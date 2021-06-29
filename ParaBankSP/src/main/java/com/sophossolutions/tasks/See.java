@@ -2,7 +2,7 @@ package com.sophossolutions.tasks;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-import com.sophossolutions.ui.AccountsPage;
+import com.sophossolutions.ui.OpenAccountPage;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -16,7 +16,7 @@ public class See implements Task {
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {
-		actor.attemptsTo(Click.on(AccountsPage.LINK_OVERVIEW));
+		actor.attemptsTo(Click.on(OpenAccountPage.NUMERO_CUENTA));
 	}
 
 }

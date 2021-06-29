@@ -11,10 +11,12 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
+import com.sophossolutions.questions.Print;
 import com.sophossolutions.questions.Validate;
 import com.sophossolutions.tasks.Login;
 import com.sophossolutions.tasks.OpenNew;
 import com.sophossolutions.tasks.See;
+import com.sophossolutions.ui.DataPage;
 import com.sophossolutions.ui.OpenAccountPage;
 
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
@@ -44,7 +46,7 @@ public class BankStepDefinitions {
 
 	@Then("Imprimo el saldo disponible")
 	public void imprimoElSaldoDisponible() {
-
+		theActorInTheSpotlight().should(seeThat(Print.available(DataPage.SALDO_CUENTA)));
 	}
 
 	@Before

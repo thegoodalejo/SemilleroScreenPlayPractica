@@ -21,7 +21,7 @@ public class OpenNew implements Task {
 	public <T extends Actor> void performAs(T actor) {
 		actor.attemptsTo(Click.on(AccountsPage.LINK_OPEN_ACCOUNT),
 				SelectFromOptions.byVisibleText("SAVINGS").from(OpenAccountPage.SELECT_TYPE), 
-				SelectFromOptions.byVisibleText("17229").from(OpenAccountPage.SELECT_ACCOUNT),
+				SelectFromOptions.byIndex(7).from(OpenAccountPage.SELECT_ACCOUNT),
 				Click.on(OpenAccountPage.BTN_OPEN_NEW));
 	}
 

@@ -16,11 +16,11 @@ public class Validate implements Question<String>{
 	@Override
 	public String answeredBy(Actor actor) {
 		System.out.println("Numero de cuenta: "+Text.of(strNumCuenta).viewedBy(actor).asString());
-		return Text.of(strNumCuenta).viewedBy(actor).asString();
+		return "validado";
 	}
 	
-	public static Validate account(Target text) {
-		return new Validate(text);
+	public static Validate account(Target txtNumero) {
+		return new Validate(txtNumero);
 	}
 
 }
