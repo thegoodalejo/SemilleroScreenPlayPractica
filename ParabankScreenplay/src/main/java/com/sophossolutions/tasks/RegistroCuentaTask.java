@@ -23,7 +23,7 @@ public class RegistroCuentaTask implements Task
 	{
 		actor.attemptsTo(Click.on(RegisterAcount.LINK_OPEN_ACOUNT),
 			SelectFromOptions.byVisibleText("SAVINGS").from(RegisterAcount.TYPE_ACOUNT_OPTIONS),
-			SelectFromOptions.byValue("13122").from(RegisterAcount.NUMBER_ACOUNT_OPTIONS),
+			SelectFromOptions.byValue(strAcount).from(RegisterAcount.NUMBER_ACOUNT_OPTIONS),
 			Click.on(RegisterAcount.BTN_NEW_ACOUNT));
 	}
 	

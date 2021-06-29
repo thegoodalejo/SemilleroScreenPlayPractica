@@ -21,13 +21,17 @@ public class LoginTask implements Task
 	@Override
 	public <T extends Actor> void performAs(T actor)
 	{
+		System.out.println("ESCRIBIR EN LOGINPAGE");
+		try {
 		actor.attemptsTo(Enter.theValue(strUser).into(ParabankLogin.TXT_USER),
 			Enter.theValue(strPassword).into(ParabankLogin.TXT_PASSWORD),
 			Click.on(ParabankLogin.BTN_LOGIN));
+		}catch(Exception e) {System.out.println("ERROR: " + e);}
 	}
 	
 	public static LoginTask withCredential(String strUser, String strPassword)
 	{
+		System.out.println("LOGIN.CREDENTIALS = " + strUser+ " " + strPassword);
 		return instrumented(LoginTask.class, strUser, strPassword);
 	}
 }
