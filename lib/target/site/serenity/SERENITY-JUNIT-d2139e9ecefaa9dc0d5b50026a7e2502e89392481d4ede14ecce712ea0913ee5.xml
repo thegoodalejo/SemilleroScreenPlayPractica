@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Buscar productos uno" skipped="0" tests="1" time="16.55" timestamp="2021-06-29 03:53:12"><testcase name="Ingresar a banco y crear cuenta"><failure message="&#10;Expected: &quot;13344&quot;&#10;     but: was &quot;12345&quot;" type="java.lang.AssertionError">
+Expected: "13344"
+     but: was "12345"</failure><system-err>
+Expected: "13344"
+     but: was "12345"&#13;
+stepdefinitions.CuentaStepDefinitions.muestroLaCuentaYElDineroEnElla(CuentaStepDefinitions.java:39)&#13;
+✽.Muestro la cuenta y el dinero en ella(file:///C:/Users/elber.ceballos/Desktop/ScreenPlay/SemilleroScreenPlayPractica/lib/src/test/resources/features/cuentabancaria.feature:9)&#13;
+</system-err></testcase></testsuite>
