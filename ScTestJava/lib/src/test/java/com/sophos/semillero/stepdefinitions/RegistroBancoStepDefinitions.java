@@ -5,6 +5,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 
 import com.sophos.semillero.tasks.LoginBanco;
 import com.sophos.semillero.tasks.RegistrarCuenta;
+import com.sophos.semillero.tasks.VerificarCuenta;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -35,7 +36,7 @@ public class RegistroBancoStepDefinitions {
 
 	@Then("Valido que la cuenta fue creada")
 	public void validoQueLaCuentaFueCreada() {
-	    // Write code here that turns the phrase above into concrete actions
+		theActorCalled("Andres Lopez").wasAbleTo(VerificarCuenta.verifyAccount());
 	   
 	}
 	@Before()
