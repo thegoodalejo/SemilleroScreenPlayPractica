@@ -10,19 +10,18 @@ public class TextValue implements Question<String>{
 
 	public static String NumeroCuenta;
 	private Target NumerocuentaT;
-	private Target Balance;
 	
-	public TextValue(Target numeroCuenta, Target balance) {
+	
+	public TextValue(Target numeroCuenta) {
 		this.NumerocuentaT = numeroCuenta;
-		this.Balance = balance;
 	}
 	@Override
 	public String answeredBy(Actor actor) {
 		return Text.of(NumerocuentaT).viewedBy(actor).asString();
 	}
 	
-	public static TextValue  in(Target numeroCuenta, Target balance) {
-		return new TextValue(numeroCuenta,balance);
+	public static TextValue  in(Target numeroCuenta) {
+		return new TextValue(numeroCuenta);
 	}
 	
 }

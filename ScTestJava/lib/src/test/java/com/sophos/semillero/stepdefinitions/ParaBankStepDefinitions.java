@@ -44,7 +44,7 @@ public class ParaBankStepDefinitions {
 	@Then("valida que el numero de cuenta")
 	public void validaQueElNumeroDeCuentaEsteEnElResumenDeCuenta() {
 		theActorCalled("Santiago Espinal").wasAbleTo(ObtenerNumeroC.in(ParaBankHomePage.NC_NEW));
-		theActorInTheSpotlight().should(seeThat(TextValue.in(ParaBankHomePage.NC_TABLA.of(TextValue.NumeroCuenta),ParaBankHomePage.NC_TABLA),IsEqual.equalTo(TextValue.NumeroCuenta)));
+		theActorInTheSpotlight().should(seeThat(TextValue.in(ParaBankHomePage.NC_TABLA.of(TextValue.NumeroCuenta)),IsEqual.equalTo(TextValue.NumeroCuenta)));
 	    
 	}
 	
