@@ -9,28 +9,31 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
-
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import com.sophossolutions.semillero.tasks.ParaBankLogin;
+import com.sophossolutions.semillero.tasks.ParaBankAccounts;
+import com.sophossolutions.semillero.tasks.ParaBankHome;
 
 public class paraBankStepdDefinitions {
 
+	
+	
 	@Given("Ingresar a (.+) y hacer login con (.+) (.+)$")
 	public void ingresarAYHacerLoginConJohnDemo(String url, String user, String password) {
 		
 		theActorCalled("Juan Miguel").wasAbleTo(Open.url(url));
-		//theActorCalled("Juan Miguel").wasAbleTo(ParaBankLogin.login(user, password));
+		theActorCalled("Juan Miguel").wasAbleTo(ParaBankLogin.in(user, password));
 	}
-
-	@When("Hacer el proceso de creacion capurar el dato generado")
-	public void hacerElProcesoDeCreacionCapurarElDatoGenerado() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	
+	@When("Hacer el proceso de creacion para la opcion (.+) (.+)$")
+	public void hacerElProcesoDeCreacionParaLaOpcion(String strType, Integer txtNumber) {
+		theActorCalled("Juan Miguel").wasAbleTo(ParaBankHome.createUser(strType, txtNumber.toString()));
+		
 	}
-
+	
 	@Then("Validar que exista el dato")
 	public void validarQueExistaElDato() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		theActorCalled("Juan Miguel").wasAbleTo(ParaBankAccounts.seeList(""));
 	}
 	
 	@Before()

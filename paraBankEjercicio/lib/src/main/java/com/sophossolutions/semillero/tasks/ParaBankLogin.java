@@ -2,9 +2,11 @@ package com.sophossolutions.semillero.tasks;
 
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Performable;
+
 import static  net.serenitybdd.screenplay.Tasks.instrumented;
 
-import com.sophossolutions.ui.ParaBankHome;
+import com.sophossolutions.ui.ParaBankLoginPage;
 
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
@@ -23,13 +25,14 @@ public class ParaBankLogin implements Task {
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 		actor.attemptsTo(
-				Enter.theValue(userName).into(ParaBankHome.TXT_USER_NAME),
-				Enter.theValue(password).into(ParaBankHome.TXT_USER_PASWORD),
-				Click.on(ParaBankHome.BTN_LOGIN)
+				Enter.theValue(userName).into(ParaBankLoginPage.TXT_USER_NAME),
+				Enter.theValue(password).into(ParaBankLoginPage.TXT_USER_PASWORD),
+				Click.on(ParaBankLoginPage.BTN_LOGIN)
 				);		
 	}
 	
-	public static ParaBankLogin login (String userName, String password) {
+	public static ParaBankLogin in (String userName, String password) {
 		return instrumented(ParaBankLogin.class, userName, password);
 	}
+
 }

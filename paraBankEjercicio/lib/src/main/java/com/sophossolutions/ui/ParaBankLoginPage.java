@@ -3,7 +3,7 @@ package com.sophossolutions.ui;
 import org.openqa.selenium.By;
 import net.serenitybdd.screenplay.targets.Target;
 
-public class ParaBankHome {
+public class ParaBankLoginPage {
 
 	public static final Target TXT_USER_NAME = Target.the("Campo donde se coloca el usuario").locatedBy("//input[@name ='username']");
 	public static final Target TXT_USER_PASWORD = Target.the("Campo donde se coloca el usuario").locatedBy("//input[@name ='password']");
