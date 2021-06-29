@@ -2,11 +2,17 @@ package com.sophos.semillero.stepdefinitions;
 
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 
+import org.hamcrest.core.IsEqual;
+
+import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+
+import com.sophos.semillero.questions.Result;
 import com.sophos.semillero.tasks.LoginBanco;
 import com.sophos.semillero.tasks.RegistrarCuenta;
 import com.sophos.semillero.tasks.VerificarCuenta;
+import com.sophos.semillero.ui.ListAcounts;
 import com.sophos.semillero.ui.RegisterPage;
 
 import io.cucumber.java.Before;
@@ -42,7 +48,7 @@ public class RegistroBancoStepDefinitions {
 	@Then("Valido que la cuenta fue creada")
 	public void validoQueLaCuentaFueCreada() {
 		theActorCalled("Andres Lopez").wasAbleTo(VerificarCuenta.verifyAccount());
-		
+		theActorInTheSpotlight().should(seeThat(Result.in(ListAcounts.NUM_CUENTA.of(strNumeroCuenta)),IsEqual.equalTo(strNumeroCuenta)));
 	   
 	}
 	@Before()
