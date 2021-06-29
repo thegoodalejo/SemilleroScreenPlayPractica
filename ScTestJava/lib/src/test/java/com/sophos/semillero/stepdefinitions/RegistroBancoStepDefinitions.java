@@ -1,11 +1,13 @@
 package com.sophos.semillero.stepdefinitions;
 
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 
 import com.sophos.semillero.tasks.LoginBanco;
 import com.sophos.semillero.tasks.RegistrarCuenta;
 import com.sophos.semillero.tasks.VerificarCuenta;
+import com.sophos.semillero.ui.RegisterPage;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -16,6 +18,7 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 
 public class RegistroBancoStepDefinitions {
 	
+	String strNumeroCuenta = "";
 	
 	@Given("Deseo ir a la pagina de {string}")
 	public void deseoIrALaPaginaDe(String strUrl) {
@@ -31,12 +34,13 @@ public class RegistroBancoStepDefinitions {
 	@When("Registrar una nueva cuenta {string}")
 	public void registrarUnaNuevaCuenta(String strValue) {
 		theActorCalled("Andres Lopez").wasAbleTo(RegistrarCuenta.withValue(strValue));
-	   
+	
 	}
 
 	@Then("Valido que la cuenta fue creada")
 	public void validoQueLaCuentaFueCreada() {
 		theActorCalled("Andres Lopez").wasAbleTo(VerificarCuenta.verifyAccount());
+		
 	   
 	}
 	@Before()
