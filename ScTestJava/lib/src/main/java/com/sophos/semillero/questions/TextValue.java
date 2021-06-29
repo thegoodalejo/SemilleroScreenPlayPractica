@@ -18,7 +18,6 @@ public class TextValue implements Question<String>{
 	}
 	@Override
 	public String answeredBy(Actor actor) {
-		
 		return Text.of(NumerocuentaT).viewedBy(actor).asString();
 	}
 	

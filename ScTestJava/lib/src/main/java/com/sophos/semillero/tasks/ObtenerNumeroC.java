@@ -22,9 +22,10 @@ public class ObtenerNumeroC implements Task{
 	public <T extends Actor> void performAs(T actor) {
 		
 		 TextValue.NumeroCuenta = Text.of(NumeroCuenta).viewedBy(actor).asString();
+		 System.out.println("--------------------------");
 		 System.out.println(TextValue.NumeroCuenta);
-		actor.attemptsTo(
-				 Click.on(ParaBankHomePage.ENLA_AO));
+		 System.out.println("--------------------------");
+		actor.attemptsTo(Click.on(ParaBankHomePage.ENLA_AO));
 		
 	}
 	public static ObtenerNumeroC in (Target numeroCuenta) {
