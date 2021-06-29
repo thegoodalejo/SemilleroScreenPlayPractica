@@ -34,6 +34,8 @@ public class RegistroBancoStepDefinitions {
 	@When("Registrar una nueva cuenta {string}")
 	public void registrarUnaNuevaCuenta(String strValue) {
 		theActorCalled("Andres Lopez").wasAbleTo(RegistrarCuenta.withValue(strValue));
+		strNumeroCuenta=RegisterPage.NEW_ACOUNT.resolveFor(theActorInTheSpotlight()).getTextValue();
+		System.out.println(strNumeroCuenta);
 	
 	}
 
