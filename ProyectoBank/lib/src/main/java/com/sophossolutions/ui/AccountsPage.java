@@ -6,5 +6,5 @@ import net.serenitybdd.screenplay.targets.Target;
 
 public class AccountsPage {
 	
-	public static final Target TABLE_ACCOUNTS = Target.the("Table accounts").located(By.xpath("//a[contains(@href,'12345')]"));
+	public static final Target TABLE_ACCOUNTS = Target.the("Table accounts").locatedBy("//a[@href='activity.htm?id={0}']");
 }

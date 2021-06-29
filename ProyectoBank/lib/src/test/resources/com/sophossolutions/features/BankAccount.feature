@@ -12,4 +12,5 @@ Feature: Create a new bank account
     Examples: 
       | userdata  | accountdata |
       | "john-demo" |    "SAVINGS-13122" |
-   #   | name2 |     "" |
+      | "john-demo" |    "CHECKING-12345" |
+      | "john-demo" |    "SAVINGS-14121" |

@@ -20,11 +20,10 @@ public class ValidateNewAccount implements Question {
 		return new ValidateNewAccount(strIdNewAccount);
 	}
 	
-	public Boolean answeredBy(Actor actor) {
+	public  String answeredBy(Actor actor) {
 		
-		
-		return true;
-				//Text.of(strIdNewAccount).viewedBy(actor).asString();
+		return Text.of(strIdNewAccount.of(NewAccountPage.strNumberAccount)).viewedBy(actor).asString();
+						
 	}
 
 }
