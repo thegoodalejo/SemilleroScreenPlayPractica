@@ -2,7 +2,7 @@ package com.sophos.semillero.tasks;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-import com.sophos.semillero.ui.LoginPage1;
+import com.sophos.semillero.ui.LoginPage;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -21,9 +21,9 @@ public class LoginBanco implements Task{
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {
-		actor.attemptsTo(Enter.theValue(strUser).into(LoginPage1.TXT_USER_NAME), 
-				Enter.theValue(strPassword).into(LoginPage1.TXT_PASSWORD),
-				Click.on(LoginPage1.BTN_LOGIN));
+		actor.attemptsTo(Enter.theValue(strUser).into(LoginPage.TXT_USER_NAME), 
+				Enter.theValue(strPassword).into(LoginPage.TXT_PASSWORD),
+				Click.on(LoginPage.BTN_LOGIN));
 		
 	}
 	public static LoginBanco withCredential(String strUser, String strPassword) {
