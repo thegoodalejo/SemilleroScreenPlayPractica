@@ -34,4 +34,8 @@ public class OpenAccount implements Task {
 		return instrumented(OpenAccount.class, strAccountType, numStartingBalance);
 	}
 	
+	public static OpenAccount clickingOnOpenAccount(String strAccountType, int numStartingBalance) {
+		return instrumented(OpenAccount.class, strAccountType, numStartingBalance);
+	}
+	
 }

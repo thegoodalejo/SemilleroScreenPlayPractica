@@ -7,6 +7,7 @@ import io.cucumber.java.en.When;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import net.serenitybdd.screenplay.targets.Target;
 
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
@@ -43,12 +44,26 @@ public class LoginStepDefinitions {
 	    theActorInTheSpotlight().wasAbleTo(OpenAccount.clickingOnOpenAccount(strAccountType, numStartingBalance));
 	}
 	
+	@When("Vuelvo al accounts overview")
+	public void vuelvoAlAccountsOverview() {
+	    theActorInTheSpotlight().wasAbleTo(OpenAccount.clickingOnOpenAccount(strAccountType, numStartingBalance));
+	}
+	
 	/*
 	@When("Valido que el mensaje de apertura sea {string}")
 	public void validoQueElMensajeDeAperturaSea(String strMessage) {
 	    theActorInTheSpotlight().should(seeThat(Result.in(OpenAccountPage.TXT_SUCCESS), IsEqual.equalTo(strMessage)));
 	}
 	*/
+	@Then("Valido que la cuenta haya sido abierta")
+	public void validoQueLaCuentaHayaSidoAbierta() {
+		String strAccountNumber = OpenAccountPage.TXT_NEWACCOUNTNUMBER.resolveFor(theActorInTheSpotlight()).getText();
+		System.out.println(strAccountNumber);
+		
+		Target tgtAccountNumber = Target.the("New account number in overview").locatedBy("//select[@id='newAccountId']");
+		
+	    theActorInTheSpotlight().should(seeThat(Result.in(OpenAccountPage.TXT_SUCCESS), IsEqual.equalTo(strAccountNumber)));
+	}
 	
 	@Before("")
 	public void setup() {
