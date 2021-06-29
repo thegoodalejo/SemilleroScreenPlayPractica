@@ -1,0 +1,21 @@
+package com.sophos.semillero.questions;
+
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Question;
+import net.serenitybdd.screenplay.targets.Target;
+
+public class AccNum implements Question<String>{
+
+	private Target NumeroCuenta;
+	
+	public AccNum(Target numeroCuenta) {
+		this.NumeroCuenta = numeroCuenta;
+	}
+	
+	@Override
+	public String answeredBy(Actor actor) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

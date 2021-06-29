@@ -1,0 +1,27 @@
+package com.sophos.semillero.tasks;
+
+import static net.serenitybdd.screenplay.Tasks.instrumented;
+
+import com.sophos.semillero.ui.ParaBankHomePage;
+
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.actions.Click;
+
+
+public class ObtenerNumeroC implements Task{
+
+	public ObtenerNumeroC() {
+		
+	}
+	@Override
+	public <T extends Actor> void performAs(T actor) {
+		actor.attemptsTo(
+				 Click.on(ParaBankHomePage.ENLA_AO));
+		
+	}
+	public static ObtenerNumeroC in () {
+		return instrumented(ObtenerNumeroC.class);
+	}
+
+}

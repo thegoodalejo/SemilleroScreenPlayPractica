@@ -1,0 +1,56 @@
+package com.sophos.semillero.tasks;
+
+import com.sophos.semillero.ui.AliExpressHomePage;
+import com.sophos.semillero.ui.ParaBankLoginPage;
+
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Task;
+import static  net.serenitybdd.screenplay.Tasks.instrumented;
+import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.actions.Scroll;
+
+public class Login implements Task{
+
+	
+	private String Usuario;
+	private String Password;
+
+	
+	public Login (String usuario, String password) {		
+		this.Usuario = usuario;
+		this.Password = password;	
+	}
+	
+	@Override
+	public <T extends Actor> void performAs(T actor) {
+		actor.attemptsTo(
+				Click.on(AliExpressHomePage.BTN_CERRAR_IMAG),
+				Enter.theValue(Producto).into(AliExpressHomePage.TXT_NAME_PRODUCTO),
+				Click.on(AliExpressHomePage.BTN_BUSCAR),
+				Scroll.to(ParaBankLoginPage.FOOTER));		
+	}
+	
+	public static Login in (String usuario ,String password ) {
+		return instrumented(Login.class, usuario,password);
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
