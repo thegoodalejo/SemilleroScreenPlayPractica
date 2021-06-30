@@ -2,6 +2,8 @@ package com.sophos.semillero.stepdefinitions;
 
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
+import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
 
 import org.hamcrest.core.IsEqual;
 
@@ -13,6 +15,7 @@ import com.sophos.semillero.tasks.LoginBanco;
 import com.sophos.semillero.tasks.RegistrarCuenta;
 import com.sophos.semillero.tasks.VerificarCuenta;
 import com.sophos.semillero.ui.ListAcounts;
+import com.sophos.semillero.ui.LoginPage;
 import com.sophos.semillero.ui.RegisterPage;
 
 import io.cucumber.java.Before;
@@ -24,33 +27,27 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 
 public class RegistroBancoStepDefinitions {
 	
-	String strNumeroCuenta = "";
+
 	
-	@Given("Deseo ir a la pagina de {string}")
-	public void deseoIrALaPaginaDe(String strUrl) {
-		theActorCalled("Andres Lopez").wasAbleTo(Open.url(strUrl));
-	   
+	@Given("Deseo acceder a la vista agregar nueva cuenta")
+	public void deseoAccederALaVistaAgregarNuevaCuenta() {
+		//temporalmente ya que la pagina esta averiada 
+		theActorCalled("Andres Lopez").should(seeThat(the(LoginPage.LOGIN_TABLE), isVisible()));
 	}
 
-	@When("Ingreso nombre de usuario {string} y password {string}")
-	public void ingresoNombreDeUsuarioYPassword(String strUser, String strPassword) {
-		theActorCalled("Andres Lopez").wasAbleTo(LoginBanco.withCredential(strUser, strPassword));
-	    
-	}
 	@When("Registrar una nueva cuenta {string}")
 	public void registrarUnaNuevaCuenta(String strValue) {
-		theActorCalled("Andres Lopez").wasAbleTo(RegistrarCuenta.withValue(strValue));
-		strNumeroCuenta=RegisterPage.NEW_ACOUNT.resolveFor(theActorInTheSpotlight()).getTextValue();
-		System.out.println(strNumeroCuenta);
-	
+	    theActorCalled("Andres Lopez").wasAbleTo(RegistrarCuenta.withValue(strValue));
+	    
 	}
 
-	@Then("Valido que la cuenta fue creada")
-	public void validoQueLaCuentaFueCreada() {
+	@Then("Deberia encontrar la cuenta nueva")
+	public void deberiaEncontrarLaCuentaNueva() {
 		theActorCalled("Andres Lopez").wasAbleTo(VerificarCuenta.verifyAccount());
-		theActorInTheSpotlight().should(seeThat(Result.in(ListAcounts.NUM_CUENTA.of(strNumeroCuenta)),IsEqual.equalTo(strNumeroCuenta)));
-	   
+		theActorInTheSpotlight().should(seeThat(Result.in(ListAcounts.NUM_CUENTA.of(RegistrarCuenta.getNumCuenta())),IsEqual.equalTo(RegistrarCuenta.getNumCuenta())));
+		
 	}
+
 	@Before()
 	public void setup() {
 		setTheStage(new OnlineCast());
