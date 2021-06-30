@@ -16,9 +16,11 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 import questions.Result;
 import tasks.CreateAccount;
 import tasks.Login;
+import tasks.Print;
 import ui.Resultado;
 
 public class CuentaStepDefinitions {
+	public String strNoCuenta;
 	@Given("Deseo ir a la pagina {string}")
 	public void deseoIrALaPagina(String string) {
 		theActorCalled("Duvan").wasAbleTo(Open.url(string));
@@ -30,13 +32,15 @@ public class CuentaStepDefinitions {
 	}
 
 	@When("y abrir una cuenta tipo (.+) a la cuenta (.+)$")
-	public void yAbrirUnaCuentaTipoALaCuenta(String strTipo, String strCuenta) {
+	public void yAbrirUnaCuentaTipoALaCuenta(String strTipo, String strCuenta) {		
 		theActorInTheSpotlight().wasAbleTo(CreateAccount.With(strTipo,strCuenta));
+		strNoCuenta = strCuenta;
 	}
 
-	@Then("Muestro la cuenta y el dinero en ella")
-	public void muestroLaCuentaYElDineroEnElla() {
-		theActorInTheSpotlight().should(seeThat(Result.in(Resultado.CUENTASCREADAS), IsEqual.equalTo("13344")));
+	@Then("Muestro la cuenta y el saldo en ella")
+	public void muestroLaCuentaYElSaldoEnElla() {
+		theActorInTheSpotlight().should(seeThat(Result.in(Resultado.CUENTAS_CREADA.of(strNoCuenta)), IsEqual.equalTo(strNoCuenta)));
+		theActorInTheSpotlight().wasAbleTo(Print.that(Resultado.SALDO_CUENTA.of(strNoCuenta)));		
 	}
 
 	@Before()

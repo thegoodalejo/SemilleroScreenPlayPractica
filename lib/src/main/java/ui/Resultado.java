@@ -5,8 +5,6 @@ import org.openqa.selenium.By;
 import net.serenitybdd.screenplay.targets.Target;
 
 public class Resultado {
-	public static final Target TABLA = Target.the("campo contraseña").located(By.xpath("//tbody"));
-	public static final Target CUENTASCREADAS = Target.the("Boton login").located(By.xpath("//tbody//a"));
-	
-
+	public static final Target CUENTAS_CREADA = Target.the("Cuenta Creada").locatedBy("//td//a[contains(text(),{0})]");
+	public static final Target SALDO_CUENTA = Target.the("Cuenta Creada").locatedBy("//*[contains(text(),{0})]/ancestor::td/following-sibling::td");
 }

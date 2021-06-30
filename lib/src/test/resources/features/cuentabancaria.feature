@@ -6,7 +6,7 @@ Feature: Buscar productos uno
     Given Deseo ir a la pagina <url>
     When Ingreso el usuario <usuario> y la contrasena <contraseña>
     And y abrir una cuenta tipo <tipo> a la cuenta <cuenta>
-    Then Muestro la cuenta y el dinero en ella
+    Then Muestro la cuenta y el saldo en ella
 
     Examples: 
       | url                                                | usuario | contraseña | tipo    | cuenta |
