@@ -154,7 +154,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 30-06-2021 16:23</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 30-06-2021 16:59</span>
     <br style="clear:left"/>
 </div>
 
@@ -192,9 +192,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
                             <span class="test-case-title">
-                                <span class="failing-color">Registrar cuenta en Banco
+                                <span class="success-color">Registrar cuenta en Banco
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -211,72 +211,27 @@
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
-            <div class="screenshotFailure panel panel-danger">
-
-    <div style="display:block">
-        <div class="table">
-            <div class="row">
-                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">Element should be enabled exception: Expected enabled element was not enabled</span>
-                </div>
-                <div class="col-sm-2">
-                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
-                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
-                </div>
-             </div>
-        </div>
-    <div>
-
-    <!-- Details Section -->
-    <div class="row stacktrace-details">
-      <div class="col">
-        <div class="collapse multi-collapse" id="stacktraceModal-overall">
-            <div class="card">
-                <div class="card-header">
-                    <h4>net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException </h4>
-                </div>
-                <div class="card-body">
-                    <div>
-                        <pre>com.sophos.semillero.tasks.RegistrarCuenta.performAs(RegistrarCuenta.java:25)<br />com.sophos.semillero.stepdefinitions.RegistroBancoStepDefinitions.registrarUnaNuevaCuenta(RegistroBancoStepDefinitions.java:36)<br />io.cucumber.java.Invoker.invoke(Invoker.java:27)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:49)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:51)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:67)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:227)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:54)<br />org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)<br />org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:768)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)<br /></pre>
-                    </div>
-
-                    <h4>
-                        Caused by: org.openqa.selenium.TimeoutException
-                    </h4>
-                    <div>
-                            <pre>Expected condition failed: waiting for By.xpath: //a[text()='Open New Account'] to be enabled (tried for 5 second(s) with 100 milliseconds interval)</pre>
-                        <pre>com.sophos.semillero.tasks.RegistrarCuenta.performAs(RegistrarCuenta.java :25)<br />com.sophos.semillero.stepdefinitions.RegistroBancoStepDefinitions.registrarUnaNuevaCuenta(RegistroBancoStepDefinitions.java :36)<br />io.cucumber.java.Invoker.invoke(Invoker.java :27)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java :27)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java :63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java :64)<br />io.cucumber.core.runner.TestStep.run(TestStep.java :49)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java :46)<br />io.cucumber.core.runner.TestCase.run(TestCase.java :51)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java :67)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java :83)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java :24)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java :227)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java :54)<br />org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java :89)<br />org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java :40)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java :541)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java :768)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java :464)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java :210)<br /></pre>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-                <div class="panel-body">
-                    <a href="#" target="_blank" class="btn btn-info">HTML Source</a>
-                </div>
-            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="9e8adcd038d48b5c6fc572205eb8fa08c1f9a7290ad15663834274e10ca4ae37.png" title=" Given Deseo ir a la pagina de &quot;https://parabank.parasoft.com/parabank/index.htm&quot;" width="1366"/>
-                <img src="9e8adcd038d48b5c6fc572205eb8fa08c1f9a7290ad15663834274e10ca4ae37.png" title=" Andres Lopez opens the https://parabank.parasoft.com/parabank/index.htm" width="1366"/>
-                <img src="9e8adcd038d48b5c6fc572205eb8fa08c1f9a7290ad15663834274e10ca4ae37.png" title=" Given Deseo ir a la pagina de &quot;https://parabank.parasoft.com/parabank/index.htm&quot; (completed)" width="1366"/>
-                <img src="55bde5bb1ca186093cfc7403920c69a73d87b32f7539bc280af2df63695b7c8b.png" title=" When Ingreso nombre de usuario &quot;john&quot; y password &quot;demo&quot;" width="1366"/>
-                <img src="55bde5bb1ca186093cfc7403920c69a73d87b32f7539bc280af2df63695b7c8b.png" title=" Andres lopez login banco" width="1366"/>
-                <img src="55bde5bb1ca186093cfc7403920c69a73d87b32f7539bc280af2df63695b7c8b.png" title=" Andres Lopez enters 'john' into Campo nombre de usuario" width="1366"/>
-                <img src="1e30e5d1bb00caf3daa55a3f25ce7ac6a4e4a524a230049e7b11306b66a2af57.png" title=" Andres Lopez enters 'john' into Campo nombre de usuario (completed)" width="1366"/>
-                <img src="1e30e5d1bb00caf3daa55a3f25ce7ac6a4e4a524a230049e7b11306b66a2af57.png" title=" Andres Lopez enters 'demo' into Campo contrase&ntilde;a" width="1366"/>
-                <img src="44567cdc76a1d11e03889fba96c6f42351757f5504e5dbdfff195353412ce4ac.png" title=" Andres Lopez enters 'demo' into Campo contrase&ntilde;a (completed)" width="1366"/>
-                <img src="44567cdc76a1d11e03889fba96c6f42351757f5504e5dbdfff195353412ce4ac.png" title=" Andres Lopez clicks on Boton login" width="1366"/>
+                <img src="409fb24aab46a1c404d0588bc2b92ff0928c55ff649172ffd418e9fea5a80070.png" title=" Given Deseo ir a la pagina de &quot;https://parabank.parasoft.com/parabank/index.htm&quot;" width="1366"/>
+                <img src="409fb24aab46a1c404d0588bc2b92ff0928c55ff649172ffd418e9fea5a80070.png" title=" Andres Lopez opens the https://parabank.parasoft.com/parabank/index.htm" width="1366"/>
+                <img src="409fb24aab46a1c404d0588bc2b92ff0928c55ff649172ffd418e9fea5a80070.png" title=" Given Deseo ir a la pagina de &quot;https://parabank.parasoft.com/parabank/index.htm&quot; (completed)" width="1366"/>
+                <img src="7c7b6b8e1da54047291959df9daea360d615230a95957227524190feed2d39a3.png" title=" When Ingreso nombre de usuario &quot;john&quot; y password &quot;demo&quot;" width="1366"/>
+                <img src="7c7b6b8e1da54047291959df9daea360d615230a95957227524190feed2d39a3.png" title=" Andres lopez login banco" width="1366"/>
+                <img src="7c7b6b8e1da54047291959df9daea360d615230a95957227524190feed2d39a3.png" title=" Andres Lopez enters 'john' into Campo nombre de usuario" width="1366"/>
+                <img src="08e73b737ad6d47369f060a362c4dc07d61dd2a0f9afa6071af4ef0de33f5fe4.png" title=" Andres Lopez enters 'john' into Campo nombre de usuario (completed)" width="1366"/>
+                <img src="08e73b737ad6d47369f060a362c4dc07d61dd2a0f9afa6071af4ef0de33f5fe4.png" title=" Andres Lopez enters 'demo' into Campo contrase&ntilde;a" width="1366"/>
+                <img src="8de199a8319994a4224974106a95dd42853838c77b85ab7c5a78efede7721451.png" title=" Andres Lopez enters 'demo' into Campo contrase&ntilde;a (completed)" width="1366"/>
+                <img src="8de199a8319994a4224974106a95dd42853838c77b85ab7c5a78efede7721451.png" title=" Andres Lopez clicks on Boton login" width="1366"/>
                 <img src="68cd6437c4f933917704cee3605e1b5ed43dc433989045f62aa8de68275429a3.png" title=" Andres Lopez clicks on Boton login (completed)" width="1366"/>
                 <img src="68cd6437c4f933917704cee3605e1b5ed43dc433989045f62aa8de68275429a3.png" title=" Andres lopez login banco (completed)" width="1366"/>
                 <img src="68cd6437c4f933917704cee3605e1b5ed43dc433989045f62aa8de68275429a3.png" title=" When Ingreso nombre de usuario &quot;john&quot; y password &quot;demo&quot; (completed)" width="1366"/>
-                <img src="68cd6437c4f933917704cee3605e1b5ed43dc433989045f62aa8de68275429a3.png" title=" Then Deberia mostrar la pagina principal" width="1366"/>
-                <img src="68cd6437c4f933917704cee3605e1b5ed43dc433989045f62aa8de68275429a3.png" title=" Given Deseo acceder a la vista agregar nueva cuenta" width="1366"/>
-                <img src="68cd6437c4f933917704cee3605e1b5ed43dc433989045f62aa8de68275429a3.png" title=" When Registrar una nueva cuenta &quot;SAVINGS&quot;" width="1366"/>
-                <img src="68cd6437c4f933917704cee3605e1b5ed43dc433989045f62aa8de68275429a3.png" title=" Andres lopez registrar cuenta" width="1366"/>
-                <img src="68cd6437c4f933917704cee3605e1b5ed43dc433989045f62aa8de68275429a3.png" title=" Andres Lopez clicks on Boton login: <span class='failing-color'>FAILURE</span>" width="1366"/>
+                <img src="38e071a5b2e467386ec64cebab70fafefa8d85c6b1cd26e0c9cd71024258b78a.png" title=" Then Deberia mostrar la pagina principal" width="1366"/>
+                <img src="38e071a5b2e467386ec64cebab70fafefa8d85c6b1cd26e0c9cd71024258b78a.png" title=" Then Boton login should be an element that is visible" width="1366"/>
+                <img src="38e071a5b2e467386ec64cebab70fafefa8d85c6b1cd26e0c9cd71024258b78a.png" title=" Then Deberia mostrar la pagina principal (completed)" width="1366"/>
+                <img src="38e071a5b2e467386ec64cebab70fafefa8d85c6b1cd26e0c9cd71024258b78a.png" title=" Given Deseo acceder a la vista agregar nueva cuenta" width="1366"/>
+                <img src="38e071a5b2e467386ec64cebab70fafefa8d85c6b1cd26e0c9cd71024258b78a.png" title=" When Registrar una nueva cuenta &quot;SAVINGS&quot;" width="1366"/>
+                <img src="38e071a5b2e467386ec64cebab70fafefa8d85c6b1cd26e0c9cd71024258b78a.png" title=" Then Deberia encontrar la cuenta nueva: <span class='success-color'>SUCCESS</span>" width="1366"/>
             </div>
         </div>
 

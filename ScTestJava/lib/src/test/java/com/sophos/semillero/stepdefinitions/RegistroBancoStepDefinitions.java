@@ -5,6 +5,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
 
+
 import org.hamcrest.core.IsEqual;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
@@ -43,9 +44,11 @@ public class RegistroBancoStepDefinitions {
 
 	@Then("Deberia encontrar la cuenta nueva")
 	public void deberiaEncontrarLaCuentaNueva() {
-		theActorCalled("Andres Lopez").wasAbleTo(VerificarCuenta.verifyAccount());
-		theActorInTheSpotlight().should(seeThat(Result.in(ListAcounts.NUM_CUENTA.of(RegistrarCuenta.getNumCuenta())),IsEqual.equalTo(RegistrarCuenta.getNumCuenta())));
 		
+		theActorCalled("Andres Lopez").wasAbleTo(VerificarCuenta.verifyAccount());
+		String NumCuenta = theActorInTheSpotlight().recall("NUMERO_DE_CUENTA");
+		theActorInTheSpotlight().should(seeThat(Result.in(ListAcounts.NUM_CUENTA.of(NumCuenta)),IsEqual.equalTo(NumCuenta)));
+
 	}
 
 	@Before()
