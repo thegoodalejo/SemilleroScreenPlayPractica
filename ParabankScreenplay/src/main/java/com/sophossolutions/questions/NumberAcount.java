@@ -8,13 +8,10 @@ import net.serenitybdd.screenplay.targets.Target;
 public class NumberAcount implements Question<String>
 {
 	private Target acountNumberT;
-	private Target acountBalanceT;
-	public static String acountNumber;
 
-	public NumberAcount(Target acountNumberT, Target acountBalanceT)
+	public NumberAcount(Target acountNumberT)
 	{
 		this.acountNumberT = acountNumberT;
-		this.acountBalanceT = acountBalanceT;
 	}
 
 	@Override
@@ -23,8 +20,8 @@ public class NumberAcount implements Question<String>
 		return Text.of(acountNumberT).viewedBy(actor).asString();
 	}
 	
-	public static NumberAcount in(Target acountNumberT, Target acountBalanceT)
+	public static NumberAcount withNumber(Target acountNumberT)
 	{
-		return new NumberAcount(acountNumberT, acountBalanceT);
+		return new NumberAcount(acountNumberT);
 	}
 }
