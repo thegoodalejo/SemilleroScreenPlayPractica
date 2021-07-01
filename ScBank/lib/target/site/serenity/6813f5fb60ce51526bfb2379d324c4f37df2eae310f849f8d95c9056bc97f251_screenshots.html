@@ -154,7 +154,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 29-06-2021 15:44</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 30-06-2021 08:40</span>
     <br style="clear:left"/>
 </div>
 
@@ -189,9 +189,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">Iniciar sesion en Para Bank
+                                <span class="error-color">Iniciar sesion en Para Bank
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -208,39 +208,66 @@
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">No such element exception: Cannot locate option with value: 12789</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.openqa.selenium.NoSuchElementException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.sophos.semillero.tasks.CreateAccount.performAs(CreateAccount.java:20)<br />com.sophos.semillero.stepdefinitions.LoginStepDefinitions.ingresoNombreDeUsuarioYPassword(LoginStepDefinitions.java:41)<br />io.cucumber.java.Invoker.invoke(Invoker.java:27)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:49)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:51)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:67)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:227)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:54)<br />org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)<br />org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:768)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource7825450454407212519.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="2bce13591fcc9845a02257eeaecaa9fab7a6ab5dd91674f4fb407258480a658c.png" title=" Given Deseo ir a la pagina de &quot;https://parabank.parasoft.com/parabank/&quot;" width="1366"/>
-                <img src="2bce13591fcc9845a02257eeaecaa9fab7a6ab5dd91674f4fb407258480a658c.png" title=" Angel Vivas opens the https://parabank.parasoft.com/parabank/" width="1366"/>
-                <img src="2bce13591fcc9845a02257eeaecaa9fab7a6ab5dd91674f4fb407258480a658c.png" title=" Given Deseo ir a la pagina de &quot;https://parabank.parasoft.com/parabank/&quot; (completed)" width="1366"/>
-                <img src="46bbd2572f87d61a7b52ed688fa877193b706884fe1cb8c7a5bb9a43d75c40fd.png" title=" When Ingreso nombre de usuario &quot;john&quot; y password &quot;demo&quot;" width="1366"/>
-                <img src="46bbd2572f87d61a7b52ed688fa877193b706884fe1cb8c7a5bb9a43d75c40fd.png" title=" Angel vivas login" width="1366"/>
-                <img src="46bbd2572f87d61a7b52ed688fa877193b706884fe1cb8c7a5bb9a43d75c40fd.png" title=" Angel Vivas enters 'john' into Campo nombre de usuario" width="1366"/>
-                <img src="e983db97a4d80ba1fddd76aa96f27acfbfba5b243c5050e4bc6d94fbff8f4ce5.png" title=" Angel Vivas enters 'john' into Campo nombre de usuario (completed)" width="1366"/>
-                <img src="e983db97a4d80ba1fddd76aa96f27acfbfba5b243c5050e4bc6d94fbff8f4ce5.png" title=" Angel Vivas enters 'demo' into Campo contrase&ntilde;a" width="1366"/>
-                <img src="04f7a3a39147064e55581523522873deb6d7b646fe659dfede249febc316a5b5.png" title=" Angel Vivas enters 'demo' into Campo contrase&ntilde;a (completed)" width="1366"/>
-                <img src="04f7a3a39147064e55581523522873deb6d7b646fe659dfede249febc316a5b5.png" title=" Angel Vivas clicks on Boton login" width="1366"/>
+                <img src="21700d4721846595b591d45a5eb49bc55643ce4e5a36a39a59fb47d2188dda33.png" title=" Given Deseo ir a la pagina de &quot;https://parabank.parasoft.com/parabank/&quot;" width="1366"/>
+                <img src="21700d4721846595b591d45a5eb49bc55643ce4e5a36a39a59fb47d2188dda33.png" title=" Angel Vivas opens the https://parabank.parasoft.com/parabank/" width="1366"/>
+                <img src="21700d4721846595b591d45a5eb49bc55643ce4e5a36a39a59fb47d2188dda33.png" title=" Given Deseo ir a la pagina de &quot;https://parabank.parasoft.com/parabank/&quot; (completed)" width="1366"/>
+                <img src="21700d4721846595b591d45a5eb49bc55643ce4e5a36a39a59fb47d2188dda33.png" title=" When Ingreso nombre de usuario &quot;john&quot; y password &quot;demo&quot;" width="1366"/>
+                <img src="165fffa0a38793bcbc66e28fd3828c700c697167d432f4db45f848f7b10a1bcf.png" title=" Angel vivas login" width="1366"/>
+                <img src="165fffa0a38793bcbc66e28fd3828c700c697167d432f4db45f848f7b10a1bcf.png" title=" Angel Vivas enters 'john' into Campo nombre de usuario" width="1366"/>
+                <img src="e5021746fec361de27ed777d082b67952dc7c4813c3cc3389620a56868213e43.png" title=" Angel Vivas enters 'john' into Campo nombre de usuario (completed)" width="1366"/>
+                <img src="e5021746fec361de27ed777d082b67952dc7c4813c3cc3389620a56868213e43.png" title=" Angel Vivas enters 'demo' into Campo contrase&ntilde;a" width="1366"/>
+                <img src="1f01b3bbc051df75f023f266442ee3192bdd01757c1c01d78236aeabe1c78703.png" title=" Angel Vivas enters 'demo' into Campo contrase&ntilde;a (completed)" width="1366"/>
+                <img src="1f01b3bbc051df75f023f266442ee3192bdd01757c1c01d78236aeabe1c78703.png" title=" Angel Vivas clicks on Boton login" width="1366"/>
                 <img src="4a861f68c874a95f2cf0072c701ec7a4d96e53c479d779ddafe232c3a9984f18.png" title=" Angel Vivas clicks on Boton login (completed)" width="1366"/>
                 <img src="4a861f68c874a95f2cf0072c701ec7a4d96e53c479d779ddafe232c3a9984f18.png" title=" Angel vivas login (completed)" width="1366"/>
                 <img src="4a861f68c874a95f2cf0072c701ec7a4d96e53c479d779ddafe232c3a9984f18.png" title=" Angel vivas create account" width="1366"/>
                 <img src="4a861f68c874a95f2cf0072c701ec7a4d96e53c479d779ddafe232c3a9984f18.png" title=" Angel Vivas clicks on Bot&oacute;n crear nueva cuenta" width="1366"/>
                 <img src="36b460ffc37f8c7a5552a46cdea016fb7c2f5545729120f449d0f9f643bfe622.png" title=" Angel Vivas clicks on Bot&oacute;n crear nueva cuenta (completed)" width="1366"/>
                 <img src="36b460ffc37f8c7a5552a46cdea016fb7c2f5545729120f449d0f9f643bfe622.png" title=" Angel Vivas selects 1 in Select con tipos de cuenta" width="1366"/>
-                <img src="6e0d94851a2f69ea593882b1393e064c082fff1e60cf2f8187414110586e802e.png" title=" Angel Vivas selects 1 in Select con tipos de cuenta (completed)" width="1366"/>
-                <img src="6e0d94851a2f69ea593882b1393e064c082fff1e60cf2f8187414110586e802e.png" title=" Angel Vivas selects 12789 in Select con cuentas creadas" width="1366"/>
-                <img src="88c5946a6e48c61b83a5f59c71f8fdaf21dfa0d5636e15485e6cb5e2ee6e36d9.png" title=" Angel Vivas selects 12789 in Select con cuentas creadas (completed)" width="1366"/>
-                <img src="88c5946a6e48c61b83a5f59c71f8fdaf21dfa0d5636e15485e6cb5e2ee6e36d9.png" title=" Angel Vivas clicks on Boton nueva cuenta" width="1366"/>
-                <img src="a0b745130f8a25cd876a3457c72aeaa9c9c37d357121faf02c4f69af52b0375b.png" title=" Angel Vivas clicks on Boton nueva cuenta (completed)" width="1366"/>
-                <img src="a0b745130f8a25cd876a3457c72aeaa9c9c37d357121faf02c4f69af52b0375b.png" title=" Angel vivas create account (completed)" width="1366"/>
-                <img src="a0b745130f8a25cd876a3457c72aeaa9c9c37d357121faf02c4f69af52b0375b.png" title=" When Ingreso nombre de usuario &quot;john&quot; y password &quot;demo&quot; (completed)" width="1366"/>
-                <img src="f864be7250bb8b55ab08ed497a59192fe3a0bc4a80d1a1d587f9bd7d71b944af.png" title=" Then Valido la cuenta creada" width="1366"/>
-                <img src="f864be7250bb8b55ab08ed497a59192fe3a0bc4a80d1a1d587f9bd7d71b944af.png" title=" Angel vivas consult account" width="1366"/>
-                <img src="f864be7250bb8b55ab08ed497a59192fe3a0bc4a80d1a1d587f9bd7d71b944af.png" title=" Angel Vivas clicks on Boton lista cuentas" width="1366"/>
-                <img src="4a861f68c874a95f2cf0072c701ec7a4d96e53c479d779ddafe232c3a9984f18.png" title=" Angel Vivas clicks on Boton lista cuentas (completed)" width="1366"/>
-                <img src="4a861f68c874a95f2cf0072c701ec7a4d96e53c479d779ddafe232c3a9984f18.png" title=" Angel vivas consult account (completed)" width="1366"/>
-                <img src="2de6d37a29755997b8544585cd600a0aca7ff0ceb341054db88c7767a80ced61.png" title=" Then account verification should be (true)" width="1366"/>
-                <img src="2de6d37a29755997b8544585cd600a0aca7ff0ceb341054db88c7767a80ced61.png" title=" Then account verification should be (true) (completed)" width="1366"/>
-                <img src="2de6d37a29755997b8544585cd600a0aca7ff0ceb341054db88c7767a80ced61.png" title=" Then Valido la cuenta creada (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+                <img src="c658e78451b89ef70c1a01feeadce33ac71ab7c6f4c37523efcec01cf9918071.png" title=" Angel Vivas selects 1 in Select con tipos de cuenta (completed)" width="1366"/>
+                <img src="c658e78451b89ef70c1a01feeadce33ac71ab7c6f4c37523efcec01cf9918071.png" title=" Angel Vivas selects 12789 in Select con cuentas creadas" width="1366"/>
+                <img src="c658e78451b89ef70c1a01feeadce33ac71ab7c6f4c37523efcec01cf9918071.png" title=" Angel Vivas selects 12789 in Select con cuentas creadas (completed): <span class='error-color'>ERROR</span>" width="1366"/>
             </div>
         </div>
 

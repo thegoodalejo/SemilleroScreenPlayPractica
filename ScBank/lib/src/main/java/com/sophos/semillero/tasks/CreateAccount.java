@@ -1,5 +1,6 @@
 package com.sophos.semillero.tasks;
 
+import com.sophos.semillero.questions.AccountResult;
 import com.sophos.semillero.ui.OpenaccountPage;
 import com.sophos.semillero.ui.OverviewPage;
 
@@ -18,11 +19,13 @@ public class CreateAccount implements Task {
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 		actor.attemptsTo(
-				Click.on(OverviewPage.BTN_NEW_ACCOUNT),
 				SelectFromOptions.byValue("1").from(OpenaccountPage.SELECT_TYPE_ACCOUNT),
-				SelectFromOptions.byValue("12789").from(OpenaccountPage.SELECT_FROM_ACCOUNT),
+				SelectFromOptions.byIndex(1).from(OpenaccountPage.SELECT_FROM_ACCOUNT),
 				Click.on(OpenaccountPage.BTN_CREATE_NEW_ACCOUNT)
 				);
+		
+		String numberNewAccount = AccountResult.in(OpenaccountPage.TXT_NUMBER_NEW_ACCOUNT).answeredBy(actor);
+		actor.remember("New account Number", numberNewAccount);
 	}
 
 	public static CreateAccount go() {
