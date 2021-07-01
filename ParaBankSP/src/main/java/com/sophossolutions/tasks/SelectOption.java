@@ -8,14 +8,17 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 
-public class GoNew implements Task {
+public class SelectOption implements Task {
+	
+	static String option;
 
-	public static GoNew account() {
-		return instrumented(GoNew.class);
+	public static SelectOption link(String option) {
+		SelectOption.option = option;
+		return instrumented(SelectOption.class);
 	}
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {
-		actor.attemptsTo(Click.on(AccountsPage.LINK_OPEN_ACCOUNT));
+		actor.attemptsTo(Click.on(AccountsPage.LINK_OPTION.of(option)));
 	}
 }

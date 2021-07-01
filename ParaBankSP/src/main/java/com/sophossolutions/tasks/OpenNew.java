@@ -19,7 +19,7 @@ public class OpenNew implements Task {
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 		int accounts = OpenAccountPage.ACCOUNT_OPTIONS.resolveAllFor(actor).size();
-		int indexAccount = (int)(Math.random()*accounts + 1);
+		int indexAccount = (int)(Math.random()*accounts);
 		actor.attemptsTo(SelectFromOptions.byVisibleText("SAVINGS").from(OpenAccountPage.SELECT_TYPE), 
 				SelectFromOptions.byIndex(indexAccount).from(OpenAccountPage.SELECT_ACCOUNT),
 				Click.on(OpenAccountPage.BTN_OPEN_NEW));
