@@ -15,7 +15,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 import org.hamcrest.core.IsEqual;
 
-import com.sophos.semillero.questions.Result;
+import com.sophos.semillero.questions.TextObtained;
 import com.sophos.semillero.tasks.GoToHomePage;
 import com.sophos.semillero.tasks.GoToOpenAccountPage;
 import com.sophos.semillero.tasks.Login;
@@ -42,7 +42,7 @@ public class OpenAccountStepDefinitions {
 	@When("Valido que la apertura haya sido confirmada")
 	public void validoQueLaAperturaHayaSidoConfirmada() {
 		String strMessage = "Account Opened!";
-		theActorInTheSpotlight().should(seeThat(Result.in(OpenAccountPage.TXT_SUCCESS), IsEqual.equalTo(strMessage)));
+		theActorInTheSpotlight().should(seeThat(TextObtained.in(OpenAccountPage.TXT_SUCCESS), IsEqual.equalTo(strMessage)));
 	}
 
 	@Then("Vuelvo al menu principal")
@@ -55,7 +55,7 @@ public class OpenAccountStepDefinitions {
 		String numCuenta = theActorInTheSpotlight().recall("NUM_NUEVACUENTA");
 
 		theActorInTheSpotlight().should(
-				seeThat(Result.in(HomePage.TXT_NEWACCOUNTNUMBERINLIST.of(numCuenta)), IsEqual.equalTo(numCuenta)));
+				seeThat(TextObtained.in(HomePage.TXT_NEWACCOUNTNUMBERINLIST.of(numCuenta)), IsEqual.equalTo(numCuenta)));
 	}
 
 	@Before("")

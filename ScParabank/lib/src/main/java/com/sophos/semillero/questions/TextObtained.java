@@ -5,11 +5,11 @@ import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 import net.serenitybdd.screenplay.targets.Target;
 
-public class Result implements Question<String> {
+public class TextObtained implements Question<String> {
 
 	private Target strObtenido;
 
-	public Result(Target strObtenido) {
+	public TextObtained(Target strObtenido) {
 		this.strObtenido = strObtenido;
 	}
 
@@ -18,8 +18,8 @@ public class Result implements Question<String> {
 		return Text.of(strObtenido).viewedBy(actor).asString();
 	}
 
-	public static Result in(Target text) {
-		return new Result(text);
+	public static TextObtained in(Target text) {
+		return new TextObtained(text);
 	}
 
 }

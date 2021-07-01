@@ -15,7 +15,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 import org.hamcrest.core.IsEqual;
 
-import com.sophos.semillero.questions.Result;
+import com.sophos.semillero.questions.TextObtained;
 import com.sophos.semillero.tasks.GoToHomePage;
 import com.sophos.semillero.tasks.Login;
 import com.sophos.semillero.tasks.OpenAccount;
@@ -36,7 +36,7 @@ public class LoginStepDefinitions {
 	@Then("Valido que haya iniciado sesion satisfactoriamente")
 	public void validoQueHayaIniciadoSesionSatisfactoriamente() {
 		String strTitle = "Account Services";
-		theActorInTheSpotlight().should(seeThat(Result.in(HomePage.TXT_WELCOME_MSG), IsEqual.equalTo(strTitle)));
+		theActorInTheSpotlight().should(seeThat(TextObtained.in(HomePage.TXT_WELCOME_MSG), IsEqual.equalTo(strTitle)));
 	}
 
 	@Before("")
