@@ -16,7 +16,7 @@ public class Print implements Question<String>{
 	@Override
 	public String answeredBy(Actor actor) {
 		System.out.println("Saldo en la cuenta: "+Text.of(strSaldoCuenta).viewedBy(actor).asString());
-		return "validado";
+		return Text.of(strSaldoCuenta).viewedBy(actor).asString();
 	}
 	
 	public static Print available(Target txtSaldo) {

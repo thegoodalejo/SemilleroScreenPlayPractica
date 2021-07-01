@@ -3,7 +3,6 @@ package com.sophossolutions.tasks;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-import com.sophossolutions.ui.AccountsPage;
 import com.sophossolutions.ui.OpenAccountPage;
 
 import net.serenitybdd.screenplay.Actor;
@@ -19,9 +18,10 @@ public class OpenNew implements Task {
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {
-		actor.attemptsTo(Click.on(AccountsPage.LINK_OPEN_ACCOUNT),
-				SelectFromOptions.byVisibleText("SAVINGS").from(OpenAccountPage.SELECT_TYPE), 
-				SelectFromOptions.byIndex(7).from(OpenAccountPage.SELECT_ACCOUNT),
+		int accounts = OpenAccountPage.ACCOUNT_OPTIONS.resolveAllFor(actor).size();
+		int indexAccount = (int)(Math.random()*accounts + 1);
+		actor.attemptsTo(SelectFromOptions.byVisibleText("SAVINGS").from(OpenAccountPage.SELECT_TYPE), 
+				SelectFromOptions.byIndex(indexAccount).from(OpenAccountPage.SELECT_ACCOUNT),
 				Click.on(OpenAccountPage.BTN_OPEN_NEW));
 	}
 

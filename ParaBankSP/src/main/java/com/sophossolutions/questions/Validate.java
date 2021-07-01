@@ -16,7 +16,7 @@ public class Validate implements Question<String>{
 	@Override
 	public String answeredBy(Actor actor) {
 		System.out.println("Numero de cuenta: "+Text.of(strNumCuenta).viewedBy(actor).asString());
-		return "validado";
+		return Text.of(strNumCuenta).viewedBy(actor).asString();
 	}
 	
 	public static Validate account(Target txtNumero) {
