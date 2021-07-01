@@ -10,6 +10,8 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
+import net.serenitybdd.screenplay.questions.Text;
+
 
 public class OpenAccount implements Task {
 
@@ -23,18 +25,15 @@ public class OpenAccount implements Task {
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {
-		actor.attemptsTo(Click.on(HomePage.BTN_OPENACCOUNT),
+		actor.attemptsTo(
 				SelectFromOptions.byVisibleText(strAccountType).from(OpenAccountPage.FORM_ACCOUNTTYPES),
 				SelectFromOptions.byValue(String.valueOf(numStartingBalance)).from(OpenAccountPage.FORM_STARTINGBALANCES),
 				Click.on(OpenAccountPage.BTN_OPENNEWACCOUNT)
 				);
+		actor.remember("NUM_NUEVACUENTA", Text.of(OpenAccountPage.TXT_NEWACCOUNTNUMBER).viewedBy(actor).asString());
 	}
 
-	public static OpenAccount clickingOnOpenAccount(String strAccountType, int numStartingBalance) {
-		return instrumented(OpenAccount.class, strAccountType, numStartingBalance);
-	}
-	
-	public static OpenAccount saveAndGoBackToAccountsOverview(String strAccountType, int numStartingBalance) {
+	public static OpenAccount choosingTheProperOptions(String strAccountType, int numStartingBalance) {
 		return instrumented(OpenAccount.class, strAccountType, numStartingBalance);
 	}
 	

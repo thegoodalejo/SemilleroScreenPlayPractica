@@ -11,7 +11,5 @@ public class OpenAccountPage {
 	public static final Target TXT_SUCCESS = Target.the("Account opening success").locatedBy("//*[text()='Account Opened!']");
 	public static final Target TXT_NEWACCOUNTNUMBER = Target.the("New account number").locatedBy("//a[@id='newAccountId']");
 	public static final Target BTN_OPENNEWACCOUNT = Target.the("Button open new account").locatedBy("//input[@value='Open New Account']");
-
-	public static String strNewAccountNumber;
 	
 }

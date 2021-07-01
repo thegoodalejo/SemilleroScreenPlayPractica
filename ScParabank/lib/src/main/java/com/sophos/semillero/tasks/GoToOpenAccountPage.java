@@ -11,19 +11,19 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
 
-public class GoToAccountsOverview implements Task {
+public class GoToOpenAccountPage implements Task {
 
-	public GoToAccountsOverview() {
+	public GoToOpenAccountPage() {
 	}
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {
-		actor.attemptsTo(Click.on(HomePage.BTN_ACCOUNTSOVERVIEW)
+		actor.attemptsTo(Click.on(HomePage.BTN_OPENACCOUNT)
 				);
 	}
 
-	public static GoToAccountsOverview usingButtonOnTheLeftPanel() {
-		return instrumented(GoToAccountsOverview.class);
+	public static GoToOpenAccountPage usingButtonOnTheLeftPanel() {
+		return instrumented(GoToOpenAccountPage.class);
 	}
 	
 }
