@@ -1,1 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Comprobar la creacion de un nuevo usuario" skipped="0" tests="1" time="28.31" timestamp="2021-06-29 03:51:39"><testcase name="Creacion de un nuevo usuario"/></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Comprobar la creacion de un nuevo usuario" skipped="0" tests="1" time="35.15" timestamp="2021-06-30 08:54:09"><testcase name="Creacion de un nuevo usuario"><error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//b[contains(text(), 'Welcome')]&quot;}&#10;  (Session info: chrome=91.0.4472.124)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'SSBOG5CG1097QPX', ip: '192.168.100.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\JUAN~1.BLA\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:60603}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: dbfd90dc7981d0c74f1ab077bcca69d0&#10;*** Element info: {Using=xpath, value=//b[contains(text(), 'Welcome')]}" type="org.openqa.selenium.NoSuchElementException">no such element: Unable to locate element: {"method":"xpath","selector":"//b[contains(text(), 'Welcome')]"}
+  (Session info: chrome=91.0.4472.124)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SSBOG5CG1097QPX', ip: '192.168.100.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\JUAN~1.BLA\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:60603}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: dbfd90dc7981d0c74f1ab077bcca69d0
+*** Element info: {Using=xpath, value=//b[contains(text(), 'Welcome')]}</error><system-err>no such element: Unable to locate element: {"method":"xpath","selector":"//b[contains(text(), 'Welcome')]"}
+  (Session info: chrome=91.0.4472.124)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SSBOG5CG1097QPX', ip: '192.168.100.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\JUAN~1.BLA\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:60603}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: dbfd90dc7981d0c74f1ab077bcca69d0
+*** Element info: {Using=xpath, value=//b[contains(text(), 'Welcome')]}&#13;
+com.sophossolutions.semillero.tasks.Login.performAs(Login.java:33)&#13;
+com.sophossolutions.stepdefinitions.StepDefinitionsLogin.usandoLasCredencialesUsuarioYClave(StepDefinitionsLogin.java:35)&#13;
+io.cucumber.java.Invoker.invoke(Invoker.java:27)&#13;
+io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)&#13;
+io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)&#13;
+io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)&#13;
+io.cucumber.core.runner.TestStep.run(TestStep.java:49)&#13;
+io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)&#13;
+io.cucumber.core.runner.TestCase.run(TestCase.java:51)&#13;
+io.cucumber.core.runner.Runner.runPickle(Runner.java:67)&#13;
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)&#13;
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)&#13;
+io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:227)&#13;
+io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:54)&#13;
+org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)&#13;
+org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:768)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)&#13;
+</system-err></testcase></testsuite>
