@@ -32,8 +32,8 @@ public class RegistroBancoStepDefinitions {
 	
 	@Given("Deseo acceder a la vista agregar nueva cuenta")
 	public void deseoAccederALaVistaAgregarNuevaCuenta() {
-		//temporalmente ya que la pagina esta averiada 
-		theActorCalled("Andres Lopez").should(seeThat(the(LoginPage.LOGIN_TABLE), isVisible()));
+		
+		theActorCalled("Andres Lopez").should(seeThat(the(ListAcounts.ACCOUNT_TABLE), isVisible()));
 	}
 
 	@When("Registrar una nueva cuenta {string}")
