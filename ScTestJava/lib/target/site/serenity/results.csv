@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Buscar un producto","Buscar producto","ERROR","2021-06-28T17:32:30.267-05:00[America/Bogota]","0.0","43.62"
+"Iniciar sesion en Guru","Iniciar sesion en Guru","SUCCESS","2021-06-28T12:04:33.0721277-05:00[America/Bogota]","0.0","20.02"
+"Crear una cuenta de ahorros","Automate creation of savings account","PENDING","2021-06-30T14:17:34.4725712-05:00[America/Bogota]","0.0","9.58"
+"Crear una cuenta bancaria","Buscar producto","SUCCESS","2021-06-30T08:55:52.8753845-05:00[America/Bogota]","0.0","18.41"

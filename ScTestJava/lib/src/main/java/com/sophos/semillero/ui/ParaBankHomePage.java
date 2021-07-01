@@ -16,6 +16,8 @@ public class ParaBankHomePage {
 	public static final Target BTN_ONA = Target.the("Boton para crear cuenta").located(By.xpath("//input[@value='Open New Account']"));
 	public static final Target ENLA_AO = Target.the("Link para ver las cuentas creadas").located(By.xpath("//a[@href='/parabank/overview.htm']"));
 	public static final Target NC_NEW = Target.the("Numero generado de la nueva cuenta").located(By.xpath("//a[@id='newAccountId']"));
+	public static final Target TITLE_PAGE = Target.the("Numero de cuenta en la tabla").locatedBy("//h1[text()='Accounts Overview']");
 	public static final Target NC_TABLA = Target.the("Numero de cuenta en la tabla").locatedBy("//a[text()='{0}']");
-	public static final Target NC_BALANCE = Target.the("el balance de cuenta en la tabla").locatedBy("//a[text()='{0}']");
+	public static final Target NC_OPTIONS = Target.the("Numero de cuenta en la tabla").locatedBy("//a[text()='{0}']");
+	public static final Target NC_BALANCE = Target.the("el balance de cuenta en la tabla").locatedBy("//a[text()='{0}']//ancestor::td/following-sibling::td");
 }

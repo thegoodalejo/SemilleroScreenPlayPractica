@@ -7,3 +7,5 @@
 1624982349931	Rename type 'ParaBankLogin'
 1624982837057	Rename type 'AliExpressHomePage'
 1624988181656	Rename type 'Result'
+1625077945579	Rename type 'ParaBankStepDefinitions'
+1625079954712	Rename resource 'ParaBank.feature'

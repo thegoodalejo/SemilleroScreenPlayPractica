@@ -6,18 +6,18 @@ import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 import net.serenitybdd.screenplay.targets.Target;
 
+
 public class TextValue implements Question<String>{
 
-	public static String NumeroCuenta;
-	private Target NumerocuentaT;
-	
+	private Target NumeroCuenta;
 	
 	public TextValue(Target numeroCuenta) {
-		this.NumerocuentaT = numeroCuenta;
+		this.NumeroCuenta = numeroCuenta;
 	}
 	@Override
-	public String answeredBy(Actor actor) {
-		return Text.of(NumerocuentaT).viewedBy(actor).asString();
+	public String answeredBy(Actor actor) {	
+		
+		return Text.of(NumeroCuenta).viewedBy(actor).asString();
 	}
 	
 	public static TextValue  in(Target numeroCuenta) {

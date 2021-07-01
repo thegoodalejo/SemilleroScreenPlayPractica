@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
 		glue = "com.sophos.semillero.stepdefinitions",
-		features = "src/test/resources/features/ParaBank.feature",
+		features = "src/test/resources/features/CrearCuentaParaBank.feature",
 		snippets = SnippetType.CAMELCASE,
 		strict = true
 		)

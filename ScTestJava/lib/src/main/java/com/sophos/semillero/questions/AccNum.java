@@ -7,18 +7,18 @@ import net.serenitybdd.screenplay.targets.Target;
 
 public class AccNum implements Question<String>{
 
-	private Target NumeroCuenta;
+	private Target Balance;
 	
-	public AccNum(Target numeroCuenta) {
-		this.NumeroCuenta = numeroCuenta;
+	public AccNum(Target balance) {
+		this.Balance = balance;
 	}
 	
 	@Override
 	public String answeredBy(Actor actor) {
-		return Text.of(NumeroCuenta).viewedBy(actor).asString();
+		return Text.of(Balance).viewedBy(actor).asString();
 	}
 
-	public static AccNum in(Target numeroCuenta) {
-		return new AccNum(numeroCuenta);
+	public static AccNum in(Target balance) {
+		return new AccNum(balance);
 	}
 }

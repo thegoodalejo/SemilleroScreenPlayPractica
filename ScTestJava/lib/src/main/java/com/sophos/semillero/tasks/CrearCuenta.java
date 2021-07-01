@@ -8,27 +8,32 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
 
+
 public class CrearCuenta implements Task{
 
-	private String NumeroCuenta;
 	
+	private String TipoCuenta;
 	
-	public CrearCuenta(String numeroCuenta) {
-		this.NumeroCuenta = numeroCuenta;
+	public CrearCuenta(String tipoCuenta) {
+		this.TipoCuenta = tipoCuenta;
 	}
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 		//SelectFromOptions.byVisibleText(Password).from(null)
+		int accounts = ParaBankHomePage.NC_OPTIONS.resolveAllFor(actor).size();
+		
+		int randomValue = 1 + (int)(Math.random() * accounts);
+		
 		actor.attemptsTo(
-				Click.on(ParaBankHomePage.ENLA_NEW_ACCOUNT),
-				SelectFromOptions.byVisibleText("SAVINGS").from(ParaBankHomePage.LISTA_TC),
-				SelectFromOptions.byVisibleText(NumeroCuenta).from(ParaBankHomePage.LISTA_NC),
+				SelectFromOptions.byVisibleText(TipoCuenta).from(ParaBankHomePage.LISTA_TC),
+				SelectFromOptions.byIndex(randomValue).from(ParaBankHomePage.LISTA_NC),
 				Click.on(ParaBankHomePage.BTN_ONA));
-				//, Click.on(ParaBankHomePage.ENLA_AO
+				
 	}
 	
-	public static CrearCuenta in (String numeroCuenta ) {
-		return instrumented(CrearCuenta.class, numeroCuenta);
+	public static CrearCuenta with (String tipoCuenta) {
+		return instrumented(CrearCuenta.class, tipoCuenta);
 	}
+	
 
 }
