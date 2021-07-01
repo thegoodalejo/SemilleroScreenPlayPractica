@@ -8,11 +8,11 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 
-public class ParaBankAccounts implements Task {
+public class BankAccounts implements Task {
 
 		
 	
-	public ParaBankAccounts() {
+	public BankAccounts() {
 		
 	}
 	
@@ -23,8 +23,8 @@ public class ParaBankAccounts implements Task {
 				);
 	}
 	
-	public static ParaBankAccounts seeList () {
-		return instrumented(ParaBankAccounts.class);
+	public static BankAccounts seeList () {
+		return instrumented(BankAccounts.class);
 	}
 
 }
