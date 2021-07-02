@@ -23,21 +23,22 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 
 public class RegisterAcountStepDefinition
 {
+	
 	@Given("Quiero estar en la pagina que muestra las cuentas")
 	public void quieroEstarEnLaPaginaQueMuestraLasCuentas()
 	{
-		theActorCalled(Constants.actor).should(seeThat(the(ParabankLogin.VISIBLE_TABLE), isVisible()));
+		theActorCalled(Constants.ACTOR_NAME).should(seeThat(the(ParabankLogin.VISIBLE_TABLE), isVisible()));
 	}
 
 	@When("Registrar nueva cuenta de tipo {string}")
 	public void registrarNuevaCuentaDeTipo(String strTypeAcount)
 	{
-	    theActorCalled(Constants.actor).wasAbleTo(RegisterAcountTask.withType(strTypeAcount));
+	    theActorCalled(Constants.ACTOR_NAME).wasAbleTo(RegisterAcountTask.withType(strTypeAcount));
 	}
 
 	@Then("Deberia encontrar la cuenta nueva")
 	public void deberiaEncontrarLaCuentaNueva()
-	{	String numberAcount = theActorInTheSpotlight().recall(Constants.remember);
+	{	String numberAcount = theActorInTheSpotlight().recall(Constants.REMEMBER);
 		theActorInTheSpotlight().should(seeThat(NumberAcount.withNumber(RegisterAcount.NEW_NUMBER_ACOUNT.of(numberAcount)),IsEqual.equalTo(numberAcount)));
 	}
 
@@ -46,4 +47,6 @@ public class RegisterAcountStepDefinition
 	{	
 		setTheStage(new OnlineCast());
 	}
+	
+	
 }

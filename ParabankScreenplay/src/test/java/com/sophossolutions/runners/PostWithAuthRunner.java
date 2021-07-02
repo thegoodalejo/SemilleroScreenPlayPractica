@@ -9,9 +9,8 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
 		glue= "com.sophossolutions.stepdefinitions",
-		features= "src/test/resources/com/sophossolutions/features/background.feature",
-		snippets= SnippetType.CAMELCASE
-	//	,strict = true
-		)
-public class RegisterRunner
-{}
+		features= "src/test/resources/com/sophossolutions/features/post_with_auth.feature",
+		snippets= SnippetType.CAMELCASE)
+public class PostWithAuthRunner {
+
+}

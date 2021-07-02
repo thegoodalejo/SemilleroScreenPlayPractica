@@ -27,7 +27,7 @@ public class RegisterAcountTask implements Task
 			SelectFromOptions.byVisibleText(strTypeAcount).from(RegisterAcount.TYPE_ACOUNT_OPTIONS),
 			SelectFromOptions.byIndex(2).from(RegisterAcount.NUMBER_ACOUNT_OPTIONS),
 			Click.on(RegisterAcount.BTN_NEW_ACOUNT));
-		actor.remember(Constants.remember, Text.of(RegisterAcount.NEW_ACOUNT).viewedBy(actor).asString());
+		actor.remember(Constants.REMEMBER, Text.of(RegisterAcount.NEW_ACOUNT).viewedBy(actor).asString());
 	}
 	
 	public static RegisterAcountTask withType(String strTypeAcount)
