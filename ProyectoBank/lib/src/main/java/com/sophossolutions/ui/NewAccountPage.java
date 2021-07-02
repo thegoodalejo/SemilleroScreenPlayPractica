@@ -12,6 +12,5 @@ public class NewAccountPage {
 	public static final Target BTN_NEWACCOUNT = Target.the("Button new open account").located(By.xpath("//input[contains(@value,'Open New')]"));
 	public static final Target TEXT_IDNEWACCOUNT = Target.the("Text ID new account").located(By.id("newAccountId"));
 	public static final Target BTN_ACCOUNTS = Target.the("Button open accounts").located(By.xpath("//a[contains(@href,'overview.htm')]"));
-	public static String strNumberAccount;
-
+	
 }

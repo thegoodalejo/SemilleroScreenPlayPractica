@@ -7,6 +7,7 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import com.sophossolutions.ui.LoginBankPage;
+import com.sophossolutions.interactions.VectorizeStrings;
 
 public class LoginBank implements Task {
 	
@@ -24,10 +25,11 @@ public class LoginBank implements Task {
 	
 	@Override
 	public <T extends Actor> void performAs(T actor) {
-		String[] strUserData1 = strUserData.toString().split("-");
-		actor.attemptsTo(Enter.theValue(strUserData1[0]).into(LoginBankPage.TXT_USERNAME),
-				Enter.theValue(strUserData1[1]).into(LoginBankPage.TXT_PASSWORD),
-				Click.on(LoginBankPage.BTN_LOGIN));
+			
+			actor.attemptsTo(VectorizeStrings.of(strUserData));			
+			actor.attemptsTo(Enter.theValue(actor.recall("STRING_VECTOR_0").toString()).into(LoginBankPage.TXT_USERNAME),
+					Enter.theValue(actor.recall("STRING_VECTOR_1").toString()).into(LoginBankPage.TXT_PASSWORD),
+					Click.on(LoginBankPage.BTN_LOGIN));
 	}
 	
 	

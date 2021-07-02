@@ -1,0 +1,178 @@
+<html><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>ParaBank | Open Account</title>
+		<link href="/parabank/template.css" rel="stylesheet" type="text/css">
+		<link href="/parabank/style.css" rel="stylesheet" type="text/css">
+		<script src="/parabank/webjars/angularjs/1.6.9/angular.min.js"></script>
+	</head>
+
+	<body>
+		<div id="mainPanel">
+			
+				
+				
+					
+
+
+
+<div id="topPanel">
+  <a href="/parabank/admin.htm"><img src="/parabank/images/clear.gif" width="56" height="42" border="0" class="admin"></a>
+  <a href="/parabank/index.htm"><img src="/parabank/images/logo.gif" alt="ParaBank" width="136" height="31" border="0" class="logo" title="ParaBank"></a>
+  <p class="caption">Experience the difference</p>
+</div>
+<div id="headerPanel" style="background: url(/parabank/images/header-customer.jpg) 0 0 no-repeat;">
+  
+
+
+<ul class="leftmenu">
+  <li class="Solutions">Solutions</li>
+  <li><a href="about.htm">About Us</a></li>
+  <li><a href="services.htm">Services</a></li>
+  <li><a href="http://www.parasoft.com/jsp/products.jsp">Products</a></li>
+  <li><a href="http://www.parasoft.com/jsp/pr/contacts.jsp">Locations</a></li>
+  <li><a href="admin.htm">Admin Page</a></li>
+  
+</ul>
+  
+
+
+<ul class="button">
+  <li class="home"><a href="/parabank/index.htm">home</a></li>
+  <li class="aboutus"><a href="about.htm">about</a></li>
+  <li class="contact"><a href="contact.htm">contact</a></li>
+</ul>
+</div>
+				
+			
+			<div id="bodyPanel">
+				<div id="leftPanel">
+					
+						
+						
+							
+
+
+<p class="smallText"><b>Welcome</b> John Smith</p>
+
+<h2>Account Services</h2>
+
+
+
+<ul>
+  <li><a href="/parabank/openaccount.htm">Open New Account</a></li>
+  <li><a href="/parabank/overview.htm">Accounts Overview</a></li>
+  <li><a href="/parabank/transfer.htm">Transfer Funds</a></li>
+  <li><a href="/parabank/billpay.htm">Bill Pay</a></li>
+  <li><a href="/parabank/findtrans.htm">Find Transactions</a></li>
+  <li><a href="/parabank/updateprofile.htm">Update Contact Info</a></li>
+  <li><a href="/parabank/requestloan.htm">Request Loan</a></li>
+  <li><a href="/parabank/logout.htm">Log Out</a></li>
+</ul>
+						
+					
+				</div>
+				<div id="rightPanel">
+					
+
+
+
+<div ng-app="AddAccountApp" ng-controller="AddAccountCtrl" class="ng-scope">
+  <!-- ngIf: showForm --><div ng-if="showForm" class="ng-scope">
+    <h1 class="title">Open New Account</h1>
+    <form ng-submit="submit()" class="ng-pristine ng-valid">
+      <p><b>What type of Account would you like to open?</b></p>
+      <select id="type" class="input ng-pristine ng-untouched ng-valid ng-not-empty" ng-init="types.selectedOption = '0'" ng-model="types.selectedOption">
+        
+          <option value="0" selected="selected">CHECKING</option>
+        
+          <option value="1">SAVINGS</option>
+        
+      </select>
+      <br><br>
+      
+      <p><b>A minimum of 100,00 $ must be deposited into this account at time of opening. Please choose an existing account to transfer funds into the new account.</b></p>
+      <select id="fromAccountId" class="input ng-pristine ng-untouched ng-valid ng-not-empty" ng-init="getAccounts()" ng-model="accounts.selectedOption" ng-options="account.id for account in accounts track by account.id"><option label="13344" value="13344" selected="selected">13344</option><option label="14454" value="14454">14454</option><option label="14676" value="14676">14676</option><option label="14787" value="14787">14787</option><option label="15120" value="15120">15120</option><option label="15786" value="15786">15786</option><option label="16008" value="16008">16008</option><option label="16896" value="16896">16896</option><option label="17340" value="17340">17340</option><option label="17451" value="17451">17451</option><option label="17673" value="17673">17673</option><option label="17784" value="17784">17784</option><option label="19116" value="19116">19116</option><option label="19227" value="19227">19227</option><option label="19560" value="19560">19560</option><option label="19671" value="19671">19671</option><option label="19893" value="19893">19893</option><option label="20004" value="20004">20004</option><option label="20337" value="20337">20337</option><option label="20448" value="20448">20448</option><option label="20559" value="20559">20559</option><option label="20781" value="20781">20781</option><option label="20892" value="20892">20892</option><option label="21003" value="21003">21003</option><option label="21114" value="21114">21114</option><option label="21336" value="21336">21336</option><option label="21447" value="21447">21447</option><option label="21558" value="21558">21558</option><option label="21780" value="21780">21780</option><option label="21891" value="21891">21891</option><option label="22002" value="22002">22002</option><option label="22113" value="22113">22113</option><option label="22335" value="22335">22335</option><option label="22446" value="22446">22446</option><option label="22557" value="22557">22557</option><option label="22668" value="22668">22668</option><option label="22779" value="22779">22779</option><option label="22890" value="22890">22890</option><option label="23001" value="23001">23001</option><option label="23112" value="23112">23112</option><option label="23223" value="23223">23223</option><option label="23334" value="23334">23334</option><option label="23445" value="23445">23445</option><option label="23556" value="23556">23556</option><option label="23667" value="23667">23667</option><option label="23778" value="23778">23778</option><option label="23889" value="23889">23889</option><option label="24000" value="24000">24000</option><option label="24111" value="24111">24111</option><option label="24444" value="24444">24444</option><option label="24555" value="24555">24555</option><option label="24666" value="24666">24666</option><option label="24888" value="24888">24888</option><option label="24999" value="24999">24999</option><option label="25221" value="25221">25221</option><option label="25887" value="25887">25887</option><option label="26109" value="26109">26109</option><option label="26220" value="26220">26220</option><option label="26331" value="26331">26331</option><option label="26442" value="26442">26442</option><option label="26553" value="26553">26553</option><option label="26664" value="26664">26664</option><option label="26775" value="26775">26775</option><option label="26886" value="26886">26886</option><option label="26997" value="26997">26997</option><option label="27108" value="27108">27108</option><option label="27219" value="27219">27219</option><option label="27330" value="27330">27330</option><option label="27441" value="27441">27441</option><option label="27552" value="27552">27552</option><option label="27663" value="27663">27663</option><option label="27885" value="27885">27885</option><option label="27996" value="27996">27996</option><option label="29994" value="29994">29994</option><option label="30327" value="30327">30327</option><option label="30438" value="30438">30438</option><option label="30549" value="30549">30549</option><option label="30660" value="30660">30660</option><option label="30771" value="30771">30771</option><option label="30882" value="30882">30882</option><option label="31104" value="31104">31104</option><option label="31215" value="31215">31215</option><option label="31326" value="31326">31326</option><option label="31437" value="31437">31437</option><option label="31548" value="31548">31548</option><option label="31659" value="31659">31659</option><option label="31770" value="31770">31770</option><option label="31881" value="31881">31881</option><option label="31992" value="31992">31992</option><option label="32103" value="32103">32103</option><option label="32214" value="32214">32214</option><option label="32325" value="32325">32325</option><option label="32547" value="32547">32547</option><option label="32658" value="32658">32658</option><option label="32769" value="32769">32769</option><option label="32880" value="32880">32880</option><option label="32991" value="32991">32991</option><option label="33213" value="33213">33213</option><option label="33324" value="33324">33324</option><option label="33435" value="33435">33435</option><option label="33546" value="33546">33546</option><option label="33657" value="33657">33657</option><option label="33768" value="33768">33768</option><option label="33879" value="33879">33879</option><option label="33990" value="33990">33990</option><option label="34101" value="34101">34101</option><option label="34212" value="34212">34212</option><option label="34323" value="34323">34323</option><option label="34434" value="34434">34434</option><option label="34545" value="34545">34545</option><option label="34656" value="34656">34656</option><option label="34767" value="34767">34767</option><option label="34878" value="34878">34878</option><option label="34989" value="34989">34989</option><option label="35877" value="35877">35877</option><option label="36210" value="36210">36210</option><option label="36321" value="36321">36321</option><option label="36432" value="36432">36432</option><option label="36543" value="36543">36543</option><option label="36654" value="36654">36654</option><option label="36765" value="36765">36765</option><option label="36987" value="36987">36987</option><option label="37098" value="37098">37098</option><option label="37320" value="37320">37320</option><option label="37431" value="37431">37431</option><option label="37653" value="37653">37653</option><option label="37875" value="37875">37875</option><option label="37986" value="37986">37986</option><option label="38097" value="38097">38097</option><option label="38208" value="38208">38208</option><option label="38319" value="38319">38319</option></select>
+      <br><br>
+      <div><input type="submit" class="button" value="Open New Account"></div>
+    </form>
+  </div><!-- end ngIf: showForm -->
+
+  <!-- ngIf: showResult -->
+
+  <!-- ngIf: showError -->
+</div>
+
+<script>
+    var app = angular.module('AddAccountApp', []);
+    app.controller('AddAccountCtrl', function($scope, $http) {
+
+        $scope.showForm = true;
+        $scope.showResult = false;
+        $scope.showError = false;
+        $scope.types = [];
+        $scope.types.selectedOption;
+
+        $scope.getAccounts = function() {
+            $http.get("services_proxy/bank/customers/12212/accounts", {timeout:30000})
+                .then(function(response) {
+                    $scope.accounts = response.data;
+                    $scope.accounts.selectedOption = $scope.accounts[0];
+                })
+                .catch(function(response) {
+                    showError(response);
+                });
+        }
+
+        $scope.submit = function() {
+            var url = "services_proxy/bank/createAccount?customerId=12212&newAccountType="+ $scope.types.selectedOption + "&fromAccountId=" + $scope.accounts.selectedOption.id;
+            $http.post(url, "", {timeout:30000})
+                .then(function(response) {
+                    $scope.showForm = false;
+                    $scope.showResult = true;
+                    $scope.newAccountId = response.data.id;
+                    $scope.newAccountUrl = "activity.htm" + "?id=" + $scope.newAccountId;
+                })
+                .catch(function(response) {
+                    showError(response);
+                });
+        }
+        
+        function showError(error) {
+            $scope.showForm = false;
+            $scope.showResult = false;
+            $scope.showError = true;
+            var status = error.status > 0 ? error.status : "timeout";
+            var data = error.data ? error.data : "Server timeout"
+            console.error("Server returned " + status + ": " + data);
+        }
+    });
+</script>
+				</div>
+			</div>
+		</div>
+		
+
+
+<div id="footermainPanel">
+  <div id="footerPanel">
+    <ul>
+      <li><a href="/parabank/index.htm">Home</a>| </li>
+      <li><a href="about.htm">About Us</a>| </li>
+      <li><a href="services.htm">Services</a>| </li>
+      <li><a href="http://www.parasoft.com/jsp/products.jsp">Products</a>| </li>
+      <li><a href="http://www.parasoft.com/jsp/pr/contacts.jsp">Locations</a>| </li>
+      <li><a href="http://forums.parasoft.com/">Forum</a>| </li>
+      <li><a href="/parabank/sitemap.htm">Site Map</a>| </li>
+      <li><a href="contact.htm">Contact Us</a></li>
+    </ul>
+    <p class="copyright">© Parasoft. All rights reserved.</p>
+    <ul class="visit">
+      <li>Visit us at:</li>
+      <li><a href="http://www.parasoft.com/" target="_blank">www.parasoft.com</a></li>
+    </ul>
+  </div>
+</div>
+	
+
+</body></html>

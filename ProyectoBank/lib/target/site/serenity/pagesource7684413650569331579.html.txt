@@ -1,0 +1,727 @@
+<html><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>ParaBank | Accounts Overview</title>
+		<link href="/parabank/template.css" rel="stylesheet" type="text/css">
+		<link href="/parabank/style.css" rel="stylesheet" type="text/css">
+		<script src="/parabank/webjars/angularjs/1.6.9/angular.min.js"></script>
+	</head>
+
+	<body>
+		<div id="mainPanel">
+			
+				
+				
+					
+
+
+
+<div id="topPanel">
+  <a href="/parabank/admin.htm"><img src="/parabank/images/clear.gif" width="56" height="42" border="0" class="admin"></a>
+  <a href="/parabank/index.htm"><img src="/parabank/images/logo.gif" alt="ParaBank" width="136" height="31" border="0" class="logo" title="ParaBank"></a>
+  <p class="caption">Experience the difference</p>
+</div>
+<div id="headerPanel" style="background: url(/parabank/images/header-customer.jpg) 0 0 no-repeat;">
+  
+
+
+<ul class="leftmenu">
+  <li class="Solutions">Solutions</li>
+  <li><a href="about.htm">About Us</a></li>
+  <li><a href="services.htm">Services</a></li>
+  <li><a href="http://www.parasoft.com/jsp/products.jsp">Products</a></li>
+  <li><a href="http://www.parasoft.com/jsp/pr/contacts.jsp">Locations</a></li>
+  <li><a href="admin.htm">Admin Page</a></li>
+  
+</ul>
+  
+
+
+<ul class="button">
+  <li class="home"><a href="/parabank/index.htm">home</a></li>
+  <li class="aboutus"><a href="about.htm">about</a></li>
+  <li class="contact"><a href="contact.htm">contact</a></li>
+</ul>
+</div>
+				
+			
+			<div id="bodyPanel">
+				<div id="leftPanel">
+					
+						
+						
+							
+
+
+<p class="smallText"><b>Welcome</b> John Smith</p>
+
+<h2>Account Services</h2>
+
+
+
+<ul>
+  <li><a href="/parabank/openaccount.htm">Open New Account</a></li>
+  <li><a href="/parabank/overview.htm">Accounts Overview</a></li>
+  <li><a href="/parabank/transfer.htm">Transfer Funds</a></li>
+  <li><a href="/parabank/billpay.htm">Bill Pay</a></li>
+  <li><a href="/parabank/findtrans.htm">Find Transactions</a></li>
+  <li><a href="/parabank/updateprofile.htm">Update Contact Info</a></li>
+  <li><a href="/parabank/requestloan.htm">Request Loan</a></li>
+  <li><a href="/parabank/logout.htm">Log Out</a></li>
+</ul>
+						
+					
+				</div>
+				<div id="rightPanel">
+					
+
+
+<div ng-app="OverviewAccountsApp" ng-controller="OverviewAccountsCtrl" class="ng-scope">
+  <!-- ngIf: showOverview --><div ng-if="showOverview" class="ng-scope">
+    <h1 class="title">Accounts Overview</h1>
+    <table id="accountTable" class="gradient-style">
+      <thead>
+        <tr>
+          <th>Account</th>
+          <th>Balance*</th>
+          <th>Available Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=13344" class="ng-binding">13344</a></td>
+          <td class="ng-binding">$1822.93</td>
+          <td class="ng-binding">$1822.93</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=13677" class="ng-binding">13677</a></td>
+          <td class="ng-binding">-$400.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=13788" class="ng-binding">13788</a></td>
+          <td class="ng-binding">-$400.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=14010" class="ng-binding">14010</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=14454" class="ng-binding">14454</a></td>
+          <td class="ng-binding">-$1.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=15009" class="ng-binding">15009</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=15120" class="ng-binding">15120</a></td>
+          <td class="ng-binding">-$600.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=15231" class="ng-binding">15231</a></td>
+          <td class="ng-binding">$0.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=15342" class="ng-binding">15342</a></td>
+          <td class="ng-binding">-$200.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=15453" class="ng-binding">15453</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=15564" class="ng-binding">15564</a></td>
+          <td class="ng-binding">$800.00</td>
+          <td class="ng-binding">$800.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=15675" class="ng-binding">15675</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=15786" class="ng-binding">15786</a></td>
+          <td class="ng-binding">$0.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=15897" class="ng-binding">15897</a></td>
+          <td class="ng-binding">$1000.00</td>
+          <td class="ng-binding">$1000.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=16008" class="ng-binding">16008</a></td>
+          <td class="ng-binding">$0.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=16119" class="ng-binding">16119</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=16230" class="ng-binding">16230</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=16341" class="ng-binding">16341</a></td>
+          <td class="ng-binding">-$200.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=16452" class="ng-binding">16452</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=16563" class="ng-binding">16563</a></td>
+          <td class="ng-binding">$0.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=16674" class="ng-binding">16674</a></td>
+          <td class="ng-binding">$0.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=16785" class="ng-binding">16785</a></td>
+          <td class="ng-binding">$0.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=16896" class="ng-binding">16896</a></td>
+          <td class="ng-binding">$0.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=17007" class="ng-binding">17007</a></td>
+          <td class="ng-binding">$0.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=17118" class="ng-binding">17118</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=17229" class="ng-binding">17229</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=17340" class="ng-binding">17340</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=17451" class="ng-binding">17451</a></td>
+          <td class="ng-binding">-$1700.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=17562" class="ng-binding">17562</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=17673" class="ng-binding">17673</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=17784" class="ng-binding">17784</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=17895" class="ng-binding">17895</a></td>
+          <td class="ng-binding">-$300.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=18006" class="ng-binding">18006</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=18117" class="ng-binding">18117</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=18228" class="ng-binding">18228</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=18339" class="ng-binding">18339</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=18450" class="ng-binding">18450</a></td>
+          <td class="ng-binding">-$200.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=18561" class="ng-binding">18561</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=18672" class="ng-binding">18672</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=18783" class="ng-binding">18783</a></td>
+          <td class="ng-binding">$0.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=18894" class="ng-binding">18894</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=19005" class="ng-binding">19005</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=19116" class="ng-binding">19116</a></td>
+          <td class="ng-binding">-$200.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=19227" class="ng-binding">19227</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=19338" class="ng-binding">19338</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=19449" class="ng-binding">19449</a></td>
+          <td class="ng-binding">-$200.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=19560" class="ng-binding">19560</a></td>
+          <td class="ng-binding">$0.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=19671" class="ng-binding">19671</a></td>
+          <td class="ng-binding">$0.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=19782" class="ng-binding">19782</a></td>
+          <td class="ng-binding">$0.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=19893" class="ng-binding">19893</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=20004" class="ng-binding">20004</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=20115" class="ng-binding">20115</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=20226" class="ng-binding">20226</a></td>
+          <td class="ng-binding">-$300.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=20337" class="ng-binding">20337</a></td>
+          <td class="ng-binding">$0.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=20448" class="ng-binding">20448</a></td>
+          <td class="ng-binding">-$200.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=20559" class="ng-binding">20559</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=20670" class="ng-binding">20670</a></td>
+          <td class="ng-binding">-$200.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=20781" class="ng-binding">20781</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=20892" class="ng-binding">20892</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=21003" class="ng-binding">21003</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=21114" class="ng-binding">21114</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=21225" class="ng-binding">21225</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=21336" class="ng-binding">21336</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=21447" class="ng-binding">21447</a></td>
+          <td class="ng-binding">$0.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=21558" class="ng-binding">21558</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=21669" class="ng-binding">21669</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=21780" class="ng-binding">21780</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=21891" class="ng-binding">21891</a></td>
+          <td class="ng-binding">$800.00</td>
+          <td class="ng-binding">$800.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=22002" class="ng-binding">22002</a></td>
+          <td class="ng-binding">$900.00</td>
+          <td class="ng-binding">$900.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=22113" class="ng-binding">22113</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=22224" class="ng-binding">22224</a></td>
+          <td class="ng-binding">$1000.00</td>
+          <td class="ng-binding">$1000.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=22335" class="ng-binding">22335</a></td>
+          <td class="ng-binding">$1000.00</td>
+          <td class="ng-binding">$1000.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=22446" class="ng-binding">22446</a></td>
+          <td class="ng-binding">$1000.00</td>
+          <td class="ng-binding">$1000.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=22557" class="ng-binding">22557</a></td>
+          <td class="ng-binding">$1000.00</td>
+          <td class="ng-binding">$1000.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=22668" class="ng-binding">22668</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=22779" class="ng-binding">22779</a></td>
+          <td class="ng-binding">$1000.00</td>
+          <td class="ng-binding">$1000.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=22890" class="ng-binding">22890</a></td>
+          <td class="ng-binding">$1000.00</td>
+          <td class="ng-binding">$1000.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=23001" class="ng-binding">23001</a></td>
+          <td class="ng-binding">$1000.00</td>
+          <td class="ng-binding">$1000.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=23112" class="ng-binding">23112</a></td>
+          <td class="ng-binding">$1000.00</td>
+          <td class="ng-binding">$1000.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=23223" class="ng-binding">23223</a></td>
+          <td class="ng-binding">$1000.00</td>
+          <td class="ng-binding">$1000.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=23445" class="ng-binding">23445</a></td>
+          <td class="ng-binding">$900.00</td>
+          <td class="ng-binding">$900.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=23556" class="ng-binding">23556</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=23667" class="ng-binding">23667</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=23778" class="ng-binding">23778</a></td>
+          <td class="ng-binding">$1000.00</td>
+          <td class="ng-binding">$1000.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=23889" class="ng-binding">23889</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=24000" class="ng-binding">24000</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=24333" class="ng-binding">24333</a></td>
+          <td class="ng-binding">$1000.00</td>
+          <td class="ng-binding">$1000.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=24555" class="ng-binding">24555</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=24666" class="ng-binding">24666</a></td>
+          <td class="ng-binding">$0.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=25110" class="ng-binding">25110</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=25221" class="ng-binding">25221</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=25443" class="ng-binding">25443</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=25554" class="ng-binding">25554</a></td>
+          <td class="ng-binding">$1000.00</td>
+          <td class="ng-binding">$1000.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=25776" class="ng-binding">25776</a></td>
+          <td class="ng-binding">$900.00</td>
+          <td class="ng-binding">$900.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=25887" class="ng-binding">25887</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=25998" class="ng-binding">25998</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=26109" class="ng-binding">26109</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=26220" class="ng-binding">26220</a></td>
+          <td class="ng-binding">-$200.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=26442" class="ng-binding">26442</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=26553" class="ng-binding">26553</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=26664" class="ng-binding">26664</a></td>
+          <td class="ng-binding">-$200.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=26775" class="ng-binding">26775</a></td>
+          <td class="ng-binding">$0.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=26886" class="ng-binding">26886</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=26997" class="ng-binding">26997</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=27108" class="ng-binding">27108</a></td>
+          <td class="ng-binding">-$200.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=27219" class="ng-binding">27219</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=27330" class="ng-binding">27330</a></td>
+          <td class="ng-binding">$0.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=27441" class="ng-binding">27441</a></td>
+          <td class="ng-binding">$22.00</td>
+          <td class="ng-binding">$22.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=27552" class="ng-binding">27552</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=27663" class="ng-binding">27663</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=27774" class="ng-binding">27774</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=27885" class="ng-binding">27885</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=27996" class="ng-binding">27996</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=28107" class="ng-binding">28107</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=28218" class="ng-binding">28218</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=28329" class="ng-binding">28329</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=28440" class="ng-binding">28440</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=28662" class="ng-binding">28662</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=28773" class="ng-binding">28773</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=28995" class="ng-binding">28995</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=29106" class="ng-binding">29106</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=29328" class="ng-binding">29328</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=29439" class="ng-binding">29439</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=29550" class="ng-binding">29550</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=29661" class="ng-binding">29661</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=29772" class="ng-binding">29772</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=29883" class="ng-binding">29883</a></td>
+          <td class="ng-binding">-$200.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=29994" class="ng-binding">29994</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=30105" class="ng-binding">30105</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=30216" class="ng-binding">30216</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=30327" class="ng-binding">30327</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=30438" class="ng-binding">30438</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=30549" class="ng-binding">30549</a></td>
+          <td class="ng-binding">-$100.00</td>
+          <td class="ng-binding">$0.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=30882" class="ng-binding">30882</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts --><tr ng-repeat="account in accounts" class="ng-scope">
+          <td><a href="activity.htm?id=30993" class="ng-binding">30993</a></td>
+          <td class="ng-binding">$100.00</td>
+          <td class="ng-binding">$100.00</td>
+        </tr><!-- end ngRepeat: account in accounts -->
+
+        <tr>
+          <td align="right"><b>Total</b></td>
+          <td><b class="ng-binding">$15243.93</b></td>
+          <td>&nbsp;</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">*Balance includes deposits that may be subject to holds
+        </td></tr>
+      </tfoot>
+    </table>
+
+  </div><!-- end ngIf: showOverview -->
+
+  <!-- ngIf: showError -->
+</div>
+
+<script>
+    var app = angular.module('OverviewAccountsApp', []);
+    app.controller('OverviewAccountsCtrl', function ($scope, $http) {
+        $scope.showOverview = true;
+        $scope.showError = false;
+        
+        $http.get("services_proxy/bank/customers/" + 12212 + "/accounts", {timeout:30000})
+            .then(function (response) {
+                $scope.accounts = [];
+                $scope.accounts = response.data;
+                $scope.totalBalance = computeTotalBalance($scope.accounts);
+
+                angular.forEach($scope.accounts, function(account) {
+                    account.availableBalance = getAvailableBalance(account);
+                });
+            })
+            .catch(function (response){
+                showError(response);
+            });
+
+        function getAvailableBalance(account) {
+            return account.balance < 0 ? 0 : account.balance;
+        }
+
+        function computeTotalBalance(accounts) {
+            var totalBalance = 0.0;
+            angular.forEach(accounts, function(account) {
+                totalBalance = totalBalance + parseFloat(account.balance, 10);
+            });
+            return totalBalance;
+        }
+        
+        function showError(error) {
+            $scope.showOverview = false;
+            $scope.showError = true;
+            var status = error.status > 0 ? error.status : "timeout";
+            var data = error.data ? error.data : "Server timeout"
+            console.error("Server returned " + status + ": " + data);
+        }
+
+    });
+
+	app.filter('commaLess', function() {
+		return function(input) {
+			return (input) ? input.toString().trim().replace(",","") : null;
+		};
+	});
+</script>
+				</div>
+			</div>
+		</div>
+		
+
+
+<div id="footermainPanel">
+  <div id="footerPanel">
+    <ul>
+      <li><a href="/parabank/index.htm">Home</a>| </li>
+      <li><a href="about.htm">About Us</a>| </li>
+      <li><a href="services.htm">Services</a>| </li>
+      <li><a href="http://www.parasoft.com/jsp/products.jsp">Products</a>| </li>
+      <li><a href="http://www.parasoft.com/jsp/pr/contacts.jsp">Locations</a>| </li>
+      <li><a href="http://forums.parasoft.com/">Forum</a>| </li>
+      <li><a href="/parabank/sitemap.htm">Site Map</a>| </li>
+      <li><a href="contact.htm">Contact Us</a></li>
+    </ul>
+    <p class="copyright">© Parasoft. All rights reserved.</p>
+    <ul class="visit">
+      <li>Visit us at:</li>
+      <li><a href="http://www.parasoft.com/" target="_blank">www.parasoft.com</a></li>
+    </ul>
+  </div>
+</div>
+	
+
+</body></html>
