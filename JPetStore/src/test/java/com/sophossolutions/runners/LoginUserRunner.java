@@ -10,8 +10,8 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 @CucumberOptions(
 		glue= "com.sophossolutions.stepdefinitions",
 		features= "src/test/resources/com/sophossolutions/features/login_user.feature",
-		snippets= SnippetType.CAMELCASE
-	//	,strict = true
+		snippets= SnippetType.CAMELCASE,
+		strict = true
 		)
 public class LoginUserRunner {
 

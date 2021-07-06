@@ -1,8 +1,8 @@
 #Author: juan.blanco@sophossolutions.com
-Feature: Title of your feature
-  I want to use this template for my feature file
+Feature: Inicio de sesion para un usuario
+  Quiero iniciar la sesion de un usuario determinado
 
-  Scenario: Title of your scenario
-    Given I want to write a step with precondition
-    When I complete action
-    Then I validate the outcomes
+  Scenario: Inicio de sesion de un Usuario
+    Given Navegar a la pagina "https://petstore.octoperf.com/actions/Catalog.action"
+    When Ingreso con el usuario "JuanSantiago" y clave "1234"
+    Then Observar la pagina inicio de sesion
