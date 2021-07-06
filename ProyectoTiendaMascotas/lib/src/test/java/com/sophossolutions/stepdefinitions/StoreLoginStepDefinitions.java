@@ -5,6 +5,7 @@ import static com.sophossolutions.ui.StoreLogin.TXT_USERNAME;
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 import org.hamcrest.core.IsEqual;
 
@@ -38,7 +39,7 @@ public class StoreLoginStepDefinitions {
 	@Then("I verify that the login is successful")
 	public void iVerifyThatTheLoginIsSuccessful() {
 		System.out.print("@THEN");
-		//theActorInTheSpotlight().should(Ensure.that(TXT_USERNAME).isDisplayed(), IsEqual.equalTo(true));
+		//theActorInTheSpotlight().should(Ensure.that(TXT_USERNAME).getSilent(), equals(true));
 	}
 	
 }
