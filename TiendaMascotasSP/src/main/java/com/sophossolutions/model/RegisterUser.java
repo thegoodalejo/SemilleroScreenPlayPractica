@@ -4,7 +4,6 @@ public class RegisterUser {
 	
 	private String strUserID;
 	private String strNewPass;
-	private String strRepPass;
 	private String stFirstName;
 	private String strLastName;
 	private String strEmail;
@@ -16,13 +15,12 @@ public class RegisterUser {
 	private String strZip;
 	private String strCountry;
 	
-	public RegisterUser(String strUserID, String strNewPass, String strRepPass, String stFirstName, String strLastName,
+	public RegisterUser(String strUserID, String strNewPass, String stFirstName, String strLastName,
 			String strEmail, String strPhone, String strAddress1, String strAddress2, String strCity, String strState,
 			String strZip, String strCountry) {
 		super();
 		this.strUserID = strUserID;
 		this.strNewPass = strNewPass;
-		this.strRepPass = strRepPass;
 		this.stFirstName = stFirstName;
 		this.strLastName = strLastName;
 		this.strEmail = strEmail;
@@ -41,10 +39,6 @@ public class RegisterUser {
 
 	public String getStrNewPass() {
 		return strNewPass;
-	}
-
-	public String getStrRepPass() {
-		return strRepPass;
 	}
 
 	public String getStFirstName() {
