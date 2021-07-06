@@ -25,6 +25,8 @@ public class Login implements Task {
 				Enter.theValue(strPassword).into(LoginPage.TXT_PASSWORD),
 				Click.on(LoginPage.BTN_LOGIN)
 				);
+	
+		
 	}
 
 	public static Login withCredentials(String strUser, String strPassword) {

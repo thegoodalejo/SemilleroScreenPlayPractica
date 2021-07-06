@@ -20,24 +20,24 @@ import com.sophos.semillero.ui.HomePage;
 
 public class LoginStepDefinitions {
 	
-	@Given("Deseo ir a la pagina de {string}")
-	public void deseoIrALaPaginaDe(String strUrl) {
-		theActorCalled("Angel Vivas").wasAbleTo(Open.url(strUrl));
-	}
-
-	@When("Ingreso nombre de usuario {string} y password {string}")
-	public void ingresoNombreDeUsuarioYPassword(String strName, String strPassword) {
-		theActorInTheSpotlight().wasAbleTo(Login.withCredentials(strName, strPassword));
-	}
-
-	@Then("Valido el inicio de sesion")
-	public void validoElInicioDeSesion() {
-		theActorInTheSpotlight().should(seeThat(the(HomePage.TXT_USER_NAME), isVisible()));	
-	}
-	
 	@Before
 	public void setup() {
 		setTheStage(new OnlineCast());
 	}
+	
+	@Given("I want to go to the website {string}")
+	public void iWantToGoToTheWebsite(String strUrl) {
+		theActorCalled("Group2").wasAbleTo(Open.url(strUrl));
+	}
 
+	@When("I enter username {string} password {string}")
+	public void iEnterUsernamePassword(String strName, String strPassword) {
+		theActorInTheSpotlight().wasAbleTo(Login.withCredentials(strName, strPassword));
+	}
+
+	@Then("I verify that i have logged in")
+	public void iVerifyThatIHaveLoggedIn() {
+		theActorInTheSpotlight().should(seeThat(the(HomePage.TXT_USER_NAME), isVisible()));
+	}
+	
 }

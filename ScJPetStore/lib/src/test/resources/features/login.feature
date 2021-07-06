@@ -1,9 +1,11 @@
-#Author: angel.vivas@sophossolutions.com
+#Author: grupo 2
+#        Angel Vivas, Maria Cala
+Feature: Log into the website JPetStore
+  I want as an automation  
+  to log into JPetStore and
+  validate that I have login
 
-Feature: Ingrear al sistema ParaBank
-	Yo como automatizador quiero iniciar sesion en ParaBank
-
-Scenario: Iniciar sesion en Para Bank
-	Given Deseo ir a la pagina de "https://petstore.octoperf.com/actions/Account.action"
-	When Ingreso nombre de usuario "MariaSophos" y password "1234"
-	Then Valido el inicio de sesion
+  Scenario: Log in to the website
+    Given I want to go to the website "https://petstore.octoperf.com/actions/Account.action"
+    When I enter username "MariaSophos" password "1234"
+    Then I verify that i have logged in
