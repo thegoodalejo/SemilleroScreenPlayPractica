@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Ingresar con credenciales a la tiende de mascotas" skipped="0" tests="1" time="13.02" timestamp="2021-07-06 03:08:11"><testcase name="Loguearme en la pagina de ParaBank"/></testsuite>
-=======
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Ingresar con credenciales a la tiende de mascotas" skipped="0" tests="1" time="15.24" timestamp="2021-07-06 12:15:09"><testcase name="Loguearme en la pagina de ParaBank"/></testsuite>
->>>>>>> 1a9e62e7a6471f3b7d3fd505bee0e2c266721b1d
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Ingresar con credenciales a la tiende de mascotas" skipped="0" tests="1" time="13.17" timestamp="2021-07-06 03:18:10"><testcase name="Loguearme en la pagina de ParaBank"/></testsuite>

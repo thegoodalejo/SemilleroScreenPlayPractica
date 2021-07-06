@@ -1,11 +1,11 @@
 #Author: grupo_5
 
 Feature: Ingresar con credenciales a la tiende de mascotas
-  Como aprendiz de automatizador quiero Loguearme
-  en la pagina de ParaBank
+  Como grupo de automatizacion se quiere ingresar
+  en la pagina de tienda de mascotas
 
   
-  Scenario: Loguearme en la pagina de ParaBank
-    Given La pagina web del banco "https://petstore.octoperf.com/actions/Catalog.action"
+  Scenario: Loguearse en la tienda de mascotas
+    Given Acceder a la pagina de la tienda "https://petstore.octoperf.com/actions/Catalog.action"
     When Ingreso usuario "TiendaMascotasGrupo_5" y password "grupo5"
     Then Estoy en Inicio de la pagina

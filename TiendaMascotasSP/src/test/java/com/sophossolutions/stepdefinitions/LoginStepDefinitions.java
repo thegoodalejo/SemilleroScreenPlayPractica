@@ -16,10 +16,10 @@ import com.sophossolutions.questions.ResultLogin;
 import com.sophossolutions.ui.HomePage;
 
 public class LoginStepDefinitions {
-	@Given("La pagina web del banco {string}")
-	public void laPaginaWebDelBanco(String strUrl) {
+	
+	@Given("Acceder a la pagina de la tienda {string}")
+	public void accederALaPaginaDeLaTienda(String strUrl) {
 		theActorCalled("grupo_5").wasAbleTo(Open.url(strUrl));
-
 	}
 
 	@When("Ingreso usuario {string} y password {string}")
