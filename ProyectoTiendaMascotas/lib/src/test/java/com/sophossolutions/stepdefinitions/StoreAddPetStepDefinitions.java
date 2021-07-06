@@ -9,6 +9,7 @@ import static com.sophossolutions.ui.StoreHome.PET_BREED;
 import static com.sophossolutions.ui.StoreHome.BTN_ADD;
 import static com.sophossolutions.ui.StoreHome.PET_SELECT;
 
+import com.sophossolutions.exceptions.ExceptionMessage;
 import com.sophossolutions.questions.TextOf;
 import com.sophossolutions.tasks.ClickTo;
 import com.sophossolutions.tasks.SaveInfo;
@@ -19,7 +20,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import com.sophosolutions.exceptions.ExceptionMessage;
 public class StoreAddPetStepDefinitions {
 	String strId;
 	

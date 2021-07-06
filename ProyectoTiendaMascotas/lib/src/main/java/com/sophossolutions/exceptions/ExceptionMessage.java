@@ -1,4 +1,4 @@
-package com.sophosolutions.exceptions;
+package com.sophossolutions.exceptions;
 
 public class ExceptionMessage extends AssertionError {
 
