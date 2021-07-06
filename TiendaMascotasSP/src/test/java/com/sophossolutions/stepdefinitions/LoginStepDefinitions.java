@@ -30,7 +30,7 @@ public class LoginStepDefinitions {
 
 	@Then("Estoy en Inicio de la pagina")
 	public void estoyEnInicioDeLaPagina() {
-		theActorInTheSpotlight().should(seeThat(ResultLogin.in(HomePage.WELCOME_MESSAGE),IsEqual.equalTo("Welcome Andres!")));
+		theActorInTheSpotlight().should(seeThat(ResultLogin.in(HomePage.MSG_WELCOME),IsEqual.equalTo("Welcome Andres!")));
 	}
 
 }
