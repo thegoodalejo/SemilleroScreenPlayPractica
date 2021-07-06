@@ -1,14 +1,12 @@
 #Author: andres.guarnizo@sophossolutions.com
-Feature: Abrir cuenta de ahorros y validar saldo
-  Como aprendiz de automatizador quiero abrir una cuenta nueva 
-  en ParaBank y validar que este abierta
-
-  Background: 
-    Given La pagina web del banco "https://parabank.parasoft.com/parabank/index.htm"
-    When Ingreso usuario "john" y password "demo"
-    Then Estoy en Home de la pagina
-
-  Scenario: Abrir cuenta de ahorros nueva en ParaBank
-    Given Estando en Home ingreso a crear una nueva cuenta
-    When creo la cuenta Seleccionando tipo de cuenta y una cuenta previa
-    Then Valido que la cuenta se haya creado con el saldo
+Feature: Agregar un nuevo usuario al sistema 
+  Como grupo de automatizador se quiere ingrear los datos de un nuevo usuario
+  a la tienda de mascotas 
+  
+Background: Hacer Login en la pagina de la tienda de mascotas
+    Given Acceder a la pagina de la tienda "https://petstore.octoperf.com/actions/Catalog.action"
+  
+Scenario: Abrir nueva cuenta de usuario 
+    Given Deseo acceder a la opcion registrar nuevo usuario 
+    When Deseo ingresar los datos del nuevo usuario 
+    Then Deberia visualizar los datos en pantalla del nuevo usuario 
