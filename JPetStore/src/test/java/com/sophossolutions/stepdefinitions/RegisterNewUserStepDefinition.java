@@ -1,20 +1,13 @@
 package com.sophossolutions.stepdefinitions;
 
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
-import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
-import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
 
-import com.sophossolutions.questions.NumberAcount;
-import com.sophossolutions.tasks.LoginTask;
+
+
 import com.sophossolutions.tasks.RegisterUser;
-import com.sophossolutions.ui.ParabankLogin;
-import com.sophossolutions.ui.HomePage;
-import com.sophossolutions.util.Constants;
 
-import org.hamcrest.core.IsEqual;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
