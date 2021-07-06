@@ -3,28 +3,33 @@ package com.sophossolutions.tasks;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Open;
+import net.serenitybdd.screenplay.targets.Target;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-import com.sophossolutions.ui.HomePage;
 
 public class GoToPage implements Task {
 
-	private String strUrl;
+	private Target linkPage;
+	private Target options;
 
-	public GoToPage(String strUrl){
-		this.strUrl = strUrl;
+	public GoToPage(Target linkpage, Target opt){
+		this.linkPage = linkpage;
+		this.options = opt;
 	}
 	
 	@Override
 	public <T extends Actor> void performAs(T actor) {
+		
+		int accounts = options.resolveAllFor(actor).size();
+		int randomValue = 1 + (int)(Math.random() * accounts);
+		System.out.println(randomValue);
 		actor.attemptsTo(
-				Open.url(strUrl),
-				Click.on(HomePage.LINK_TEXT_SIGN_IN)
+				Click.on(linkPage.of(String.valueOf(randomValue)))
 				);
 	}
-	public static GoToPage login(String strUrl) {
-		return instrumented(GoToPage.class, strUrl);
+	
+	public static GoToPage animal(Target linkpage,Target opt) {
+		return instrumented(GoToPage.class, linkpage,opt);
 	}
 }

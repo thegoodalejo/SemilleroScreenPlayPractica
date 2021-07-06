@@ -7,12 +7,12 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 
-public class LoginTask implements Task
+public class Login implements Task
 {
 	private String strUser;
 	private String strPassword;
 	
-	public LoginTask(String strUser, String strPassword) {
+	public Login(String strUser, String strPassword) {
 		this.strUser = strUser;
 		this.strPassword = strPassword;
 	}
@@ -27,8 +27,8 @@ public class LoginTask implements Task
 				Click.on(LoginPage.BTN_LOGIN));
 	}
 	
-	public static LoginTask withCredential(String strUser, String strPassword)
+	public static Login withCredential(String strUser, String strPassword)
 	{
-		return instrumented(LoginTask.class, strUser, strPassword);
+		return instrumented(Login.class, strUser, strPassword);
 	}
 }
