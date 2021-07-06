@@ -37,6 +37,7 @@ public class StoreLoginStepDefinitions {
 
 	@Then("I verify that the login is successful")
 	public void iVerifyThatTheLoginIsSuccessful() {
+		System.out.print("@THEN");
 		//theActorInTheSpotlight().should(Ensure.that(TXT_USERNAME).isDisplayed(), IsEqual.equalTo(true));
 	}
 	
