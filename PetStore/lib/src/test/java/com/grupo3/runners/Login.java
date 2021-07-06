@@ -9,9 +9,9 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
 			glue = "com.grupo3.stepdefs",
-			features = "src/test/resources/com/guacha/features/NOMBREDELFEATURE.feature",
+			features = "src/test/resources/com/grupo3/features/login.feature",
 			snippets = SnippetType.CAMELCASE
 		)
-public class RunnerGuide {
+public class Login {
 
 }
