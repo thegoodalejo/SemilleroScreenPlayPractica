@@ -11,4 +11,5 @@ public class HomePage {
 	public static final Target OPC_REPTILES = Target.the("Opcion reptiles").locatedBy("(//img[contains(@src, 'reptiles')])[1]");
 	public static final Target OPC_BIRDS = Target.the("Opcion aves").locatedBy("(//img[contains(@src, 'birds')])[1]");
 	public static final Target BTN_CARRITO = Target.the("Entrar al carrito").locatedBy("//img[@name='img_cart']");
+
 }
