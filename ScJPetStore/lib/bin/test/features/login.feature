@@ -1,7 +1,7 @@
 #Author: grupo 2
 #        Angel Vivas, Maria Cala
 Feature: Log into the website JPetStore
-  I want as an automation  
+  I want as an automatizer  
   to log into JPetStore and
   validate that I have login
 

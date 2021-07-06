@@ -14,30 +14,33 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight; //ya conoce el actor
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
+import com.sophos.semillero.tasks.AddToCart;
 import com.sophos.semillero.tasks.Login;
 import com.sophos.semillero.ui.CatalogPage;
 
 
-public class LoginStepDefinitions {
+public class AddItemToCartStepDefinitions {
+	
+	@Given("Deseo seleccionar un item")
+	public void deseoSeleccionarUnItem() {
+		
+	}
+
+	@When("Elijo una categoria (.+) un producto (.+) y un item(.+)$")
+	public void elijoUnaCategoriaUnProductoYUnItem(String strCategoria, String strProductoId, String strItemId) {
+		theActorCalled("Angel Vivas").wasAbleTo(AddToCart.withCategoriaProductoItem(strCategoria, strProductoId, strItemId));
+		
+	}
+
+	
+	@Then("Valido el carrito")
+	public void validoElCarrito() {
+		
+	}
 	
 	@Before
 	public void setup() {
 		setTheStage(new OnlineCast());
 	}
-	
-	@Given("I want to go to the website {string}")
-	public void iWantToGoToTheWebsite(String strUrl) {
-		theActorCalled("Group2").wasAbleTo(Open.url(strUrl));
-	}
 
-	@When("I enter username {string} password {string}")
-	public void iEnterUsernamePassword(String strName, String strPassword) {
-		theActorInTheSpotlight().wasAbleTo(Login.withCredentials(strName, strPassword));
-	}
-
-	@Then("I verify that i have logged in")
-	public void iVerifyThatIHaveLoggedIn() {
-		theActorInTheSpotlight().should(seeThat(the(CatalogPage.TXT_USER_NAME), isVisible()));
-	}
-	
 }
