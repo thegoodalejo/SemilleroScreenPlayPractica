@@ -9,8 +9,8 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
 		glue= "com.sophossolutions.stepdefinitions",
-		features= "src/test/resources/com/sophossolutions/features/parabank.feature",
+		features= "src/test/resources/com/sophossolutions/features/add_animal_to_car.feature",
 		snippets= SnippetType.CAMELCASE)
-public class ParabankRunner
+public class AddAnimalToCarRunner
 {
 }

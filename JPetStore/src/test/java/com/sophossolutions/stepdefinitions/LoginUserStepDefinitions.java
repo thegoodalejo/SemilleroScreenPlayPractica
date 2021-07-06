@@ -9,13 +9,14 @@ import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
 
 
 import com.sophossolutions.tasks.GoToPage;
-import com.sophossolutions.tasks.LoginTask;
+import com.sophossolutions.tasks.Login;
 import com.sophossolutions.ui.HomePage;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
 public class LoginUserStepDefinitions {
@@ -29,12 +30,12 @@ public class LoginUserStepDefinitions {
 
 	@Given("Navegar a la pagina {string}")
 	public void navegarALaPagina(String urlHome) {
-		theActorCalled(strActorName).wasAbleTo(GoToPage.login(urlHome));
+		theActorCalled(strActorName).wasAbleTo(Open.url(urlHome));
 	}
 
 	@When("Ingreso con el usuario {string} y clave {string}")
 	public void ingresoConElUsuarioYClave(String strUserName, String strPassword) {
-		theActorInTheSpotlight().wasAbleTo(LoginTask.withCredential(strUserName, strPassword));
+		theActorInTheSpotlight().wasAbleTo(Login.withCredential(strUserName, strPassword));
 	}
 
 	@Then("Observar la pagina inicio de sesion")

@@ -10,7 +10,6 @@ public class RegisterModel
 	
 	public RegisterModel(String strFirsName, String strLastName, String strAddress, String strPhone, boolean isMarried)
 	{
-		super();
 		this.strFirsName = strFirsName;
 		this.strLastName = strLastName;
 		this.strAddress = strAddress;

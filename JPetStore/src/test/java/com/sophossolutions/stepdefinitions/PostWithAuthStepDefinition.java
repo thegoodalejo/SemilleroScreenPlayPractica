@@ -7,7 +7,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
 
-import com.sophossolutions.tasks.GetWhith;
+import com.sophossolutions.tasks.AddAnimalToCar;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -25,7 +25,7 @@ public class PostWithAuthStepDefinition
 	@When("he requests to the endpoint {string} and id {string}")
 	public void heRequestsToTheEndpointAndId(String strEndpoint, String strid) {
 		System.out.println("@WHEN");
-		theActorInTheSpotlight().wasAbleTo(GetWhith.oautn2(strEndpoint, strid));
+		theActorInTheSpotlight().wasAbleTo(AddAnimalToCar.oautn2(strEndpoint, strid));
 	}
 
 	@Then("he should validate that the status code is {int}")
