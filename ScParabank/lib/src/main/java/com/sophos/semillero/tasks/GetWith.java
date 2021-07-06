@@ -19,7 +19,7 @@ public class GetWith implements Task {
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {
-		actor.attemptsTo(Get.resource(strEndpoint.concat("?page=5")).with(
+		actor.attemptsTo(Get.resource(strEndpoint.concat(strIdUser)).with(
 				request -> request.auth().oauth2(TOKEN_API_GOREST)));
 	}
 
