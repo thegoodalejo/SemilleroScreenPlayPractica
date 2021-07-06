@@ -1,4 +1,4 @@
-#Author: julian.rodriguez@sophossolutions.com
+#Author: santiago.espinal@sophossolutions.com and juan.blanco@sophossolutions.com 
 
 Feature: Probar ingreso de registro de cuenta en ParaBank
   Yo quiero probar que puedo registrar una nueba cuenta en ParaBank
