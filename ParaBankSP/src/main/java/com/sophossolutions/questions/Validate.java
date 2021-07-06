@@ -5,7 +5,6 @@ import com.sophossolutions.ui.AccountsPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
-import net.serenitybdd.screenplay.targets.Target;
 
 public class Validate implements Question<String>{
 

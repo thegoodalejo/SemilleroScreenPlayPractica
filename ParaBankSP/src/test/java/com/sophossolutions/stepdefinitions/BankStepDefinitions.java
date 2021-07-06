@@ -8,6 +8,7 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
 import com.sophossolutions.questions.Validate;
