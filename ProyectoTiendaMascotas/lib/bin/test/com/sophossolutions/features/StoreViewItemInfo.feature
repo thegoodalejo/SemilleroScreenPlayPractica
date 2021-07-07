@@ -7,7 +7,7 @@ Feature: Add Pet To Shopping Cart
     When I assing "pepito" "123"
     Then I verify that the login is successful
 
-  Scenario: Add Pet To Shopping Cart
+  Scenario Outline: Add Pet To Shopping Cart
     Given I want search pet type <type>
     And Select pet breed <breed> 
     When I decide the pet by the description <description>
