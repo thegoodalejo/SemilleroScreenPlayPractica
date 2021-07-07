@@ -12,8 +12,13 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
 
+import org.hamcrest.core.IsEqual;
+
+import com.sophossolutions.questions.ResultLogin;
+import com.sophossolutions.questions.ItemsInCar;
 import com.sophossolutions.tasks.ChangeAmount;
 import com.sophossolutions.ui.CartPage;
+import com.sophossolutions.ui.HomePage;
 
 public class UpdateCarStepDefinitions {
 	
@@ -29,7 +34,8 @@ public class UpdateCarStepDefinitions {
 
 	@Then("Quiero validar que el nuevo precio total de los items sea el correcto")
 	public void quieroValidarQueElNuevoPrecioTotalDeLosItemsSeaElCorrecto() {
-	    
+		String strTotal  = theActorInTheSpotlight().recall("PRECIO_TOTAL");
+		theActorInTheSpotlight().should(seeThat(ItemsInCar.in(),IsEqual.equalTo(strTotal)));
 	}
 
 }
