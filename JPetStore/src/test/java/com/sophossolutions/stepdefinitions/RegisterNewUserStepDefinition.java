@@ -18,6 +18,8 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 
 public class RegisterNewUserStepDefinition
 {
+	private String strActorName = "Juan Miguel y Santaigo ";
+	
 	@Before()
 	public void setup()
 	{	
@@ -26,12 +28,12 @@ public class RegisterNewUserStepDefinition
 	
 	@Given("Debe estar en la url {string}")
 	public void debeEstarEnLaUrl(String strUrl) {
-		theActorCalled("Santiago Juan").wasAbleTo(Open.url(strUrl));
+		theActorCalled(strActorName).wasAbleTo(Open.url(strUrl));
 	}
 
 	@When("Debe ingresar la informacion {string}")
 	public void debeIngresarLaInformacion(String datos) {
-		theActorCalled("Santiago Juan").wasAbleTo(RegisterUser.with(datos));
+		theActorCalled(strActorName).wasAbleTo(RegisterUser.with(datos));
 	}
 
 	@Then("Debe estar la informacion en los campos")

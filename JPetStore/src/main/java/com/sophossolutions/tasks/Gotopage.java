@@ -8,12 +8,12 @@ import net.serenitybdd.screenplay.targets.Target;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 
-public class GoToPage implements Task {
+public class Gotopage implements Task {
 
 	private Target linkPage;
 	private Target options;
 
-	public GoToPage(Target linkpage, Target opt){
+	public Gotopage(Target linkpage, Target opt){
 		this.linkPage = linkpage;
 		this.options = opt;
 	}
@@ -29,7 +29,7 @@ public class GoToPage implements Task {
 				);
 	}
 	
-	public static GoToPage animal(Target linkpage,Target opt) {
-		return instrumented(GoToPage.class, linkpage,opt);
+	public static Gotopage animal(Target linkpage,Target opt) {
+		return instrumented(Gotopage.class, linkpage,opt);
 	}
 }
