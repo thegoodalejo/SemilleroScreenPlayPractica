@@ -37,7 +37,6 @@ public class GoToPage implements Task {
 		
 		Integer accounts = options.resolveAllFor(actor).size();
 		Integer randomValue = this.minValue + (int)(Math.random() * accounts - this.accountsMinus);
-		//System.out.println(randomValue);
 		actor.attemptsTo(
 				Click.on(linkPage.of(String.valueOf(randomValue)))
 				);

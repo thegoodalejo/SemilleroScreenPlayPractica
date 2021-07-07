@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Probar eliminar un animal del carrito" skipped="0" tests="1" time="12.14" timestamp="2021-07-07 12:19:07"><testcase name="Agregar un animal al carrito"><failure message="&#10;Expected: &quot;RP-SN-01&quot;&#10;     but: was &quot; &quot;" type="java.lang.AssertionError">
+Expected: "RP-SN-01"
+     but: was " "</failure><system-err>
+Expected: "RP-SN-01"
+     but: was " "&#13;
+com.sophossolutions.stepdefinitions.AddAnimalToCarStepDefinition.observarElAnimalSeleccionadoEnElCarrito(AddAnimalToCarStepDefinition.java:55)&#13;
+✽.Observar el animal seleccionado en el carrito(file:///C:/Users/santiago.espinal/Desktop/JPetStore/WorkSpace/JPetStore/src/test/resources/com/sophossolutions/features/remove_item_from_car.feature:12)&#13;
+</system-err></testcase></testsuite>
