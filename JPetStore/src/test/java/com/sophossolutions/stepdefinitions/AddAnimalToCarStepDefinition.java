@@ -49,7 +49,7 @@ public class AddAnimalToCarStepDefinition
 		theActorInTheSpotlight().wasAbleTo(GoToPage.selectOne(AnimalPage.LINK_ANIMAL, AnimalPage.LINKS_ANIMALS));
 		auxIndex = theActorInTheSpotlight().recall(Constants.DIR_INDEX_ANIMAL).toString();
 		theActorInTheSpotlight().wasAbleTo(GetInfo.animal());
-		theActorInTheSpotlight().wasAbleTo(Click.on(AnimalPage.BTN_ANIMAL.of(auxIndex)));
+		theActorInTheSpotlight().wasAbleTo(Click.on(AnimalPage.BTN_ADD_TO_CART_ANIMAL.of(auxIndex)));
 	}
 
 	@Then("Observe the selected animal in the cart")
