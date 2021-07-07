@@ -13,28 +13,25 @@ import com.sophossolutions.util.Constants;
 
 public class GoToPage implements Task {
 
-	private Target tarLinkPage;
-	private Target tarOptions;
+
+	private Target linkPage;
+	private Target options;
+	private Integer minValue = 1;
 	
 	
-	public GoToPage(Target tarLinkPage, Target tarOptions){
-		this.tarLinkPage = tarLinkPage;
-		this.tarOptions = tarOptions;
+	public GoToPage(Target linkPage, Target options){
+		this.linkPage = linkPage;
+		this.options = options;
 	}
 	
-	public GoToPage(Target tarLinkPage, Target tarOptions, Integer intMinValue, Integer accoutnMinus){
-		this.tarLinkPage = tarLinkPage;
-		this.tarOptions = tarOptions;
-	}
 	
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 		
-		Integer accounts = tarOptions.resolveAllFor(actor).size();
-		Integer randomValue = 1 + (int)(Math.random() * accounts );
-		System.out.println(randomValue);
+		Integer accounts = options.resolveAllFor(actor).size();
+		Integer randomValue = this.minValue + (int)(Math.random() * accounts );
 		actor.attemptsTo(
-				Click.on(tarLinkPage.of(String.valueOf(randomValue)))
+				Click.on(linkPage.of(String.valueOf(randomValue)))
 				);
 		theActorInTheSpotlight().remember(Constants.DIR_INDEX_ANIMAL, randomValue.toString());
 	}
@@ -47,8 +44,8 @@ public class GoToPage implements Task {
 		return instrumented(GoToPage.class, tarLinkPage,tarOptions);
 	}
 
-	public static GoToPage selectOne(Target tarLinkPage,Target tarOptions) {
-		return instrumented(GoToPage.class, tarLinkPage,tarOptions);
+	public static GoToPage selectOne(Target linkpage,Target opt) {
+		return instrumented(GoToPage.class, linkpage,opt);
 	}
 	
 }

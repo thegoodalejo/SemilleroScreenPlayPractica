@@ -25,7 +25,7 @@ public class Remove implements Task
 	@Override
 	public <T extends Actor> void performAs(T actor)
 	{
-		Integer accounts = NAnimals.resolveAllFor(actor).size() - 2;
+		Integer accounts = NAnimals.resolveAllFor(actor).size() ;
 		for (int i = 0; i < accounts ; i++) {
 			actor.attemptsTo(Click.on(TargetClic));
 		}

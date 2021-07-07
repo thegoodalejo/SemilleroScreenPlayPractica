@@ -9,7 +9,7 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
 import com.sophossolutions.tasks.Remove;
 import com.sophossolutions.ui.CarPage;
-import com.sophossolutions.util.Constants;
+
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -31,8 +31,13 @@ public class RemoveItemFromCarStepDefinition {
 	}
 	@When("Debe seleccionar un animal del carrito aleatoriamente")
 	public void debeSeleccionarUnAnimalDelCarritoAleatoriamente() {
-		String auxIndex = theActorInTheSpotlight().recall(Constants.DIR_INDEX_ANIMAL).toString();
-		theActorInTheSpotlight().wasAbleTo(Remove.with(CarPage.BTN_REMOVE.of(auxIndex),CarPage.N_ANIMALS_TABLE ));
+			try {
+				Thread.sleep(20000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		theActorInTheSpotlight().wasAbleTo(Remove.with(CarPage.BTN_REMOVE,CarPage.N_ANIMALS_TABLE ));
 	}
 	@Then("Validar la eliminacion del articulo")
 	public void validarLaEliminacionDelArticulo() {
