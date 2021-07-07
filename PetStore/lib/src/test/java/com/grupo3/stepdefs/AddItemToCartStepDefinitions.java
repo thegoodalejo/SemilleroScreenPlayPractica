@@ -1,18 +1,26 @@
 package com.grupo3.stepdefs;
 
+
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.actions.Open;
 
+import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
+import com.grupo3.questions.AnimalsInCart;
+
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static com.grupo3.tasks.AddARandomProductToCart.addARandomProductToCart;
 
 public class AddItemToCartStepDefinitions {
 
 	@Given("Quiero agregar un item al carrito")
 	public void quieroAgregarUnItemAlCarrito() {
-	    
+	    theActorCalled("X").wasAbleTo(Open.url("https://petstore.octoperf.com/actions/Catalog.action"));;
 	}
 
 	@When("Busco el item y lo agrego al carrito")
@@ -22,7 +30,8 @@ public class AddItemToCartStepDefinitions {
 
 	@Then("Deberia ver ese item en la lista de elementos del carrito")
 	public void deberAVerEseItemEnLaListaDeElementosDelCarrito() {
-	    System.out.println("xd");
+		Actor theActor = theActorInTheSpotlight();
+	    theActor.should(seeThat(AnimalsInCart.containsAnimalAddedByActor(theActor)));
 	}
 	
 }

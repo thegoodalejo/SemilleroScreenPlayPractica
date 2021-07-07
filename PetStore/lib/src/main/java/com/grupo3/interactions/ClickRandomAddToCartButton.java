@@ -10,6 +10,7 @@ import com.grupo3.ui.ProductPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.questions.Text;
 import net.serenitybdd.screenplay.targets.Target;
 
 public class ClickRandomAddToCartButton implements Task{
@@ -25,6 +26,7 @@ public class ClickRandomAddToCartButton implements Task{
 		int amt = actor.asksFor(AmountOfElements.in(possibleItems));
 		int sel = ThreadLocalRandom.current().nextInt(1, amt+1);
 		actor.attemptsTo(
+					MakeChoice.ofElement(sel),
 					Click.on(ProductPage.getAddToCartButtonNo(sel))
 				);
 	}
