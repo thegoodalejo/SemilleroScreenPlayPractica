@@ -5,10 +5,11 @@ import org.hamcrest.core.IsEqual;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 import com.sophossolutions.tasks.SelectSpecie;
 import com.sophossolutions.ui.CartPage;
-import com.sophossolutions.questions.Item;
 import com.sophossolutions.tasks.AddToCar;
 
 import io.cucumber.java.en.Given;
@@ -30,7 +31,7 @@ public class AddToCarStepDefinitions {
 
 	@Then("Quiero verificar si quedo el item {string} en el carrito")
 	public void quieroVerificarSiQuedoElItemEnElCarrito(String strItem) {
-		theActorInTheSpotlight().should(seeThat(Item.inCar(CartPage.ID_ITEM.of(strItem)),IsEqual.equalTo(strItem)));
+		theActorInTheSpotlight().should(seeThat(the(CartPage.ID_ITEM.of(strItem)), isVisible()));
 	}
 
 }
