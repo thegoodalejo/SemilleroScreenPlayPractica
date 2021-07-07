@@ -1,6 +1,5 @@
 package com.sophos.semillero.ui;
 
-import org.openqa.selenium.By;
 
 import net.serenitybdd.screenplay.targets.Target;
 

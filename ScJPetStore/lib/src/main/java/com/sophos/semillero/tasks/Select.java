@@ -2,7 +2,7 @@ package com.sophos.semillero.tasks;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-
+import com.sophos.semillero.interactions.ActorRemember;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -25,8 +25,6 @@ public class Select implements Task {
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 		actor.attemptsTo(SelectFromOptions.byValue(strValue).from(tarMenu));
-	
-		
 	}
 
 	public static Select the(String strValue, Target tarMenu) {

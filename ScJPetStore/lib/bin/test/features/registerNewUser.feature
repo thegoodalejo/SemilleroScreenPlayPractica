@@ -7,8 +7,7 @@ Feature: Register a person on the website JPetStore
 
   Scenario Outline: Register a person on the website
     Given I want to go to the website "https://petstore.octoperf.com/actions/Account.action"
-    When I enter the user credentials <credentials> account information <info>
-    And favourite category <category>
+    When I enter the user credentials <credentials> account information <info> favourite category <category>
     Then I should see the whole user information
 
     Examples: 

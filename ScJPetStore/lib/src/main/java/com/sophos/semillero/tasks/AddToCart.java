@@ -27,7 +27,7 @@ public class AddToCart implements Task {
 		actor.attemptsTo(				
 				Click.on(CatalogPage.BTN_CATEGORIA.of(strCategoria)),
 				Click.on(CatalogPage.LINK_PRODUCT_ID.of(strProductoId)),
-				Click.on(CatalogPage.LINK_ITEM_ID.of(strItemId)),
+				Click.on(CatalogPage.LINK_PRODUCT_ID.of(strItemId.replace(" ", ""))),
 				Click.on(CatalogPage.BTN_ADD_TO_CART)
 				);
 	}

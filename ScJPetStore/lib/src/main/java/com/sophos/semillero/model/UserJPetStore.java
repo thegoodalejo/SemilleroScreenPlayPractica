@@ -12,29 +12,21 @@ public class UserJPetStore {
 	private String strZip;
 	private String strCountry;
 	private String strPhone;
-	private String strLenguage;
 	private String strFavouriteCategory;
-	private boolean isEnableMyList;
-	private boolean isEnableMyBanner;
+
 	
-	public UserJPetStore(String strFirstName, String strLastName, String strAddress1, String strEmail,
-			String strAddress2, String strCity, String strState, String strZip, String strCountry, String strPhone,
-			String strLenguage, String strFavouriteCategory, boolean isEnableMyList, boolean isEnableMyBanner) {
-		super();
-		this.strFirstName = strFirstName;
-		this.strLastName = strLastName;
-		this.strAddress1 = strAddress1;
-		this.strEmail = strEmail;
-		this.strAddress2 = strAddress2;
-		this.strCity = strCity;
-		this.strState = strState;
-		this.strZip = strZip;
-		this.strCountry = strCountry;
-		this.strPhone = strPhone;
-		this.strLenguage = strLenguage;
-		this.strFavouriteCategory = strFavouriteCategory;
-		this.isEnableMyList = isEnableMyList;
-		this.isEnableMyBanner = isEnableMyBanner;
+	public UserJPetStore(String[] strValue) {
+		this.strFirstName = strValue[0];
+		this.strLastName = strValue[1];
+		this.strAddress1 = strValue[2];
+		this.strEmail = strValue[3];
+		this.strAddress2 = strValue[4];
+		this.strCity = strValue[5];
+		this.strState = strValue[6];
+		this.strZip = strValue[7];
+		this.strCountry = strValue[8];
+		this.strPhone = strValue[9];
+		this.strFavouriteCategory = strValue[10];
 	}
 
 	public String getStrFirstName() {
@@ -77,20 +69,9 @@ public class UserJPetStore {
 		return strPhone;
 	}
 
-	public String getStrLenguage() {
-		return strLenguage;
-	}
 
 	public String getStrFavouriteCategory() {
 		return strFavouriteCategory;
-	}
-
-	public boolean isEnableMyList() {
-		return isEnableMyList;
-	}
-
-	public boolean isEnableMyBanner() {
-		return isEnableMyBanner;
 	}
 	
 }
