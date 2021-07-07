@@ -1,12 +1,11 @@
 package com.grupo3.interactions;
 
-import java.util.concurrent.ThreadLocalRandom;
-
+import static com.grupo3.util.WebElement.elementNo;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 import com.grupo3.questions.AmountOfElements;
-import com.grupo3.ui.ProductPage;
-import static com.grupo3.util.WebElement.elementNo;
 
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.Actor;

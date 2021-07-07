@@ -23,9 +23,11 @@ public class AddItemToCartStepDefinitions {
 	    theActorCalled("X").wasAbleTo(Open.url("https://petstore.octoperf.com/actions/Catalog.action"));;
 	}
 
-	@When("Busco el item y lo agrego al carrito")
-	public void buscoElItemYLoAgregoAlCarrito() {
-	    theActorInTheSpotlight().wasAbleTo(addARandomProductToCart());
+	@When("Busco {int} items y los agrego al carrito")
+	public void buscoItemsYLosAgregoAlCarrito(Integer itemAmount) {
+		for (int i = 0; i < itemAmount; i++) {
+			theActorInTheSpotlight().wasAbleTo(addARandomProductToCart());			
+		}
 	}
 
 	@Then("Deberia ver ese item en la lista de elementos del carrito")

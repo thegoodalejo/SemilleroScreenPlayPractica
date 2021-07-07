@@ -2,17 +2,9 @@ package com.grupo3.tasks;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-import java.util.List;
-import java.util.concurrent.ThreadLocalRandom;
-
-import org.openqa.selenium.NoSuchElementException;
-
-import com.grupo3.interactions.DeleteButton;
 import com.grupo3.model.Animal;
-import com.grupo3.questions.AmountOfElements;
-import com.grupo3.ui.CartViewPage;
+import com.grupo3.questions.DeleteButton;
 
-import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;

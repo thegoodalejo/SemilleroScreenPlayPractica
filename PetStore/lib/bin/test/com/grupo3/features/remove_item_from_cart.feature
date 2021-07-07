@@ -5,7 +5,7 @@ Feature: Borrar un elemento del carrito
 
 	Background:
 		Given Quiero agregar un item al carrito
-    When Busco el item y lo agrego al carrito
+    When Busco 1 items y los agrego al carrito
     Then Deberia ver ese item en la lista de elementos del carrito
 
   Scenario: Eliminar elemento del carrito

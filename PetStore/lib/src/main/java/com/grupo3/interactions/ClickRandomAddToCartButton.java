@@ -1,8 +1,8 @@
 package com.grupo3.interactions;
 
-import java.util.concurrent.ThreadLocalRandom;
-
 import static net.serenitybdd.screenplay.Tasks.instrumented;
+
+import java.util.concurrent.ThreadLocalRandom;
 
 import com.grupo3.questions.AmountOfElements;
 import com.grupo3.ui.ProductPage;
@@ -10,7 +10,6 @@ import com.grupo3.ui.ProductPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.questions.Text;
 import net.serenitybdd.screenplay.targets.Target;
 
 public class ClickRandomAddToCartButton implements Task{

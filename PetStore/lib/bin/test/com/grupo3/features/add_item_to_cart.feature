@@ -1,8 +1,8 @@
 #Author: julian.espitaleta@your.domain.com
 
 
-Feature: Title of your feature
-  I want to use this template for my feature file
+Feature: Agregar Item a carrito
+  Quiero automatizar el proceso de elegir un elemento y agregar al carrito
 	
 	Background:
 		Given Quiero iniciar sesion
@@ -11,5 +11,5 @@ Feature: Title of your feature
 	
   Scenario: Agregar item a carrito
     Given Quiero agregar un item al carrito
-    When Busco el item y lo agrego al carrito
+    When Busco 3 items y los agrego al carrito
     Then Deberia ver ese item en la lista de elementos del carrito

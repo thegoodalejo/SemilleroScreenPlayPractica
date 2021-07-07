@@ -1,4 +1,4 @@
-package com.grupo3.interactions;
+package com.grupo3.questions;
 
 import java.util.List;
 
