@@ -23,7 +23,7 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 
 public class UpdateCarAmmountStepDefinitions {
 
-	private String strActorName = "Juan Miguel y Santaigo ";
+	private String strActorName = Constants.ACTOR_NAME;
 	private String strAuxIndex;
 	@Before
 	public void setup()
@@ -37,13 +37,13 @@ public class UpdateCarAmmountStepDefinitions {
 		theActorInTheSpotlight().attemptsTo(
 				Enter.theValue(intAmmountPets.toString()).into(CarPage.EDIT_TEXT_QUANTITY.of(strAuxIndex))
 				);
-		System.out.println("given");
+		
 	}
 
 	@When("Update cart")
 	public void updateCart() {
 	    theActorInTheSpotlight().wasAbleTo(UpdateCar.quantity());
-	    System.out.println("when");
+	    
 	}
 
 	@Then("Validate the cost in the cart")
@@ -52,7 +52,6 @@ public class UpdateCarAmmountStepDefinitions {
 		ItemShopCar infoAnimal = theActorInTheSpotlight().recall(Constants.MODEL_CART);
 	    theActorInTheSpotlight().should(seeThat(PriceCart.with(CarPage.TOTAL_PRICE_SHOP),
 	    		IsEqual.equalTo(infoAnimal.getStrTotalCost())));
-	    System.out.println("them");
 	    		
 	}
 	
