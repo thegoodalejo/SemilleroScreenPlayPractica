@@ -8,6 +8,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import org.hamcrest.core.IsEqual;
 import org.mockito.internal.matchers.Contains;
 
+import com.sophossolutions.models.ItemAnimal;
 import com.sophossolutions.models.ItemOrderInvoice;
 import com.sophossolutions.models.ItemShopCar;
 import com.sophossolutions.questions.IdProduc;
@@ -52,7 +53,7 @@ public class FinishBuyRequestStepDefinition {
 		theActorInTheSpotlight().should(seeThat(InfoOfDateToday.with(BillPaymentPage.TXT_INFO_ORDER,2),
 				IsEqual.equalTo(itemOrder.getStrDate())));
 		
-		ItemShopCar infoAnimal = theActorInTheSpotlight().recall(Constants.MODEL_CARRITO);
+		ItemAnimal infoAnimal = theActorInTheSpotlight().recall(Constants.MODEL_ANIMAL);
 		theActorInTheSpotlight().should(seeThat(IdProducAnima.with(BillPaymentPage.TXT_ITEM_ID),
 				IsEqual.equalTo(infoAnimal.getItemID())));
 	}

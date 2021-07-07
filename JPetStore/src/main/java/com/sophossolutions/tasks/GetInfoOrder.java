@@ -16,11 +16,9 @@ public class GetInfoOrder implements Task {
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 		String infoOrder[] = Text.of(BillPaymentPage.TXT_INFO_ORDER).viewedBy(actor).asString().split(" ");
-		System.out.println("----------");
 		for (String string : infoOrder) {
 			System.out.println(string);
 		}
-		System.out.println("----------");
 		ItemOrderInvoice infoItemsOrder = new ItemOrderInvoice(infoOrder[1],infoOrder[2],infoOrder[3]);
 		actor.remember(Constants.MODEL_ORDER, infoItemsOrder);
 		
