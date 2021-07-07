@@ -8,7 +8,6 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisi
 import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
 
 
-import com.sophossolutions.tasks.GoToPage;
 import com.sophossolutions.tasks.Login;
 import com.sophossolutions.ui.HomePage;
 

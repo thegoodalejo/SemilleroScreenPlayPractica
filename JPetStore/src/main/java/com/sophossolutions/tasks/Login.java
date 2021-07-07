@@ -20,7 +20,6 @@ public class Login implements Task
 	@Override
 	public <T extends Actor> void performAs(T actor)
 	{
-		System.out.println("ESCRIBIR EN LOGINPAGE");
 		actor.attemptsTo(
 				Enter.theValue(strUser).into(LoginPage.INPUT_TEXT_USER_NAME),
 				Enter.theValue(strPassword).into(LoginPage.INPUT_TEXT_PASSWORD),

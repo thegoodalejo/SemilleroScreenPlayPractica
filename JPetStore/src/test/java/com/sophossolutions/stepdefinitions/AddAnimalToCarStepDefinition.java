@@ -1,19 +1,22 @@
 package com.sophossolutions.stepdefinitions;
 
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
-import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+
 
 import com.sophossolutions.tasks.GoToPage;
+import com.sophossolutions.tasks.GetInfo;
+import com.sophossolutions.ui.AnimalPage;
 import com.sophossolutions.ui.HomePage;
-import com.sophossolutions.ui.ResultAnimalsPage;
+import com.sophossolutions.ui.ResultTypeAnimalsPage;
+import com.sophossolutions.util.Constants;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
 public class AddAnimalToCarStepDefinition
@@ -27,13 +30,16 @@ public class AddAnimalToCarStepDefinition
 	
 	@Given("Debe ir a los catalogos de animales")
 	public void debeIrALosCatalogosDeAnimales() {
-		theActorCalled(strActorName).wasAbleTo(GoToPage.animal(HomePage.LINK_ANIMAL,HomePage.LINKS_ANIMALS));
+		theActorCalled(strActorName).wasAbleTo(GoToPage.type(HomePage.LINK_ANIMAL,HomePage.LINKS_ANIMALS));
+		theActorInTheSpotlight().wasAbleTo(GoToPage.animals(ResultTypeAnimalsPage.LINK_ANIMAL,ResultTypeAnimalsPage.LINKS_ANIMALS));
 	}
 
 	@When("Debe seleccionar un animal aleatoriamente")
 	public void debeSeleccionarUnAnimalAleatoriamente() {
-		theActorCalled(strActorName).wasAbleTo(GoToPage.animal(ResultAnimalsPage.LINK_ANIMAL,ResultAnimalsPage.LINKS_ANIMALS));
-		
+		theActorInTheSpotlight().wasAbleTo(GoToPage.selectOne(AnimalPage.LINK_ANIMAL, ResultTypeAnimalsPage.LINKS_ANIMALS));
+		String auxIndex = theActorInTheSpotlight().recall(Constants.DIR_INDEX_ANIMAL).toString();
+		theActorInTheSpotlight().wasAbleTo(GetInfo.animal());
+		theActorInTheSpotlight().wasAbleTo(Click.on(AnimalPage.BTN_ANIMAL.of(auxIndex)));
 	}
 
 	@Then("Observar el animal seleccionado en el carrito")
