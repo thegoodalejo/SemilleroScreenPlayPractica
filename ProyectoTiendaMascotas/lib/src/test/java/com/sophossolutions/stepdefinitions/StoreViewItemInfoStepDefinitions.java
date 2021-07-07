@@ -23,7 +23,6 @@ public class StoreViewItemInfoStepDefinitions {
 		theActorInTheSpotlight().wasAbleTo(SaveInfo.on(PET_SELECT.of(string)),
 				ClickButton.elementTarget(PET_VIEWLINK.of(string)));
 		strId = theActorInTheSpotlight().recall("TextoElemento");
-		System.out.println(strId);
 	}
 
 	@Then("I verify that show view item information")

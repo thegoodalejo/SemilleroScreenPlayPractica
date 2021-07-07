@@ -1,30 +1,30 @@
 package com.sophossolutions.stepdefinitions;
 
-import static com.sophossolutions.ui.StoreCar.PET_SELECTED;
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static com.sophossolutions.ui.StoreCar.BTN_REMOVE;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-
-import org.hamcrest.core.IsEqual;
-
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
 import com.sophossolutions.exceptions.ExceptionMessage;
 import com.sophossolutions.interactions.ClickButton;
-import com.sophossolutions.questions.TextOf;
-
+import com.sophossolutions.tasks.SaveInfo;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.serenitybdd.screenplay.ensure.Ensure;
+import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 
 public class StoreDeletePetStepDefinitions {
+	String strDel;
 	
-	@When("i delete the pet in the shopping cart")
-	public void iDeleteThePetInTheShoppingCart() {
-	    theActorInTheSpotlight().wasAbleTo(ClickButton.elementTarget(null));
+	@When("i delete the pet in the shopping cart (.+)$")
+	public void iDeleteThePetInTheShoppingCart(String strDes) {
+	    theActorInTheSpotlight().wasAbleTo(SaveInfo.on(BTN_REMOVE.of(strDes)),
+	    		ClickButton.elementTarget(BTN_REMOVE.of(strDes)));	 
+	    strDel = theActorInTheSpotlight().recall("TextoElemento");
 	}
 
 	@Then("I verified that the pet is not in the shopping cart")
 	public void iVerifiedThatThePetIsNotInTheShoppingCart() {
-		theActorInTheSpotlight().should(seeThat(TextOf.in(null), IsEqual.equalTo(""))
-				.orComplainWith(ExceptionMessage.class, "Ha ocurrido un error"));
+		theActorInTheSpotlight().has(Ensure.that(BTN_REMOVE.of(strDel)).isNotDisplayed());
+		
 	}
-
 
 }
