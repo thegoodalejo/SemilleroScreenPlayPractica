@@ -6,8 +6,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
 
-import com.sophossolutions.tasks.Gotopage;
-import com.sophossolutions.tasks.prueba;
+import com.sophossolutions.tasks.GoToPage;
 import com.sophossolutions.ui.HomePage;
 import com.sophossolutions.ui.ResultAnimalsPage;
 
@@ -28,12 +27,12 @@ public class AddAnimalToCarStepDefinition
 	
 	@Given("Debe ir a los catalogos de animales")
 	public void debeIrALosCatalogosDeAnimales() {
-		theActorCalled(strActorName).wasAbleTo(Gotopage.animal(HomePage.LINK_ANIMAL,HomePage.LINKS_ANIMALS));
+		theActorCalled(strActorName).wasAbleTo(GoToPage.animal(HomePage.LINK_ANIMAL,HomePage.LINKS_ANIMALS));
 	}
 
 	@When("Debe seleccionar un animal aleatoriamente")
 	public void debeSeleccionarUnAnimalAleatoriamente() {
-		theActorCalled(strActorName).wasAbleTo(Gotopage.animal(ResultAnimalsPage.LINK_ANIMAL,ResultAnimalsPage.LINKS_ANIMALS));
+		theActorCalled(strActorName).wasAbleTo(GoToPage.animal(ResultAnimalsPage.LINK_ANIMAL,ResultAnimalsPage.LINKS_ANIMALS));
 		
 	}
 
