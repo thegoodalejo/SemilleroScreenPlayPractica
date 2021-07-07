@@ -9,9 +9,9 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(glue = "com.sophossolutions.stepdefinitions",
-				 features = "src/test/resources/features/addAnimalToCar.feature",
+				 features = "src/test/resources/features/updateCarAmount.feature",
 				 snippets = SnippetType.CAMELCASE)
 
-public class AddToCar {
+public class UpdateCarAmount {
 
 }

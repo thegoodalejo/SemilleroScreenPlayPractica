@@ -3,13 +3,10 @@ package com.sophossolutions.tasks;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 import com.sophossolutions.ui.HomePage;
-import com.sophossolutions.ui.LoginPage;
 
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Enter;
 
 public class SelectSpecie implements Task{
 	

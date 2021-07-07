@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Agreagr un animal al carrito de compras" skipped="0" tests="1" time="16.66" timestamp="2021-07-07 08:04:28"><testcase name="Agregar un animal al carrito"/></testsuite>
+=======
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Agreagr un animal al carrito de compras" skipped="0" tests="1" time="14.21" timestamp="2021-07-07 12:22:55"><testcase name="Agregar un animal al carrito"/></testsuite>
+>>>>>>> 1cfd38571d128079d5815fd152712e28cd2e68cc
