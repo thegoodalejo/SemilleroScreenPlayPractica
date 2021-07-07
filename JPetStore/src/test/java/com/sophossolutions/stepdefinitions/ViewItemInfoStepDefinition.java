@@ -25,7 +25,7 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 
 public class ViewItemInfoStepDefinition {
 
-	private String strActorName = "Juan Miguel y Santaigo ";
+	private String strActorName = Constants.ACTOR_NAME;
 
 	@Before
 	public void setup() {

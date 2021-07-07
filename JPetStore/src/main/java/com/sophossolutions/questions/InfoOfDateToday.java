@@ -7,23 +7,26 @@ import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 import net.serenitybdd.screenplay.targets.Target;
 
-public class IdProducAnima implements Question<String>
+public class InfoOfDateToday implements Question<String>
 {
 	private Target IdProduc;
+	private int nIndex;
 
-	public IdProducAnima(Target Idproduc)
+	public InfoOfDateToday(Target Idproduc,int nindex)
 	{
 		this.IdProduc = Idproduc;
+		this.nIndex = nindex;
 	}
 
 	@Override
 	public String answeredBy(Actor actor)
 	{
-		return Text.of(IdProduc).viewedBy(actor).asString();
+		String infoOrder[] = Text.of(IdProduc).viewedBy(actor).asString().split(" ");
+		return infoOrder[nIndex];
 	}
 	
-	public static IdProducAnima with(Target Idproduc)
+	public static InfoOfDateToday with(Target Idproduc, int nindex)
 	{
-		return new IdProducAnima(Idproduc);
+		return new InfoOfDateToday(Idproduc,nindex);
 	}
 }

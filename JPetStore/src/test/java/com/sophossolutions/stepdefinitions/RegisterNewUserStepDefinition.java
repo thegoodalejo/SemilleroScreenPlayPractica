@@ -7,7 +7,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 
 
 import com.sophossolutions.tasks.RegisterUser;
-
+import com.sophossolutions.util.Constants;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -19,7 +19,7 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 public class RegisterNewUserStepDefinition
 {	
 
-	private String strActorName = "Juan Miguel y Santaigo ";
+	private String strActorName = Constants.ACTOR_NAME;
 	
 	@Before()
 	public void setup()

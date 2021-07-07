@@ -1,6 +1,7 @@
 #Author: santiago.espinal@sophossolutions.com and juan.blanco@sophossolutions.com
-Feature: Try removing an animal from the cart
-  I as an operator want to remove an animal from the cart
+
+Feature: Verify the invoice information
+  I as an operator want verify the invoice information
 
   Background: User login
     Given Navigate to the page "https://petstore.octoperf.com/actions/Account.action?signonForm="
@@ -11,6 +12,6 @@ Feature: Try removing an animal from the cart
     And Observe the selected animal in the cart
 
   Scenario: Remove an animal from the cart
-    Given Must go to cart
-    When You must select an animal from the cart at random to upgrade
-    Then Validate the updated price
+    Given Must go to invoice
+    When Must extract the information from the invoice
+    Then Validate the date and generate id

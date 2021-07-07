@@ -1,4 +1,4 @@
-#Author: juan.blanco@sophossolutions.com
+#Author: santiago.espinal@sophossolutions.com and juan.blanco@sophossolutions.com
 Feature: Login for a user
   I want to start the session of a certain user
 
