@@ -1,5 +1,7 @@
 package com.sophossolutions.stepdefinitions;
 
+import static com.sophossolutions.ui.StoreHome.BTN_HOME;
+import static com.sophossolutions.ui.StoreCar.BTN_SHOPPINGCAR;
 import static com.sophossolutions.ui.StoreCar.BTN_REMOVE;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
@@ -16,7 +18,9 @@ public class StoreDeletePetStepDefinitions {
 	
 	@When("i delete the pet in the shopping cart (.+)$")
 	public void iDeleteThePetInTheShoppingCart(String strDes) {
-	    theActorInTheSpotlight().wasAbleTo(SaveInfo.on(BTN_REMOVE.of(strDes)),
+	    theActorInTheSpotlight().wasAbleTo(ClickButton.elementTarget(BTN_HOME),
+	    		ClickButton.elementTarget(BTN_SHOPPINGCAR),
+	    		SaveInfo.on(BTN_REMOVE.of(strDes)),
 	    		ClickButton.elementTarget(BTN_REMOVE.of(strDes)));	 
 	    strDel = theActorInTheSpotlight().recall("TextoElemento");
 	}
