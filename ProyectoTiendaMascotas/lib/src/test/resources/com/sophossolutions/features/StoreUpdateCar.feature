@@ -1,4 +1,4 @@
-#Author: your.email@your.domain.com
+#Author: jonathan.castro@sophossolutions.com
 Feature: Update shopping cart in pet store
   As a tester, I want to modify the amounts of pets to verify its operation
 
