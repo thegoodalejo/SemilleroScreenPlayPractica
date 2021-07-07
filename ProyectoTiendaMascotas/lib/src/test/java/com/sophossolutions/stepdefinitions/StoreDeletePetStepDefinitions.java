@@ -13,6 +13,9 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 
+import java.time.Duration;
+import java.util.*; 
+
 public class StoreDeletePetStepDefinitions {
 	String strDel;
 	
@@ -27,8 +30,8 @@ public class StoreDeletePetStepDefinitions {
 
 	@Then("I verified that the pet is not in the shopping cart")
 	public void iVerifiedThatThePetIsNotInTheShoppingCart() {
-		theActorInTheSpotlight().has(Ensure.that(BTN_REMOVE.of(strDel)).isNotDisplayed());
-		
+		theActorInTheSpotlight().has(Ensure.that(BTN_REMOVE.of(strDel).waitingForNoMoreThan(Duration.ofSeconds(5))).isNotDisplayed());
+
 	}
 
 }
