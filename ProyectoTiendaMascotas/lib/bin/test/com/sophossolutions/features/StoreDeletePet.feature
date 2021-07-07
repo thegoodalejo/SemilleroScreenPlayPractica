@@ -11,7 +11,7 @@ Feature: Add Pet To Shopping Cart
     Given I want search pet type <type>
     And Select pet breed <breed>
     When decide the pet by the description <description>
-    And i delete the pet in the shopping cart
+    And i delete the pet in the shopping cart <description>
     Then I verified that the pet is not in the shopping cart
 
     Examples: 
