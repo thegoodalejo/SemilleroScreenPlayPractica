@@ -1,12 +1,13 @@
 package com.sophossolutions.stepdefinitions;
 
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static com.sophossolutions.ui.StoreLogin.TXT_USERNAME;
-import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
-
+import static com.sophossolutions.ui.StoreHome.TXT_WELCOME;
+import com.sophossolutions.questions.ValidateStoreWelcome;
 import org.hamcrest.core.IsEqual;
 
 import com.sophossolutions.tasks.StoreLogin;
@@ -28,7 +29,7 @@ public class StoreLoginStepDefinitions {
 
 	@Given("I want Login in {string}")
 	public void iWantLoginIn(String strUrl) {
-	    theActorCalled("Jonathan").wasAbleTo(Open.url(strUrl));
+	    theActorCalled("Pepito").wasAbleTo(Open.url(strUrl));
 	}
 
 	@When("I assing {string} {string}")
@@ -38,8 +39,7 @@ public class StoreLoginStepDefinitions {
 
 	@Then("I verify that the login is successful")
 	public void iVerifyThatTheLoginIsSuccessful() {
-		System.out.print("@THEN");
-		//theActorInTheSpotlight().should(Ensure.that(TXT_USERNAME).getSilent(), equals(true));
+		theActorInTheSpotlight().should(seeThat(ValidateStoreWelcome.withText(TXT_WELCOME), IsEqual.equalTo(true)));
 	}
 	
 }

@@ -1,9 +1,15 @@
 package com.sophossolutions.stepdefinitions;
 
+import static com.sophossolutions.ui.StoreHome.TXT_WELCOME;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import java.util.Map;
+
+import org.hamcrest.core.IsEqual;
+
 import com.sophossolutions.models.RegisterModel;
+import com.sophossolutions.questions.ValidateStoreWelcome;
 import com.sophossolutions.tasks.StoreRegister;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
@@ -36,7 +42,7 @@ public class StoreRegisterStepDefinitions {
 
 	@Then("I verify that the register is successful")
 	public void iVerifyThatTheRegisterIsSuccessful() {
-		System.out.println("@THEN");
+		theActorInTheSpotlight().should(seeThat(ValidateStoreWelcome.withText(TXT_WELCOME), IsEqual.equalTo(false)));
 	}
 
 }

@@ -5,7 +5,7 @@ Feature: I want to register at the pet store
   Scenario: I want to register at the pet store
     Given I want to register in "https://petstore.octoperf.com/actions/Account.action?newAccountForm="
     When I assign the user data
-      | username           | pepito2         |
+      | username           | pepito9         |
       | password           |             123 |
       | firstname          | pepito2         |
       | lastname           | lala            |

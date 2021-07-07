@@ -3,6 +3,7 @@ package com.sophossolutions.tasks;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
+import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
 import com.sophossolutions.models.RegisterModel;
@@ -23,6 +24,7 @@ import static com.sophossolutions.ui.StoreRegister.SELECT_LANGUAGEPREFERENCE;
 import static com.sophossolutions.ui.StoreRegister.SELECT_FAVOURITECATEGORY;
 import static com.sophossolutions.ui.StoreRegister.BOOL_ENABLEMYLIST;
 import static com.sophossolutions.ui.StoreRegister.BOOL_ENABLEMYBANNER;
+import static com.sophossolutions.ui.StoreRegister.BTN_REGISTER;
 import com.sophossolutions.interactions.ClickButton;
 
 public class StoreRegister implements Task {
@@ -52,8 +54,9 @@ public class StoreRegister implements Task {
 				Enter.theValue(newUser.getStrCountry()).into(TXT_COUNTRY),
 				SelectFromOptions.byValue(newUser.getStrLanguage()).from(SELECT_LANGUAGEPREFERENCE),
 				SelectFromOptions.byValue(newUser.getStrFavouriteCategory()).from(SELECT_FAVOURITECATEGORY),
-				ClickButton.whenState(BOOL_ENABLEMYBANNER, newUser.isEnableMyBanner()),
-				ClickButton.whenState(BOOL_ENABLEMYLIST, newUser.isEnableMyList()));
+				ClickButton.whenState(BOOL_ENABLEMYLIST, newUser.isEnableMyList()),
+				ClickButton.whenState(BOOL_ENABLEMYBANNER, newUser.isEnableMyBanner()));
+				//Click.on(BTN_REGISTER)
 	}
 	
 	public static StoreRegister withData(RegisterModel newUser) {
