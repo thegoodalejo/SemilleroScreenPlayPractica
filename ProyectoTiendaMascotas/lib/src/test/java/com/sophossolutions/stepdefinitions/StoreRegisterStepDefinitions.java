@@ -2,6 +2,7 @@ package com.sophossolutions.stepdefinitions;
 
 import static com.sophossolutions.ui.StoreHome.TXT_WELCOME;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import java.util.Map;
@@ -12,12 +13,19 @@ import com.sophossolutions.models.RegisterModel;
 import com.sophossolutions.questions.ValidateStoreWelcome;
 import com.sophossolutions.tasks.StoreRegister;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actions.Open;
+import net.serenitybdd.screenplay.actors.OnlineCast;
 
 public class StoreRegisterStepDefinitions {
+	
+	@Before()
+	public void setup() {
+		setTheStage(new OnlineCast());
+	}
 
 	@Given("I want to register in {string}")
 	public void iWantToRegisterIn(String strUrl) {

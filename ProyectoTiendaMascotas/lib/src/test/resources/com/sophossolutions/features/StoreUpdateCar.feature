@@ -17,5 +17,5 @@ Feature: Update shopping cart in pet store
     Examples: 
       | type     | breed     | description | amount |
       | FISH     | Angelfish | Large       |      5 |
-      | REPTILES | Iguana    | Green       |      2 |
-      | DOGS     | Bulldog   | Male        |      3 |
+ #     | REPTILES | Iguana    | Green       |      2 |
+ #     | DOGS     | Bulldog   | Male        |      3 |
