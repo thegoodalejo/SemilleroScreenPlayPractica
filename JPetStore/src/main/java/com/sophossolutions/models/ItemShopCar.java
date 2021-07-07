@@ -1,17 +1,15 @@
 package com.sophossolutions.models;
 
-public class ItemShopCart {
+public class ItemShopCar {
 	private String itemID;
 	private String productId;
 	private String description;
-	private Boolean inStock;
 	private String listPrice;
 	
-	public ItemShopCart(String itemID, String productId, Boolean inStock,String description, String listPrice) {
+	public ItemShopCar(String itemID, String productId, String description, String listPrice) {
 		this.itemID = itemID;
 		this.productId = productId;
 		this.description = description;
-		this.inStock = inStock;
 		this.listPrice = listPrice;
 	}
 
@@ -30,9 +28,13 @@ public class ItemShopCart {
 	public String getListPrice() {
 		return listPrice;
 	}
-
-	public Boolean getInStock() {
-		return inStock;
+	
+	public void showAnimal() {
+		String base = "|%25s|%25s|%25s|%25s|";
+		System.out.println(
+				String.format(base, "Item Id", "Product Id", "Description", "List Price") + "\n" +
+				String.format(base, getItemID(), getProductId(), getDescription(), getListPrice() ) 
+				);
 	}
 	
 }
