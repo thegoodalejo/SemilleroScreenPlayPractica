@@ -29,5 +29,9 @@ public class ClickButton implements Interaction {
 	public static ClickButton whenState(Target targetButton, boolean boolState) {
 		return Tasks.instrumented(ClickButton.class, targetButton, boolState);
 	}
+	
+	public static ClickButton elementTarget(Target targetButton) {
+		return Tasks.instrumented(ClickButton.class, targetButton, true);
+	}
 
 }
