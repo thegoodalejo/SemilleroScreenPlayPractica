@@ -25,9 +25,8 @@ public class ClickRandomElement implements Task{
 	public <T extends Actor> void performAs(T actor) {
 		int amt = actor.asksFor(AmountOfElements.in(selectedTargets));
 		int sel = ThreadLocalRandom.current().nextInt(0, amt);
-		WebElementFacade selectedElement = elementNo(sel).fromList(selectedTargets.resolveAllFor(actor));
 		actor.attemptsTo(
-					Click.on(selectedElement)
+					Click.on(elementNo(sel).fromList(selectedTargets.resolveAllFor(actor)))
 				);
 	}
 	

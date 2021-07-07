@@ -12,6 +12,18 @@ public class CartViewPage {
 		return Target.the("Item ID").locatedBy(String.format(ITEM_SELECTOR, i) + "/td[1]/a");
 	}
 	
+	public static Target getProductID(int i) {
+		return Target.the("Product ID").locatedBy(String.format(ITEM_SELECTOR, i) + "/td[2]");
+	}
+	
+	public static Target getDescription(int i) {
+		return Target.the("Product Description").locatedBy(String.format(ITEM_SELECTOR, i) + "/td[3]");
+	}
+	
+	public static Target getTotalCost(int i) {
+		return Target.the("Total item cost").locatedBy(String.format(ITEM_SELECTOR, i) + "/td[7]");
+	}
+	
 	public static Target getListPrice(int i) {
 		return Target.the("Item Price").locatedBy(String.format(ITEM_SELECTOR, i) + "/td[6]");
 	}

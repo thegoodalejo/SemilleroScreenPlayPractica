@@ -25,6 +25,7 @@ public class MakeChoice implements Task{
 		Animal a = new Animal(
 					Text.of(ProductPage.getItemIDNo(chosenElement)).viewedBy(actor).asString(),
 					Text.of(ProductPage.getProductIDNo(chosenElement)).viewedBy(actor).asString(),
+					Text.of(ProductPage.getDescriptionNo(chosenElement)).viewedBy(actor).asString(),
 					Text.of(ProductPage.getListPriceNo(chosenElement)).viewedBy(actor).asString()
 				);
 		actor.remember("ADDED_ANIMAL", a);
