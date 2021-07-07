@@ -50,7 +50,7 @@ public class ViewItemInfoStepDefinition {
 
 	@Then("Validate the information in the table")
 	public void validateTheInformationInTheTable() {
-		ItemShopCar infoAnimal = theActorInTheSpotlight().recall(Constants.MODEL_CARRITO);
+		ItemShopCar infoAnimal = theActorInTheSpotlight().recall(Constants.MODEL_ANIMAL);  // Aca hay un cambio !
 		theActorInTheSpotlight().should(seeThat(IdProducAnima.with(ResultTypeAnimalsPage.TXT_ID_ANIMAL),
 				IsEqual.equalTo(infoAnimal.getItemID())));
 	}

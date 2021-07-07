@@ -1,8 +1,7 @@
 #Author: santiago.espinal@sophossolutions.com and juan.blanco@sophossolutions.com
 Feature: Try update cart
   I as an automation want to try update cart
-  
-	 
+
   Background: User login
     Given Navigate to the page "https://petstore.octoperf.com/actions/Account.action?signonForm="
     When Login with the user "JuanSantiago" and password "1234"
@@ -12,6 +11,6 @@ Feature: Try update cart
     And Observe the selected animal in the cart
 
   Scenario: update cart
-    Given Must go to cart
-    When Debe seleccionar un animal del carrito aleatoriamente
-    Then Validar la eliminacion del articulo 
+    Given I want to select 5 pets
+    When Update cart
+    Then Validate the cost in the cart
