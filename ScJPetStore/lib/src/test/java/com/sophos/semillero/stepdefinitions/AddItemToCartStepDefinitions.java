@@ -22,7 +22,7 @@ public class AddItemToCartStepDefinitions {
 		
 	}
 
-	@When("Elijo una categoria (.+) un producto (.+) y un item(.+)$")
+	@When("Elijo una categoria (.+) un producto (.+) y un item (.+)$")
 	public void elijoUnaCategoriaUnProductoYUnItem(String strCategoria, String strProductoId, String strItemId) {
 		theActorInTheSpotlight().wasAbleTo(AddToCart.withCategoriaProductoItem(strCategoria, strProductoId, strItemId));
 		
