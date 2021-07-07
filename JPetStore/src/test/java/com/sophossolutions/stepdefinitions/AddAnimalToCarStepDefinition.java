@@ -29,22 +29,22 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 public class AddAnimalToCarStepDefinition
 {	
 	@Before
-	public void settup()
+	public void setup()
 	{
 		setTheStage(new OnlineCast());
 	}
 	private String strActorName = "Juan Miguel y Santaigo ";
 	private String auxIndex;
 	
-	@Given("Debe ir a los catalogos de animales")
-	public void debeIrALosCatalogosDeAnimales() {
+	@Given("Must go to animal catalogs")
+	public void mustGoToAnimalCatalogs() {
 		theActorCalled(strActorName).wasAbleTo(GoToPage.type(HomePage.LINK_ANIMAL,HomePage.LINKS_ANIMALS));
 		
 		theActorInTheSpotlight().wasAbleTo(GoToPage.animals(ResultTypeAnimalsPage.LINK_ANIMAL,ResultTypeAnimalsPage.LINKS_ANIMALS));
 	}
 
-	@When("Debe seleccionar un animal aleatoriamente")
-	public void debeSeleccionarUnAnimalAleatoriamente() {
+	@When("Must select an animal randomly")
+	public void mustSelectAnAnimalRandomly() {
 		
 		theActorInTheSpotlight().wasAbleTo(GoToPage.selectOne(AnimalPage.LINK_ANIMAL, AnimalPage.LINKS_ANIMALS));
 		auxIndex = theActorInTheSpotlight().recall(Constants.DIR_INDEX_ANIMAL).toString();
@@ -52,11 +52,10 @@ public class AddAnimalToCarStepDefinition
 		theActorInTheSpotlight().wasAbleTo(Click.on(AnimalPage.BTN_ANIMAL.of(auxIndex)));
 	}
 
-	@Then("Observar el animal seleccionado en el carrito")
-	public void observarElAnimalSeleccionadoEnElCarrito() {
+	@Then("Observe the selected animal in the cart")
+	public void observeTheSelectedAnimalInTheCart() {
 		ItemShopCar infoAnimal = theActorInTheSpotlight().recall(Constants.MODEL_CARRITO);
 		theActorInTheSpotlight().should(seeThat(IdProduc.with(CarPage.TEXT_PRODUCT_ID,CarPage.N_ANIMALS_TABLE),
 				IsEqual.equalTo(infoAnimal.getProductId())));
 	}
-	
 }

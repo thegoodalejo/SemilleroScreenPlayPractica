@@ -19,28 +19,24 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
 public class RemoveItemFromCarStepDefinition {
+	
 	private String strActorName = "Juan Miguel y Santaigo ";
 	@Before
-	public void settup()
+	public void setup()
 	{
 		setTheStage(new OnlineCast());
 	}
-	@Given("Debe ir al carrito")
-	public void debeIrAlCarrito() {
+	@Given("Must go to cart")
+	public void mustGoToCart() {
 		theActorCalled(strActorName).attemptsTo(Click.on(CarPage.BTN_UPDATE_CAR));
 	}
-	@When("Debe seleccionar un animal del carrito aleatoriamente")
-	public void debeSeleccionarUnAnimalDelCarritoAleatoriamente() {
-			try {
-				Thread.sleep(20000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+	@When("You must select an animal from the cart at random to upgrade")
+	public void youMustSelectAnAnimalFromTheCartAtRandomToUpgrade() {
 		theActorInTheSpotlight().wasAbleTo(Remove.with(CarPage.BTN_REMOVE,CarPage.N_ANIMALS_TABLE ));
 	}
-	@Then("Validar la eliminacion del articulo")
-	public void validarLaEliminacionDelArticulo() {
+	@Then("Validate the updated price")
+	public void validateTheUpdatedPrice() {
 		theActorInTheSpotlight().should(seeThat(the(CarPage.TITLE_EMPTY), isVisible()));
 	}
+	
 }

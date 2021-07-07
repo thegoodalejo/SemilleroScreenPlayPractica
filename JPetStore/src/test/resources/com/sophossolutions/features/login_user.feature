@@ -1,8 +1,8 @@
 #Author: juan.blanco@sophossolutions.com
-Feature: Inicio de sesion para un usuario
-  Quiero iniciar la sesion de un usuario determinado
+Feature: Login for a user
+  I want to start the session of a certain user
 
-  Scenario: Inicio de sesion de un Usuario
-    Given Navegar a la pagina "https://petstore.octoperf.com/actions/Account.action?signonForm="
-    When Ingreso con el usuario "JuanSantiago" y clave "1234"
-    Then Observar la pagina inicio de sesion
+  Scenario: User login
+    Given Navigate to the page "https://petstore.octoperf.com/actions/Account.action?signonForm="
+    When Login with the user "JuanSantiago" and password "1234"
+    Then Observe the login page
