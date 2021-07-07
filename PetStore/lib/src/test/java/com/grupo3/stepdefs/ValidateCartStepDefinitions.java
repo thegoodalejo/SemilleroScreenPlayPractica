@@ -6,6 +6,8 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 import com.grupo3.model.ShoppingCart;
 import com.grupo3.questions.AmountOfItemsInCart;
+import com.grupo3.questions.TheItemsInTheCart;
+
 import static com.grupo3.tasks.GetTheCartInfo.readAndRememberTheItemsInTheCart;
 
 import io.cucumber.java.en.Given;
@@ -26,7 +28,7 @@ public class ValidateCartStepDefinitions {
 
 	@Then("Deberia validar que la informacion es congruente")
 	public void deberiaValidarQueLaInformacionEsCongruente() {
-	    theActorInTheSpotlight().should(seeThat(null, null));
+	    theActorInTheSpotlight().should(seeThat(TheItemsInTheCart.areCongruent()));
 	}
 	
 }
