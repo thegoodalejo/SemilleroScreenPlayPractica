@@ -26,8 +26,7 @@ public class ValidateCartStepDefinitions {
 
 	@Then("Deberia validar que la informacion es congruente")
 	public void deberiaValidarQueLaInformacionEsCongruente() {
-	    ShoppingCart c = theActorInTheSpotlight().recall("SHOPPING_CART");
-	    c.printCart();
+	    theActorInTheSpotlight().should(seeThat(null, null));
 	}
 	
 }

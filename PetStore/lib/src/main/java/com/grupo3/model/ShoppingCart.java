@@ -14,24 +14,34 @@ public class ShoppingCart {
 	}
 	
 	public void addToCart(Animal a) {
-		if (this.contents.containsKey(a)) {
-			int v = this.contents.get(a);
-			this.contents.replace(a, v+1);
-		} else {
-			this.contents.put(a, 1);
+		for (Entry<Animal, Integer> entry : this.contents.entrySet()) {
+			if (entry.getKey().getItemID().equals(a.getItemID())) {
+				this.contents.replace(entry.getKey(), entry.getValue()+1);
+				total += a.getListPrice();
+				return;
+			}
 		}
+		total += a.getListPrice();
+		this.contents.put(a, 1);
 	}
 	
 	
 	public void printCart() {
 		System.out.println("Carrito de compras: ");
+		System.out.println("PID\tNombre\t\t\t\tPrecio\t\tCantidad\ttotal");
+		System.out.println("-------------------------------------------------------------------------------");
 		for (Entry<Animal, Integer> entry : this.contents.entrySet()) {
 			Animal a = entry.getKey();
 			int amount = entry.getValue();
-			
-			System.out.println("\t" + a.getItemID() + "\t" + (a.getListPrice()*amount) + " ("+ amount + "x" + a.getListPrice() +")");
+			System.out.printf("%-8s%-30s\t$%2.2f\t\t%02d\t\t$%2.2f\n",
+						a.getItemID(),
+						a.getDescription(),
+						a.getListPrice(),
+						amount,
+						a.getListPrice()*amount
+					);
 		}
-		System.out.println("------------------------------------------------");
-		System.out.println("Total: \t" + total);
+		System.out.println("-------------------------------------------------------------------------------");
+		System.out.printf("Total: \t$%2.2f\n", total);
 	}
 }

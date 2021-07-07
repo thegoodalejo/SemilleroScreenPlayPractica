@@ -31,7 +31,16 @@ public class Animal {
 	public String getDescription() {
 		return description;
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Animal) {
+			Animal a = (Animal)obj;
+			return a.itemID.equals(this.itemID);
+		}
+		return false;
+	}
 	
-	
+		
 	
 }

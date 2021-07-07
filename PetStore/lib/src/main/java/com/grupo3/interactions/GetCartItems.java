@@ -9,6 +9,7 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 import com.grupo3.model.Animal;
 import com.grupo3.model.ShoppingCart;
 import com.grupo3.questions.AmountOfElements;
+import static com.grupo3.questions.NumberOfItem.numberOfItem;
 import com.grupo3.ui.CartViewPage;
 
 public class GetCartItems implements Task{
@@ -19,13 +20,16 @@ public class GetCartItems implements Task{
 		int amt = actor.asksFor(AmountOfElements.in(CartViewPage.ITEMS_IN_CART));
 		ShoppingCart cart = new ShoppingCart();
 		for (int i = 1; i < amt+1; i++) {
-			Animal a = new Animal(
+			int animalCount = actor.asksFor(numberOfItem(i));
+			for (int j = 0; j < animalCount; j++) {
+				Animal a = new Animal(
 						Text.of(CartViewPage.getItemID(i)).viewedBy(actor).asString(),
 						Text.of(CartViewPage.getProductID(i)).viewedBy(actor).asString(),
 						Text.of(CartViewPage.getDescription(i)).viewedBy(actor).asString(),
 						Text.of(CartViewPage.getListPrice(i)).viewedBy(actor).asString()
-					);
-			cart.addToCart(a);
+						);
+				cart.addToCart(a);				
+			}
 					
 		}
 		actor.remember("SHOPPING_CART", cart);
