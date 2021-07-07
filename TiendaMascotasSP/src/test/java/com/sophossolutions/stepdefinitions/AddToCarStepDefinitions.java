@@ -1,10 +1,14 @@
 package com.sophossolutions.stepdefinitions;
 
-import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
+import org.hamcrest.core.IsEqual;
 
-import com.sophossolutions.tasks.Login;
+import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+
 import com.sophossolutions.tasks.SelectSpecie;
+import com.sophossolutions.ui.CartPage;
+import com.sophossolutions.questions.Item;
 import com.sophossolutions.tasks.AddToCar;
 
 import io.cucumber.java.en.Given;
@@ -24,9 +28,9 @@ public class AddToCarStepDefinitions {
 
 	}
 
-	@Then("Quiero verificar si quedo el item en el carrito")
-	public void quieroVerificarSiQuedoElItemEnElCarrito() {
-
+	@Then("Quiero verificar si quedo el item {string} en el carrito")
+	public void quieroVerificarSiQuedoElItemEnElCarrito(String strItem) {
+		theActorInTheSpotlight().should(seeThat(Item.inCar(CartPage.ID_ITEM.of(strItem)),IsEqual.equalTo(strItem)));
 	}
 
 }

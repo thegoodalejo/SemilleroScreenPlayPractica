@@ -11,4 +11,4 @@ Feature: Agreagr un animal al carrito de compras
   Scenario: Agregar un animal al carrito
     Given Estando en la pagina de inicio deseo selecionar una especie de animal "cats"
     When Deseo selecionar un producto "FL-DLH-02" y agregar el item "EST-17"
-    Then Quiero verificar si quedo el item en el carrito
+    Then Quiero verificar si quedo el item "EST-17" en el carrito

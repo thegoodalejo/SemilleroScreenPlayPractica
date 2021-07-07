@@ -12,8 +12,6 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import com.sophossolutions.tasks.NewUser;
 import com.sophossolutions.tasks.ToRegister;
 
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
-
 //import com.sophossolutions.tasks.SelectOption;
 //import com.sophossolutions.tasks.OpenNew;
 //import com.sophossolutions.ui.OpenAccountPage;
@@ -30,14 +28,13 @@ public class NewUserStepDefinitions {
 
 	@When("Deseo ingresar los datos del nuevo usuario")
 	public void deseoIngresarLosDatosDelNuevoUsuario() {
-		theActorCalled("grupo_5").wasAbleTo(NewUser.withValues());
+		theActorInTheSpotlight().wasAbleTo(NewUser.withValues());
 
 	}
 
 	@Then("Deberia visualizar los datos en pantalla del nuevo usuario")
 	public void deberiaVisualizarLosDatosEnPantallaDelNuevoUsuario() {
-		// Write code here that turns the phrase above into concrete actions
-
+		
 	}
 
 	@Before

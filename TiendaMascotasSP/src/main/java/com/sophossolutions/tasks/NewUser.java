@@ -6,11 +6,7 @@ import com.sophossolutions.model.RegisterUser;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.actions.SelectFromOptions;
-import com.sophossolutions.ui.HomePage;
-import com.sophossolutions.ui.LoginPage;
 import com.sophossolutions.ui.RegisterPage;
 
 public class NewUser implements Task{
