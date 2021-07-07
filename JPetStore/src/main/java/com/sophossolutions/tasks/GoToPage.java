@@ -16,7 +16,6 @@ public class GoToPage implements Task {
 	private Target linkPage;
 	private Target options;
 	private Integer minValue = 1;
-	private Integer accountsMinus = 0;
 	
 	
 	
@@ -25,18 +24,12 @@ public class GoToPage implements Task {
 		this.options = opt;
 	}
 	
-	public GoToPage(Target linkpage, Target opt, Integer minValue, Integer accoutnMinus){
-		this.linkPage = linkpage;
-		this.options = opt;
-		this.minValue = minValue;
-		this.accountsMinus = accoutnMinus;
-	}
 	
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 		
 		Integer accounts = options.resolveAllFor(actor).size();
-		Integer randomValue = this.minValue + (int)(Math.random() * accounts - this.accountsMinus);
+		Integer randomValue = this.minValue + (int)(Math.random() * accounts );
 		actor.attemptsTo(
 				Click.on(linkPage.of(String.valueOf(randomValue)))
 				);
@@ -52,7 +45,7 @@ public class GoToPage implements Task {
 	}
 
 	public static GoToPage selectOne(Target linkpage,Target opt) {
-		return instrumented(GoToPage.class, linkpage,opt, 2, 1);
+		return instrumented(GoToPage.class, linkpage,opt);
 	}
 	
 }
