@@ -16,14 +16,14 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class AddToCarStepDefinitions {
-	@Given("Estando en la pagina de inicio deseo selecionar una especie de animal {string}")
-	public void estandoEnLaPaginaDeInicioDeseoSelecionarUnaEspecieDeAnimal(String strEspecie) {
+	@Given("Estando en la pagina de inicio deseo seleccionar una especie de animal {string}")
+	public void estandoEnLaPaginaDeInicioDeseoSeleccionarUnaEspecieDeAnimal(String strEspecie) {
 		theActorCalled("grupo_5").wasAbleTo(SelectSpecie.withValue(strEspecie));
 
 	}
 
-	@When("Deseo selecionar un producto {string} y agregar el item {string}")
-	public void deseoSelecionarUnProductoYAgregarElItem(String strIdProducto, String strIdItem) {
+	@When("Deseo seleccionar un producto {string} y agregar el item {string}")
+	public void deseoSeleccionarUnProductoYAgregarElItem(String strIdProducto, String strIdItem) {
 		theActorInTheSpotlight().wasAbleTo(AddToCar.the(strIdProducto, strIdItem));
 
 	}
