@@ -10,10 +10,10 @@ import static com.sophos.semillero.ui.RegisterNewUser.MENU_FAVOURITE_CATEGORY;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
+import com.sophos.semillero.interactions.SaveModel;
 import com.sophos.semillero.model.UserJPetStore;
 import com.sophos.semillero.tasks.DarClick;
 import com.sophos.semillero.tasks.InsertThe;
-import com.sophos.semillero.tasks.SaveModels;
 import com.sophos.semillero.tasks.Select;
 
 public class RegisterNewUserStepDefinitions {
@@ -25,7 +25,7 @@ public class RegisterNewUserStepDefinitions {
 	    		InsertThe.data(strCredentials, TABLE_USER_INFORMATION),
 	    		InsertThe.data(strInfo, TABLE_ACCOUNT_INFORMATION),
 	    		Select.the(strCategory, MENU_FAVOURITE_CATEGORY),
-	    		SaveModels.user(strCredentials, strInfo, strCategory,"USER_MODEL"));
+	    		SaveModel.user(strCredentials, strInfo, strCategory,"USER_MODEL"));
 	}
 
 	@Then("I should see the whole user information")

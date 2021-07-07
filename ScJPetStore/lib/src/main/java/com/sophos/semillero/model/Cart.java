@@ -11,6 +11,10 @@ public class Cart {
 		this.listItems = listItems;
 		this.subTotal = subTotal;
 	}
+	
+	public Cart(List<Item> listItems) {
+		this.listItems = listItems;
+	}
 
 	public List<Item> getListItems() {
 		return listItems;
@@ -18,6 +22,16 @@ public class Cart {
 
 	public String getSubTotal() {
 		return subTotal;
+	}
+
+	public void setListItems(List<Item> listItems) {
+		this.listItems = listItems;
+	}
+
+	public void setSubTotal(String subTotal) {
+		this.subTotal = subTotal;
 	}	
+	
+	
 
 }

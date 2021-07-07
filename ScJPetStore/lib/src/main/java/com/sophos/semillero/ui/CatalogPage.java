@@ -12,9 +12,11 @@ public class CatalogPage {
 	public static final Target BTN_CATEGORIA = Target.the("Boton categoria").locatedBy("//img[@src='../images/{0}_icon.gif']");
 	public static final Target LINK_PRODUCT_ID = Target.the("Boton product ID").locatedBy("//a[text()='{0}']");
 	public static final Target LINK_ITEM_ID = Target.the("Boton item ID").locatedBy("//a[text()='{0}']");	
-	public static final Target BTN_ADD_TO_CART =Target.the("Boton agregar a carrito").locatedBy("//a[text()='Add to Cart']");
-	
-	public static final Target TXT_ANIMAL_NAME =Target.the("Nombre completo del animal").locatedBy("//font[@size='4']");
-	
+	public static final Target BTN_ADD_TO_CART =Target.the("Boton agregar a carrito").locatedBy("//a[text()='Add to Cart']");	
+	public static final Target TXT_ANIMAL_NAME =Target.the("Nombre completo del animal").locatedBy("//font[@size='4']");	
+	public static final Target CART_LIST = Target.the("Lista items carrito").locatedBy("//tr[position()>1]");
+	public static final Target LOGO_HOME = Target.the("Logo de inicio").locatedBy("//div[@id='LogoContent']/a");	
+	public static final Target BTN_REMOVE_ITEM =  Target.the("Boton remover item").locatedBy("//a[@href='/actions/Cart.action?removeItemFromCart=&workingItemId={0}']");		
+	public static final Target IMG_ITEM = Target.the("Imagen del Item").locatedBy("//tbody/tr/td/img");
 
 }

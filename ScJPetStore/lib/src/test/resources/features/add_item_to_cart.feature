@@ -7,12 +7,8 @@ Feature: Agregar item al carrito de compra
     When I enter username "MariaSophos" password "1234"
     Then I verify that i have logged in
 
-  Scenario Outline: Agregar item al carrito
-    Given Deseo seleccionar un item
-    When Elijo una categoria <categoria> un producto <producto> y un item <item>
+  Scenario: Agregar item al carrito
+    When Agrego items al carrito
+      | 0 | dogs,K9-BD-01,EST-6 |
+      | 1 | dogs,K9-BD-01,EST-7 |
     Then Valido el carrito
-
-    Examples: 
-      | categoria | producto | item  |
-      | dogs      | K9-BD-01 | EST-6 |
-#      | DOGS      | 'K9-BD-01' | 'EST-7' |

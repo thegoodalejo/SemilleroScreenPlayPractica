@@ -2,8 +2,6 @@ package com.sophos.semillero.tasks;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-import com.sophos.semillero.interactions.ActorRemember;
-
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 

@@ -12,7 +12,6 @@ public class Item {
 	
 	public Item(String itemID, String productID, String description, boolean inStock, String quantity, String listPrice,
 			String totalCost) {
-		super();
 		this.itemID = itemID;
 		this.productID = productID;
 		this.description = description;
@@ -20,6 +19,15 @@ public class Item {
 		Quantity = quantity;
 		this.listPrice = listPrice;
 		this.totalCost = totalCost;
+	}
+	
+	public Item(String itemID, String productID) {
+		this.itemID = itemID;
+		this.productID = productID;
+	}
+	
+	public Item(String itemID) {
+		this.itemID = itemID;
 	}
 
 	public String getItemID() {
@@ -49,5 +57,46 @@ public class Item {
 	public String getTotalCost() {
 		return totalCost;
 	}
+
+	public void setItemID(String itemID) {
+		this.itemID = itemID;
+	}
+
+	public void setProductID(String productID) {
+		this.productID = productID;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public void setInStock(boolean inStock) {
+		this.inStock = inStock;
+	}
+
+	public void setQuantity(String quantity) {
+		Quantity = quantity;
+	}
+
+	public void setListPrice(String listPrice) {
+		this.listPrice = listPrice;
+	}
+
+	public void setTotalCost(String totalCost) {
+		this.totalCost = totalCost;
+	}
+
+	
+	@Override
+	public boolean equals(Object obj) {
+		Item itemOtro = (Item) obj;
+		
+		if(this.itemID.equals(itemOtro.getItemID())) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}	
 
 }
