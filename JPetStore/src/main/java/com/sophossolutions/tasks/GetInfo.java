@@ -1,6 +1,7 @@
 package com.sophossolutions.tasks;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 import com.sophossolutions.models.ItemShopCar;
 import com.sophossolutions.ui.AnimalPage;
@@ -22,6 +23,8 @@ public class GetInfo implements Task {
 				Text.of(AnimalPage.TEXT_LIST_PRICE.of(indexAnimal)).viewedBy(actor).asString()
 				);
 		infoAnimal.showAnimal();
+		theActorInTheSpotlight().remember(Constants.MODEL_CARRITO, infoAnimal);
+		
 	}
 	
 	public static GetInfo animal() {

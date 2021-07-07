@@ -13,47 +13,42 @@ import com.sophossolutions.util.Constants;
 
 public class GoToPage implements Task {
 
-	private Target linkPage;
-	private Target options;
-	private Integer minValue = 1;
-	private Integer accountsMinus = 0;
+	private Target tarLinkPage;
+	private Target tarOptions;
 	
 	
-	
-	public GoToPage(Target linkpage, Target opt){
-		this.linkPage = linkpage;
-		this.options = opt;
+	public GoToPage(Target tarLinkPage, Target tarOptions){
+		this.tarLinkPage = tarLinkPage;
+		this.tarOptions = tarOptions;
 	}
 	
-	public GoToPage(Target linkpage, Target opt, Integer minValue, Integer accoutnMinus){
-		this.linkPage = linkpage;
-		this.options = opt;
-		this.minValue = minValue;
-		this.accountsMinus = accoutnMinus;
+	public GoToPage(Target tarLinkPage, Target tarOptions, Integer intMinValue, Integer accoutnMinus){
+		this.tarLinkPage = tarLinkPage;
+		this.tarOptions = tarOptions;
 	}
 	
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 		
-		Integer accounts = options.resolveAllFor(actor).size();
-		Integer randomValue = this.minValue + (int)(Math.random() * accounts - this.accountsMinus);
-		//System.out.println(randomValue);
+		Integer accounts = tarOptions.resolveAllFor(actor).size();
+		Integer randomValue = 1 + (int)(Math.random() * accounts );
+		System.out.println(randomValue);
 		actor.attemptsTo(
-				Click.on(linkPage.of(String.valueOf(randomValue)))
+				Click.on(tarLinkPage.of(String.valueOf(randomValue)))
 				);
 		theActorInTheSpotlight().remember(Constants.DIR_INDEX_ANIMAL, randomValue.toString());
 	}
 	
-	public static GoToPage type(Target linkpage,Target opt) {
-		return instrumented(GoToPage.class, linkpage,opt);
+	public static GoToPage type(Target tarLinkPage,Target tarOptions) {
+		return instrumented(GoToPage.class, tarLinkPage,tarOptions);
 	}
 	
-	public static GoToPage animals(Target linkpage,Target opt) {
-		return instrumented(GoToPage.class, linkpage,opt);
+	public static GoToPage animals(Target tarLinkPage,Target tarOptions) {
+		return instrumented(GoToPage.class, tarLinkPage,tarOptions);
 	}
 
-	public static GoToPage selectOne(Target linkpage,Target opt) {
-		return instrumented(GoToPage.class, linkpage,opt, 2, 1);
+	public static GoToPage selectOne(Target tarLinkPage,Target tarOptions) {
+		return instrumented(GoToPage.class, tarLinkPage,tarOptions);
 	}
 	
 }
