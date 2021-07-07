@@ -18,6 +18,7 @@ import org.hamcrest.core.IsEqual;
 import com.sophos.semillero.exceptions.ExceptionMsg;
 import com.sophos.semillero.questions.TextObtained;
 import com.sophos.semillero.tasks.GoToHomePage;
+import com.sophos.semillero.tasks.GoToLoginPage;
 import com.sophos.semillero.tasks.Login;
 import com.sophos.semillero.tasks.OpenAccount;
 import com.sophos.semillero.ui.HomePage;
@@ -31,6 +32,7 @@ public class LoginStepDefinitions {
 
 	@When("Ingreso nombre de usuario {string} y password {string}")
 	public void ingresoNombreDeUsuarioYPassword(String strUser, String strPassword) {
+		theActorInTheSpotlight().wasAbleTo(GoToLoginPage.usingButtonAtTheTop());
 		theActorInTheSpotlight().wasAbleTo(Login.withCredential(strUser, strPassword));
 	}
 
