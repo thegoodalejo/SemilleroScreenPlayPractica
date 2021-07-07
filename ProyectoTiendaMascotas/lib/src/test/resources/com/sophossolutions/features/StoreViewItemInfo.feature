@@ -8,7 +8,13 @@ Feature: Add Pet To Shopping Cart
     Then I verify that the login is successful
 
   Scenario: Add Pet To Shopping Cart
-    Given I want search pet type "FISH"
-    And Select pet breed "Angelfish" 
-    When I decide the pet by the description "Large"
+    Given I want search pet type <type>
+    And Select pet breed <breed> 
+    When I decide the pet by the description <description>
     Then I verify that show view item information
+    
+    Examples: 
+      | type     | breed     | description |
+      | FISH     | Angelfish | Large       |
+      | REPTILES | Iguana    | Green       |
+      | DOGS     | Bulldog   | Male        |
