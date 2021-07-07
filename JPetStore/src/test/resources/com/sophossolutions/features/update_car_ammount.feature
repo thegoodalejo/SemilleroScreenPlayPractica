@@ -1,7 +1,8 @@
 #Author: julian.rodriguez@sophossolutions.com
-Feature: Try removing an animal from the cart
-  I as an operator want to remove an animal from the cart
-
+Feature: Try update cart
+  I as an automation want to try update cart
+  
+	 
   Background: User login
     Given Navigate to the page "https://petstore.octoperf.com/actions/Account.action?signonForm="
     When Login with the user "JuanSantiago" and password "1234"
@@ -10,7 +11,7 @@ Feature: Try removing an animal from the cart
     And Must select an animal randomly
     And Observe the selected animal in the cart
 
-  Scenario: Remove an animal from the cart
+  Scenario: update cart
     Given Must go to cart
-    When You must select an animal from the cart at random to upgrade
-    Then Validate the updated price
+    When Debe seleccionar un animal del carrito aleatoriamente
+    Then Validar la eliminacion del articulo 

@@ -26,17 +26,17 @@ public class RegisterNewUserStepDefinition
 		setTheStage(new OnlineCast());
 	}
 	
-	@Given("Debe estar en la url {string}")
+	@Given("It must be in the url {string}")
 	public void debeEstarEnLaUrl(String strUrl) {
 		theActorCalled(strActorName).wasAbleTo(Open.url(strUrl));
 	}
 
-	@When("Debe ingresar la informacion {string}")
+	@When("You must enter the information {string}")
 	public void debeIngresarLaInformacion(String datos) {
 		theActorCalled(strActorName).wasAbleTo(RegisterUser.with(datos));
 	}
 
-	@Then("Debe estar la informacion en los campos")
+	@Then("The information must be in the fields")
 	public void debeEstarLaInformacionEnLosCampos() {
 	    System.out.println("@Then");
 	}

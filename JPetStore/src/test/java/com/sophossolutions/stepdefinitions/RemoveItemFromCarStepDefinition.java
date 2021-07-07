@@ -25,21 +25,15 @@ public class RemoveItemFromCarStepDefinition {
 	{
 		setTheStage(new OnlineCast());
 	}
-	@Given("Debe ir al carrito")
+	@Given("Must go to cart")
 	public void debeIrAlCarrito() {
 		theActorCalled(strActorName).attemptsTo(Click.on(CarPage.BTN_UPDATE_CAR));
 	}
-	@When("Debe seleccionar un animal del carrito aleatoriamente")
+	@When("Must select an animal from the cart randomly")
 	public void debeSeleccionarUnAnimalDelCarritoAleatoriamente() {
-			try {
-				Thread.sleep(20000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 		theActorInTheSpotlight().wasAbleTo(Remove.with(CarPage.BTN_REMOVE,CarPage.N_ANIMALS_TABLE ));
 	}
-	@Then("Validar la eliminacion del articulo")
+	@Then("Validate the deletion of the article")
 	public void validarLaEliminacionDelArticulo() {
 		theActorInTheSpotlight().should(seeThat(the(CarPage.TITLE_EMPTY), isVisible()));
 	}

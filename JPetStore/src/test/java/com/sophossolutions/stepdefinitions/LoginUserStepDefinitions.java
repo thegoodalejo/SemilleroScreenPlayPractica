@@ -27,17 +27,17 @@ public class LoginUserStepDefinitions {
 		setTheStage(new OnlineCast());
 	}
 
-	@Given("Navegar a la pagina {string}")
+	@Given("Navigate to the page {string}")
 	public void navegarALaPagina(String urlHome) {
 		theActorCalled(strActorName).wasAbleTo(Open.url(urlHome));
 	}
 
-	@When("Ingreso con el usuario {string} y clave {string}")
+	@When("Login with the user {string} and password {string}")
 	public void ingresoConElUsuarioYClave(String strUserName, String strPassword) {
 		theActorInTheSpotlight().wasAbleTo(Login.withCredential(strUserName, strPassword));
 	}
 
-	@Then("Observar la pagina inicio de sesion")
+	@Then("Observe the login page")
 	public void observarLaPaginaInicioDeSesion() {
 		theActorInTheSpotlight().should(seeThat(the(HomePage.TXT_WELCOME), isVisible()));
 	}
