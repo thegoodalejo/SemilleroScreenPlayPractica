@@ -1,40 +1,41 @@
 package com.sophossolutions.models;
 
-public class ItemShopCar {
-	private String itemID;
-	private String productId;
-	private String description;
-	private String listPrice;
+public class ItemShopCar extends ItemAnimal {
+
+	private String strInStock;
+	private String strQuantity;
+	private String strTotalCost;
 	
-	public ItemShopCar(String itemID, String productId, String description, String listPrice) {
-		this.itemID = itemID;
-		this.productId = productId;
-		this.description = description;
-		this.listPrice = listPrice;
+	public ItemShopCar(String itemID, String productId, String description, String strInStock, String strQuantity,String listPrice, String strTotalCost) {
+		super(itemID, productId, description, listPrice);
+		this.strInStock = strInStock;
+		this.strQuantity = strQuantity;
+		this.strTotalCost = strTotalCost;
+		
 	}
 
-	public String getItemID() {
-		return itemID;
+	public String getStrInStock() {
+		return strInStock;
 	}
 
-	public String getProductId() {
-		return productId;
+	public String getStrQuantity() {
+		return strQuantity;
 	}
 
-	public String getDescription() {
-		return description;
+	public String getStrTotalCost() {
+		return strTotalCost;
 	}
 
-	public String getListPrice() {
-		return listPrice;
-	}
+//	public void setStrTotalCost(String listPriceIn, String strQuantity) {
+//		Double intValAux = Double.parseDouble(listPriceIn.replace("$", ""))*Double.parseDouble(strQuantity);
+//		this.strTotalCost = "$" + intValAux.toString();
+//	}
 	
-	public void showAnimal() {
-		String base = "|%25s|%25s|%25s|%25s|";
+	public void showData() {
+		String base = "|%25s|%25s|%25s|%25s|%25s|%25s|%25s|";
 		System.out.println(
-				String.format(base, "Item Id", "Product Id", "Description", "List Price") + "\n" +
-				String.format(base, getItemID(), getProductId(), getDescription(), getListPrice() ) 
+				String.format(base, "Item Id", "Product Id", "Description", "In Stock","Quantity","List Price","Total Cost") + "\n" +
+				String.format(base, getItemID(), getProductId(), getDescription(), getStrInStock(), getStrQuantity(),getListPrice(), getStrTotalCost() ) 
 				);
 	}
-	
 }

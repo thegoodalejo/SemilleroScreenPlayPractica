@@ -9,7 +9,7 @@ import org.hamcrest.core.IsEqual;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
 import com.sophossolutions.tasks.GoToPage;
-import com.sophossolutions.models.ItemShopCar;
+import com.sophossolutions.models.ItemAnimal;
 import com.sophossolutions.questions.IdProduc;
 import com.sophossolutions.tasks.GetInfo;
 import com.sophossolutions.ui.AnimalPage;
@@ -54,7 +54,7 @@ public class AddAnimalToCarStepDefinition
 
 	@Then("Observe the selected animal in the cart")
 	public void observeTheSelectedAnimalInTheCart() {
-		ItemShopCar infoAnimal = theActorInTheSpotlight().recall(Constants.MODEL_CARRITO);
+		ItemAnimal infoAnimal = theActorInTheSpotlight().recall(Constants.MODEL_ANIMAL);
 		theActorInTheSpotlight().should(seeThat(IdProduc.with(CarPage.TEXT_PRODUCT_ID,CarPage.N_ANIMALS_TABLE),
 				IsEqual.equalTo(infoAnimal.getProductId())));
 	}
