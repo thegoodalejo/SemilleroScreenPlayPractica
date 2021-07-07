@@ -29,17 +29,17 @@ public class StoreAddPetStepDefinitions {
 		setTheStage(new OnlineCast());
 	}
 
-	@Given("I want search pet type {string}")
+	@Given("I want search pet type (.+)$")
 	public void iWantSearchPetType(String strPetType) {
 		theActorInTheSpotlight().wasAbleTo(ClickTo.ElementTarget(PET_TYPE.of(strPetType)));
 	}
 
-	@Given("Select pet breed {string}")
+	@Given("Select pet breed (.+)$")
 	public void selectPetBreed(String strPetBreed) {
 		theActorInTheSpotlight().wasAbleTo(ClickTo.ElementTarget(PET_BREED.of(strPetBreed)));
 	}
 
-	@When("decide the pet by the description {string}")
+	@When("decide the pet by the description (.+)$")
 	public void decideThePetByTheDescription(String strPetSelect) {
 		theActorInTheSpotlight().wasAbleTo(SaveInfo.on(PET_SELECT.of(strPetSelect)),
 				ClickTo.ElementTarget(BTN_ADD.of(strPetSelect)));
