@@ -1,19 +1,15 @@
 package com.sophossolutions.stepdefinitions;
 
 import static com.sophossolutions.ui.StoreCar.LIST_PETSCAR;
-import static com.sophossolutions.ui.StoreHome.TXT_WELCOME;
 import static com.sophossolutions.ui.StoreRegister.LIST_DATAACCOUNT;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
-
 import org.hamcrest.core.IsEqual;
-
 import com.sophossolutions.interactions.AddPets;
-import com.sophossolutions.models.RegisterModel;
 import com.sophossolutions.questions.ValidateDataAccountFacture;
-import com.sophossolutions.questions.ValidateStoreWelcome;
+import com.sophossolutions.questions.ValidateDataOrderFacture;
+import com.sophossolutions.questions.ValidateDataPetsFacture;
 import com.sophossolutions.tasks.StoreFinishBuy;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -33,7 +29,11 @@ public class StoreFinishBuyStepDefinitions {
 	@Then("I verify that the invoice matches what was entered")
 	public void iVerifyThatTheInvoiceMatchesWhatWasEntered() {
 		
+		String[] strDataOrder= theActorInTheSpotlight().recall("strDataOrder");
+		
 		theActorInTheSpotlight().should(seeThat(ValidateDataAccountFacture.with("dataCurrentAccountFacture"), IsEqual.equalTo(true)));
-		System.out.println("@THEN");
+		theActorInTheSpotlight().should(seeThat(ValidateDataOrderFacture.withData(strDataOrder), IsEqual.equalTo(true)));
+		theActorInTheSpotlight().should(seeThat(ValidateDataPetsFacture.with("dataPetsOrder"), IsEqual.equalTo(true)));
+		
 	}
 }

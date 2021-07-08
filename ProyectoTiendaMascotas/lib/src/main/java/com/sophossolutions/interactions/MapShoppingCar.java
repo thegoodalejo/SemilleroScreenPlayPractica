@@ -14,42 +14,69 @@ import com.sophossolutions.models.PetsCarModel;
 import static com.sophossolutions.ui.StoreCar.TEXT_PETSCAR;
 import static com.sophossolutions.ui.StoreCar.TEXT_QUANTITIES;
 
-public class MapShoppingCar implements Interaction{
+public class MapShoppingCar implements Interaction {
 
 	private Target listDataShoppingCar;
-	
-	public MapShoppingCar(Target listDataCurrentAccount) {
+	private Target listDataPetCar;
+	private String strKey;
+
+	public MapShoppingCar(Target listDataShoppingCar, Target listDataPetCar, String strKey) {
 		super();
-		this.listDataShoppingCar = listDataCurrentAccount;
+		this.listDataShoppingCar = listDataShoppingCar;
+		this.listDataPetCar = listDataPetCar;
+		this.strKey = strKey;
 	}
-	
+
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 		// TODO Auto-generated method stub
-		
+
 		List<WebElementFacade> dataPets = listDataShoppingCar.resolveAllFor(actor);
-		List<PetsCarModel> petsShoppingCar = new ArrayList<PetsCarModel>();
-		
-		for(int i=0; i< dataPets.size(); i++) {
-			List<WebElementFacade> dataPet = TEXT_PETSCAR.of(String.valueOf(i+1)).resolveAllFor(actor);
-			List<WebElementFacade> quantitiesAccount = TEXT_QUANTITIES.of(String.valueOf(i+1)).resolveAllFor(actor);
+
+		List<List<String>> petsData = new ArrayList<List<String>>();
+
+		for (int i = 0; i < dataPets.size(); i++) {
+
+			List<WebElementFacade> dataPet = listDataPetCar.of(String.valueOf(i + 1)).resolveAllFor(actor);
 			
-			PetsCarModel pet = new PetsCarModel(dataPet.get(0).getText(), 
-					dataPet.get(2).getText(), quantitiesAccount.get(0).getValue(),
-					dataPet.get(5).getText(), dataPet.get(6).getText());
-			
-			petsShoppingCar.add(pet);
+
+			List<String> petData = new ArrayList<String>();
+
+			if (dataPet.size() > 5 ) {
+				List<WebElementFacade> quantitiesAccount = TEXT_QUANTITIES.of(String.valueOf(i + 1)).resolveAllFor(actor);
+				petData.add(dataPet.get(0).getText());
+				petData.add(dataPet.get(2).getText());
+				petData.add((quantitiesAccount.get(0).getValue()));
+				petData.add(dataPet.get(5).getText());
+				petData.add(dataPet.get(6).getText());
+
+			} else {
+
+				petData.add(dataPet.get(0).getText());
+				petData.add(dataPet.get(1).getText());
+				petData.add(dataPet.get(2).getText());
+				petData.add(dataPet.get(3).getText());
+				petData.add(dataPet.get(4).getText());
+
+			}
+
+			/*
+			 * petsCarModel pet = new PetsCarModel(dataPet.get(0).getText(),
+			 * dataPet.get(2).getText(), quantitiesAccount.get(0).getValue(),
+			 * dataPet.get(5).getText(), dataPet.get(6).getText());
+			 * 
+			 * petsShoppingCar.add(pet);
+			 */
+			petsData.add(petData);
 		}
-		
-		actor.remember("petsShoppingCar", petsShoppingCar);
 
-	}
-	
-	
-	public static MapShoppingCar ofTarget(Target listDataShoppingCar) {
-		return Tasks.instrumented(MapShoppingCar.class,listDataShoppingCar );
+		// actor.remember("petsShoppingCar", petsShoppingCar);
+
+		actor.remember(strKey, petsData);
 	}
 
-
+	public static MapShoppingCar ofTarget(Target listDataShoppingCar, Target listDataPetCar, String strKey) {
+		return Tasks.instrumented(MapShoppingCar.class, listDataShoppingCar,listDataPetCar , strKey);
+	}
 
 }

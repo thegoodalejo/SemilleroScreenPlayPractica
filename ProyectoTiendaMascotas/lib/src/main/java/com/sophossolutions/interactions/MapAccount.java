@@ -1,6 +1,6 @@
 package com.sophossolutions.interactions;
 
-import static com.sophossolutions.ui.StoreCar.TEXT_PETSCAR;
+
 import static com.sophossolutions.ui.StoreCar.TEXT_QUANTITIES;
 
 import java.util.ArrayList;
