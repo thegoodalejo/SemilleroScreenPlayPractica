@@ -16,19 +16,19 @@ public class HeaderDate implements Question<String> {
 		String[] strHeaderDate = Text.of(FinalOrderPage.TXT_ORDER_DATE).viewedBy(actor).asString().split(" ");
 		int año = fecha.get(Calendar.YEAR);
 		int mes = fecha.get(Calendar.MONTH) + 1;
-		int dia = fecha.get(Calendar.DAY_OF_MONTH) + 1;
+		int dia = fecha.get(Calendar.DAY_OF_MONTH);
 
 		String strDate;
 
 		if (mes < 10 && dia < 10) {
-			strDate = año + "/0" + mes + "/0" + dia;
+			strDate = Integer.toString(año) + "/0" + Integer.toString(mes) + "/0" + Integer.toString(dia);
 
 		} else if (mes < 10 && dia > 9) {
-			strDate = año + "/0" + mes + "/" + dia;
+			strDate = Integer.toString(año) + "/0" + Integer.toString(mes) + "/" + Integer.toString(dia);
 		} else if (mes > 9 && dia < 10) {
-			strDate = año + "/" + mes + "/0" + dia;
+			strDate = Integer.toString(año) + "/" + Integer.toString(mes) + "/0" + Integer.toString(dia);
 		} else {
-			strDate = año + "/" + mes + "/" + dia;
+			strDate = Integer.toString(año) + "/" + Integer.toString(mes) + "/" + Integer.toString(dia);
 		}
 
 		System.out.println("Aquie esta la fecha actual :" + strDate );
