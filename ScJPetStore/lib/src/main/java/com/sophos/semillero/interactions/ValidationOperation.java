@@ -12,7 +12,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.targets.Target;
 
-public class Validation {
+public class ValidationOperation {
 	
 	private static Boolean itemsInCart(List<Item> listItemsActor, List<WebElementFacade> listItemsWeb) {
 			
@@ -31,9 +31,9 @@ public class Validation {
 		return isValid;
 	}
 		
-	public static Boolean addItemToCart(Actor actor, Target car_list) {
+	public static Boolean addedItemToCart(Actor actor, Target cartList) {
 		
-		List<WebElementFacade> listItemsWeb = car_list.resolveAllFor(actor);
+		List<WebElementFacade> listItemsWeb = cartList.resolveAllFor(actor);
 		
 		Cart cartActor = actor.recall("CART");
 		List<Item> listItemsActor = cartActor.getListItems();
@@ -74,8 +74,8 @@ public class Validation {
 				
 		
 	
-	public static Boolean removeItemFromCart(Actor actor, Target car_list) {
-		List<WebElementFacade> listItemsWeb = car_list.resolveAllFor(actor);
+	public static Boolean removedItemFromCart(Actor actor, Target cartList) {
+		List<WebElementFacade> listItemsWeb = cartList.resolveAllFor(actor);
 		Cart cartActor = actor.recall("CART");
 		List<Item> listItemsActor = cartActor.getListItems();
 				
@@ -116,6 +116,16 @@ public class Validation {
 		}
 		return right;
 		
+	}
+	
+	public static Boolean updatedItemInCart(Actor actor, Target cartList) {
+		
+		List<WebElementFacade> listItemsWeb = cartList.resolveAllFor(actor);
+		
+		Cart cartActor = actor.recall("CART");
+		List<Item> listItemsActor = cartActor.getListItems();		
+				
+		return itemsInCart(listItemsActor, listItemsWeb);
 	}
 
 }

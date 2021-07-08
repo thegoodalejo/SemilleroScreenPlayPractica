@@ -1,6 +1,6 @@
 #Author: Group2
 Feature: Checkout
-   I want as an automator to finish the purchase 
+   I want as an automatizer to finish the purchase 
    in JPetStore and validate if the invoice is correct
 
   Background: 

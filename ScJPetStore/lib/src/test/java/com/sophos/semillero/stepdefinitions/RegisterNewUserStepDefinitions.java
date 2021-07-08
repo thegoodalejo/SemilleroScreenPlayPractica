@@ -4,13 +4,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import static com.sophos.semillero.ui.LoginPage.BTN_REGISTER;
-import static com.sophos.semillero.ui.RegisterNewUser.TABLE_USER_INFORMATION;
-import static com.sophos.semillero.ui.RegisterNewUser.TABLE_ACCOUNT_INFORMATION;
-import static com.sophos.semillero.ui.RegisterNewUser.MENU_FAVOURITE_CATEGORY;
+import static com.sophos.semillero.ui.RegisterUserPage.TABLE_USER_INFORMATION;
+import static com.sophos.semillero.ui.RegisterUserPage.TABLE_ACCOUNT_INFORMATION;
+import static com.sophos.semillero.ui.RegisterUserPage.MENU_FAVOURITE_CATEGORY;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
-import com.sophos.semillero.tasks.SaveModels;
+import com.sophos.semillero.tasks.SaveUser;
 import com.sophos.semillero.model.UserJPetStore;
 import com.sophos.semillero.tasks.DarClick;
 import com.sophos.semillero.tasks.InsertThe;
@@ -25,7 +25,7 @@ public class RegisterNewUserStepDefinitions {
 	    		InsertThe.data(strCredentials, TABLE_USER_INFORMATION),
 	    		InsertThe.data(strInfo, TABLE_ACCOUNT_INFORMATION),
 	    		Select.the(strCategory, MENU_FAVOURITE_CATEGORY),
-	    		SaveModels.user(strInfo,"USER_MODEL"));
+	    		SaveUser.user(strInfo,"USER_MODEL"));
 	}
 
 	@Then("I should see the whole user information")

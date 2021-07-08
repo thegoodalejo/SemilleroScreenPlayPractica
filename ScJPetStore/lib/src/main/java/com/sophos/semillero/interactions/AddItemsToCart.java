@@ -14,13 +14,13 @@ import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.targets.Target;
 
-public class Test1 implements Interaction {
+public class AddItemsToCart implements Interaction {
 
 	
 	private Map<String,String> mapValues;
 	
 
-	public Test1(Map<String, String> mapValues) {
+	public AddItemsToCart(Map<String, String> mapValues) {
 		this.mapValues = mapValues;
 	}
 
@@ -31,13 +31,14 @@ public class Test1 implements Interaction {
 			String strProductoId = mapValues.get(i+"").split(",")[1];
 			String strItemId = mapValues.get(i+"").split(",")[2];
 			
-			actor.attemptsTo(SelectItem.with(strCategoria, strProductoId, strItemId),
+			actor.attemptsTo(
+					SelectItem.with(strCategoria, strProductoId, strItemId),
 					AddToCart.with(strCategoria, strProductoId, strItemId));		
 		}
 	}
 
-	public static Test1 the(Map<String,String> mapValues) {
-		return instrumented(Test1.class,mapValues);		
+	public static AddItemsToCart the(Map<String,String> mapValues) {
+		return instrumented(AddItemsToCart.class,mapValues);		
 	}
 
 

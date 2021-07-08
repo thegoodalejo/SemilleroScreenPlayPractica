@@ -27,7 +27,7 @@ public class AddToCart implements Task {
 	public <T extends Actor> void performAs(T actor) {
 		actor.attemptsTo(				
 				Click.on(CatalogPage.BTN_ADD_TO_CART),				
-				SaveModel.addItemCart("CART", strCategoria, strProductoId, strItemId)
+				SaveModel.addedItemCart("CART", strCategoria, strProductoId, strItemId)
 				);
 		
 	}

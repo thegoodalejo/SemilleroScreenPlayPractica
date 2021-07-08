@@ -1,6 +1,6 @@
 #Author: Group2
 Feature: Add item to shopping cart
-  I as an automator want to add an item 
+  I as an automatizer want to add an item 
   to the shopping cart and validate 
   that my products appear in the cart.
 

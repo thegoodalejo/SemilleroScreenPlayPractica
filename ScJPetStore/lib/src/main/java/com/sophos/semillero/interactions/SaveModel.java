@@ -42,7 +42,7 @@ public class SaveModel implements Task {
 		return instrumented(SaveModel.class,strName,dataUser);		
 	}
 	
-	public static SaveModel addItemCart(String strName, String strCategoria, String strProductoId, String strItemId) {
+	public static SaveModel addedItemCart(String strName, String strCategoria, String strProductoId, String strItemId) {
 		
 		Item item = new Item(strItemId, strProductoId);
 		
@@ -62,10 +62,19 @@ public class SaveModel implements Task {
 		}
 	}
 	
-	public static SaveModel deleteItemCart(String strName, String itemId) {
+	public static SaveModel deletedItemCart(String strName, String itemId) {
 		
 		Cart cart = theActorInTheSpotlight().recall("CART");
 		cart.getListItems().remove(new Item(itemId));
+		
+		return instrumented(SaveModel.class, strName, cart);
+	}
+	
+	public static SaveModel updatedItemCart(String strName, String itemId, String newQuantity) {
+		
+		Cart cart = theActorInTheSpotlight().recall("CART");
+		int indexOf = cart.getListItems().indexOf(new Item(itemId));
+		cart.getListItems().get(indexOf).setQuantity(newQuantity);
 		
 		return instrumented(SaveModel.class, strName, cart);
 	}

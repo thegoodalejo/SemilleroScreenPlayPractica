@@ -4,7 +4,7 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 import java.util.Map;
 
-import com.sophos.semillero.interactions.Test1;
+import com.sophos.semillero.interactions.AddItemsToCart;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -21,7 +21,7 @@ public class AddThe implements Task {
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {
-		actor.attemptsTo(Test1.the(mapValues));
+		actor.attemptsTo(AddItemsToCart.the(mapValues));
 	}
 
 	public static AddThe items(Map<String,String> mapValues) {

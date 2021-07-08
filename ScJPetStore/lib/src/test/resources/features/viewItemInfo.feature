@@ -1,6 +1,6 @@
 #Author: angel.vivas@sophossolutions.com
 Feature: See animal information
-  As an automator I want to see if 
+  As an automatizer I want to see if 
   the animal view has an image 
   and a description.
 

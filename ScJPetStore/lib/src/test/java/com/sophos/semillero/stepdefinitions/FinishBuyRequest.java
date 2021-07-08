@@ -7,9 +7,9 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static com.sophos.semillero.ui.CheckOutPages.BTN_CHECKOUT;
 import static com.sophos.semillero.ui.CheckOutPages.BTN_CONTINUE;
 import static com.sophos.semillero.ui.CheckOutPages.BTN_CONFIRM;
-import static com.sophos.semillero.ui.Invoice.TXT_ORDER_DATE;
-import static com.sophos.semillero.ui.Invoice.TXT_BILL;
-import static com.sophos.semillero.ui.Invoice.TXT_BILL_ITEMS;
+import static com.sophos.semillero.ui.InvoicePage.TXT_ORDER_DATE;
+import static com.sophos.semillero.ui.InvoicePage.TXT_BILL;
+import static com.sophos.semillero.ui.InvoicePage.TXT_BILL_ITEMS;
 import static com.sophos.semillero.ui.CheckOutPages.TABLE_USER_DATA;
 
 import com.sophos.semillero.interactions.SaveData;
@@ -18,7 +18,7 @@ import com.sophos.semillero.questions.CheckUserData;
 import com.sophos.semillero.questions.FinishBuy;
 import com.sophos.semillero.questions.OrderVerification;
 import com.sophos.semillero.tasks.DarClick;
-import com.sophos.semillero.tasks.SaveModels;
+import com.sophos.semillero.tasks.SaveUser;
 
 import org.hamcrest.core.IsEqual;
 import io.cucumber.java.en.Given;
@@ -43,7 +43,7 @@ public class FinishBuyRequest {
 		
 		String strInfo=theActorInTheSpotlight().recall("USER_DATA");
 		
-		theActorInTheSpotlight().wasAbleTo(SaveModels.user(strInfo,"USER_MODEL"),
+		theActorInTheSpotlight().wasAbleTo(SaveUser.user(strInfo,"USER_MODEL"),
 				DarClick.on(BTN_CONFIRM));
 	}
 

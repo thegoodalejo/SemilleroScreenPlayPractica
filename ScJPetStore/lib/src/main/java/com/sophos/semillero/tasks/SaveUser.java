@@ -9,13 +9,13 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.targets.Target;
 
-public class SaveModels implements Task {
+public class SaveUser implements Task {
 
 	private String strInfo;
 	private String strName;
 
 
-	public SaveModels(String strInfo, String strName) {
+	public SaveUser(String strInfo, String strName) {
 		this.strInfo = strInfo;
 		this.strName = strName;
 	}
@@ -25,7 +25,7 @@ public class SaveModels implements Task {
 		actor.attemptsTo(SaveModel.user(strInfo, strName));
 	}
 	
-	public static SaveModels user(String strInfo,String strName){
-		return instrumented(SaveModels.class,strInfo,strName);		
+	public static SaveUser user(String strInfo,String strName){
+		return instrumented(SaveUser.class,strInfo,strName);		
 	}
 }

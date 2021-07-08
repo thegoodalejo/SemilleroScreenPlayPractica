@@ -1,6 +1,6 @@
 #Author: angel.vivas@sophossolutions.com
 Feature: Remove item from shopping cart
-  I as an automator want to remove an item from 
+  I as an automatizer want to remove an item from 
   the shopping cart and validate that it no longer exists.
 
   Background: 

@@ -10,7 +10,7 @@ import net.serenitybdd.screenplay.Performable;;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
 	glue = "com.sophos.semillero.stepdefinitions", 
-	features = "src/test/resources/features/view_item_info.feature",
+	features = "src/test/resources/features/viewItemInfo.feature",
 	snippets = SnippetType.CAMELCASE	
 	)
 

@@ -6,13 +6,13 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.targets.Target;
 
-public class OrderVerification implements Question<Boolean> {
+public class UpdatedItemCartVerification implements Question<Boolean> {
 
-	private Target orderList;
+	private Target listCart;
 	
 	
-	public OrderVerification(Target car_list) {
-		this.orderList = car_list;
+	public UpdatedItemCartVerification(Target listCart) {
+		this.listCart = listCart;
 	}
 
 	@Override
@@ -20,15 +20,15 @@ public class OrderVerification implements Question<Boolean> {
 				
 		try {
 			
-			return ValidationOperation.orderInvoice(actor, orderList);				
+			return ValidationOperation.updatedItemInCart(actor, listCart);				
 			
 		} catch (Exception e) {
 			return false;
 		}
 	}
 	
-	public static OrderVerification in(Target target) {		
-		return new OrderVerification(target);
+	public static UpdatedItemCartVerification in(Target target) {		
+		return new UpdatedItemCartVerification(target);
 	}
 	
 }
