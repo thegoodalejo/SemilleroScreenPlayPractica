@@ -32,6 +32,18 @@ public class RegisterUser {
 		this.strZip = strZip;
 		this.strCountry = strCountry;
 	}
+	
+	public RegisterUser(String stFirstName, String strLastName, String strAddress1, 
+			String strCity, String strState, String strZip, String strCountry) {
+		super();
+		this.stFirstName = stFirstName;
+		this.strLastName = strLastName;
+		this.strAddress1 = strAddress1;
+		this.strCity = strCity;
+		this.strState = strState;
+		this.strZip = strZip;
+		this.strCountry = strCountry;
+	}
 
 	public String getStrUserID() {
 		return strUserID;

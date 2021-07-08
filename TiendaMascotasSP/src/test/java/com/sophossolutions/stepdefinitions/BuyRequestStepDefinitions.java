@@ -15,10 +15,12 @@ import com.sophossolutions.questions.HeaderDate;
 import com.sophossolutions.tasks.SelectBuy;
 import com.sophossolutions.tasks.SelectNextOptions;
 import com.sophossolutions.ui.FinalOrderPage;
+import com.sophossolutions.ui.MyAccountPage;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.serenitybdd.screenplay.questions.Text;
 
 public class BuyRequestStepDefinitions {
 	@Given("Estando en el carrito deseo proceder a generar la orden de compra")
@@ -33,12 +35,15 @@ public class BuyRequestStepDefinitions {
 
 	@Then("Espero ver los datos correspondientes a mi compra")
 	public void esperoVerLosDatosCorrespondientesAMiCompra() {
+		String strFirstName  = theActorInTheSpotlight().recall("FIRSTNAME");
+		String strLastName  = theActorInTheSpotlight().recall("LASTNAME");
+		String strAddress  = theActorInTheSpotlight().recall("ADDRESS");
+		String strCity  = theActorInTheSpotlight().recall("CITY");
+		String strState  = theActorInTheSpotlight().recall("STATE");
+		String strZip  = theActorInTheSpotlight().recall("ZIP");
+		String strCountry  = theActorInTheSpotlight().recall("COUNTRY");
+		RegisterUser UserModel = new RegisterUser (strFirstName, strLastName, strAddress, strCity, strState, strZip, strCountry);
 		
-		RegisterUser UserModel = new RegisterUser ("TiendaMascotasGrupo_5",
-				"grupo5", "Andres", "Guarnizo",
-				"andres.lopez@sophossolutions.com",
-				"3131234567", "Carrera 31 C 19 A las",
-				"", "Bogota", "Cundinamerca", "12", "Colombia");
 		theActorInTheSpotlight().should(seeThat(HeaderResult.in(),IsEqual.equalTo("true")));
 		theActorInTheSpotlight().should(seeThat(HeaderDate.in(),IsEqual.equalTo("false")));
 		theActorInTheSpotlight().should(seeThat(ResultOrder.in(FinalOrderPage.TXT_FIRSTNAME),IsEqual.equalTo(UserModel.getStFirstName())));

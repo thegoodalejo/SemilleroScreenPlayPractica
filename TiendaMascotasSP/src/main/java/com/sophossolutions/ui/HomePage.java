@@ -7,5 +7,6 @@ public class HomePage {
 	public static final Target MSG_WELCOME = Target.the("Mensaje de Bienvenida").locatedBy("//div[@id='WelcomeContent']");
 	public static final Target SELECT_SPECIES = Target.the("Opcion gatos").locatedBy("(//img[contains(@src, '{0}')])[1]");
 	public static final Target BTN_CARRITO = Target.the("Entrar al carrito").locatedBy("//img[@name='img_cart']");
+	public static final Target BTN_MY_ACCOUNT = Target.the("Boton para entrar a mi cuenta").locatedBy("//a[text()='My Account']");
 
 }

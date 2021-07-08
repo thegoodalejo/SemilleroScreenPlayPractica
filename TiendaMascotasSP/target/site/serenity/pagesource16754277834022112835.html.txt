@@ -1,0 +1,160 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<link rel="StyleSheet" href="../css/jpetstore.css" type="text/css" media="screen">
+
+<meta name="generator" content="HTML Tidy for Linux/x86 (vers 1st November 2002), see www.w3.org">
+<title>JPetStore Demo</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<meta http-equiv="Cache-Control" content="max-age=0">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="Expires" content="Tue, 01 Jan 1980 1:00:00 GMT">
+<meta http-equiv="Pragma" content="no-cache">
+</head>
+
+<body>
+
+<div id="Header">
+
+<div id="Logo">
+<div id="LogoContent"><a href="/actions/Catalog.action"><img src="../images/logo-topbar.gif"></a></div>
+</div>
+
+<div id="Menu">
+<div id="MenuContent"><a href="/actions/Cart.action?viewCart="><img align="middle" name="img_cart" src="../images/cart.gif"></a> <img align="middle" src="../images/separator.gif">  
+	
+ 
+	
+		<a href="/actions/Account.action?signoff=">Sign Out</a>
+		<img align="middle" src="../images/separator.gif">
+		<a href="/actions/Account.action?editAccountForm=">My Account</a>
+	
+ <img align="middle" src="../images/separator.gif"> <a href="../help.html">?</a></div>
+</div>
+
+<div id="Search">
+<div id="SearchContent"><form method="post" action="/actions/Catalog.action">
+	<input size="14" name="keyword" type="text">
+	<input name="searchProducts" type="submit" value="Search">
+<div style="display: none;"><input type="hidden" name="_sourcePage" value="8HyUGp3QOabV9QeReMKc-RNvI8neTsEEjDT2Vyshf1byTidhGdLaofVnUjp-qyl9tDf16nr20PENXpmqnZgHmYr3RuyR9AW7YJBstBRqB_cMwO7ZZtKhkw=="><input type="hidden" name="__fp" value="6LMULQG-Dq_rM4_uW5Z-pEjuZMJo3jYwpqYl_Bj2UYOlzb0lfVuK0cb27rVySyR_"></div></form></div>
+</div>
+
+<div id="QuickLinks"><a href="/actions/Catalog.action?viewCategory=&amp;categoryId=FISH"><img src="../images/sm_fish.gif"></a> <img src="../images/separator.gif"> <a href="/actions/Catalog.action?viewCategory=&amp;categoryId=DOGS"><img src="../images/sm_dogs.gif"></a> <img src="../images/separator.gif"> <a href="/actions/Catalog.action?viewCategory=&amp;categoryId=REPTILES"><img src="../images/sm_reptiles.gif"></a> <img src="../images/separator.gif"> <a href="/actions/Catalog.action?viewCategory=&amp;categoryId=CATS"><img src="../images/sm_cats.gif"></a> <img src="../images/separator.gif"> <a href="/actions/Catalog.action?viewCategory=&amp;categoryId=BIRDS"><img src="../images/sm_birds.gif"></a></div>
+
+</div>
+
+<div id="Content">
+
+<div id="Catalog"><form method="post" action="/actions/Account.action">
+
+	<h3>User Information</h3>
+
+	<table>
+		<tbody><tr>
+			<td>User ID:</td>
+			<td>TiendaMascotasGrupo_5</td>
+		</tr>
+		<tr>
+			<td>New password:</td>
+			<td><input name="password" id="stripes--524652556" type="text"><script type="text/javascript">setTimeout(function(){try{var z=document.getElementById('stripes--524652556');z.focus();z.select();}catch(e){}},1);</script></td>
+		</tr>
+		<tr>
+			<td>Repeat password:</td>
+			<td><input name="repeatedPassword" type="text"></td>
+		</tr>
+	</tbody></table>
+	
+<h3>Account Information</h3>
+
+<table>
+	<tbody><tr>
+		<td>First name:</td>
+		<td><input name="account.firstName" type="text" value="Andres"></td>
+	</tr>
+	<tr>
+		<td>Last name:</td>
+		<td><input name="account.lastName" type="text" value="Guarnizo"></td>
+	</tr>
+	<tr>
+		<td>Email:</td>
+		<td><input size="40" name="account.email" type="text" value="andres.lopez@sophossolutions.com"></td>
+	</tr>
+	<tr>
+		<td>Phone:</td>
+		<td><input name="account.phone" type="text" value="3131234567"></td>
+	</tr>
+	<tr>
+		<td>Address 1:</td>
+		<td><input size="40" name="account.address1" type="text" value="Carrera 31 C 19 A las"></td>
+	</tr>
+	<tr>
+		<td>Address 2:</td>
+		<td><input size="40" name="account.address2" type="text"></td>
+	</tr>
+	<tr>
+		<td>City:</td>
+		<td><input name="account.city" type="text" value="Bogota"></td>
+	</tr>
+	<tr>
+		<td>State:</td>
+		<td><input size="4" name="account.state" type="text" value="Cundinamerca"></td>
+	</tr>
+	<tr>
+		<td>Zip:</td>
+		<td><input size="10" name="account.zip" type="text" value="12"></td>
+	</tr>
+	<tr>
+		<td>Country:</td>
+		<td><input size="15" name="account.country" type="text" value="Colombia"></td>
+	</tr>
+</tbody></table>
+
+<h3>Profile Information</h3>
+
+<table>
+	<tbody><tr>
+		<td>Language Preference:</td>
+		<td><select name="account.languagePreference">
+			<option value="english" selected="selected">english</option><option value="japanese">japanese</option>
+		</select></td>
+	</tr>
+	<tr>
+		<td>Favourite Category:</td>
+		<td><select name="account.favouriteCategoryId">
+			<option value="FISH">FISH</option><option value="DOGS">DOGS</option><option value="REPTILES">REPTILES</option><option value="CATS" selected="selected">CATS</option><option value="BIRDS">BIRDS</option>
+		</select></td>
+	</tr>
+	<tr>
+		<td>Enable MyList</td>
+		<td><input name="account.listOption" type="checkbox" value="true"></td>
+	</tr>
+	<tr>
+		<td>Enable MyBanner</td>
+		<td><input name="account.bannerOption" type="checkbox" value="true"></td>
+	</tr>
+
+</tbody></table>
+
+
+	<input name="editAccount" type="submit" value="Save Account Information">
+
+<div style="display: none;"><input type="hidden" name="_sourcePage" value="K5l6ls3Lu7II4-hKMYjL7vei4Ha-00XarL22JbPpzHqpaS96MXW8QgV45NkdpmghohzAAKwZ0OWwakF1YI8DcTIuJUBDmzyV24mLiKDzZuxbuNYFqcGD1w=="><input type="hidden" name="__fp" value="XmkM4adZziRvTua654L08wGh17ExE5hwfThyu2HsrRWB8dGLxxYP_k1tY2LlXoewFkNezBVTx4c6CmkIMjHG8L1XfBdetVSQQHhpzW0AMSXZbiVrBtStdZk9RmxcMGYaQH78FgtnScCDXWx9YmWKE6oyZ4eYdgjOKxD4dLa8CdbZE1esHxfNkHKZ2kJNnRwl"></div></form> <a href="/actions/Order.action?listOrders=">My Orders</a></div>
+
+
+</div>
+
+<div id="Footer">
+
+<div id="PoweredBy">&nbsp;<a href="http://www.mybatis.org">www.mybatis.org</a>
+</div>
+
+<div id="Banner">
+	
+		
+	
+</div>
+
+</div>
+
+
+
+</body></html>
