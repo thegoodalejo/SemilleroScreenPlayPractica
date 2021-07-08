@@ -1,4 +1,4 @@
-#Author: julian.rodriguez@sophossolutions.com
+#Author: santiago.espinal@sophossolutions.com and juan.blanco@sophossolutions.com
 Feature:  Verify the cart information
   I as an operator want verify the cart information
 

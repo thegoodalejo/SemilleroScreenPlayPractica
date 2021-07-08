@@ -1,4 +1,4 @@
-#Author: julian.rodriguez@sophossolutions.com
+#Author: santiago.espinal@sophossolutions.com and juan.blanco@sophossolutions.com
 Feature: Try update cart
   I as an automation want to try update cart
 

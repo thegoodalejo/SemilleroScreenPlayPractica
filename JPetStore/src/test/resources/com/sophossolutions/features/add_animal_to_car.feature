@@ -1,4 +1,4 @@
-#Author: julian.rodriguez@sophossolutions.com
+#Author: santiago.espinal@sophossolutions.com and juan.blanco@sophossolutions.com
 Feature: Try adding an animal to the cart
   I as an operator want to add an animal to the cart
 

@@ -7,6 +7,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 import org.hamcrest.core.IsEqual;
 
+import com.sophossolutions.models.ItemAnimal;
 import com.sophossolutions.models.ItemShopCar;
 import com.sophossolutions.questions.IdProducAnima;
 import com.sophossolutions.tasks.GetInfo;
@@ -25,7 +26,7 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 
 public class ViewItemInfoStepDefinition {
 
-	private String strActorName = "Juan Miguel y Santaigo ";
+	private String strActorName = Constants.ACTOR_NAME;
 
 	@Before
 	public void setup() {
@@ -50,7 +51,7 @@ public class ViewItemInfoStepDefinition {
 
 	@Then("Validate the information in the table")
 	public void validateTheInformationInTheTable() {
-		ItemShopCar infoAnimal = theActorInTheSpotlight().recall(Constants.MODEL_ANIMAL);  // Aca hay un cambio !
+		ItemAnimal infoAnimal = theActorInTheSpotlight().recall(Constants.MODEL_ANIMAL);  
 		theActorInTheSpotlight().should(seeThat(IdProducAnima.with(ResultTypeAnimalsPage.TXT_ID_ANIMAL),
 				IsEqual.equalTo(infoAnimal.getItemID())));
 	}

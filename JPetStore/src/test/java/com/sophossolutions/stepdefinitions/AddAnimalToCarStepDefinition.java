@@ -33,7 +33,7 @@ public class AddAnimalToCarStepDefinition
 	{
 		setTheStage(new OnlineCast());
 	}
-	private String strActorName = "Juan Miguel y Santaigo ";
+	private String strActorName = Constants.ACTOR_NAME;
 	private String auxIndex;
 	
 	@Given("Must go to animal catalogs")

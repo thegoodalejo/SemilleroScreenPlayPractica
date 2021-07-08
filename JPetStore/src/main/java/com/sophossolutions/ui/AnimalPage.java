@@ -10,5 +10,6 @@ public class AnimalPage {
 	public static final Target TEXT_PRODUCT_ID = Target.the("Text of Product Id").locatedBy("((//tr[position()>1 and position() < last()])[{0}]//td)[2]");
 	public static final Target TEXT_DESCRIPTION = Target.the("Description od animal").locatedBy("((//tr[position()>1 and position() < last()])[{0}]//td)[3]");
 	public static final Target TEXT_LIST_PRICE = Target.the("Description od animal").locatedBy("((//tr[position()>1 and position() < last()])[{0}]//td)[4]");
+	
 
 }

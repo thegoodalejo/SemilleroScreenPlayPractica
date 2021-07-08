@@ -1,4 +1,4 @@
-#Author: julian.rodriguez@sophossolutions.com
+#Author: santiago.espinal@sophossolutions.com and juan.blanco@sophossolutions.com
 Feature: Try removing an animal from the cart
   I as an operator want to remove an animal from the cart
 

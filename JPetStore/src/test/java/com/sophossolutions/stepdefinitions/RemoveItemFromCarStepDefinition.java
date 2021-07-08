@@ -9,7 +9,7 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
 import com.sophossolutions.tasks.Remove;
 import com.sophossolutions.ui.CarPage;
-
+import com.sophossolutions.util.Constants;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -20,7 +20,7 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 
 public class RemoveItemFromCarStepDefinition {
 	
-	private String strActorName = "Juan Miguel y Santaigo ";
+	private String strActorName = Constants.ACTOR_NAME;
 	@Before
 	public void setup()
 	{

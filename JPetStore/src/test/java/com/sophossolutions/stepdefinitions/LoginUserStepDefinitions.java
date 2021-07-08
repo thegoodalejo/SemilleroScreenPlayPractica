@@ -10,6 +10,7 @@ import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
 
 import com.sophossolutions.tasks.Login;
 import com.sophossolutions.ui.HomePage;
+import com.sophossolutions.util.Constants;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -20,7 +21,7 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 
 public class LoginUserStepDefinitions {
 	
-	private String strActorName = "Juan Miguel y Santaigo ";
+	private String strActorName = Constants.ACTOR_NAME;
 	
 	@Before()
 	public void setup(){	
