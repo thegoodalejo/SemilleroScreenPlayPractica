@@ -16,11 +16,10 @@ public class HeaderDate implements Question<String> {
 		String[] strHeaderDate = Text.of(FinalOrderPage.TXT_ORDER_DATE).viewedBy(actor).asString().split(" ");
 		int año = fecha.get(Calendar.YEAR);
 		int mes = fecha.get(Calendar.MONTH) + 1;
-<<<<<<< HEAD
+
 		int dia = fecha.get(Calendar.DAY_OF_MONTH) ;
-=======
-		int dia = fecha.get(Calendar.DAY_OF_MONTH);
->>>>>>> b5712163d471b3f1a4364d724705a0ad2b88f17d
+
+
 
 		String strDate;
 
