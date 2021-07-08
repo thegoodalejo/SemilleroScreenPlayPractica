@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Actualizar la cantidad de un item del carrito de compras" skipped="0" tests="1" time="16.82" timestamp="2021-07-07 05:57:54"><testcase name="Actualizar la cantidad de un item agregado"/></testsuite>
+=======
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Actualizar la cantidad de un item del carrito de compras" skipped="0" tests="1" time="12.76" timestamp="2021-07-07 05:04:58"><testcase name="Actualizar la cantidad de un item agregado"/></testsuite>
+>>>>>>> bf7d07c14965286ca7db111b5176e778ee7dc16d
