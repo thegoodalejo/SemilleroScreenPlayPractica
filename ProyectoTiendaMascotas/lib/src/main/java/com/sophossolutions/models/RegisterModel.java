@@ -41,6 +41,21 @@ public class RegisterModel {
 		this.enableMyList = enableMyList;
 		this.enableMyBanner = enableMyBanner;
 	}
+	
+	
+	public RegisterModel( String strFirstName, String strLastName, String strAddress1, String strAddress2, String strCity, String strState,
+			String strZip, String strCountry) {
+		
+		super();
+		this.strFirstName = strFirstName;
+		this.strLastName = strLastName;
+		this.strAddress1 = strAddress1;
+		this.strAddress2 = strAddress2;
+		this.strCity = strCity;
+		this.strState = strState;
+		this.strZip = strZip;
+		this.strCountry = strCountry;
+	}
 
 	public String getStrUserName() {
 		return strUserName;

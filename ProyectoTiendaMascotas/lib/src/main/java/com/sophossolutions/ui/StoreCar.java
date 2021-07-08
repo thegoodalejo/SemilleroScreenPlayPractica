@@ -13,6 +13,11 @@ public class StoreCar {
 	public static final Target BTN_UPDATE = Target.the("Update Quantity").located(By.name("updateCartQuantities"));
 	public static final Target BTN_SHOPPINGCAR = Target.the("Shopping car button").locatedBy("//a[contains(@href, 'Cart.action')]");
 	public static final Target LIST_PETSCAR = Target.the("Pet listing shopping cart").locatedBy("//tr[position()>1 and position() < last()]");
+	public static final Target TEXT_PETSCAR = Target.the("Pet listing shopping cart").locatedBy("//tr[position()>1 and position() < last()][{0}]//td");
+	public static final Target TEXT_QUANTITIES = Target.the("Pet listing shopping cart").locatedBy("//tr[position()>1 and position() < last()][{0}]//td/input");
 	public static final Target BTN_CHECKOUT = Target.the("Button proceed to checkout").locatedBy("//a[contains(@href,'Order.action')]");
+	public static final Target BTN_CONTINUE = Target.the("Button continue with the buy").located(By.name("newOrder"));
+	public static final Target BTN_CONFIRM = Target.the("Button confirm the buy").located(By.className("Button"));
+	public static final Target BTN_MYACCOUNT = Target.the("Button my account").locatedBy("//a[contains(@href,'edit')]");
 }
 

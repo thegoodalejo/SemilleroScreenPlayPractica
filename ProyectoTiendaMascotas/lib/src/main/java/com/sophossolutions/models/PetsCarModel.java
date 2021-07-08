@@ -1,6 +1,6 @@
 package com.sophossolutions.models;
 
-public class ProductCarModel {
+public class PetsCarModel {
 
 	private String strItemId;
 	private String strDescription;
@@ -8,7 +8,7 @@ public class ProductCarModel {
 	private String strPrice;
 	private String strTotalCost;
 	
-	public ProductCarModel(String strItemId, String strDescription, String strQuantity, String strPrice,
+	public PetsCarModel(String strItemId, String strDescription, String strQuantity, String strPrice,
 			String strTotalCost) {
 		super();
 		this.strItemId = strItemId;

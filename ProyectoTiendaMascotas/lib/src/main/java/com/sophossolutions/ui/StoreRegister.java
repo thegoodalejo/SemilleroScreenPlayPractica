@@ -24,5 +24,6 @@ public class StoreRegister {
 	public static final Target BOOL_ENABLEMYLIST = Target.the("Enable my list").located(By.name("account.listOption")); 
 	public static final Target BOOL_ENABLEMYBANNER = Target.the("Enable my banner").located(By.name("account.bannerOption")); 
 	public static final Target BTN_REGISTER = Target.the("Register button").located(By.name("newAccount"));
+	public static final Target LIST_DATAACCOUNT = Target.the("").located(By.xpath("//table[2]//tr//input"));
 
 }
