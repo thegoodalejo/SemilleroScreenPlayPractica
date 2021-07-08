@@ -25,6 +25,24 @@ public class ShoppingCart {
 		this.contents.put(a, 1);
 	}
 	
+	public boolean hasAnimal(Animal a) {
+		for (Entry<Animal, Integer> entry : this.contents.entrySet()) {
+			if (entry.getKey().getItemID().equals(a.getItemID())) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public int getAnimalAmount(Animal a) {
+		for (Entry<Animal, Integer> entry : this.contents.entrySet()) {
+			if (entry.getKey().getItemID().equals(a.getItemID())) {
+				return entry.getValue();
+			}
+		}
+		return -1;
+	}
+	
 	
 	public void printCart() {
 		System.out.println("Carrito de compras: ");
@@ -43,5 +61,18 @@ public class ShoppingCart {
 		}
 		System.out.println("-------------------------------------------------------------------------------");
 		System.out.printf("Total: \t$%2.2f\n", total);
+	}
+	
+	public boolean isEquivalentTo(ShoppingCart other) {
+		for (Entry<Animal, Integer> entry : this.contents.entrySet()) {
+			if (!other.hasAnimal(entry.getKey())) {
+				return false;
+			} else {
+				if(other.getAnimalAmount(entry.getKey()) != entry.getValue()) {
+					return false;
+				} 
+			}
+		}
+		return true;
 	}
 }

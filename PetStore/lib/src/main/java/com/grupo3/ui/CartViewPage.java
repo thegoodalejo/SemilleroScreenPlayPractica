@@ -7,6 +7,8 @@ public class CartViewPage {
 	public static final Target ITEMS_IN_CART = Target.the("Element IDs in cart").locatedBy("//table//tr[position()>1 and position() < last()][count(*)>1]/td[1]/a");
 	private static final String ITEM_SELECTOR = "//table//tr[position()>1 and position() < last()][count(*)>1][%d]";
 	public static final Target TOTAL_VALUE = Target.the("Total Price").locatedBy("//td[@colspan='7']");
+	public static final Target BTN_CHECKOUT = Target.the("Checkout Button").locatedBy("//div/a[@class='Button']");
+	
 	
 	
 	public static Target getItemID(int i) {
