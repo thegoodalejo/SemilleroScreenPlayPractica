@@ -27,7 +27,8 @@ public class SelectBuy implements Task {
 		actor.remember("STATE", Value.of(MyAccountPage.TXT_STATE).viewedBy(actor).asString());
 		actor.remember("ZIP", Value.of(MyAccountPage.TXT_ZIP).viewedBy(actor).asString());
 		actor.remember("COUNTRY", Value.of(MyAccountPage.TXT_COUNTRY).viewedBy(actor).asString());
-		actor.attemptsTo(Click.on(HomePage.BTN_CARRITO), Click.on(CartPage.BTN_PROCEED));
+		actor.attemptsTo(Click.on(HomePage.BTN_CARRITO),
+		Click.on(CartPage.BTN_PROCEED));
 		
 	}
 
