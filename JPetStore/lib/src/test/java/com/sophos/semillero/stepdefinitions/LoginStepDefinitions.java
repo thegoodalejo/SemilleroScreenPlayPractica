@@ -25,22 +25,21 @@ import com.sophos.semillero.ui.HomePage;
 import com.sophos.semillero.ui.OpenAccountPage;
 
 public class LoginStepDefinitions {
-	@Given("Deseo ir a la pagina de {string}")
-	public void deseoIrALaPaginaDe(String strUrl) {
-		theActorCalled("Grupo 4").wasAbleTo(Open.url(strUrl));
+	@Given("Navigate to log in page")
+	public void navigateToLoginPage(String strUrl) {
+		theActorInTheSpotlight().wasAbleTo(GoToLoginPage.usingButtonAtTheTop());
 	}
 
-	@When("Ingreso nombre de usuario {string} y password {string}")
-	public void ingresoNombreDeUsuarioYPassword(String strUser, String strPassword) {
-		theActorInTheSpotlight().wasAbleTo(GoToLoginPage.usingButtonAtTheTop());
+	@When("Enter username {string} and password {string}")
+	public void enterUsernameAndPassword(String strUser, String strPassword) {
 		theActorInTheSpotlight().wasAbleTo(Login.withCredential(strUser, strPassword));
 	}
 
-	@Then("Valido que haya iniciado sesion satisfactoriamente")
-	public void validoQueHayaIniciadoSesionSatisfactoriamente() {
+	@Then("Validate successful login")
+	public void validateSuccessfulLogin() {
 		String strTitleWhenLoggedIn = "Sign Out";
-		theActorInTheSpotlight().should(seeThat(TextObtained.in(HomePage.TXT_LOGGEDIN), IsEqual.equalTo(strTitleWhenLoggedIn))
-				.orComplainWith(ExceptionMsg.class, "Error en login"));
+		theActorInTheSpotlight().should(seeThat(TextObtained.in(HomePage.BTN_SIGN_OUT), IsEqual.equalTo(strTitleWhenLoggedIn))
+				.orComplainWith(ExceptionMsg.class, "Error when logging in"));
 	}
 
 	@Before("")

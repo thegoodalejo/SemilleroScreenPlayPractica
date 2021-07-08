@@ -22,18 +22,36 @@ import com.sophos.semillero.tasks.GoToLoginPage;
 import com.sophos.semillero.tasks.GoToRegisterPage;
 import com.sophos.semillero.tasks.Login;
 import com.sophos.semillero.tasks.OpenAccount;
+import com.sophos.semillero.tasks.Register;
 import com.sophos.semillero.ui.HomePage;
 import com.sophos.semillero.ui.OpenAccountPage;
 
 public class RegisterStepDefinitions {
-	@Given("Deseo ir a la pagina de {string}")
-	public void deseoIrALaPaginaDe (String strUrl) {
+	@Given("Go to website {string}")
+	public void goToWebsite(String strUrl) {
 		theActorCalled("Grupo 4").wasAbleTo(Open.url(strUrl));
 	}
-	
-	@When("Navego a la pagina para registrarme")
-	public void navegoALaPaginaParaRegistrarme() {
+
+	@When("Navigate to register page")
+	public void navigateToRegisterPage() {
 		theActorInTheSpotlight().wasAbleTo(GoToRegisterPage.usingButtonAtTheBottom());
+	}
+
+	@When("Fill the form with {string} as id, {string} as password, {string} as first name, {string} as last name,"
+			+ " {string} as email, {int} as phone, {string} as address one, {string} as address two, {string} as city,"
+			+ " {string} as state, {int} as zip, {string} as country")
+	public void fillTheFormWith(String strUser, String strPassword, String strFirstName, String strLastName,
+			String strEmail, int intPhone, String strAddress1, String strAddress2, String strCity,
+			String strState, int intZip, String strCountry) {
+		theActorInTheSpotlight().wasAbleTo(Register.withAllCredentials(strUser, strPassword, strFirstName, strLastName,
+				strEmail, intPhone, strAddress1, strAddress2, strCity, strState, intZip, strCountry));
+	}
+	
+	@Then("Validate successful account creation")
+	public void validateSuccessfulAccountCreation() {
+		String strLogin = "Sign In";
+		theActorInTheSpotlight().should(seeThat(TextObtained.in(HomePage.BTN_LOGIN), IsEqual.equalTo(strLogin))
+				.orComplainWith(ExceptionMsg.class, "Error when registering user"));
 	}
 
 	@Before("")

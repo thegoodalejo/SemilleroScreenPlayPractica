@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">JPetStore</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="cccdbc089ae4bc6eda6ec7073537a5a90b9783d1f0f44a8f7bf74d63f9c6b5ea.html">Register On Jpetstore</a></span>
+                > <span class="truncate-60"><a
+                    href="4018152922e9b587548543c76f578189c32b4d449923eef6dccfe97ebc86950c.html">Register on JPetStore </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 07-07-2021 21:27</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Register On Jpetstore </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                I as an automator want to register on JPetStore
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Register on JPetStore
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given Go to website "https://petstore.octoperf.com/actions/Catalog.action"<br>When Navigate to register page<br>And Fill the form with &lt;User ID&gt; as id, &lt;Password&gt; as password, &lt;First Name&gt; as first name, &lt;Last Name&gt; as last name, &lt;Email&gt; as email, &lt;Phone&gt; as phone, &lt;Address1&gt; as address one, &lt;Address2&gt; as address two, &lt;City&gt; as city, &lt;State&gt; as state, &lt;Zip&gt; as zip, &lt;Country&gt; as country<br>Then Validate successful account creation</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="b141cb61e781a416ae46df6ac84982363f7b1863fdd0f2e5812ff65889f5bc84.png" title=" Example: {User ID=&quot;autosophos44&quot;, Password=&quot;contraGrupo4&quot;, First Name=&quot;grupo&quot;, Last Name=&quot;cuatro&quot;, Email=&quot;juan.ugarriza@sophossolutions.com&quot;, Phone=1234567, Address1=&quot;nowhere&quot;, Address2=&quot;around&quot;, City=&quot;cartagena&quot;, State=&quot;bolivar&quot;, Zip=130001, Country=&quot;colombia&quot;}" width="1034"/>
+                <img src="b141cb61e781a416ae46df6ac84982363f7b1863fdd0f2e5812ff65889f5bc84.png" title=" Given Go to website &quot;https://petstore.octoperf.com/actions/Catalog.action&quot;" width="1034"/>
+                <img src="b141cb61e781a416ae46df6ac84982363f7b1863fdd0f2e5812ff65889f5bc84.png" title=" Grupo 4 opens the https://petstore.octoperf.com/actions/Catalog.action" width="1034"/>
+                <img src="b141cb61e781a416ae46df6ac84982363f7b1863fdd0f2e5812ff65889f5bc84.png" title=" Given Go to website &quot;https://petstore.octoperf.com/actions/Catalog.action&quot; (completed)" width="1034"/>
+                <img src="b141cb61e781a416ae46df6ac84982363f7b1863fdd0f2e5812ff65889f5bc84.png" title=" When Navigate to register page" width="1034"/>
+                <img src="b141cb61e781a416ae46df6ac84982363f7b1863fdd0f2e5812ff65889f5bc84.png" title=" Grupo 4 go to register page" width="1034"/>
+                <img src="b141cb61e781a416ae46df6ac84982363f7b1863fdd0f2e5812ff65889f5bc84.png" title=" Grupo 4 clicks on Log in button" width="1034"/>
+                <img src="9f8584bf8a51335ba09abc1a85bb4ce23de9c6ce3e4b1eccfaee7fac07379b74.png" title=" Grupo 4 clicks on Log in button (completed)" width="1034"/>
+                <img src="9f8584bf8a51335ba09abc1a85bb4ce23de9c6ce3e4b1eccfaee7fac07379b74.png" title=" Grupo 4 clicks on Register page button" width="1034"/>
+                <img src="d05675428864498f39e380c8e483bb3005ef91b5418813b3ce412545037fd95d.png" title=" Grupo 4 clicks on Register page button (completed)" width="1034"/>
+                <img src="d05675428864498f39e380c8e483bb3005ef91b5418813b3ce412545037fd95d.png" title=" Grupo 4 go to register page (completed)" width="1034"/>
+                <img src="d05675428864498f39e380c8e483bb3005ef91b5418813b3ce412545037fd95d.png" title=" When Navigate to register page (completed)" width="1034"/>
+                <img src="d05675428864498f39e380c8e483bb3005ef91b5418813b3ce412545037fd95d.png" title=" And Fill the form with &quot;autosophos44&quot; as id, &quot;contraGrupo4&quot; as password, &quot;grupo&quot; as first name, &quot;cuatro&quot; as last name, &quot;juan.ugarriza@sophossolutions.com&quot; as email, 1234567 as phone, &quot;nowhere&quot; as address one, &quot;around&quot; as address two, &quot;cartagena&quot; as city, &quot;bolivar&quot; as state, 130001 as zip, &quot;colombia&quot; as country" width="1034"/>
+                <img src="a0e24031d7974474273c7949158603056ecf906d953788a0bbeff0bc36cd0ce2.png" title=" Grupo 4 register" width="1034"/>
+                <img src="a0e24031d7974474273c7949158603056ecf906d953788a0bbeff0bc36cd0ce2.png" title=" Grupo 4 enters 'autosophos44' into Username field" width="1034"/>
+                <img src="3e99be3c1558f5021fde335e8d1adc45b21a7b119ec107340644c84e905317d7.png" title=" Grupo 4 enters 'autosophos44' into Username field (completed)" width="1034"/>
+                <img src="3e99be3c1558f5021fde335e8d1adc45b21a7b119ec107340644c84e905317d7.png" title=" Grupo 4 enters 'contraGrupo4' into Password field" width="1034"/>
+                <img src="ec8fbeac359065cd888b5b01ce138d6d71a5fc46e7f0cdafddc0a461d20c7fb6.png" title=" Grupo 4 enters 'contraGrupo4' into Password field (completed)" width="1034"/>
+                <img src="ec8fbeac359065cd888b5b01ce138d6d71a5fc46e7f0cdafddc0a461d20c7fb6.png" title=" Grupo 4 enters 'contraGrupo4' into Repeated password field" width="1034"/>
+                <img src="7c6f66d1db0116c9610c8902694d4fb21ce4a768fdd1f40c121bbec2f485898f.png" title=" Grupo 4 enters 'contraGrupo4' into Repeated password field (completed)" width="1034"/>
+                <img src="7c6f66d1db0116c9610c8902694d4fb21ce4a768fdd1f40c121bbec2f485898f.png" title=" Grupo 4 enters 'grupo' into First name field" width="1034"/>
+                <img src="2b151f3bf41aaf9d4a0dbbba05500bd61f725bbcbc6e5c3e4f9c0667a338740f.png" title=" Grupo 4 enters 'grupo' into First name field (completed)" width="1034"/>
+                <img src="2b151f3bf41aaf9d4a0dbbba05500bd61f725bbcbc6e5c3e4f9c0667a338740f.png" title=" Grupo 4 enters 'cuatro' into Last name field" width="1034"/>
+                <img src="13a11514fb3863188820dcd79f4e9d01a1d10fa3f17dfde23c9d47c914b29cb8.png" title=" Grupo 4 enters 'cuatro' into Last name field (completed)" width="1034"/>
+                <img src="13a11514fb3863188820dcd79f4e9d01a1d10fa3f17dfde23c9d47c914b29cb8.png" title=" Grupo 4 enters 'juan.ugarriza@sophossolutions.com' into Email field" width="1034"/>
+                <img src="0a4622c3a450d48296db3005e7f433eea3c54691a00bccbe27d45c1e44cd421c.png" title=" Grupo 4 enters 'juan.ugarriza@sophossolutions.com' into Email field (completed)" width="1034"/>
+                <img src="0a4622c3a450d48296db3005e7f433eea3c54691a00bccbe27d45c1e44cd421c.png" title=" Grupo 4 enters '1234567' into Phone field" width="1034"/>
+                <img src="b95b290c9d63b5dd0a3b18f37fd560dc281283d05dbcc9646c597a415cc89b3c.png" title=" Grupo 4 enters '1234567' into Phone field (completed)" width="1034"/>
+                <img src="b95b290c9d63b5dd0a3b18f37fd560dc281283d05dbcc9646c597a415cc89b3c.png" title=" Grupo 4 enters 'nowhere' into Address 1 field" width="1034"/>
+                <img src="b7e1e849a5d3514ea7458724bedbd3b935b799d104cc76709489fccdf6408e50.png" title=" Grupo 4 enters 'nowhere' into Address 1 field (completed)" width="1034"/>
+                <img src="b7e1e849a5d3514ea7458724bedbd3b935b799d104cc76709489fccdf6408e50.png" title=" Grupo 4 enters 'around' into Address 2 field" width="1034"/>
+                <img src="5f79bee1ac2c2657488cfc34d95809ecbad5076481a8555c67a50a268112bb42.png" title=" Grupo 4 enters 'around' into Address 2 field (completed)" width="1034"/>
+                <img src="5f79bee1ac2c2657488cfc34d95809ecbad5076481a8555c67a50a268112bb42.png" title=" Grupo 4 enters 'cartagena' into City field" width="1034"/>
+                <img src="60c39441dcaf17293d929e02a246a12aba3fec0fb024207fd78d453cb0679410.png" title=" Grupo 4 enters 'cartagena' into City field (completed)" width="1034"/>
+                <img src="60c39441dcaf17293d929e02a246a12aba3fec0fb024207fd78d453cb0679410.png" title=" Grupo 4 enters 'bolivar' into State field" width="1034"/>
+                <img src="dbab12d814d7e298ea2b952ddc07a2a2f18d9104602d03e839561d3371c4a661.png" title=" Grupo 4 enters 'bolivar' into State field (completed)" width="1034"/>
+                <img src="dbab12d814d7e298ea2b952ddc07a2a2f18d9104602d03e839561d3371c4a661.png" title=" Grupo 4 enters '130001' into Zip code field" width="1034"/>
+                <img src="45519c52ce6d1bc1c92c961393ab8f8fadcb87fd0f0a3c24b1d4c591f59a4541.png" title=" Grupo 4 enters '130001' into Zip code field (completed)" width="1034"/>
+                <img src="45519c52ce6d1bc1c92c961393ab8f8fadcb87fd0f0a3c24b1d4c591f59a4541.png" title=" Grupo 4 enters 'colombia' into Country field" width="1034"/>
+                <img src="1d493e76dca4b9e6076432d5c5d3456f6218f152d35572e383a62cfca142db4e.png" title=" Grupo 4 enters 'colombia' into Country field (completed)" width="1034"/>
+                <img src="1d493e76dca4b9e6076432d5c5d3456f6218f152d35572e383a62cfca142db4e.png" title=" Grupo 4 clicks on Register button" width="1034"/>
+                <img src="b141cb61e781a416ae46df6ac84982363f7b1863fdd0f2e5812ff65889f5bc84.png" title=" Grupo 4 clicks on Register button (completed)" width="1034"/>
+                <img src="b141cb61e781a416ae46df6ac84982363f7b1863fdd0f2e5812ff65889f5bc84.png" title=" Grupo 4 register (completed)" width="1034"/>
+                <img src="b141cb61e781a416ae46df6ac84982363f7b1863fdd0f2e5812ff65889f5bc84.png" title=" And Fill the form with &quot;autosophos44&quot; as id, &quot;contraGrupo4&quot; as password, &quot;grupo&quot; as first name, &quot;cuatro&quot; as last name, &quot;juan.ugarriza@sophossolutions.com&quot; as email, 1234567 as phone, &quot;nowhere&quot; as address one, &quot;around&quot; as address two, &quot;cartagena&quot; as city, &quot;bolivar&quot; as state, 130001 as zip, &quot;colombia&quot; as country (completed)" width="1034"/>
+                <img src="b141cb61e781a416ae46df6ac84982363f7b1863fdd0f2e5812ff65889f5bc84.png" title=" Then Validate successful account creation" width="1034"/>
+                <img src="b141cb61e781a416ae46df6ac84982363f7b1863fdd0f2e5812ff65889f5bc84.png" title=" Then text obtained should be 'Sign In'" width="1034"/>
+                <img src="b141cb61e781a416ae46df6ac84982363f7b1863fdd0f2e5812ff65889f5bc84.png" title=" Then text obtained should be 'Sign In' (completed)" width="1034"/>
+                <img src="b141cb61e781a416ae46df6ac84982363f7b1863fdd0f2e5812ff65889f5bc84.png" title=" Then Validate successful account creation (completed)" width="1034"/>
+                <img src="b141cb61e781a416ae46df6ac84982363f7b1863fdd0f2e5812ff65889f5bc84.png" title=" Example: {User ID=&quot;autosophos44&quot;, Password=&quot;contraGrupo4&quot;, First Name=&quot;grupo&quot;, Last Name=&quot;cuatro&quot;, Email=&quot;juan.ugarriza@sophossolutions.com&quot;, Phone=1234567, Address1=&quot;nowhere&quot;, Address2=&quot;around&quot;, City=&quot;cartagena&quot;, State=&quot;bolivar&quot;, Zip=130001, Country=&quot;colombia&quot;} (completed): <span class='success-color'>SUCCESS</span>" width="1034"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.2.9</span>
+</div>
+</body>
+</html>
