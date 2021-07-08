@@ -43,7 +43,7 @@ public class BuyRequestStepDefinitions {
 		RegisterUser UserModel = new RegisterUser (strFirstName, strLastName, strAddress, strCity, strState, strZip, strCountry);
 		
 		theActorInTheSpotlight().should(seeThat(HeaderResult.in(),IsEqual.equalTo("true")));
-		theActorInTheSpotlight().should(seeThat(HeaderDate.in(),IsEqual.equalTo("true")));
+		theActorInTheSpotlight().should(seeThat(HeaderDate.in(),IsEqual.equalTo("false")));
 		theActorInTheSpotlight().should(seeThat(ResultOrder.in(FinalOrderPage.TXT_FIRSTNAME),IsEqual.equalTo(UserModel.getStFirstName())));
 		theActorInTheSpotlight().should(seeThat(ResultOrder.in(FinalOrderPage.TXT_LASTNAME),IsEqual.equalTo(UserModel.getStrLastName())));
 		theActorInTheSpotlight().should(seeThat(ResultOrder.in(FinalOrderPage.TXT_ADDRESS),IsEqual.equalTo(UserModel.getStrAddress1())));
