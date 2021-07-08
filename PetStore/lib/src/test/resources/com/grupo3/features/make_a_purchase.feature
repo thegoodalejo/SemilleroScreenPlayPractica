@@ -7,7 +7,7 @@ Feature: Hacer una compra
   
   Background:
   	Given Quiero agregar un item al carrito
-    When Busco 1 items y los agrego al carrito
+    When Busco 3 items y los agrego al carrito
     Then Deberia ver ese item en la lista de elementos del carrito
 
   Scenario: Hacer una compra
