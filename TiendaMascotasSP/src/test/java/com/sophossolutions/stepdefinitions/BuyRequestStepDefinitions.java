@@ -15,12 +15,10 @@ import com.sophossolutions.questions.HeaderDate;
 import com.sophossolutions.tasks.SelectBuy;
 import com.sophossolutions.tasks.SelectNextOptions;
 import com.sophossolutions.ui.FinalOrderPage;
-import com.sophossolutions.ui.MyAccountPage;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.serenitybdd.screenplay.questions.Text;
 
 public class BuyRequestStepDefinitions {
 	@Given("Estando en el carrito deseo proceder a generar la orden de compra")

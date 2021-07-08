@@ -2,8 +2,6 @@ package com.sophossolutions.tasks;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-import org.aspectj.runtime.internal.cflowstack.ThreadCounter;
-
 import com.sophossolutions.ui.CartPage;
 import com.sophossolutions.ui.HomePage;
 import com.sophossolutions.ui.MyAccountPage;
@@ -11,7 +9,6 @@ import com.sophossolutions.ui.MyAccountPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.questions.Text;
 import net.serenitybdd.screenplay.questions.Value;
 
 public class SelectBuy implements Task {
