@@ -19,8 +19,6 @@ public class HeaderDate implements Question<String> {
 
 		int dia = fecha.get(Calendar.DAY_OF_MONTH) ;
 
-
-
 		String strDate;
 
 		if (mes < 10 && dia < 10) {

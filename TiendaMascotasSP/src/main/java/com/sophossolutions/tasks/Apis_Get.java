@@ -19,8 +19,6 @@ public class Apis_Get implements Task {
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 
-		// actor.attemptsTo(Get.resource(strEndPoint.concat(strIdUser)).with(request ->
-		// request.auth().oauth2(ConstantsAPI.TOKEN_GOREST)));
 		actor.attemptsTo(Get.resource(strEndPoint));
 		SerenityRest.lastResponse().prettyPeek();
 

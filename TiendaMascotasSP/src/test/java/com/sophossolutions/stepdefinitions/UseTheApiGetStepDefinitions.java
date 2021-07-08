@@ -1,8 +1,12 @@
 package com.sophossolutions.stepdefinitions;
 
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
+import org.hamcrest.core.IsEqual;
+
+import com.sophossolutions.questions.GetRequest;
 import com.sophossolutions.tasks.Apis_Get;
 
 import io.cucumber.java.en.Given;
@@ -24,7 +28,8 @@ public class UseTheApiGetStepDefinitions {
 	}
 
 	@Then("Verificar que la respuesta sea un estatutus {int}")
-	public void verificarQueLaRespuestaSeaUnEstatutus(Integer int1) {
+	public void verificarQueLaRespuestaSeaUnEstatutus(Integer intStatus) {
+		theActorInTheSpotlight().should(seeThat(GetRequest.code(),IsEqual.equalTo(intStatus)));
 
 	}
 
