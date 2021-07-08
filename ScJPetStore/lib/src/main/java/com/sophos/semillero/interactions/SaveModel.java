@@ -3,6 +3,8 @@ package com.sophos.semillero.interactions;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.ArrayList;
 
 import com.sophos.semillero.model.Cart;
@@ -74,7 +76,15 @@ public class SaveModel implements Task {
 		
 		Cart cart = theActorInTheSpotlight().recall("CART");
 		int indexOf = cart.getListItems().indexOf(new Item(itemId));
-		cart.getListItems().get(indexOf).setQuantity(newQuantity);
+		String oldPrice = cart.getListItems().get(indexOf).getListPrice().replace("$", "");
+		
+		float newTotalCost = Float.valueOf(oldPrice) * Float.valueOf(newQuantity);
+		DecimalFormatSymbols dotSymbol = new DecimalFormatSymbols();
+		dotSymbol.setDecimalSeparator('.');
+		DecimalFormat dFormat = new DecimalFormat("#.00", dotSymbol);
+		
+		cart.getListItems().get(indexOf).setQuantity(newQuantity);		
+		cart.getListItems().get(indexOf).setTotalCost(String.valueOf("$"+dFormat.format(newTotalCost)));
 		
 		return instrumented(SaveModel.class, strName, cart);
 	}

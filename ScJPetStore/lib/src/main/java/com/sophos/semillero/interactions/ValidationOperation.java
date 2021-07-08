@@ -123,9 +123,26 @@ public class ValidationOperation {
 		List<WebElementFacade> listItemsWeb = cartList.resolveAllFor(actor);
 		
 		Cart cartActor = actor.recall("CART");
-		List<Item> listItemsActor = cartActor.getListItems();		
-				
-		return itemsInCart(listItemsActor, listItemsWeb);
+		List<Item> listItemsActor = cartActor.getListItems();
+		boolean isValid = false;
+		
+		for (int i = 0; i < listItemsActor.size(); i++) {
+			WebElement item  = listItemsWeb.get(i);			
+			String itemIDWeb = item.findElements(By.tagName("td")).get(0).findElement(By.tagName("a")).getText();
+			String strQuanty  = item.findElements(By.tagName("td")).get(4).findElement(By.tagName("input")).getAttribute("value");
+			String strTotal  = item.findElements(By.tagName("td")).get(6).getText();
+			
+			if(listItemsActor.get(i).getItemID().equals(itemIDWeb)   &&
+			   listItemsActor.get(i).getQuantity().equals(strQuanty) &&
+			   listItemsActor.get(i).getTotalCost().equals(strTotal)) {				
+				isValid = true;
+			} else {
+				break;
+			}
+		}
+		
+		return isValid;
+		
 	}
 
 }
