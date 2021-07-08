@@ -17,33 +17,37 @@ import org.hamcrest.core.IsEqual;
 
 import com.sophos.semillero.exceptions.ExceptionMsg;
 import com.sophos.semillero.questions.TextObtained;
+import com.sophos.semillero.tasks.GoToCartPage;
 import com.sophos.semillero.tasks.GoToHomePage;
 import com.sophos.semillero.tasks.GoToLoginPage;
+import com.sophos.semillero.tasks.GoToRegisterPage;
 import com.sophos.semillero.tasks.Login;
 import com.sophos.semillero.tasks.OpenAccount;
+import com.sophos.semillero.tasks.Register;
+import com.sophos.semillero.tasks.RemoveAnimalFromCart;
+import com.sophos.semillero.ui.CartPage;
 import com.sophos.semillero.ui.HomePage;
 import com.sophos.semillero.ui.OpenAccountPage;
 
-public class LoginStepDefinitions {
+public class RemoveAnimalFromCartStepDefinitions {
 	@Before("")
 	public void setup() {
 		setTheStage(new OnlineCast());
 	}
 	
-	@Given("Navigate to log in page")
-	public void navigateToLoginPage(String strUrl) {
-		theActorInTheSpotlight().wasAbleTo(GoToLoginPage.usingButtonAtTheTop());
+	@Given("Navigate to shopping cart page")
+	public void navigateToShoppingCartPage() {
+		theActorCalled("Grupo 4").wasAbleTo(GoToCartPage.usingButtonAtTheTop());
+	}
+	
+	@When("Validate that item ID {string} is present")
+	public void validateThatItemIDIsPresent() {
+		theActorInTheSpotlight().wasAbleTo(GoToCartPage.usingButtonAtTheTop());
 	}
 
-	@When("Enter username {string} and password {string}")
-	public void enterUsernameAndPassword(String strUser, String strPassword) {
-		theActorInTheSpotlight().wasAbleTo(Login.withCredential(strUser, strPassword));
+	@Then("Delete item with ID {string}")
+	public void deleteItemWithID(String strItemId) {
+		theActorInTheSpotlight().wasAbleTo(RemoveAnimalFromCart.usingButtonForID(strItemId));
 	}
 
-	@Then("Validate successful login")
-	public void validateSuccessfulLogin() {
-		String strTitleWhenLoggedIn = "Sign Out";
-		theActorInTheSpotlight().should(seeThat(TextObtained.in(HomePage.BTN_SIGN_OUT), IsEqual.equalTo(strTitleWhenLoggedIn))
-				.orComplainWith(ExceptionMsg.class, "Error when logging in"));
-	}
 }

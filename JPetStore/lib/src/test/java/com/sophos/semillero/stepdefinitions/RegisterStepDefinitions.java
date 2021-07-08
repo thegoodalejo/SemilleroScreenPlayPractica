@@ -27,6 +27,11 @@ import com.sophos.semillero.ui.HomePage;
 import com.sophos.semillero.ui.OpenAccountPage;
 
 public class RegisterStepDefinitions {
+	@Before("")
+	public void setup() {
+		setTheStage(new OnlineCast());
+	}
+	
 	@Given("Go to website {string}")
 	public void goToWebsite(String strUrl) {
 		theActorCalled("Grupo 4").wasAbleTo(Open.url(strUrl));
@@ -52,10 +57,5 @@ public class RegisterStepDefinitions {
 		String strLogin = "Sign In";
 		theActorInTheSpotlight().should(seeThat(TextObtained.in(HomePage.BTN_LOGIN), IsEqual.equalTo(strLogin))
 				.orComplainWith(ExceptionMsg.class, "Error when registering user"));
-	}
-
-	@Before("")
-	public void setup() {
-		setTheStage(new OnlineCast());
 	}
 }

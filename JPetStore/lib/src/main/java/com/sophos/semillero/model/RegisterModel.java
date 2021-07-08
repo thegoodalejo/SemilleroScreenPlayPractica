@@ -2,36 +2,86 @@ package com.sophos.semillero.model;
 
 public class RegisterModel {
 
+	private String strUser;
+	private String strPassword;
 	private String strFirstName;
 	private String strLastName;
-	private String strAddress;
-	private String strPhoneNumber;
-	private Boolean isMarried;
-	
-	public RegisterModel(String strFirstName, String strLastName, String strAddress, String strPhoneNumber,
-			Boolean isMarried) {
-		super();
+	private String strEmail;
+	private int intPhone;
+	private String strAddress1;
+	private String strAddress2;
+	private String strCity;
+	private String strState;
+	private int intZip;
+	private String strCountry;
+		
+	public RegisterModel(String strUser, String strPassword, String strFirstName, String strLastName, String strEmail,
+			int intPhone, String strAddress1, String strAddress2, String strCity, String strState, int intZip,
+			String strCountry) {
+		this.strUser = strUser;
+		this.strPassword = strPassword;
 		this.strFirstName = strFirstName;
 		this.strLastName = strLastName;
-		this.strAddress = strAddress;
-		this.strPhoneNumber = strPhoneNumber;
-		this.isMarried = isMarried;
+		this.strEmail = strEmail;
+		this.intPhone = intPhone;
+		this.strAddress1 = strAddress1;
+		this.strAddress2 = strAddress2;
+		this.strCity = strCity;
+		this.strState = strState;
+		this.intZip = intZip;
+		this.strCountry = strCountry;
 	}
-	
+
+
+
+	public String getStrUser() {
+		return strUser;
+	}
+
+
+
+	public String getStrPassword() {
+		return strPassword;
+	}
+
 	public String getStrFirstName() {
 		return strFirstName;
 	}
+
 	public String getStrLastName() {
 		return strLastName;
 	}
-	public String getStrAddress() {
-		return strAddress;
+
+	public String getStrEmail() {
+		return strEmail;
 	}
-	public String getStrPhoneNumber() {
-		return strPhoneNumber;
+
+	public int getIntPhone() {
+		return intPhone;
 	}
-	public Boolean getIsMarried() {
-		return isMarried;
-	}	
+
+	public String getStrAddress1() {
+		return strAddress1;
+	}
+
+	public String getStrAddress2() {
+		return strAddress2;
+	}
+
+	public String getStrCity() {
+		return strCity;
+	}
+
+	public String getStrState() {
+		return strState;
+	}
+
+	public int getIntZip() {
+		return intZip;
+	}
+
+	public String getStrCountry() {
+		return strCountry;
+	}
 	
 }
