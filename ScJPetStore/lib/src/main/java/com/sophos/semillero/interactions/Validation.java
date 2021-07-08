@@ -34,6 +34,7 @@ public class Validation {
 	public static Boolean addItemToCart(Actor actor, Target car_list) {
 		
 		List<WebElementFacade> listItemsWeb = car_list.resolveAllFor(actor);
+		
 		Cart cartActor = actor.recall("CART");
 		List<Item> listItemsActor = cartActor.getListItems();
 		
@@ -79,6 +80,42 @@ public class Validation {
 		List<Item> listItemsActor = cartActor.getListItems();
 				
 		return itemsInCart(listItemsActor, listItemsWeb);
+	}
+	
+	
+	public static Boolean orderInvoice(Actor actor, Target itemList) {
+		
+		List<WebElementFacade> listItemsWeb = itemList.resolveAllFor(actor);
+		
+		Cart cartActor = actor.recall("CART"); 
+		List<Item> listItemsActor = cartActor.getListItems();
+		
+		boolean right=false;
+		int numRight=0;
+		
+		for (int i = 0; i < listItemsActor.size(); i++) {
+			WebElement item = listItemsWeb.get(i);			
+			String itemIDWeb = item.findElements(By.tagName("td")).get(0).findElement(By.tagName("a")).getText();
+			String strDescripcion = item.findElements(By.tagName("td")).get(1).getText();
+			String strQuanty = item.findElements(By.tagName("td")).get(2).getText();
+			String strPrice = item.findElements(By.tagName("td")).get(3).getText();
+			String strTotal = item.findElements(By.tagName("td")).get(4).getText();
+			
+			if(listItemsActor.get(i).getItemID().equals(itemIDWeb)) {numRight++;}
+			if(listItemsActor.get(i).getDescription().equals(strDescripcion)) {numRight++;}
+			if(listItemsActor.get(i).getQuantity().equals(strQuanty)) {numRight++;}
+			if(listItemsActor.get(i).getListPrice().equals(strPrice)) {numRight++;}
+			if(listItemsActor.get(i).getTotalCost().equals(strTotal)) {numRight++;}
+			
+			if(numRight==5) {
+				right=true;
+				numRight=0;
+			}else {
+				return false;
+				}
+		}
+		return right;
+		
 	}
 
 }

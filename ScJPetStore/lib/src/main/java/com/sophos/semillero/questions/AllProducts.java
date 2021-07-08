@@ -5,11 +5,11 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.targets.Target;
 
-public class AddItemCartVerification implements Question<Boolean> {
+public class AllProducts implements Question<Boolean> {
 
 	private Target car_list;
 	
-	public AddItemCartVerification(Target target) {
+	public AllProducts(Target target) {
 		this.car_list = target;
 	}
 	
@@ -25,8 +25,8 @@ public class AddItemCartVerification implements Question<Boolean> {
 		}
 	}
 	
-	public static AddItemCartVerification in(Target target) {		
-		return new AddItemCartVerification(target);
+	public static AllProducts wereAdded(Target target) {		
+		return new AllProducts(target);
 	}
 	
 }

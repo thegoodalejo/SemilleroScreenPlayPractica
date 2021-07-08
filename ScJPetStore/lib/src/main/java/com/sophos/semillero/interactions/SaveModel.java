@@ -27,10 +27,18 @@ public class SaveModel implements Task {
 		actor.remember(strName,objModel);
 	}
 	
-	public static SaveModel user(String strValue1,String strValue2,String strValue3,String strName) {
-		String value=strValue1+strValue2+","+strValue3;
-		String[] values=value.split(",");
-		UserJPetStore dataUser=new UserJPetStore(values);
+	public static SaveModel user(String strInfo,String strName){
+		String[] strValues=strInfo.split(",");
+		String strFirstName=strValues[0];
+		String strLastName=strValues[1];
+		String strAddress1=strValues[8];
+		String strAddress2=strValues[9];
+		String strCity=strValues[5];
+		String strState=strValues[6];
+		String strZip=strValues[7];
+		
+		UserJPetStore dataUser=new UserJPetStore(strFirstName,strLastName,strAddress1,strAddress2,
+				strCity,strState,strZip);
 		return instrumented(SaveModel.class,strName,dataUser);		
 	}
 	

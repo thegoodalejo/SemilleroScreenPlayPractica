@@ -16,7 +16,7 @@ import java.util.Map;
 
 import org.hamcrest.core.IsEqual;
 
-import com.sophos.semillero.questions.AddItemCartVerification;
+import com.sophos.semillero.questions.AllProducts;
 import com.sophos.semillero.questions.RemoveItemCartVerification;
 import com.sophos.semillero.tasks.AddToCart;
 import com.sophos.semillero.tasks.RemoveFromCart;
@@ -28,18 +28,18 @@ import com.sophos.semillero.exceptions.Exception;
 public class RemoveItemFromCartStepDefinitions {
 	
 	
-	@Given("Deseo estar en el carrito")
-	public void deseoEstarEnElCarrito() {
+	@Given("I want to be in the cart")
+	public void iWantToBeInTheCart() {
 	}
 
-	@When("Deseo remover el item con id {string}")
-	public void deseoRemoverElItemConId(String itemId) {
+	@When("I want to remove the item with id {string}")
+	public void iWantToRemoveTheItemWithId(String itemId) {
 		theActorInTheSpotlight().wasAbleTo(RemoveFromCart.itemWithId(itemId));
 		
 	}
 
-	@Then("Verifico el carrito")
-	public void verificoElCarrito() {
+	@Then("I validate that i have removed the item")
+	public void iValidateThatIHaveRemovedTheItem() {
 		theActorInTheSpotlight()
 		.should(
 				seeThat(RemoveItemCartVerification.in(CatalogPage.CART_LIST), IsEqual.equalTo(true))

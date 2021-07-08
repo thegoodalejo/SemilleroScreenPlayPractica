@@ -5,28 +5,20 @@ public class UserJPetStore {
 	private String strFirstName;
 	private String strLastName;
 	private String strAddress1;
-	private String strEmail;
 	private String strAddress2;
 	private String strCity;
 	private String strState;
 	private String strZip;
-	private String strCountry;
-	private String strPhone;
-	private String strFavouriteCategory;
 
-	
-	public UserJPetStore(String[] strValue) {
-		this.strFirstName = strValue[0];
-		this.strLastName = strValue[1];
-		this.strAddress1 = strValue[2];
-		this.strEmail = strValue[3];
-		this.strAddress2 = strValue[4];
-		this.strCity = strValue[5];
-		this.strState = strValue[6];
-		this.strZip = strValue[7];
-		this.strCountry = strValue[8];
-		this.strPhone = strValue[9];
-		this.strFavouriteCategory = strValue[10];
+	public UserJPetStore(String strFirstName, String strLastName, String strAddress1, String strAddress2,
+			String strCity, String strState, String strZip) {
+		this.strFirstName = strFirstName;
+		this.strLastName = strLastName;
+		this.strAddress1 = strAddress1;
+		this.strAddress2 = strAddress2;
+		this.strCity = strCity;
+		this.strState = strState;
+		this.strZip = strZip;
 	}
 
 	public String getStrFirstName() {
@@ -41,9 +33,6 @@ public class UserJPetStore {
 		return strAddress1;
 	}
 
-	public String getStrEmail() {
-		return strEmail;
-	}
 
 	public String getStrAddress2() {
 		return strAddress2;
@@ -59,19 +48,6 @@ public class UserJPetStore {
 
 	public String getStrZip() {
 		return strZip;
-	}
-
-	public String getStrCountry() {
-		return strCountry;
-	}
-
-	public String getStrPhone() {
-		return strPhone;
-	}
-
-
-	public String getStrFavouriteCategory() {
-		return strFavouriteCategory;
 	}
 	
 }

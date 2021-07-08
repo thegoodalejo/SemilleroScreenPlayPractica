@@ -1,13 +1,15 @@
 #Author: angel.vivas@sophossolutions.com
-Feature: Agregar item al carrito de compra
-  Yo como automatizador quiero agregar un item al carrito de compra
+Feature: See animal information
+  As an automator I want to see if 
+  the animal view has an image 
+  and a description.
 
   Background: 
     Given I want to go to the website "https://petstore.octoperf.com/actions/Account.action"
     When I enter username "MariaSophos" password "1234"
     Then I verify that i have logged in
 
-  Scenario: Ver informacion del item
-  	When Selecciono item
+  Scenario: See animal information
+  	When I select the item
       | 0 | dogs,K9-BD-01,EST-6 |    
-    Then Valido la informacion
+    Then I valide if the item has an image

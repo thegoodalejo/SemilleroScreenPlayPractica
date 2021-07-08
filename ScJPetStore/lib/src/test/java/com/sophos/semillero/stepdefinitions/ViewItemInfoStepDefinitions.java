@@ -18,8 +18,8 @@ import com.sophos.semillero.tasks.SelectItem;
 
 public class ViewItemInfoStepDefinitions {
 
-	@When("Selecciono item")
-	public void seleccionoItem(DataTable data) {
+	@When("I select the item")
+	public void iSelectTheItem(DataTable data) {
 		Map<String,String> mapData = data.asMap(String.class, String.class);
 				
 		String strCategoria = mapData.get("0").split(",")[0];
@@ -29,8 +29,8 @@ public class ViewItemInfoStepDefinitions {
 		theActorInTheSpotlight().wasAbleTo(SelectItem.with(strCategoria, strProductoId, strItemId));	
 	}
 	
-	@Then("Valido la informacion")
-	public void validoLaInformacion() {
+	@Then("I valide if the item has an image")
+	public void iValideIfTheItemHasAnImage() {
 		theActorInTheSpotlight().should(seeThat(the(CatalogPage.IMG_ITEM), isVisible())
 				.orComplainWith(Exception.class, "No es visible la información del item."));
 	}
