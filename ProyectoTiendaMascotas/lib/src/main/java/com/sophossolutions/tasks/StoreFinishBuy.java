@@ -12,6 +12,7 @@ import static com.sophossolutions.ui.StoreCar.BTN_SHOPPINGCAR;
 import static com.sophossolutions.ui.StoreCar.BTN_CHECKOUT;
 import static com.sophossolutions.ui.StoreCar.BTN_CONTINUE;
 import static com.sophossolutions.ui.StoreCar.BTN_CONFIRM;
+import static com.sophossolutions.ui.StoreFacture.LIST_DATAACCOUNTFACTURE;
 
 public class StoreFinishBuy implements Task {
 
@@ -29,11 +30,12 @@ public class StoreFinishBuy implements Task {
 		 actor.attemptsTo(Click.on(BTN_SHOPPINGCAR),
 				 MapShoppingCar.ofTarget(listDataShoppingCar),
 				 Click.on(BTN_MYACCOUNT),
-				 MapAccount.ofTarget(listDataCurrentAccount),
+				 MapAccount.ofTarget(listDataCurrentAccount, "dataCurrentAccountOrder"),
 				 Click.on(BTN_SHOPPINGCAR),
 				 Click.on(BTN_CHECKOUT),
 				 Click.on(BTN_CONTINUE),
-				 Click.on(BTN_CONFIRM));		 
+				 Click.on(BTN_CONFIRM),
+				 MapAccount.ofTarget(LIST_DATAACCOUNTFACTURE, "dataCurrentAccountFacture"));		 
 	}
 	
 	public static StoreFinishBuy withValidationof(Target listDataCurrentAccount, Target listDataShoppingCar) {
