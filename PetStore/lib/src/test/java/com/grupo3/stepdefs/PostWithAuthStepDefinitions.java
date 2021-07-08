@@ -28,14 +28,8 @@ public class PostWithAuthStepDefinitions {
 
 	@When("Envio la informacion de la publicacion al endpoint {string}")
 	public void envioLaInformacionDeLaPublicacionAlEndpoint(String endpoint) {
-		String postBody = File.randomBodyForPost();
-		String postTitle = File.randomTitleForPost();
 		
-		
-		theActorInTheSpotlight().wasAbleTo(CallThePostApi.onEndpoint(endpoint)
-					.toCreatePostWithTitle(postTitle)
-					.andBody(postBody)
-				);
+		theActorInTheSpotlight().wasAbleTo(CallThePostApi.onEndpoint(endpoint));
 	}
 
 	@Then("Valido que la solicitud retorne con codigo {int}")

@@ -4,6 +4,7 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 import com.grupo3.model.ApiPost;
 import com.grupo3.model.ApiUser;
+import com.grupo3.util.File;
 
 import net.serenitybdd.rest.SerenityRest;
 
@@ -38,7 +39,8 @@ public class CallThePostApi implements Task{
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 		
-		assert  postTitle != null && postBody != null;
+		this.postBody = File.randomBodyForPost();
+		this.postTitle = File.randomTitleForPost();
 		
 		actor.attemptsTo(
 					Post.to(endpoint).with(
