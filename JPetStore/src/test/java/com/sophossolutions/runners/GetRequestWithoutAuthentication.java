@@ -8,10 +8,11 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-		glue= "com.sophossolutions.stepdefinitions",
-		features= "src/test/resources/com/sophossolutions/features/add_animal_to_car.feature",
-		snippets= SnippetType.CAMELCASE
+		glue = "com.sophossolutions.stepdefinitions",
+		features = "src/test/resources/com/sophossolutions/features/get_request_without_authentication.feature",
+		snippets = SnippetType.CAMELCASE
 		)
-public class AddAnimalToCarRunner
-{
+
+public class GetRequestWithoutAuthentication {
+
 }

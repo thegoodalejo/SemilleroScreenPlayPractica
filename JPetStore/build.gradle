@@ -32,10 +32,10 @@ buildscript {
 dependencies {
     compile group: 'net.serenity-bdd', name: 'serenity-core', version: "2.2.6"
     compile group: 'net.serenity-bdd', name: 'serenity-cucumber5', version: "2.2.6"
-    compile group: 'net.serenity-bdd', name: 'serenity-ensure', version: "2.2.6"
+    compile group: 'net.serenity-bdd', name: 'serenity-ensure', version: "2.2.6" // Para peticiones a una api !
     compile group: 'net.serenity-bdd', name: 'serenity-junit', version: "2.2.6"
     compile group: 'net.serenity-bdd', name: 'serenity-screenplay', version: "2.2.6"
-    compile group: 'net.serenity-bdd', name: 'serenity-screenplay-rest', version: "2.2.6"
+    compile group: 'net.serenity-bdd', name: 'serenity-screenplay-rest', version: "2.2.6" // Para peticiones a una api !
     compile group: 'net.serenity-bdd', name: 'serenity-screenplay-webdriver', version: "2.2.6"
     compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
     testCompile group: 'junit', name: 'junit', version: '4.13'

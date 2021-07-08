@@ -14,4 +14,5 @@ public class Constants
 	public static final String DATE_TODAY = dtf.format(LocalDateTime.now());
 	public static final String MODEL_ANIMAL = "ModelAnimal";
 	public static final String MODEL_CART = "ModelCart";
+	public static final String INDEX_STATUS_CODE = "indexStatusCode";
 }

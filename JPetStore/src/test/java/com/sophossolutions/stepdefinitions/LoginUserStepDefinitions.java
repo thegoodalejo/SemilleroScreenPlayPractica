@@ -9,8 +9,8 @@ import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
 
 
 import com.sophossolutions.tasks.Login;
-import com.sophossolutions.ui.HomePage;
-import com.sophossolutions.util.Constants;
+import static com.sophossolutions.ui.HomePage.TXT_WELCOME;
+import static com.sophossolutions.util.Constants.ACTOR_NAME;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -21,7 +21,7 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 
 public class LoginUserStepDefinitions {
 	
-	private String strActorName = Constants.ACTOR_NAME;
+	private String strActorName = ACTOR_NAME;
 	
 	@Before()
 	public void setup(){	
@@ -40,7 +40,7 @@ public class LoginUserStepDefinitions {
 
 	@Then("Observe the login page")
 	public void observeTheLoginPage() {
-		theActorInTheSpotlight().should(seeThat(the(HomePage.TXT_WELCOME), isVisible()));
+		theActorInTheSpotlight().should(seeThat(the(TXT_WELCOME), isVisible()));
 	}
 	
 }

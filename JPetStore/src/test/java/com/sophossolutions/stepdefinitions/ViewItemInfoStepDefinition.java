@@ -8,7 +8,6 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import org.hamcrest.core.IsEqual;
 
 import com.sophossolutions.models.ItemAnimal;
-import com.sophossolutions.models.ItemShopCar;
 import com.sophossolutions.questions.IdProducAnima;
 import com.sophossolutions.tasks.GetInfo;
 import com.sophossolutions.tasks.GoToPage;
