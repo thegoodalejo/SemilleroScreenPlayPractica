@@ -9,7 +9,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
 		glue = "com.sophos.semillero.stepdefinitions",
-		features = "src/test/resources/features/login.feature",
+		features = "src/test/resources/features/02_login.feature",
 		snippets = SnippetType.CAMELCASE
 		)
 public class Login {

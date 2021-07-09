@@ -22,12 +22,10 @@ import com.sophos.semillero.tasks.GoToHomePage;
 import com.sophos.semillero.tasks.GoToLoginPage;
 import com.sophos.semillero.tasks.GoToRegisterPage;
 import com.sophos.semillero.tasks.Login;
-import com.sophos.semillero.tasks.OpenAccount;
-import com.sophos.semillero.tasks.Register;
+import com.sophos.semillero.tasks.RegisterNewUser;
 import com.sophos.semillero.tasks.RemoveAnimalFromCart;
 import com.sophos.semillero.ui.CartPage;
 import com.sophos.semillero.ui.HomePage;
-import com.sophos.semillero.ui.OpenAccountPage;
 
 public class RemoveAnimalFromCartStepDefinitions {
 	@Before("")
@@ -41,13 +39,13 @@ public class RemoveAnimalFromCartStepDefinitions {
 	}
 	
 	@When("Validate that item ID {string} is present")
-	public void validateThatItemIDIsPresent() {
-		theActorInTheSpotlight().wasAbleTo(GoToCartPage.usingButtonAtTheTop());
+	public void validateThatItemIdIsPresent(String strItemId) {
+		theActorInTheSpotlight().should(seeThat(TextObtained.in(CartPage.BTN_REMOVE_ITEM.of(strItemId)), IsEqual.equalTo(strItemId)));
 	}
 
 	@Then("Delete item with ID {string}")
-	public void deleteItemWithID(String strItemId) {
-		theActorInTheSpotlight().wasAbleTo(RemoveAnimalFromCart.usingButtonForID(strItemId));
+	public void deleteItemWithId(String strItemId) {
+		theActorInTheSpotlight().wasAbleTo(RemoveAnimalFromCart.usingButtonForItemId(strItemId));
 	}
 
 }

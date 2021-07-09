@@ -20,9 +20,7 @@ import com.sophos.semillero.questions.TextObtained;
 import com.sophos.semillero.tasks.GoToHomePage;
 import com.sophos.semillero.tasks.GoToLoginPage;
 import com.sophos.semillero.tasks.Login;
-import com.sophos.semillero.tasks.OpenAccount;
 import com.sophos.semillero.ui.HomePage;
-import com.sophos.semillero.ui.OpenAccountPage;
 
 public class LoginStepDefinitions {
 	@Before("")
@@ -31,8 +29,8 @@ public class LoginStepDefinitions {
 	}
 	
 	@Given("Navigate to log in page")
-	public void navigateToLoginPage(String strUrl) {
-		theActorInTheSpotlight().wasAbleTo(GoToLoginPage.usingButtonAtTheTop());
+	public void navigateToLoginPage() {
+		theActorCalled("Grupo 4").wasAbleTo(GoToLoginPage.usingButtonAtTheTop());
 	}
 
 	@When("Enter username {string} and password {string}")

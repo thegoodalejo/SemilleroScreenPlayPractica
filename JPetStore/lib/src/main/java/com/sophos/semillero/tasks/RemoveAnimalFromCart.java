@@ -24,7 +24,7 @@ public class RemoveAnimalFromCart implements Task {
 				);
 	}
 
-	public static RemoveAnimalFromCart usingButtonForID(String strItemId) {
+	public static RemoveAnimalFromCart usingButtonForItemId(String strItemId) {
 		return instrumented(RemoveAnimalFromCart.class, strItemId);
 	}
 

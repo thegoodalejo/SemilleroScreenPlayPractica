@@ -9,7 +9,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
 		glue = "com.sophos.semillero.stepdefinitions",
-		features = "src/test/resources/features/remove_animal_from_cart.feature",
+		features = "src/test/resources/features/04_remove_animal_from_cart.feature",
 		snippets = SnippetType.CAMELCASE
 		)
 public class RemoveAnimalFromCart {

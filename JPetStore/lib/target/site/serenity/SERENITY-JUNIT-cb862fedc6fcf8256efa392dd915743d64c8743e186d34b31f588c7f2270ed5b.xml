@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Log in on JPetStore" skipped="0" tests="1" time="0.06" timestamp="2021-07-08 01:49:30"><testcase name="Log in on JPetStore"><error type="java.lang.NullPointerException"/><system-err>null&#13;
+com.google.common.base.Preconditions.checkNotNull(Preconditions.java:882)&#13;
+com.sophos.semillero.stepdefinitions.LoginStepDefinitions.navigateToLoginPage(LoginStepDefinitions.java:35)&#13;
+✽.Navigate to log in page(file:///C:/Repos/ScreenPlay%20Parabank/SemilleroScreenPlayPractica/JPetStore/lib/src/test/resources/features/02_login.feature:8)&#13;
+</system-err></testcase></testsuite>

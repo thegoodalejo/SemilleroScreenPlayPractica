@@ -2,7 +2,6 @@ package com.sophos.semillero.tasks;
 
 import com.sophos.semillero.ui.HomePage;
 import com.sophos.semillero.ui.LoginPage;
-import com.sophos.semillero.ui.OpenAccountPage;
 
 import net.serenitybdd.screenplay.Actor;
 import static net.serenitybdd.screenplay.Tasks.instrumented;

@@ -32,13 +32,9 @@ public class RegisterModel {
 		this.strCountry = strCountry;
 	}
 
-
-
 	public String getStrUser() {
 		return strUser;
 	}
-
-
 
 	public String getStrPassword() {
 		return strPassword;
