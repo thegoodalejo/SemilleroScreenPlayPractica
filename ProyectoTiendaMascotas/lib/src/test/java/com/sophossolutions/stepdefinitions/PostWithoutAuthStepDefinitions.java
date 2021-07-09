@@ -5,10 +5,12 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.containsString;
 
 import org.hamcrest.core.IsEqual;
 
 import com.sophossolutions.questions.ResponseCode;
+import com.sophossolutions.questions.ValidateLastResponse;
 import com.sophossolutions.questions.ValidateTextPost;
 import com.sophossolutions.tasks.SendThat;
 import io.cucumber.java.Before;
@@ -41,7 +43,7 @@ public class PostWithoutAuthStepDefinitions {
 	public void verifyThatApiResponseContainsStatusAndToken(Integer code, String strToken) {
 		String strResponse = theActorInTheSpotlight().recall("Response");
 		theActorInTheSpotlight().should(seeThat("code of response ", ResponseCode.was(), equalTo(code)));
-		theActorInTheSpotlight().should(seeThat(ValidateTextPost.was(strResponse,strToken), equalTo(true)));
+		theActorInTheSpotlight().should(seeThat(ValidateLastResponse.withData(), containsString(strToken)));
 		
 	}
 
