@@ -9,9 +9,9 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
 	glue = "com.sophos.semillero.stepdefinitions", 
-	features = "src/test/resources/features/apiPostReqres.feature",
+	features = "src/test/resources/features/apiGetGorest.feature",
 	snippets = SnippetType.CAMELCASE	
 	)
-public class ApiPostReqres {
+public class ApiGetGorest {
 
 }

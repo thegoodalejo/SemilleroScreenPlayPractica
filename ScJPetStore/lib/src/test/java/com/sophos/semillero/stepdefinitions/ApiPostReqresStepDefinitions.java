@@ -17,11 +17,11 @@ import org.hamcrest.core.IsEqual;
 
 import com.sophos.semillero.questions.ResponseHas;
 import com.sophos.semillero.questions.PostResponseHas;
-import com.sophos.semillero.tasks.MakeAPostRequest;
+import com.sophos.semillero.tasks.MakeAPostReqres;
 
 import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
 
-public class ApiPostStepDefinitions {
+public class ApiPostReqresStepDefinitions {
 	@Before
 	public void setup() {
 		setTheStage(new OnlineCast());
@@ -35,12 +35,12 @@ public class ApiPostStepDefinitions {
 	@When("Envio la informacion para la peticion {string}")
 	public void envioLaInformacionParaLaPeticion(String string,DataTable dataTable) {
 		Map<String,String> body=dataTable.asMap(String.class,String.class);
-		theActorCalled("Group2").wasAbleTo(MakeAPostRequest.withoutAuthentication(string, body));
+		theActorInTheSpotlight().wasAbleTo(MakeAPostReqres.withoutAuthentication(string, body));
 	}
 
 	@Then("Valido la respuesta tenga status {int} id {string} y token {string}")
-	public void validoLaRespuestaTengaStatusIdYToken(Integer int1, String strId, String strToken) {
-		theActorInTheSpotlight().should(seeThat(ResponseHas.the("STATUS_CODE"),IsEqual.equalTo(int1)));
+	public void validoLaRespuestaTengaStatusIdYToken(Integer strStatus, String strId, String strToken) {
+		theActorInTheSpotlight().should(seeThat(ResponseHas.the("STATUS_CODE"),IsEqual.equalTo(strStatus)));
 		theActorInTheSpotlight().should(seeThat(PostResponseHas.the("ID"),IsEqual.equalTo(strId)));
 		theActorInTheSpotlight().should(seeThat(PostResponseHas.the("TOKEN"),IsEqual.equalTo(strToken)));
 	}

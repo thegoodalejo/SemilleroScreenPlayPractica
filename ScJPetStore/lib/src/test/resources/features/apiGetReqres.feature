@@ -7,4 +7,4 @@ Feature: Make a get request on the reqres web site
   Scenario: Make a get request
     Given I want to make an api request on "https://reqres.in"
     When I send the request "/api/users/" and id "2"
-    Then I check that my response is 200 
+    Then I check that my response is 200

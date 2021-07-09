@@ -5,15 +5,9 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-
-
 import org.hamcrest.core.IsEqual;
-
-
 import com.sophos.semillero.questions.ResponseHas;
-import com.sophos.semillero.tasks.MakeAGetRequest;
-
-import net.serenitybdd.rest.SerenityRest;
+import com.sophos.semillero.tasks.MakeAGetReqres;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
 import io.cucumber.java.Before;
@@ -35,12 +29,12 @@ public class ApiGetReqresStepDefinitions {
 
 	@When("I send the request {string} and id {string}")
 	public void iSendTheRequestAndId(String strEndPoint, String strUserId) {
-		theActorInTheSpotlight().wasAbleTo(MakeAGetRequest.withoutAuthentication(strEndPoint, strUserId));
+		theActorInTheSpotlight().wasAbleTo(MakeAGetReqres.withoutAuthentication(strEndPoint, strUserId));
 	}
 
 	@Then("I check that my response is {int}")
-	public void iCheckThatMyResponseIsAndHasTheSameId(Integer int1) {
-		theActorInTheSpotlight().should(seeThat(ResponseHas.the("STATUS_CODE"),IsEqual.equalTo(int1)));
+	public void iCheckThatMyResponseIsAndHasTheSameId(Integer intCode) {
+		theActorInTheSpotlight().should(seeThat(ResponseHas.the("STATUS_CODE"),IsEqual.equalTo(intCode)));
 	}
 
 }
