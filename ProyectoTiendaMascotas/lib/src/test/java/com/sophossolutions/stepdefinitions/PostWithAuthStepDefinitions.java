@@ -1,13 +1,11 @@
 package com.sophossolutions.stepdefinitions;
 
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.containsString;
+import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeThatResponse;
 
-import com.sophossolutions.questions.ResponseCode;
 import com.sophossolutions.tasks.*;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -37,8 +35,12 @@ public class PostWithAuthStepDefinitions {
 	
 	@Then("I verify that reponse contains status {int} and name {string}")
 	public void iVerifyThatReponseContainsStatusAndName(Integer intStatus, String strName) {
-		theActorInTheSpotlight().should(seeThat("code of response ", ResponseCode.was(), equalTo(intStatus)));
-		theActorInTheSpotlight().should(seeThat(ValidateLastResponse.withData(), containsString(strName)));
+		
+		/*theActorInTheSpotlight().should(seeThat("code of response ", ResponseCode.was(), equalTo(intStatus)));
+		theActorInTheSpotlight().should(seeThat(ValidateLastResponse.withData(), containsString(strName)));*/
+	
+		theActorInTheSpotlight().should(seeThatResponse("User name should be correct", response -> response.statusCode(200).body("data.name", equalTo(strName))));
+	
 	}
 
 }
