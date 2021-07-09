@@ -7,6 +7,8 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.equalTo;
 
+import org.hamcrest.core.IsEqual;
+
 import com.sophossolutions.questions.ResponseCode;
 import com.sophossolutions.questions.ValidateLastResponse;
 import com.sophossolutions.questions.ValidateTextPost;
@@ -40,6 +42,6 @@ public class GetWithoutAuthStepDefinitions {
 	public void iValidateThatTheCodeAndAreOfPage(Integer intStatus, String strPage) {
 	    theActorInTheSpotlight().should(seeThat("code of response ", ResponseCode.was(), equalTo(intStatus)));
 	    String response = theActorInTheSpotlight().recall("strResponse");
-	    theActorInTheSpotlight().should(seeThat(ValidateTextPost.was(response, strPage, "page")));
+	    theActorInTheSpotlight().should(seeThat(ValidateTextPost.was(response, strPage, "page"), IsEqual.equalTo(true)));
 	}
 }
