@@ -10,9 +10,9 @@ Feature: Update item Ammount in shopping cart
     Then I verify that i have logged in
     
     When I add items to the cart
-      | 0 | dogs,K9-BD-01,EST-6 |
+      | 0 | dogs,K9-RT-02,EST-23     |
     Then I valide my cart
 
   Scenario: Update item Ammount
-    When I want to change the quantity of the itemId "EST-6" by "5"
+    When I want to change the quantity of the itemId "EST-23" by "5"
     Then I valide my cart updated

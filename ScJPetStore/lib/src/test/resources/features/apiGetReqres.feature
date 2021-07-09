@@ -1,4 +1,4 @@
-#Autor: maria.cala@sophossolutions.com
+#Autor: Group 2
 Feature: Make a get request on the reqres web site 
   I as an automator want to perform a get request 
   on the reqres web page and validate 

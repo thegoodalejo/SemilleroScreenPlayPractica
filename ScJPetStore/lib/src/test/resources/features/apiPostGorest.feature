@@ -1,4 +1,4 @@
-#Author: angel.vivas@sophossolutions.com
+#Author: Group 2
 Feature: Post With Authentification in GoRest
   I as an automatizer
   I want to Automate a POST api

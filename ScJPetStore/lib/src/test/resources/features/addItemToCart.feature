@@ -11,6 +11,6 @@ Feature: Add item to shopping cart
 
   Scenario: Add item to shopping cart
     When I add items to the cart
-      | 0 | dogs,K9-BD-01,EST-6 |
-      | 1 | dogs,K9-BD-01,EST-7 |
+      | 0 | dogs,K9-RT-02,EST-23     |
+      | 1 | reptiles,RP-SN-01,EST-12 |
     Then I valide my cart

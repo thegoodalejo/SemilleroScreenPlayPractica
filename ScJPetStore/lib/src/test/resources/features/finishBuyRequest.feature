@@ -8,8 +8,8 @@ Feature: Checkout
     When I enter username "MariaSophos" password "1234"
     Then I verify that i have logged in
     And I add items to the cart
-      | 0 | dogs,K9-BD-01,EST-6 |
-      | 1 | dogs,K9-BD-01,EST-7 |
+      | 0 | dogs,K9-RT-02,EST-23     |
+      | 1 | reptiles,RP-SN-01,EST-12 |
     And I valide my cart 
     
 

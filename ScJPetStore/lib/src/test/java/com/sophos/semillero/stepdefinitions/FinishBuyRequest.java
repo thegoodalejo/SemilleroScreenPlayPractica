@@ -35,16 +35,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class FinishBuyRequest {
-	GetDate actualDate;
-	private static final String DATE_FORMAT = "yyyy/MM/dd";
-	Calendar calendar = Calendar.getInstance();
-	Date date = calendar.getTime();
-	DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DATE_FORMAT);
-	Instant instant = date.toInstant();
-	LocalDateTime ldt = instant
-			  .atZone(ZoneId.of("UTC"))
-			  .toLocalDateTime();
-	String formattedDate = ldt.format(formatter);
+	
+	GetDate actualDate= new GetDate();
 	
 	@Given("I want to complete my order")
 	public void iWantToCompleteMyOrder() {
@@ -66,7 +58,7 @@ public class FinishBuyRequest {
 	public void iValidateTheInvoiceData() {
 		UserJPetStore usuario=theActorInTheSpotlight().recall("USER_MODEL");
 		theActorInTheSpotlight().should(seeThat(FinishBuy.on(TXT_ORDER_DATE, 1),matchesRegex("^#[0-9]+")));
-		theActorInTheSpotlight().should(seeThat(FinishBuy.on(TXT_ORDER_DATE,2),IsEqual.equalTo(formattedDate)));
+		theActorInTheSpotlight().should(seeThat(FinishBuy.on(TXT_ORDER_DATE,2),IsEqual.equalTo(actualDate.gatActualDate())));
 		theActorInTheSpotlight().should(seeThat(CheckUserData.on(TXT_BILL, usuario),IsEqual.equalTo(true)));
 		theActorInTheSpotlight().should(seeThat(OrderVerification.in(TXT_BILL_ITEMS),IsEqual.equalTo(true)));
 	}

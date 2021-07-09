@@ -26,20 +26,20 @@ public class ApiPostReqresStepDefinitions {
 	public void setup() {
 		setTheStage(new OnlineCast());
 	}
-	
-	@Given("Quiero hacer una peticion en la api de tipo post {string}")
-	public void quieroHacerUnaPeticionEnLaApiDeTipoPost(String strUrl) {
+	    
+	@Given("I want to make a request in the api of type post {string}")
+	public void iWantToMakeARequestInTheApiOfTypePost(String strUrl) {
 		theActorCalled("Group2").whoCan(CallAnApi.at(strUrl));
 	}
 
-	@When("Envio la informacion para la peticion {string}")
-	public void envioLaInformacionParaLaPeticion(String string,DataTable dataTable) {
+	@When("I send the information for the request {string}")
+	public void iSendTheInformationForTheRequest(String string,DataTable dataTable) {
 		Map<String,String> body=dataTable.asMap(String.class,String.class);
 		theActorInTheSpotlight().wasAbleTo(MakeAPostReqres.withoutAuthentication(string, body));
 	}
 
-	@Then("Valido la respuesta tenga status {int} id {string} y token {string}")
-	public void validoLaRespuestaTengaStatusIdYToken(Integer strStatus, String strId, String strToken) {
+	@Then("I validate the response has status {int} id {string} and token {string}")
+	public void iValidateTheResponseHasStatusIdAndToken(Integer strStatus, String strId, String strToken) {
 		theActorInTheSpotlight().should(seeThat(ResponseHas.the("STATUS_CODE"),IsEqual.equalTo(strStatus)));
 		theActorInTheSpotlight().should(seeThat(PostResponseHas.the("ID"),IsEqual.equalTo(strId)));
 		theActorInTheSpotlight().should(seeThat(PostResponseHas.the("TOKEN"),IsEqual.equalTo(strToken)));
