@@ -9,6 +9,6 @@ Feature: Post with authentification
     When he required post a user in the endpoint "public-api/users/"
       | name   | jose         |
       | gender | Female       |
-      | email  | rllaae@gmail.com |
+      | email  | rll123aaaae@gmail.com |
       | status | Active       |
     Then I verify that reponse contains status 200 and name "jose"

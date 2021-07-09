@@ -1,8 +1,5 @@
 package com.sophossolutions.questions;
 
-import java.util.List;
-
-import com.sophossolutions.models.RegisterModel;
 import com.sophossolutions.models.AccountModel;
 
 import net.serenitybdd.screenplay.Actor;
@@ -22,7 +19,7 @@ public class ValidateDataAccountFacture implements Question {
 		// TODO Auto-generated method stub
 		AccountModel dataAcccountFacture1 = actor.recall(dataAcccountFacture);
 		AccountModel dataCurrentAccountOrder = actor.recall("dataCurrentAccountOrder");
-		
+
 		if (dataAcccountFacture1.getStrAddress1().equals(dataCurrentAccountOrder.getStrAddress1())
 				&& dataAcccountFacture1.getStrAddress2().equals(dataCurrentAccountOrder.getStrAddress2())
 				&& dataAcccountFacture1.getStrFirstName().equals(dataCurrentAccountOrder.getStrFirstName())
@@ -33,8 +30,7 @@ public class ValidateDataAccountFacture implements Question {
 				&& dataAcccountFacture1.getStrZip().equals(dataCurrentAccountOrder.getStrZip())) {
 			return true;
 
-		}
-		else {
+		} else {
 			return false;
 		}
 	}

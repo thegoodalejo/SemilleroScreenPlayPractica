@@ -1,20 +1,21 @@
 package com.sophossolutions.stepdefinitions;
 
+import static com.sophossolutions.ui.StoreCar.PET_SELECTED;
+import static com.sophossolutions.ui.StoreHome.BTN_ADD;
+import static com.sophossolutions.ui.StoreHome.PET_BREED;
+import static com.sophossolutions.ui.StoreHome.PET_SELECT;
+import static com.sophossolutions.ui.StoreHome.PET_TYPE;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-import static com.sophossolutions.ui.StoreCar.PET_SELECTED;
-import static com.sophossolutions.ui.StoreHome.PET_TYPE;
-import static com.sophossolutions.ui.StoreHome.PET_BREED;
-import static com.sophossolutions.ui.StoreHome.BTN_ADD;
-import static com.sophossolutions.ui.StoreHome.PET_SELECT;
+
+import org.hamcrest.core.IsEqual;
 
 import com.sophossolutions.exceptions.ExceptionMessage;
 import com.sophossolutions.interactions.ClickButton;
 import com.sophossolutions.questions.TextOf;
 import com.sophossolutions.tasks.SaveInfo;
-import com.sophossolutions.ui.StoreHome;
-import org.hamcrest.core.IsEqual;
+
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -31,7 +32,7 @@ public class StoreAddPetStepDefinitions {
 
 	@Given("I want search pet type (.+)$")
 	public void iWantSearchPetType(String strPetType) {
-		
+
 		theActorInTheSpotlight().wasAbleTo(ClickButton.elementTarget(PET_TYPE.of(strPetType)));
 	}
 
@@ -42,10 +43,10 @@ public class StoreAddPetStepDefinitions {
 
 	@When("decide the pet by the description (.+)$")
 	public void decideThePetByTheDescription(String strPetSelect) {
-		
+
 		theActorInTheSpotlight().wasAbleTo(SaveInfo.on(PET_SELECT.of(strPetSelect)),
 				ClickButton.elementTarget(BTN_ADD.of(strPetSelect)));
-		strId = theActorInTheSpotlight().recall("TextoElemento");
+		strId = theActorInTheSpotlight().recall("TextElement");
 	}
 
 	@Then("I verified that the pet is in the shopping cart")

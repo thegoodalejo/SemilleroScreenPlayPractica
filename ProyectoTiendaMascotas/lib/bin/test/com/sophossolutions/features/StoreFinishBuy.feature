@@ -1,6 +1,8 @@
-#Author: jonathan.castro@sophossolutions.com
+#Author: Grupo Uno
 Feature: Finish purchase of pets
-  As a tester, I want to finish a purchase of pets for to test billing
+  As a tester
+  I want to finish a purchase of pets for 
+  To test billing
 
   Background: 
     Given I want Login in "https://petstore.octoperf.com/actions/Account.action"
