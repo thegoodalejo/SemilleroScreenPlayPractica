@@ -144,7 +144,7 @@
             <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 08-07-2021 20:18</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 08-07-2021 21:01</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -173,9 +173,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">
+                                <span class="failing-color">
                                     Post with authentification
                                         <span class="related-issue-title"></span>
                                 </span>
@@ -276,7 +276,7 @@
                         </td>
 
                         <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                        <td width="100"><span class="top-level-step">0.13s</span></td>
+                        <td width="100"><span class="top-level-step">0.16s</span></td>
                     </tr>
                     <tr class="test-SUCCESS">
 
@@ -303,7 +303,7 @@
                         </td>
 
                         <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                        <td width="100"><span class="top-level-step">7.16s</span></td>
+                        <td width="100"><span class="top-level-step">8.57s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -334,7 +334,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">6.51s</span></td>
+                        <td width="100"><span class="nested-step">7.78s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -377,9 +377,9 @@
                                         <h4>Request Cookies</h4>
                                         <pre></pre>
                                         <h4>Response Headers</h4>
-                                        <pre>Server: nginx<br>Date: Fri, 09 Jul 2021 01:18:41 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Vary: Accept-Encoding<br>X-Frame-Options: SAMEORIGIN<br>X-XSS-Protection: 1; mode=block<br>X-Content-Type-Options: nosniff<br>X-Download-Options: noopen<br>X-Permitted-Cross-Domain-Policies: none<br>Referrer-Policy: strict-origin-when-cross-origin<br>Location: https://gorest.co.in/public-api/users/1428<br>ETag: W/&quot;c874f706c3517e5d8b617f500177bda6&quot;<br>Cache-Control: max-age=0, private, must-revalidate<br>X-Request-Id: 2dc91be9-1bb4-4140-87c2-331dde4033c5<br>X-Runtime: 0.024194<br>Strict-Transport-Security: max-age=31536000; includeSubDomains<br>Vary: Origin<br>X-Frame-Options: sameorigin<br>Expect-CT: enforce; max-age=3600<br>Content-Encoding: gzip</pre>
+                                        <pre>Server: nginx<br>Date: Fri, 09 Jul 2021 02:02:02 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>Vary: Accept-Encoding<br>X-Frame-Options: SAMEORIGIN<br>X-XSS-Protection: 1; mode=block<br>X-Content-Type-Options: nosniff<br>X-Download-Options: noopen<br>X-Permitted-Cross-Domain-Policies: none<br>Referrer-Policy: strict-origin-when-cross-origin<br>ETag: W/&quot;c449a15232e402aaacaed9f43dd2e742&quot;<br>Cache-Control: max-age=0, private, must-revalidate<br>X-Request-Id: e65ec86c-313e-46b4-b803-76385ff3df0b<br>X-Runtime: 0.024728<br>Strict-Transport-Security: max-age=31536000; includeSubDomains<br>Vary: Origin<br>X-Frame-Options: sameorigin<br>Expect-CT: enforce; max-age=3600<br>Content-Encoding: gzip</pre>
                                     <h4>Response Body</h4>
-                                        <pre>{<br>    &quot;code&quot;: 201,<br>    &quot;meta&quot;: null,<br>    &quot;data&quot;: {<br>        &quot;id&quot;: 1428,<br>        &quot;name&quot;: &quot;jose&quot;,<br>        &quot;email&quot;: &quot;saassspere@gmail.com&quot;,<br>        &quot;gender&quot;: &quot;Female&quot;,<br>        &quot;status&quot;: &quot;Active&quot;,<br>        &quot;created_at&quot;: &quot;2021-07-09T06:48:41.107+05:30&quot;,<br>        &quot;updated_at&quot;: &quot;2021-07-09T06:48:41.107+05:30&quot;<br>    }<br>}</pre>
+                                        <pre>{<br>    &quot;code&quot;: 422,<br>    &quot;meta&quot;: null,<br>    &quot;data&quot;: [<br>        {<br>            &quot;field&quot;: &quot;email&quot;,<br>            &quot;message&quot;: &quot;has already been taken&quot;<br>        }<br>    ]<br>}</pre>
                                 </div>
                             </div>
                         </div>
@@ -400,13 +400,13 @@
                                 </table>
                             </td>
                         </tr>
-                    <tr class="test-SUCCESS">
+                    <tr class="test-FAILURE">
 
                         <td width="50" class="step-icon">
                             <a name="2"></a>
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
                                    style="display:block">
-                                    <i class="fa fa-plus-square-o imgstepSection2 success-icon"
+                                    <i class="fa fa-plus-square-o imgstepSection2 failure-icon"
                                        style="margin-left: 20px; float:left; padding-right:5px"></i>
                                 </a>
                         </td>
@@ -424,8 +424,8 @@
                             </div>
                         </td>
 
-                        <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                        <td width="100"><span class="top-level-step">0.2s</span></td>
+                        <td width="130"><span class="top-level-step">FAILURE</span></td>
+                        <td width="100"><span class="top-level-step">0.28s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -453,12 +453,12 @@
                         <td width="130"><span class="nested-group-step">SUCCESS</span></td>
                         <td width="100"><span class="nested-group-step">0.01s</span></td>
                     </tr>
-                    <tr class="test-SUCCESS">
+                    <tr class="test-FAILURE">
 
                         <td width="70" class="step-icon">
                             <a name="2-1"></a>
                                 <span style="margin-left: 40px;"
-                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a>
                                 </span>
                         </td>
 
@@ -472,17 +472,55 @@
                             </div>
                         </td>
 
-                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-group-step">0.01s</span></td>
+                        <td width="130"><span class="nested-group-step">FAILURE</span></td>
+                        <td width="100"><span class="nested-group-step">0.03s</span></td>
                     </tr>
+                        <tr class="test-FAILURE">
+                            <td width="40">&nbsp</td>
+                            <td width="%" colspan="3" class="error-message-cell">
+
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">java.lang.AssertionError: <br>Expected: a string containing &quot;jose&quot;<br>     but: was &quot;{&quot;code&quot;:422,&quot;meta&quot;:null,&quot;data&quot;:[{&quot;field&quot;:&quot;email&quot;,&quot;message&quot;:&quot;has already been taken&quot;}]}&quot;</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-7""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-7">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.sophossolutions.stepdefinitions.PostWithAuthStepDefinitions.iVerifyThatReponseContainsStatusAndName(PostWithAuthStepDefinitions.java:41)<br />io.cucumber.java.Invoker.invoke(Invoker.java:27)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:49)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:51)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:67)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:227)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:54)<br />org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)<br />org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:768)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                            </td>
+                        </tr>
 
                                 </table>
                             </td>
                         </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-FAILURE">
                         <td colspan="2"></td>
-                    <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>7.8s</em></span></td>
+                    <td width="130"><span class="top-level-step"><em>FAILURE</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>9.43s</em></span></td>
                 </tr>
 
             </table>
