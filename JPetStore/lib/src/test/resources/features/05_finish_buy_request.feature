@@ -11,6 +11,7 @@ Feature: Finish buy request on JPetStore
     When Choose card type <Card Type> with number <Card Number> and date <Card Expiry Date>
     And Validate that billing details match account information
     And Confirm order information
+    Then Validate that receipt information matches order
     
     Examples:
     	| Card Type    | Card Number     | Card Expiry Date |

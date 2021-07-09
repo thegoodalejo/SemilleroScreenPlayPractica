@@ -17,8 +17,7 @@ import org.hamcrest.core.IsEqual;
 
 import com.sophos.semillero.exceptions.ExceptionMsg;
 import com.sophos.semillero.questions.TextObtained;
-import com.sophos.semillero.tasks.GoToHomePage;
-import com.sophos.semillero.tasks.GoToLoginPage;
+import com.sophos.semillero.tasks.GoToPageGivenByTarget;
 import com.sophos.semillero.tasks.Login;
 import com.sophos.semillero.ui.HomePage;
 
@@ -30,7 +29,7 @@ public class LoginStepDefinitions {
 	
 	@Given("Navigate to log in page")
 	public void navigateToLoginPage() {
-		theActorCalled("Grupo 4").wasAbleTo(GoToLoginPage.usingButtonAtTheTop());
+		theActorCalled("Grupo 4").wasAbleTo(GoToPageGivenByTarget.usingButtonOrLink(HomePage.BTN_LOGIN));
 	}
 
 	@When("Enter username {string} and password {string}")

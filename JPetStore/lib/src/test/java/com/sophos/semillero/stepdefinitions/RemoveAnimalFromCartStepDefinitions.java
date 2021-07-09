@@ -17,9 +17,7 @@ import org.hamcrest.core.IsEqual;
 
 import com.sophos.semillero.exceptions.ExceptionMsg;
 import com.sophos.semillero.questions.TextObtained;
-import com.sophos.semillero.tasks.GoToCartPage;
-import com.sophos.semillero.tasks.GoToHomePage;
-import com.sophos.semillero.tasks.GoToLoginPage;
+import com.sophos.semillero.tasks.GoToPageGivenByTarget;
 import com.sophos.semillero.tasks.GoToRegisterPage;
 import com.sophos.semillero.tasks.Login;
 import com.sophos.semillero.tasks.RegisterNewUser;
@@ -35,7 +33,7 @@ public class RemoveAnimalFromCartStepDefinitions {
 	
 	@Given("Navigate to shopping cart page")
 	public void navigateToShoppingCartPage() {
-		theActorCalled("Grupo 4").wasAbleTo(GoToCartPage.usingButtonAtTheTop());
+		theActorCalled("Grupo 4").wasAbleTo(GoToPageGivenByTarget.usingButtonOrLink(HomePage.BTN_CART));
 	}
 	
 	@When("Validate that item ID {string} is present")

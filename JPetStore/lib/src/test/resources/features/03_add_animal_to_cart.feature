@@ -1,11 +1,19 @@
-#Author: juan.ugarriza@sophossolutions.com
+#Author: valentina.correa@sophossolutions.com
 @AddAnimalToCart
-Feature: Agregar animal al carrito
-  Yo como automatizador quiero agregar un animal al carrito
+Feature: Add animal to cart at JPetStore
+  I as an automator want to add animal to cart at JPetStore
+  
+  Background:
+  	Given Open website "https://petstore.octoperf.com/actions/Catalog.action"
+    And Navigate to log in page
+    When Enter username <User ID> and password <Password>
+    Then Validate successful login
 
-  Scenario: Agregar animal al carrito
-    Given Voy a la pagina de la categoria de animales
-    When Abro una cuenta "SAVINGS" con un saldo inicial de 16230
-    And Valido que la apertura haya sido confirmada
-    Then Vuelvo al menu principal
-    And Valido que la cuenta haya sido abierta exitosamente
+    Examples: 
+      | User ID         | Password       |
+      | "autosophos101" | "contraGrupo4" |
+
+  Scenario: Add animal to cart at JPetStore
+    Given I am at the homepage
+    When Agrego un animal al carrito de compras
+    Then Valido que en la tabla este el ID Item

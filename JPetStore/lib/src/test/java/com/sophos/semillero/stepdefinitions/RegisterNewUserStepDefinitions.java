@@ -18,8 +18,6 @@ import org.hamcrest.core.IsEqual;
 import com.sophos.semillero.exceptions.ExceptionMsg;
 import com.sophos.semillero.model.RegisterModel;
 import com.sophos.semillero.questions.TextObtained;
-import com.sophos.semillero.tasks.GoToHomePage;
-import com.sophos.semillero.tasks.GoToLoginPage;
 import com.sophos.semillero.tasks.GoToRegisterPage;
 import com.sophos.semillero.tasks.Login;
 import com.sophos.semillero.tasks.RegisterNewUser;
