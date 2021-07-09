@@ -55,18 +55,8 @@ public class MapShoppingCar implements Interaction {
 				petData.add(dataPet.get(4).getText());
 
 			}
-
-			/*
-			 * petsCarModel pet = new PetsCarModel(dataPet.get(0).getText(),
-			 * dataPet.get(2).getText(), quantitiesAccount.get(0).getValue(),
-			 * dataPet.get(5).getText(), dataPet.get(6).getText());
-			 * 
-			 * petsShoppingCar.add(pet);
-			 */
 			petsData.add(petData);
 		}
-
-		// actor.remember("petsShoppingCar", petsShoppingCar);
 
 		actor.remember(strKey, petsData);
 	}
