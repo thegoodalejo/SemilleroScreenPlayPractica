@@ -1,6 +1,6 @@
 package com.sophos.semillero.model;
 
-public class OrderItemModel {
+public class ItemModel {
 
 	private String strItemId;
 	private String strItemDescription;
@@ -8,7 +8,7 @@ public class OrderItemModel {
 	private double numItemPrice;
 	private double numTotalCost;
 	
-	public OrderItemModel(String strItemId, String strItemDescription, int numItemQuantity, double numItemPrice) {
+	public ItemModel(String strItemId, String strItemDescription, int numItemQuantity, double numItemPrice) {
 		this.strItemId = strItemId;
 		this.strItemDescription = strItemDescription;
 		this.numItemQuantity = numItemQuantity;

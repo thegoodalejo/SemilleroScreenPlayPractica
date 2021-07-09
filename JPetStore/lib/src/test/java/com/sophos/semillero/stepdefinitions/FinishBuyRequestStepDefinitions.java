@@ -16,8 +16,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.sophos.semillero.exceptions.ExceptionMsg;
 import com.sophos.semillero.model.OrderCardModel;
-import com.sophos.semillero.model.OrderUserInfoModel;
+import com.sophos.semillero.model.OrderInfoModel;
+import com.sophos.semillero.questions.OrderInfoMatches;
 import com.sophos.semillero.questions.TextObtained;
 import com.sophos.semillero.tasks.EnterCardDetails;
 import com.sophos.semillero.tasks.GoToPageGivenByTarget;
@@ -49,10 +51,12 @@ public class FinishBuyRequestStepDefinitions {
 	 * driver.findElement(By.xpath(CartPage.TXT_EMPTY_CART.getCssOrXPathSelector()))
 	 * .click(); } }
 	 */
-
-	@Given("Go to checkout page")
-	public void goToCheckoutPage() {
+	
+	@Given("Purchasing has ended")
+	public void purchasingHasEnded() {
+		
 		theActorCalled("Grupo 4").wasAbleTo(GoToPageGivenByTarget.usingButtonOrLink(CartPage.BTN_CHECKOUT));
+		theActorInTheSpotlight().wasAbleTo(GoToPageGivenByTarget.usingButtonOrLink(CartPage.BTN_CHECKOUT));
 	}
 
 	@When("Choose card type {string} with number {string} and date {string}")
@@ -60,35 +64,29 @@ public class FinishBuyRequestStepDefinitions {
 		OrderCardModel ocmUserCard = new OrderCardModel(strCardType, strCardNumber, strCardExpiryDate);
 		theActorInTheSpotlight().remember("ocmUserCard", ocmUserCard);
 
-		theActorInTheSpotlight().wasAbleTo(EnterCardDetails.ofTheirCard());
+		theActorInTheSpotlight().wasAbleTo(EnterCardDetails.ofTheirCard(ocmUserCard));
 	}
 
 	@When("Confirm order information")
 	public void confirmOrderInformation() {
-		String strFirstNameBilling = CheckoutPage.TXT_FIRST_NAME.resolveFor(theActorInTheSpotlight()).getValue();
-		String strLastNameBilling = CheckoutPage.TXT_LAST_NAME.resolveFor(theActorInTheSpotlight()).getValue();
-		String strAddress1Billing = CheckoutPage.TXT_ADDRESS_1.resolveFor(theActorInTheSpotlight()).getValue();
-		String strAddress2Billing = CheckoutPage.TXT_ADDRESS_2.resolveFor(theActorInTheSpotlight()).getValue();
-		String strCityBilling = CheckoutPage.TXT_CITY.resolveFor(theActorInTheSpotlight()).getValue();
-		String strStateBilling = CheckoutPage.TXT_STATE.resolveFor(theActorInTheSpotlight()).getValue();
-		String strZipBilling = CheckoutPage.TXT_ZIP.resolveFor(theActorInTheSpotlight()).getValue();
-		String strCountryBilling = CheckoutPage.TXT_COUNTRY.resolveFor(theActorInTheSpotlight()).getValue();
-		OrderUserInfoModel ouimInfo = new OrderUserInfoModel(strFirstNameBilling, strLastNameBilling,
-				strAddress1Billing, strAddress2Billing, strCityBilling, strStateBilling, strZipBilling,
-				strCountryBilling, strFirstNameBilling, strLastNameBilling, strAddress1Billing,
-				strAddress2Billing, strCityBilling, strStateBilling, strZipBilling, strCountryBilling);
-		theActorInTheSpotlight().remember("ouimInfo", ouimInfo);
 		
-		theActorInTheSpotlight().wasAbleTo(
-				GoToPageGivenByTarget.usingButtonOrLink(CheckoutPage.BTN_CONTINUE),
-				ValidateBillingInfoInConfirmOrder.ofUser(),
-				GoToPageGivenByTarget.usingButtonOrLink(ConfirmOrderPage.BTN_CONFIRM)
-				);
+		OrderInfoModel orderInfo = new OrderInfoModel(theActorInTheSpotlight());
+		
+		String strOrderDate = ConfirmOrderPage.TXT_ORDER_DATE.resolveFor(theActorInTheSpotlight()).getText();
+		theActorInTheSpotlight().remember("strOrderDate", strOrderDate);
+		
+		theActorInTheSpotlight().wasAbleTo(GoToPageGivenByTarget.usingButtonOrLink(CheckoutPage.BTN_CONTINUE));
+		
+		theActorInTheSpotlight().should(seeThat(OrderInfoMatches.enteredInfo(orderInfo),
+				IsEqual.equalTo(Boolean.TRUE)).orComplainWith(
+						ExceptionMsg.class, "Error when validating that the order info matches"));
 		
 	}
 
 	@When("Validate that receipt information matches order")
 	public void validateThatReceiptInformationMatchesOrder() {
+		theActorInTheSpotlight().wasAbleTo(GoToPageGivenByTarget.usingButtonOrLink(ConfirmOrderPage.BTN_CONFIRM));
+		
 		String[] strArrGeneratedDetails = ReceiptPage.ROW_GENERATED_DETAILS.resolveFor(theActorInTheSpotlight()).getText().split(" ");
 		String strOrderId = strArrGeneratedDetails[1];
 		String strOrderDate = strArrGeneratedDetails[2];

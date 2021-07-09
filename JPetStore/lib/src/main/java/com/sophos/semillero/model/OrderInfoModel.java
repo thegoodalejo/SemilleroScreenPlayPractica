@@ -2,7 +2,11 @@ package com.sophos.semillero.model;
 
 import java.util.ArrayList;
 
-public class OrderUserInfoModel {
+import com.sophos.semillero.ui.CheckoutPage;
+
+import net.serenitybdd.screenplay.Actor;
+
+public class OrderInfoModel {
 
 	private String strFirstNameBilling;
 	private String strLastNameBilling;
@@ -22,7 +26,7 @@ public class OrderUserInfoModel {
 	private String strZipShipping;
 	private String strCountryShipping;
 
-	public OrderUserInfoModel(String strFirstNameBilling, String strLastNameBilling, String strAddress1Billing,
+	public OrderInfoModel(String strFirstNameBilling, String strLastNameBilling, String strAddress1Billing,
 			String strAddress2Billing, String strCityBilling, String strStateBilling, String strZipBilling,
 			String strCountryBilling, String strFirstNameShipping, String strLastNameShipping,
 			String strAddress1Shipping, String strAddress2Shipping, String strCityShipping, String strStateShipping,
@@ -44,6 +48,26 @@ public class OrderUserInfoModel {
 		this.strStateShipping = strStateShipping;
 		this.strZipShipping = strZipShipping;
 		this.strCountryShipping = strCountryShipping;
+	}
+	
+	public OrderInfoModel (Actor actor) {
+		this.strFirstNameBilling = CheckoutPage.TXT_FIRST_NAME.resolveFor(actor).getValue();
+		this.strLastNameBilling = CheckoutPage.TXT_LAST_NAME.resolveFor(actor).getValue();
+		this.strAddress1Billing = CheckoutPage.TXT_ADDRESS_1.resolveFor(actor).getValue();
+		this.strAddress2Billing = CheckoutPage.TXT_ADDRESS_2.resolveFor(actor).getValue();
+		this.strCityBilling = CheckoutPage.TXT_CITY.resolveFor(actor).getValue();
+		this.strStateBilling = CheckoutPage.TXT_STATE.resolveFor(actor).getValue();
+		this.strZipBilling = CheckoutPage.TXT_ZIP.resolveFor(actor).getValue();
+		this.strCountryBilling = CheckoutPage.TXT_COUNTRY.resolveFor(actor).getValue();
+		
+		this.strFirstNameShipping = this.strFirstNameBilling;
+		this.strLastNameShipping = this.strLastNameBilling;
+		this.strAddress1Shipping = this.strAddress1Billing;
+		this.strAddress2Shipping = this.strAddress2Billing;
+		this.strCityShipping = this.strCityBilling;
+		this.strStateShipping = this.strStateBilling;
+		this.strZipShipping = this.strZipBilling;
+		this.strCountryShipping = this.strCountryBilling;		
 	}
 
 	public String getStrFirstNameBilling() {

@@ -13,7 +13,7 @@ Feature: Finish buy request on JPetStore
     Then Validate that picked animal is in the cart
     
   Scenario Outline: Finish buy request on JPetStore
-    Given Go to checkout page
+    Given Purchasing has ended
     When Choose card type <Card Type> with number <Card Number> and date <Card Expiry Date>
     And Confirm order information
     Then Validate that receipt information matches order

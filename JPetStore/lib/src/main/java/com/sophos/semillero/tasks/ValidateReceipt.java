@@ -2,7 +2,7 @@ package com.sophos.semillero.tasks;
 
 import com.sophos.semillero.exceptions.ExceptionMsg;
 import com.sophos.semillero.model.OrderCardModel;
-import com.sophos.semillero.model.OrderUserInfoModel;
+import com.sophos.semillero.model.OrderInfoModel;
 import com.sophos.semillero.model.RegisterModel;
 import com.sophos.semillero.questions.TextObtained;
 import com.sophos.semillero.questions.TextObtainedFromString;
@@ -65,7 +65,7 @@ public class ValidateReceipt implements Task {
 				);
 		
 		// Validate that billing and shipping info match user info
-		OrderUserInfoModel ouimInfo = actor.recall("ouimInfo");
+		OrderInfoModel ouimInfo = actor.recall("ouimInfo");
 		actor.should(
 				seeThat(TextObtained.in(ReceiptPage.TXT_BILLING_FIRST_NAME),
 				IsEqual.equalTo(ouimInfo.getStrFirstNameBilling())).orComplainWith(

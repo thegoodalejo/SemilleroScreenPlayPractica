@@ -17,13 +17,15 @@ import net.serenitybdd.screenplay.actions.SelectFromOptions;
 import net.serenitybdd.screenplay.questions.Text;
 
 public class EnterCardDetails implements Task {
+	
+	private OrderCardModel ocmUserCard;
 
-	public EnterCardDetails() {
+	public EnterCardDetails(OrderCardModel ocmUserCard) {
+		this.ocmUserCard = ocmUserCard;
 	}
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {
-		OrderCardModel ocmUserCard = actor.recall("ocmUserCard");
 		actor.attemptsTo(
 				SelectFromOptions.byVisibleText(ocmUserCard.getStrCardType()).from(CheckoutPage.FORM_CARD_TYPE),
 				Enter.theValue(ocmUserCard.getStrCardNumber()).into(CheckoutPage.TXT_CARD_NUMBER),
@@ -31,8 +33,8 @@ public class EnterCardDetails implements Task {
 				);
 	}
 
-	public static EnterCardDetails ofTheirCard() {
-		return instrumented(EnterCardDetails.class);
+	public static EnterCardDetails ofTheirCard(OrderCardModel ocmUserCard) {
+		return instrumented(EnterCardDetails.class, ocmUserCard);
 	}
 
 }

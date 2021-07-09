@@ -2,16 +2,16 @@ package com.sophos.semillero.model;
 
 import java.util.ArrayList;
 
-public class OrderPurchasesModel {
+public class CartItemsModel {
 
 	private double numOrderTotal;
-	private ArrayList<OrderItemModel> listOrderItems;
+	private ArrayList<ItemModel> listOrderItems;
 
-	public OrderPurchasesModel(ArrayList<OrderItemModel> listOrderItems) {
+	public CartItemsModel(ArrayList<ItemModel> listOrderItems) {
 		this.listOrderItems = listOrderItems;
 		// Calculate order total
 		this.numOrderTotal = 0;
-		for (OrderItemModel orderItem: listOrderItems) {
+		for (ItemModel orderItem: listOrderItems) {
 			this.numOrderTotal += orderItem.getNumTotalCost();
 		}
 	}
@@ -20,7 +20,7 @@ public class OrderPurchasesModel {
 		return numOrderTotal;
 	}
 
-	public ArrayList<OrderItemModel> getListOrderItems() {
+	public ArrayList<ItemModel> getListOrderItems() {
 		return listOrderItems;
 	}
 }
