@@ -1,7 +1,5 @@
 package com.grupo3.util;
 
-import java.util.LinkedList;
-
 public class RemoveCharacters {
 	
 	private int start;

@@ -19,7 +19,6 @@ public class TheLatestApiResponse implements Question<Boolean>{
 	
 	@Override
 	public Boolean answeredBy(Actor actor) {
-		SerenityRest.lastResponse().prettyPeek();
 		for (JsonValidator validator : validators) {
 			if (!validator.isValidForResponse(SerenityRest.lastResponse())) {
 				return false;

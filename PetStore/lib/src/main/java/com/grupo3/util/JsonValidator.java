@@ -6,7 +6,7 @@ public class JsonValidator {
 	
 	private String route;
 	private Object expectedValue;
-	private Class type;
+	private Class<? extends Object> type;
 	
 	
 	public JsonValidator(String route, Object expected_value) {

@@ -1,15 +1,13 @@
 package com.grupo3.stepdefs;
 
+import static com.grupo3.tasks.GetTheCartInfo.readAndRememberTheItemsInTheCart;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
-import com.grupo3.model.ShoppingCart;
 import com.grupo3.questions.AmountOfItemsInCart;
 import com.grupo3.questions.TheItemsInTheCart;
 import com.grupo3.util.Constants;
-
-import static com.grupo3.tasks.GetTheCartInfo.readAndRememberTheItemsInTheCart;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
