@@ -9,4 +9,3 @@ Feature: Get without authentificathion
     Given I want to get list of users from "https://reqres.in/"
     When he required users in the endpoint "api/users?page=" and page "2"
     Then I validate that the code 200 and are of page
-
