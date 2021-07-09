@@ -4,6 +4,8 @@ import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeThatResponse;
+import static org.hamcrest.CoreMatchers.equalTo;
+
 import com.sophossolutions.tasks.GetWithAuth;
 
 import io.cucumber.java.Before;
@@ -14,7 +16,7 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
 
 public class GetWithAuthStepDefinitions {
-	
+
 	@Before()
 	public void setup() {
 		setTheStage(new OnlineCast());
@@ -22,7 +24,7 @@ public class GetWithAuthStepDefinitions {
 
 	@Given("{string} wants to get users from {string}")
 	public void wantsToGetUsersFrom(String strActor, String strUrl) {
-	    theActorCalled(strActor).whoCan(CallAnApi.at(strUrl));
+		theActorCalled(strActor).whoCan(CallAnApi.at(strUrl));
 	}
 
 	@When("he required users in the endpoint {string} and with status {string}")
@@ -32,13 +34,10 @@ public class GetWithAuthStepDefinitions {
 
 	@Then("I validate that the users have {string} status")
 	public void iValidateThatTheUsersHaveStatus(String strStatus) {
-		
-		String strResponseData= theActorInTheSpotlight().recall("strResponseData");
-		
-		theActorInTheSpotlight().should(seeThatResponse("User status should be correct", response -> response.statusCode(200).body("data.", null)));
-		///theActorInTheSpotlight().should(seeThat(ValidateGetWithAuth.withStatus(strResponseData, strStatus), IsEqual.equalTo(true)));
-		
+
+		theActorInTheSpotlight()
+				.should(seeThatResponse("Users status should be correct", response -> response.statusCode(200)
+						.body("data[0].status", equalTo(strStatus)).body("data[1].status", equalTo(strStatus))));
 	}
 
-	
 }

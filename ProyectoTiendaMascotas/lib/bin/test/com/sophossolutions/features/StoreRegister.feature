@@ -1,6 +1,8 @@
 #Author: jonathan.castro@sophossolutions.com
 Feature: I want to register at the pet store
-  As a tester I want to register to buy pets
+  As a tester
+  I want to register 
+  To buy pets
 
   Scenario: I want to register at the pet store
     Given I want to register in "https://petstore.octoperf.com/actions/Account.action?newAccountForm="

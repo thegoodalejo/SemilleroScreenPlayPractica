@@ -27,6 +27,8 @@ public class PostWithAuth implements Task {
 		Map<String, String> bodyDataNewUser = tableDataNewUser.asMap(String.class, String.class);
 		actor.attemptsTo(Post.to(strEndPoint).with(
 				request -> request.auth().oauth2(GOREST_TOKEN).contentType(ContentType.JSON).body(bodyDataNewUser)));
+		
+		SerenityRest.lastResponse().prettyPeek().asString();
 	}
 
 	public static PostWithAuth withData(DataTable tableDataNewUser, String strEndPoint) {

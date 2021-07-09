@@ -31,6 +31,7 @@ public class StoreAddPetStepDefinitions {
 
 	@Given("I want search pet type (.+)$")
 	public void iWantSearchPetType(String strPetType) {
+		
 		theActorInTheSpotlight().wasAbleTo(ClickButton.elementTarget(PET_TYPE.of(strPetType)));
 	}
 
@@ -41,6 +42,7 @@ public class StoreAddPetStepDefinitions {
 
 	@When("decide the pet by the description (.+)$")
 	public void decideThePetByTheDescription(String strPetSelect) {
+		
 		theActorInTheSpotlight().wasAbleTo(SaveInfo.on(PET_SELECT.of(strPetSelect)),
 				ClickButton.elementTarget(BTN_ADD.of(strPetSelect)));
 		strId = theActorInTheSpotlight().recall("TextoElemento");
