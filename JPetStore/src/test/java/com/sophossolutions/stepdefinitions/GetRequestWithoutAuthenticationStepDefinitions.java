@@ -4,11 +4,8 @@ import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
-import static org.junit.Assert.assertThat;
 
 import org.hamcrest.core.IsEqual;
-
-import static com.sophossolutions.util.Constants.INDEX_STATUS_CODE;
 
 import com.sophossolutions.questions.isStatus;
 import com.sophossolutions.tasks.GetUserApi;
