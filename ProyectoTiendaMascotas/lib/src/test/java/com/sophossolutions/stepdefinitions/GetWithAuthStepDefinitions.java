@@ -3,20 +3,15 @@ package com.sophossolutions.stepdefinitions;
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-
-import org.hamcrest.core.IsEqual;
-
+import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeThatResponse;
 import com.sophossolutions.tasks.GetWithAuth;
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
-
-import com.sophossolutions.questions.ValidateGetWithAuth;
-import com.sophossolutions.tasks.*;
 
 public class GetWithAuthStepDefinitions {
 	
@@ -40,7 +35,8 @@ public class GetWithAuthStepDefinitions {
 		
 		String strResponseData= theActorInTheSpotlight().recall("strResponseData");
 		
-		theActorInTheSpotlight().should(seeThat(ValidateGetWithAuth.withStatus(strResponseData, strStatus), IsEqual.equalTo(true)));
+		theActorInTheSpotlight().should(seeThatResponse("User status should be correct", response -> response.statusCode(200).body("data.", null)));
+		///theActorInTheSpotlight().should(seeThat(ValidateGetWithAuth.withStatus(strResponseData, strStatus), IsEqual.equalTo(true)));
 		
 	}
 
