@@ -26,9 +26,9 @@ public class GetWithAuthStepDefinitions {
 	    theActorInTheSpotlight().wasAbleTo(CallTheGetApi.onEndpoint(endpoint).withParameter(usrId));
 	}
 
-	@Then("Valido que la solicitud retorne con codigo {int} y con nombre {string}")
-	public void validoQueLaSolicitudRetorneConCodigoYConNombre(Integer responseCode, String actualName) {
-		theActorInTheSpotlight().should(seeThat(TheLatestApiResponse.shouldHave("code", responseCode).and("data/name", actualName)));
+	@Then("Valido que la solicitud retorne con codigo {int} y con id {int}")
+	public void validoQueLaSolicitudRetorneConCodigoYConId(Integer responseCode, Integer receivedId) {
+		theActorInTheSpotlight().should(seeThat(TheLatestApiResponse.shouldHave("code", responseCode).and("data/id", receivedId)));
 	}
 	
 }
