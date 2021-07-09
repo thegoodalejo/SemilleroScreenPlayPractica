@@ -6,20 +6,21 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 import org.hamcrest.core.IsEqual;
-import org.mockito.internal.matchers.Contains;
 
 import com.sophossolutions.models.ItemAnimal;
 import com.sophossolutions.models.ItemOrderInvoice;
-import com.sophossolutions.models.ItemShopCar;
-import com.sophossolutions.questions.IdProduc;
 import com.sophossolutions.questions.IdProducAnima;
 import com.sophossolutions.questions.InfoOfDateToday;
 import com.sophossolutions.tasks.GetInfoOrder;
-import com.sophossolutions.ui.BillPaymentPage;
-import com.sophossolutions.ui.CarPage;
-import com.sophossolutions.ui.NewOrderFormPage;
-import com.sophossolutions.ui.OrderPage;
-import com.sophossolutions.util.Constants;
+
+import static com.sophossolutions.ui.BillPaymentPage.TXT_INFO_ORDER;
+import static com.sophossolutions.ui.BillPaymentPage.TXT_ITEM_ID;
+import static com.sophossolutions.ui.CarPage.BTN_PROCEED_TO_CHECK;
+import static com.sophossolutions.ui.NewOrderFormPage.BTN_CONTINUE;
+import static com.sophossolutions.ui.OrderPage.BTN_CONFIRM;
+import static com.sophossolutions.util.Constants.MODEL_ANIMAL;
+import static com.sophossolutions.util.Constants.MODEL_ORDER;
+import static com.sophossolutions.util.Constants.ACTOR_NAME;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -28,8 +29,10 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
+
+
 public class FinishBuyRequestStepDefinition {
-	private String strActorName = Constants.ACTOR_NAME;
+	private String strActorName = ACTOR_NAME;
 
 	@Before()
 	public void setup() {
@@ -38,8 +41,8 @@ public class FinishBuyRequestStepDefinition {
 
 	@Given("Must go to invoice")
 	public void mustGoToInvoice() {
-		theActorCalled(strActorName).wasAbleTo(Click.on(CarPage.BTN_PROCEED_TO_CHECK),
-				Click.on(NewOrderFormPage.BTN_CONTINUE), Click.on(OrderPage.BTN_CONFIRM));
+		theActorCalled(strActorName).wasAbleTo(Click.on(BTN_PROCEED_TO_CHECK),
+				Click.on(BTN_CONTINUE), Click.on(BTN_CONFIRM));
 	}
 
 	@When("Must extract the information from the invoice")
@@ -49,12 +52,12 @@ public class FinishBuyRequestStepDefinition {
 
 	@Then("Validate the date and generate id")
 	public void validateTheDateAndGenerateId() {
-		ItemOrderInvoice itemOrder = theActorInTheSpotlight().recall(Constants.MODEL_ORDER);
-		theActorInTheSpotlight().should(seeThat(InfoOfDateToday.with(BillPaymentPage.TXT_INFO_ORDER,2),
+		ItemOrderInvoice itemOrder = theActorInTheSpotlight().recall(MODEL_ORDER);
+		theActorInTheSpotlight().should(seeThat(InfoOfDateToday.with(TXT_INFO_ORDER, 2),
 				IsEqual.equalTo(itemOrder.getStrDate())));
 		
-		ItemAnimal infoAnimal = theActorInTheSpotlight().recall(Constants.MODEL_ANIMAL);
-		theActorInTheSpotlight().should(seeThat(IdProducAnima.with(BillPaymentPage.TXT_ITEM_ID),
+		ItemAnimal infoAnimal = theActorInTheSpotlight().recall(MODEL_ANIMAL);
+		theActorInTheSpotlight().should(seeThat(IdProducAnima.with(TXT_ITEM_ID),
 				IsEqual.equalTo(infoAnimal.getItemID())));
 	}
 }

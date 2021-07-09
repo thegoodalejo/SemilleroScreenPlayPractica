@@ -4,8 +4,8 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 import com.sophossolutions.models.ItemShopCar;
 
-import com.sophossolutions.ui.CarPage;
-import com.sophossolutions.util.Constants;
+import static com.sophossolutions.ui.CarPage.*;
+import static com.sophossolutions.util.Constants.MODEL_CART;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -18,21 +18,21 @@ public class UpdateCar implements Task{
 	
 	@Override
 	public <T extends Actor> void performAs(T actor) {
-		Integer intAnimals = CarPage.N_ANIMALS_TABLE.resolveAllFor(actor).size();
-		actor.attemptsTo(Click.on(CarPage.BTN_UPDATE_CAR));
+		Integer intAnimals = N_ANIMALS_TABLE.resolveAllFor(actor).size();
+		actor.attemptsTo(Click.on(BTN_UPDATE_CAR));
 		for(Integer i = 1; i <= intAnimals; i++) {
 			strIndex = i.toString();
 			ItemShopCar itemList = new ItemShopCar(
-					Text.of(CarPage.TEXT_ITEM_ID.of(strIndex)).viewedBy(actor).asString(),
-					Text.of(CarPage.TEXT_PRODUCT_ID.of(strIndex)).viewedBy(actor).asString(),
-					Text.of(CarPage.TEXT_DESCRIPTION.of(strIndex)).viewedBy(actor).asString(),
-					Text.of(CarPage.TEXT_IN_STOCK.of(strIndex)).viewedBy(actor).asString(),
-					Text.of(CarPage.EDIT_TEXT_QUANTITY.of(strIndex)).viewedBy(actor).asString(),
-					Text.of(CarPage.TEXT_LIST_PRICE.of(strIndex)).viewedBy(actor).asString(),
-					Text.of(CarPage.TOTAL_PRICE_MASCOTA.of(strIndex)).viewedBy(actor).asString()
+					Text.of(TEXT_ITEM_ID.of(strIndex)).viewedBy(actor).asString(),
+					Text.of(TEXT_PRODUCT_ID.of(strIndex)).viewedBy(actor).asString(),
+					Text.of(TEXT_DESCRIPTION.of(strIndex)).viewedBy(actor).asString(),
+					Text.of(TEXT_IN_STOCK.of(strIndex)).viewedBy(actor).asString(),
+					Text.of(EDIT_TEXT_QUANTITY.of(strIndex)).viewedBy(actor).asString(),
+					Text.of(TEXT_LIST_PRICE.of(strIndex)).viewedBy(actor).asString(),
+					Text.of(TOTAL_PRICE_MASCOTA.of(strIndex)).viewedBy(actor).asString()
 					);
 			itemList.showData();
-			actor.remember(Constants.MODEL_CART, itemList);
+			actor.remember(MODEL_CART, itemList);
 		}
 	}
 

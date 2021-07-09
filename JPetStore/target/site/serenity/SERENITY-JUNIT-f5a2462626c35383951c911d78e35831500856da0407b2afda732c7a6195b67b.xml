@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Try update cart" skipped="0" tests="1" time="15.05" timestamp="2021-07-07 05:41:45"><testcase name="update cart"/></testsuite>
-=======
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Try update cart" skipped="0" tests="1" time="14.11" timestamp="2021-07-07 07:06:22"><testcase name="update cart"/></testsuite>
->>>>>>> 35297c02f34a20a7b9d171304be6e0739daafb88
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Try update cart" skipped="0" tests="1" time="29.21" timestamp="2021-07-09 10:22:28"><testcase name="update cart"/></testsuite>

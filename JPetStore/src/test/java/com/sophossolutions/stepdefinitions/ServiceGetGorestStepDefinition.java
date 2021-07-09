@@ -5,24 +5,16 @@ import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.junit.Assert.assertEquals;
-
-import java.util.Properties;
-
-import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
-
 import org.hamcrest.core.IsEqual;
 
-import com.sophossolutions.questions.IdProduc;
 import com.sophossolutions.questions.Info;
 import com.sophossolutions.tasks.GetWhith;
-import com.sophossolutions.ui.CarPage;
-import com.sophossolutions.util.Constants;
+import static com.sophossolutions.util.Constants.ACTOR_NAME;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.path.json.JsonPath;
 import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
@@ -34,7 +26,7 @@ public class ServiceGetGorestStepDefinition {
 	{
 		setTheStage(new OnlineCast());
 	}
-	private String strActorName = Constants.ACTOR_NAME;
+	private String strActorName = ACTOR_NAME;
 	
 	@Given("I want to register in the page api {string}")
 	public void iWantToRegisterInThePageApi(String strUrl) {

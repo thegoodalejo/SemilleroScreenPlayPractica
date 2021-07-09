@@ -4,8 +4,8 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 
 import com.sophossolutions.models.ItemOrderInvoice;
-import com.sophossolutions.ui.BillPaymentPage;
-import com.sophossolutions.util.Constants;
+import static com.sophossolutions.ui.BillPaymentPage.TXT_INFO_ORDER;
+import static com.sophossolutions.util.Constants.MODEL_ORDER;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -15,12 +15,12 @@ public class GetInfoOrder implements Task {
 		
 	@Override
 	public <T extends Actor> void performAs(T actor) {
-		String infoOrder[] = Text.of(BillPaymentPage.TXT_INFO_ORDER).viewedBy(actor).asString().split(" ");
+		String infoOrder[] = Text.of(TXT_INFO_ORDER).viewedBy(actor).asString().split(" ");
 		for (String string : infoOrder) {
 			System.out.println(string);
 		}
 		ItemOrderInvoice infoItemsOrder = new ItemOrderInvoice(infoOrder[1],infoOrder[2],infoOrder[3]);
-		actor.remember(Constants.MODEL_ORDER, infoItemsOrder);
+		actor.remember(MODEL_ORDER, infoItemsOrder);
 		
 	}
 	

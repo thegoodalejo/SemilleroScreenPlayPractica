@@ -1,7 +1,6 @@
 package com.sophossolutions.stepdefinitions;
 
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
-import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
@@ -9,8 +8,6 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import org.hamcrest.core.IsEqual;
 
 import com.sophossolutions.questions.Info;
-import com.sophossolutions.questions.isStatus;
-import com.sophossolutions.tasks.GetUserApi;
 import com.sophossolutions.tasks.PostCreateUser;
 
 import io.cucumber.datatable.DataTable;

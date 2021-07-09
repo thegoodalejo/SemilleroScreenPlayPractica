@@ -8,7 +8,7 @@ import net.serenitybdd.screenplay.targets.Target;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
-import com.sophossolutions.util.Constants;
+import static com.sophossolutions.util.Constants.DIR_INDEX_ANIMAL;
 
 
 public class GoToPage implements Task {
@@ -33,7 +33,7 @@ public class GoToPage implements Task {
 		actor.attemptsTo(
 				Click.on(linkPage.of(String.valueOf(randomValue)))
 				);
-		theActorInTheSpotlight().remember(Constants.DIR_INDEX_ANIMAL, randomValue.toString());
+		theActorInTheSpotlight().remember(DIR_INDEX_ANIMAL, randomValue.toString());
 	}
 	
 	public static GoToPage type(Target tarLinkPage,Target tarOptions) {
