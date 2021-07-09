@@ -26,12 +26,12 @@ public class RegisterNewUser implements Task {
 				Enter.theValue(rmNewUser.getStrFirstName()).into(RegisterPage.TXT_FIRST_NAME),
 				Enter.theValue(rmNewUser.getStrLastName()).into(RegisterPage.TXT_LAST_NAME),
 				Enter.theValue(rmNewUser.getStrEmail()).into(RegisterPage.TXT_EMAIL),
-				Enter.theValue(String.valueOf(rmNewUser.getIntPhone())).into(RegisterPage.TXT_PHONE),
+				Enter.theValue(rmNewUser.getStrPhone()).into(RegisterPage.TXT_PHONE),
 				Enter.theValue(rmNewUser.getStrAddress1()).into(RegisterPage.TXT_ADDRESS_1),
 				Enter.theValue(rmNewUser.getStrAddress2()).into(RegisterPage.TXT_ADDRESS_2),
 				Enter.theValue(rmNewUser.getStrCity()).into(RegisterPage.TXT_CITY),
 				Enter.theValue(rmNewUser.getStrState()).into(RegisterPage.TXT_STATE),
-				Enter.theValue(String.valueOf(rmNewUser.getIntZip())).into(RegisterPage.TXT_ZIP),
+				Enter.theValue(rmNewUser.getStrZip()).into(RegisterPage.TXT_ZIP),
 				Enter.theValue(rmNewUser.getStrCountry()).into(RegisterPage.TXT_COUNTRY),
 				Click.on(RegisterPage.BTN_REGISTER)
 				);

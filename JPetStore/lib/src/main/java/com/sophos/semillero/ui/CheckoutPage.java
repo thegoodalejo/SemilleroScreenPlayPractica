@@ -8,7 +8,7 @@ public class CheckoutPage {
 
 	public static final Target FORM_CARD_TYPE = Target.the("Card type form").locatedBy("//*[@name='order.cardType']");
 	
-	public static final Target TXT_CARD_NUMBER = Target.the("Card number field").locatedBy("//*[@name='order.cardType']");
+	public static final Target TXT_CARD_NUMBER = Target.the("Card number field").locatedBy("//*[@name='order.creditCard']");
 	public static final Target TXT_CARD_EXPIRY_DATE = Target.the("Card expiry date field").locatedBy("//*[@name='order.expiryDate']");
 	public static final Target TXT_FIRST_NAME = Target.the("First name field").locatedBy("//*[@name='order.billToFirstName']");
 	public static final Target TXT_LAST_NAME = Target.the("Last name field").locatedBy("//*[@name='order.billToLastName']");

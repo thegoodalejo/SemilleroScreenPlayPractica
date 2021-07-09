@@ -1,6 +1,6 @@
 package com.sophos.semillero.tasks;
 
-import com.sophos.semillero.model.CardModel;
+import com.sophos.semillero.model.OrderCardModel;
 import com.sophos.semillero.ui.CartPage;
 import com.sophos.semillero.ui.CheckoutPage;
 import com.sophos.semillero.ui.HomePage;
@@ -23,11 +23,10 @@ public class EnterCardDetails implements Task {
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {
-		CardModel cmUserCard = actor.recall("cmUserCard");
-		
+		OrderCardModel cmUserCard = actor.recall("ocmUserCard");
 		actor.attemptsTo(
 				SelectFromOptions.byVisibleText(cmUserCard.getStrCardType()).from(CheckoutPage.FORM_CARD_TYPE),
-				Enter.theValue(String.valueOf(cmUserCard.getIntCardNumber())).into(CheckoutPage.TXT_CARD_NUMBER),
+				Enter.theValue(cmUserCard.getStrCardNumber()).into(CheckoutPage.TXT_CARD_NUMBER),
 				Enter.theValue(cmUserCard.getStrCardExpiryDate()).into(CheckoutPage.TXT_CARD_EXPIRY_DATE)
 				);
 	}

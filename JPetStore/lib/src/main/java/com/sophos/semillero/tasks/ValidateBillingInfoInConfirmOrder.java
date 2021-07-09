@@ -1,7 +1,7 @@
 package com.sophos.semillero.tasks;
 
 import com.sophos.semillero.exceptions.ExceptionMsg;
-import com.sophos.semillero.model.CardModel;
+import com.sophos.semillero.model.OrderCardModel;
 import com.sophos.semillero.model.RegisterModel;
 import com.sophos.semillero.questions.TextObtained;
 import com.sophos.semillero.ui.CartPage;
@@ -26,9 +26,9 @@ import net.serenitybdd.screenplay.actions.EnterValue;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
 import net.serenitybdd.screenplay.questions.Text;
 
-public class ConfirmOrderBillingInfo implements Task {
+public class ValidateBillingInfoInConfirmOrder implements Task {
 
-	public ConfirmOrderBillingInfo() {
+	public ValidateBillingInfoInConfirmOrder() {
 	}
 
 	@Override
@@ -58,7 +58,7 @@ public class ConfirmOrderBillingInfo implements Task {
 						IsEqual.equalTo(rmNewUser.getStrState())).orComplainWith(
 								ExceptionMsg.class, "Error when trying match for billing state when confirming order"),
 				seeThat(TextObtained.in(ConfirmOrderPage.TXT_BILLING_ZIP),
-						IsEqual.equalTo(String.valueOf(rmNewUser.getIntZip()))).orComplainWith(
+						IsEqual.equalTo(rmNewUser.getStrZip())).orComplainWith(
 								ExceptionMsg.class, "Error when trying match for billing zip code when confirming order"),
 				seeThat(TextObtained.in(ConfirmOrderPage.TXT_BILLING_COUNTRY),
 						IsEqual.equalTo(rmNewUser.getStrCountry())).orComplainWith(
@@ -83,7 +83,7 @@ public class ConfirmOrderBillingInfo implements Task {
 								IsEqual.equalTo(rmNewUser.getStrState())).orComplainWith(
 										ExceptionMsg.class, "Error when trying match for shipping state when confirming order"),
 						seeThat(TextObtained.in(ConfirmOrderPage.TXT_SHIPPING_ZIP),
-								IsEqual.equalTo(String.valueOf(rmNewUser.getIntZip()))).orComplainWith(
+								IsEqual.equalTo(rmNewUser.getStrZip())).orComplainWith(
 										ExceptionMsg.class, "Error when trying match for shipping zip code when confirming order"),
 						seeThat(TextObtained.in(ConfirmOrderPage.TXT_SHIPPING_COUNTRY),
 								IsEqual.equalTo(rmNewUser.getStrCountry())).orComplainWith(
@@ -91,8 +91,8 @@ public class ConfirmOrderBillingInfo implements Task {
 				);
 	}
 
-	public static ConfirmOrderBillingInfo ofUser() {
-		return instrumented(ConfirmOrderBillingInfo.class);
+	public static ValidateBillingInfoInConfirmOrder ofUser() {
+		return instrumented(ValidateBillingInfoInConfirmOrder.class);
 	}
 
 }

@@ -27,6 +27,11 @@ public class LoginStepDefinitions {
 		setTheStage(new OnlineCast());
 	}
 	
+	@Given("Open website {string}")
+	public void openWebsite(String strUrl) {
+		theActorCalled("Grupo 4").wasAbleTo(Open.url(strUrl));
+	}
+	
 	@Given("Navigate to log in page")
 	public void navigateToLoginPage() {
 		theActorCalled("Grupo 4").wasAbleTo(GoToPageGivenByTarget.usingButtonOrLink(HomePage.BTN_LOGIN));

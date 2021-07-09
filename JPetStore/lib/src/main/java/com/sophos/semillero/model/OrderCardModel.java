@@ -1,14 +1,14 @@
 package com.sophos.semillero.model;
 
-public class CardModel {
+public class OrderCardModel {
 
 	private String strCardType;
-	private int intCardNumber;
+	private String strCardNumber;
 	private String strCardExpiryDate;
 
-	public CardModel(String strCardType, int intCardNumber, String strCardExpiryDate) {
+	public OrderCardModel(String strCardType, String strCardNumber, String strCardExpiryDate) {
 		this.strCardType = strCardType;
-		this.intCardNumber = intCardNumber;
+		this.strCardNumber = strCardNumber;
 		this.strCardExpiryDate = strCardExpiryDate;
 	}
 
@@ -16,8 +16,8 @@ public class CardModel {
 		return strCardType;
 	}
 
-	public int getIntCardNumber() {
-		return intCardNumber;
+	public String getStrCardNumber() {
+		return strCardNumber;
 	}
 
 	public String getStrCardExpiryDate() {

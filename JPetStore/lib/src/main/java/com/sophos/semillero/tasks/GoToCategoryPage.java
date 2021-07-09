@@ -9,22 +9,21 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.targets.Target;
 
-public class SelectRandomCategoryAndAnimal implements Task {
+public class GoToCategoryPage implements Task {
 
-	private int intRandomCategory;
+	private Target tagRandomCategory;
 
-	public SelectRandomCategoryAndAnimal() {
-		intRandomCategory = (int) (Math.random() * 5 + 1);
+	public GoToCategoryPage(Target tagRandomCategory) {
+		this.tagRandomCategory = tagRandomCategory;
 	}
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {
-
-		actor.attemptsTo(Click.on());
+		actor.attemptsTo(Click.on(tagRandomCategory));
 	}
 
-	public static SelectRandomCategoryAndAnimal givenByRandomlySelectedCategory(Target tagRandomCategory) {
-		return instrumented(SelectRandomCategoryAndAnimal.class);
+	public static GoToCategoryPage usingLink(Target tagRandomCategory) {
+		return instrumented(GoToCategoryPage.class, tagRandomCategory);
 	}
 
 }

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Finish buy request on JPetStore" skipped="0" tests="1" time="21.21" timestamp="2021-07-09 02:00:29"><testcase name="Finish buy request on JPetStore"><error type="java.lang.NullPointerException"/><system-err>null&#13;
+com.sophos.semillero.tasks.ValidateBillingInfoInConfirmOrder.performAs(ValidateBillingInfoInConfirmOrder.java:43)&#13;
+com.sophos.semillero.stepdefinitions.FinishBuyRequestStepDefinitions.confirmOrderInformation(FinishBuyRequestStepDefinitions.java:68)&#13;
+✽.Confirm order information(file:///C:/Repos/ScreenPlay%20Parabank/SemilleroScreenPlayPractica/JPetStore/lib/src/test/resources/features/05_finish_buy_request.feature:19)&#13;
+</system-err></testcase></testsuite>

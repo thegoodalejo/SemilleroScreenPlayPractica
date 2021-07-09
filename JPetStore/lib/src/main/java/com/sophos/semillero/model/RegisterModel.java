@@ -7,28 +7,28 @@ public class RegisterModel {
 	private String strFirstName;
 	private String strLastName;
 	private String strEmail;
-	private int intPhone;
+	private String strPhone;
 	private String strAddress1;
 	private String strAddress2;
 	private String strCity;
 	private String strState;
-	private int intZip;
+	private String strZip;
 	private String strCountry;
 		
 	public RegisterModel(String strUser, String strPassword, String strFirstName, String strLastName, String strEmail,
-			int intPhone, String strAddress1, String strAddress2, String strCity, String strState, int intZip,
+			String strPhone, String strAddress1, String strAddress2, String strCity, String strState, String strZip,
 			String strCountry) {
 		this.strUser = strUser;
 		this.strPassword = strPassword;
 		this.strFirstName = strFirstName;
 		this.strLastName = strLastName;
 		this.strEmail = strEmail;
-		this.intPhone = intPhone;
+		this.strPhone = strPhone;
 		this.strAddress1 = strAddress1;
 		this.strAddress2 = strAddress2;
 		this.strCity = strCity;
 		this.strState = strState;
-		this.intZip = intZip;
+		this.strZip = strZip;
 		this.strCountry = strCountry;
 	}
 
@@ -52,8 +52,8 @@ public class RegisterModel {
 		return strEmail;
 	}
 
-	public int getIntPhone() {
-		return intPhone;
+	public String getStrPhone() {
+		return strPhone;
 	}
 
 	public String getStrAddress1() {
@@ -72,8 +72,8 @@ public class RegisterModel {
 		return strState;
 	}
 
-	public int getIntZip() {
-		return intZip;
+	public String getStrZip() {
+		return strZip;
 	}
 
 	public String getStrCountry() {

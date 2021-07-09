@@ -4,6 +4,9 @@ import net.serenitybdd.screenplay.targets.Target;
 
 public class ReceiptPage {
 
+	public static final Target TXT_CARD_TYPE = Target.the("Card type text").locatedBy("//tr[3]/td[2]");
+	public static final Target TXT_CARD_NUMBER = Target.the("Card number text").locatedBy("//tr[4]/td[2]");
+	public static final Target TXT_CARD_EXPIRY_DATE = Target.the("Card expiry date text").locatedBy("//tr[5]/td[2]");
 	public static final Target TXT_BILLING_FIRST_NAME = Target.the("Billing first name text")
 			.locatedBy("//tr[7]/td[2]");
 	public static final Target TXT_BILLING_LAST_NAME = Target.the("Billing last name text").locatedBy("//tr[8]/td[2]");
@@ -25,9 +28,6 @@ public class ReceiptPage {
 	public static final Target TXT_SHIPPING_STATE = Target.the("Shipping state text").locatedBy("//tr[21]/td[2]");
 	public static final Target TXT_SHIPPING_ZIP = Target.the("Shipping zip code text").locatedBy("//tr[22]/td[2]");
 	public static final Target TXT_SHIPPING_COUNTRY = Target.the("Shipping country text").locatedBy("//tr[23]/td[2]");
-	public static final Target TXT_CARD_TYPE = Target.the("Card type text").locatedBy("//tr[3]/td[2]");
-	public static final Target TXT_CARD_NUMBER = Target.the("Card number text").locatedBy("//tr[4]/td[2]");
-	public static final Target TXT_CARD_EXPIRY_DATE = Target.the("Card expiry date text").locatedBy("//tr[5]/td[2]");
 
 	public static final Target ROW_GENERATED_DETAILS = Target.the("Generated order details row")
 			.locatedBy("(//tbody//th)[1]");

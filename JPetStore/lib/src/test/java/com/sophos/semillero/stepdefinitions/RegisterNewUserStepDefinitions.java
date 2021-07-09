@@ -35,13 +35,13 @@ public class RegisterNewUserStepDefinitions {
 	}
 
 	@When("Fill the form with {string} as id, {string} as password, {string} as first name, {string} as last name,"
-			+ " {string} as email, {int} as phone, {string} as address one, {string} as address two, {string} as city,"
-			+ " {string} as state, {int} as zip, {string} as country")
+			+ " {string} as email, {string} as phone, {string} as address one, {string} as address two, {string} as city,"
+			+ " {string} as state, {string} as zip, {string} as country")
 	public void fillTheFormWith(String strUser, String strPassword, String strFirstName, String strLastName,
-			String strEmail, int intPhone, String strAddress1, String strAddress2, String strCity,
-			String strState, int intZip, String strCountry) {
+			String strEmail, String strPhone, String strAddress1, String strAddress2, String strCity,
+			String strState, String strZip, String strCountry) {
 		RegisterModel rmNewUser = new RegisterModel(strUser, strPassword, strFirstName, strLastName,
-				strEmail, intPhone, strAddress1, strAddress2, strCity, strState, intZip, strCountry);
+				strEmail, strPhone, strAddress1, strAddress2, strCity, strState, strZip, strCountry);
 		theActorInTheSpotlight().remember("rmNewUser", rmNewUser);
 		
 		theActorInTheSpotlight().wasAbleTo(RegisterNewUser.withAllCredentials());

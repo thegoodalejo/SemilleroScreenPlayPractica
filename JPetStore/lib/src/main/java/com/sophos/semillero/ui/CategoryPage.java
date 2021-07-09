@@ -1,11 +1,10 @@
 package com.sophos.semillero.ui;
 
-import org.openqa.selenium.By;
-
 import net.serenitybdd.screenplay.targets.Target;
 
 public class CategoryPage {
-
-	public static final Target TXT_LOGGEDIN = Target.the("Logged in message").locatedBy("//*[text()='Sign Out']");
+	
+	public static final Target TB_NAMES = Target.the("Pet names table").locatedBy("//tbody//tr");
+	public static final Target BTN_ITEM = Target.the("Item button").locatedBy("//tbody//tr[{0}]//td[1]");
 	
 }

@@ -15,18 +15,26 @@ import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
+import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
+
 import org.hamcrest.core.IsEqual;
 
 import com.sophos.semillero.exceptions.ExceptionMsg;
 import com.sophos.semillero.questions.TextObtained;
-import com.sophos.semillero.questions.TextObtainedInList;
+import com.sophos.semillero.tasks.AddAnimalToCartFromDetailPage;
+import com.sophos.semillero.tasks.GoToCategoryPage;
 import com.sophos.semillero.tasks.Login;
-import com.sophos.semillero.tasks.SelectRandomCategoryAndAnimal;
+import com.sophos.semillero.tasks.SelectAnimalSpecies;
+import com.sophos.semillero.tasks.SelectItem;
+import com.sophos.semillero.ui.CartPage;
+import com.sophos.semillero.ui.CategoryPage;
 import com.sophos.semillero.ui.HomePage;
 
 public class AddAnimalToCartStepDefinitions {
 
 	private static int intRandomCategory;
+	private static int intRandomItem;
 	private static Target tarRandomCategory;
 
 	@Before()
@@ -43,43 +51,41 @@ public class AddAnimalToCartStepDefinitions {
 
 	@When("A random animal is added to the cart")
 	public void aRandomAnimalIsAddedToTheCart() {
-		intRandomCategory = (int) (Math.random() * 5 + 1);
+		intRandomCategory = ThreadLocalRandom.current().nextInt(1, 5 + 1);
 		switch (intRandomCategory) {
-			case 1:
-				tarRandomCategory = HomePage.BTN_FISH;
-				break;
-			case 2:
-				tarRandomCategory = HomePage.BTN_DOGS;
-				break;
-			case 3:
-				tarRandomCategory = HomePage.BTN_REPTILES;
-				break;
-			case 4:
-				tarRandomCategory = HomePage.BTN_CATS;
-				break;
-			case 5:
-				tarRandomCategory = HomePage.BTN_BIRDS;
-				break;
+		case 1:
+			tarRandomCategory = HomePage.BTN_FISH;
+			break;
+		case 2:
+			tarRandomCategory = HomePage.BTN_DOGS;
+			break;
+		case 3:
+			tarRandomCategory = HomePage.BTN_REPTILES;
+			break;
+		case 4:
+			tarRandomCategory = HomePage.BTN_CATS;
+			break;
+		case 5:
+			tarRandomCategory = HomePage.BTN_BIRDS;
+			break;
 		}
-		theActorInTheSpotlight().wasAbleTo(
-				SelectRandomCategoryAndAnimal.givenByRandomlySelectedCategory(tarRandomCategory),
-				
-				);
-		theActorInTheSpotlight().wasAbleTo(
-				
-				SelectItem.in(CategoryPage.LINK_CATEGORY),
-				SelectItem.in(NamePage.LINK_NAME),
-				AddCart.in(DetailPage.BTN_ADD_CART)
-				);
+		theActorInTheSpotlight().wasAbleTo(GoToCategoryPage.usingLink(tarRandomCategory));
 		
+		List<?> listItemNames = CategoryPage.TB_NAMES.resolveAllFor(theActorInTheSpotlight());
+		intRandomItem = ThreadLocalRandom.current().nextInt(2, listItemNames.size());
 
+		theActorInTheSpotlight().wasAbleTo(
+				SelectAnimalSpecies.fromTableRowInCategoryPage(intRandomItem),
+				SelectItem.fromTableRowInCategoryPage(intRandomItem),
+				AddAnimalToCartFromDetailPage.usingButtonAtTheBottom()
+				);
 	}
 
-	@Then("Valido que en la tabla este el ID Item")
-	public void validoQueEnLaTablaEsteElIDItem() {
-		String strItemId = theActorInTheSpotlight().recall("ID_ITEM").toString();
+	@Then("Validate that picked animal is in the cart")
+	public void validateThatPickedAnimalIsInTheCart() {
+		String strItemId = theActorInTheSpotlight().recall("strItemDetailId");
 		theActorInTheSpotlight()
-				.should(seeThat(TextObtainedInList.in(CartPage.TXT_ID_ITEM, strItemId), IsEqual.equalTo(strItemId)));
+				.should(seeThat(TextObtained.in(CartPage.BTN_ITEM_ID.of(strItemId)), IsEqual.equalTo(strItemId)));
 	}
 
 }
