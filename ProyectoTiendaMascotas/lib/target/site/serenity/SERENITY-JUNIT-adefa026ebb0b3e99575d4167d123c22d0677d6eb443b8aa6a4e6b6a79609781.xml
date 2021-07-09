@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Login with user using method Post" skipped="0" tests="1" time="11.33" timestamp="2021-07-09 11:07:49"><testcase name="Login a user"><failure message="1 expectation failed.&#10;JSON path token doesn't match.&#10;Expected: sdasdasdasda&#10;  Actual: QpwL5tke4Pnpja7X4&#10;" type="java.lang.AssertionError">1 expectation failed.
+JSON path token doesn't match.
+Expected: sdasdasdasda
+  Actual: QpwL5tke4Pnpja7X4
+</failure><system-err>1 expectation failed.
+JSON path token doesn't match.
+Expected: sdasdasdasda
+  Actual: QpwL5tke4Pnpja7X4
+&#13;
+com.sophossolutions.stepdefinitions.PostWithoutAuthStepDefinitions.verifyThatApiResponseContainsStatusAndToken(PostWithoutAuthStepDefinitions.java:39)&#13;
+✽.Verify that api response contains status 200 and token "QpwL5tke4Pnpja7X4"(file:///C:/Users/elber.ceballos/Documents/trabajos%20en%20grupo/SemilleroScreenPlayPractica/ProyectoTiendaMascotas/lib/src/test/resources/com/sophossolutions/features/post_without_auth.feature:13)&#13;
+</system-err></testcase></testsuite>

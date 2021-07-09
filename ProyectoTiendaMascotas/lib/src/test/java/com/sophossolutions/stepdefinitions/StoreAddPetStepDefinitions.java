@@ -49,7 +49,7 @@ public class StoreAddPetStepDefinitions {
 	@Then("I verified that the pet is in the shopping cart")
 	public void iVerifiedThatThePetIsInTheShoppingCart() {
 		theActorInTheSpotlight().should(seeThat(TextOf.in(PET_SELECTED.of(strId)), IsEqual.equalTo(strId))
-				.orComplainWith(ExceptionMessage.class, "Ha ocurrido un error"));
+				.orComplainWith(ExceptionMessage.class, "an error occurred while adding pet to shopping cart"));
 	}
 
 }
