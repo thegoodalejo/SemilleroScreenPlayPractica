@@ -3,12 +3,10 @@ package com.sophossolutions.tasks;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 import com.sophossolutions.ui.CartPage;
-import com.sophossolutions.ui.HomePage;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.questions.Text;
 
 public class Delete implements Task{
 	

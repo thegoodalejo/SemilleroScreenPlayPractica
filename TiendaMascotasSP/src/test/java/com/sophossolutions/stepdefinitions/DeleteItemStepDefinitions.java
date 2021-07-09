@@ -1,22 +1,16 @@
 package com.sophossolutions.stepdefinitions;
+
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isNotCurrentlyVisible;
 import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
-
-
-import net.serenitybdd.screenplay.Actor;
 
 import com.sophossolutions.tasks.Delete;
 import com.sophossolutions.ui.CartPage;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.serenitybdd.screenplay.questions.Text;
-import net.serenitybdd.screenplay.waits.WaitUntil;
-
 
 public class DeleteItemStepDefinitions {
 	

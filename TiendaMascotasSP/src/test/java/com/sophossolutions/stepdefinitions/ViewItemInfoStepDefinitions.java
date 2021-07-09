@@ -7,10 +7,8 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import org.hamcrest.core.IsEqual;
 
 import com.sophossolutions.questions.ResultLogin;
-import com.sophossolutions.tasks.AddToCar;
 import com.sophossolutions.tasks.SelectSpecie;
 import com.sophossolutions.tasks.ViewItem;
-import com.sophossolutions.ui.HomePage;
 import com.sophossolutions.ui.ItemInfo;
 
 import io.cucumber.java.en.Given;

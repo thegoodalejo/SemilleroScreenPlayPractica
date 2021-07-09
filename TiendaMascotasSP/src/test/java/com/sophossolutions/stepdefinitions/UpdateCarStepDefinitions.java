@@ -3,8 +3,6 @@ package com.sophossolutions.stepdefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.serenitybdd.screenplay.Question;
-import net.serenitybdd.screenplay.targets.Target;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -13,12 +11,9 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisi
 import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
 
 import org.hamcrest.core.IsEqual;
-
-import com.sophossolutions.questions.ResultLogin;
 import com.sophossolutions.questions.ItemsInCar;
 import com.sophossolutions.tasks.ChangeAmount;
 import com.sophossolutions.ui.CartPage;
-import com.sophossolutions.ui.HomePage;
 
 public class UpdateCarStepDefinitions {
 	

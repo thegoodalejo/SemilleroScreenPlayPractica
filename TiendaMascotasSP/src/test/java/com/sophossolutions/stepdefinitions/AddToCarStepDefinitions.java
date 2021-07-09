@@ -1,7 +1,5 @@
 package com.sophossolutions.stepdefinitions;
 
-import org.hamcrest.core.IsEqual;
-
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;

@@ -6,7 +6,6 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.rest.interactions.Get;
 import net.serenitybdd.rest.SerenityRest;
-import net.serenitybdd.screenplay.Actor;
 
 public class Apis_Get implements Task {
 	private String strEndPoint;

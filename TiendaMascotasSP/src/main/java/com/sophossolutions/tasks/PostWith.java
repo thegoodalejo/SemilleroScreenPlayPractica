@@ -3,7 +3,6 @@ package com.sophossolutions.tasks;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 import io.cucumber.datatable.DataTable;
-import net.serenitybdd.screenplay.rest.interactions.Post;
 import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;

@@ -6,7 +6,6 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 import org.hamcrest.core.IsEqual;
 
-import com.sophossolutions.questions.PostSend;
 import com.sophossolutions.questions.ResultPost;
 import com.sophossolutions.tasks.Apis_Post;
 
