@@ -1,9 +1,9 @@
 #Author: elber.ceballos@sophossolutions.com
 
 Feature: Get without authentificathion
-  I want as a tester
-  automate get api test
-  to validate the result is successful
+  As a tester
+  I want automate get api test
+  To validate the result is successful
 
   Scenario: Title of your scenario
     Given I want to get list of users from "https://reqres.in/"
