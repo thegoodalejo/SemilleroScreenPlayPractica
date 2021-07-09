@@ -3,6 +3,8 @@ package com.grupo3.stepdefs;
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 
+import com.grupo3.util.Constants;
+
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import net.serenitybdd.screenplay.actors.OnlineCast;
@@ -18,7 +20,7 @@ public class CommonSteps {
 
 	@Given("Quiero hacer una peticion a la API {string}")
 	public void quieroHacerUnaPeticionALaAPI(String baseURL) {
-	    theActorCalled("X").can(CallAnApi.at(baseURL));
+	    theActorCalled(Constants.ACTOR).whoCan(CallAnApi.at(baseURL));
 	}
 	
 }

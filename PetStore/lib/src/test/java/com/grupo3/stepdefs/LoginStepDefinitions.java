@@ -7,6 +7,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 import com.grupo3.questions.MainMenu;
 import com.grupo3.tasks.Login;
+import com.grupo3.util.Constants;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -18,7 +19,7 @@ public class LoginStepDefinitions {
 
 	@Given("Quiero iniciar sesion")
 	public void quieroIniciarSesion() {
-	    theActorCalled("X").wasAbleTo(Open.url("https://petstore.octoperf.com/actions/Account.action?signonForm="));
+	    theActorCalled(Constants.ACTOR).wasAbleTo(Open.url("https://petstore.octoperf.com/actions/Account.action?signonForm="));
 	}
 
 	@When("Ingreso el usuario {string} y la contrasena {string}")

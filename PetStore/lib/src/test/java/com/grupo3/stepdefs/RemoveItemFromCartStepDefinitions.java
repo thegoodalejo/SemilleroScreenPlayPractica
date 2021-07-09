@@ -8,6 +8,7 @@ import com.grupo3.model.Animal;
 import com.grupo3.questions.AmountOfItemsInCart;
 import static com.grupo3.questions.TheItem.theItemWithTheAnimal;
 import com.grupo3.tasks.ClickRemoveButton;
+import com.grupo3.util.Constants;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -17,7 +18,7 @@ public class RemoveItemFromCartStepDefinitions {
 
 	@Given("Tengo al menos {int} elemento en mi carrito")
 	public void tengoAlMenosElementoEnMiCarrito(Integer minItems) {
-	    theActorCalled("X").should(seeThat(AmountOfItemsInCart.isAtLeast(minItems)));
+	    theActorCalled(Constants.ACTOR).should(seeThat(AmountOfItemsInCart.isAtLeast(minItems)));
 	}
 
 	@When("Elija un elemento y presione su boton de eliminar")
