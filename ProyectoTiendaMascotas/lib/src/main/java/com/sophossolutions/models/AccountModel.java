@@ -1,7 +1,7 @@
 package com.sophossolutions.models;
 
 public class AccountModel {
-	
+
 	private String strFirstName;
 	private String strLastName;
 	private String strAddress1;
@@ -10,10 +10,10 @@ public class AccountModel {
 	private String strState;
 	private String strZip;
 	private String strCountry;
-	
-	public AccountModel( String strFirstName, String strLastName, String strAddress1, String strAddress2, String strCity, String strState,
-			String strZip, String strCountry) {
-		
+
+	public AccountModel(String strFirstName, String strLastName, String strAddress1, String strAddress2, String strCity,
+			String strState, String strZip, String strCountry) {
+
 		super();
 		this.strFirstName = strFirstName;
 		this.strLastName = strLastName;

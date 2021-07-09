@@ -7,7 +7,7 @@ public class PetsCarModel {
 	private String strQuantity;
 	private String strPrice;
 	private String strTotalCost;
-	
+
 	public PetsCarModel(String strItemId, String strDescription, String strQuantity, String strPrice,
 			String strTotalCost) {
 		super();
@@ -17,21 +17,25 @@ public class PetsCarModel {
 		this.strPrice = strPrice;
 		this.strTotalCost = strTotalCost;
 	}
-	
+
 	public String getStrItemId() {
 		return strItemId;
 	}
+
 	public String getStrDescription() {
 		return strDescription;
 	}
+
 	public String getStrQuantity() {
 		return strQuantity;
 	}
+
 	public String getStrPrice() {
 		return strPrice;
 	}
+
 	public String getStrTotalCost() {
 		return strTotalCost;
 	}
-	
+
 }

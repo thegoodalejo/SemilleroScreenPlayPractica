@@ -1,7 +1,7 @@
 package com.sophossolutions.models;
 
 public class RegisterModel {
-	
+
 	private String strUserName;
 	private String strPassword;
 	private String strFirstName;
@@ -18,7 +18,7 @@ public class RegisterModel {
 	private String strFavouriteCategory;
 	private boolean enableMyList;
 	private boolean enableMyBanner;
-	
+
 	public RegisterModel(String strUserName, String strPassword, String strFirstName, String strLastName,
 			String strEmail, String strPhone, String strAddress1, String strAddress2, String strCity, String strState,
 			String strZip, String strCountry, String strLanguage, String strFavouriteCategory, boolean enableMyList,
@@ -105,7 +105,5 @@ public class RegisterModel {
 	public boolean isEnableMyBanner() {
 		return enableMyBanner;
 	}
-	
-	
 
 }

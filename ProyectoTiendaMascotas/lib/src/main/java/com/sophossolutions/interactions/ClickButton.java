@@ -10,7 +10,7 @@ public class ClickButton implements Interaction {
 
 	private Target targetButton;
 	private boolean boolState;
-	
+
 	public ClickButton(Target targetButton, boolean boolState) {
 		super();
 		this.targetButton = targetButton;
@@ -19,17 +19,15 @@ public class ClickButton implements Interaction {
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {
-		if(boolState==true) {
+		if (boolState == true) {
 			actor.attemptsTo(Click.on(targetButton));
 		}
 	}
-	
-	
-	
+
 	public static ClickButton whenState(Target targetButton, boolean boolState) {
 		return Tasks.instrumented(ClickButton.class, targetButton, boolState);
 	}
-	
+
 	public static ClickButton elementTarget(Target targetButton) {
 		return Tasks.instrumented(ClickButton.class, targetButton, true);
 	}
