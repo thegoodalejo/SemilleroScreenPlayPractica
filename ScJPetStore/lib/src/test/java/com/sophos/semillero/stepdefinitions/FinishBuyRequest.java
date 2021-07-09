@@ -2,6 +2,14 @@ package com.sophos.semillero.stepdefinitions;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.core.StringRegularExpression.matchesRegex;
+
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Date;
+
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
 import static com.sophos.semillero.ui.CheckOutPages.BTN_CHECKOUT;
@@ -19,17 +27,24 @@ import com.sophos.semillero.questions.FinishBuy;
 import com.sophos.semillero.questions.OrderVerification;
 import com.sophos.semillero.tasks.DarClick;
 import com.sophos.semillero.tasks.SaveUser;
+import com.sophos.semillero.util.GetDate;
 
 import org.hamcrest.core.IsEqual;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 public class FinishBuyRequest {
-	
-	String dateFormat = new SimpleDateFormat("yyyy/MM/dd").format(new Date());
+	GetDate actualDate;
+	private static final String DATE_FORMAT = "yyyy/MM/dd";
+	Calendar calendar = Calendar.getInstance();
+	Date date = calendar.getTime();
+	DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DATE_FORMAT);
+	Instant instant = date.toInstant();
+	LocalDateTime ldt = instant
+			  .atZone(ZoneId.of("UTC"))
+			  .toLocalDateTime();
+	String formattedDate = ldt.format(formatter);
 	
 	@Given("I want to complete my order")
 	public void iWantToCompleteMyOrder() {
@@ -51,7 +66,7 @@ public class FinishBuyRequest {
 	public void iValidateTheInvoiceData() {
 		UserJPetStore usuario=theActorInTheSpotlight().recall("USER_MODEL");
 		theActorInTheSpotlight().should(seeThat(FinishBuy.on(TXT_ORDER_DATE, 1),matchesRegex("^#[0-9]+")));
-		//theActorInTheSpotlight().should(seeThat(FinishBuy.on(TXT_ORDER_DATE,2),IsEqual.equalTo(dateFormat)));
+		theActorInTheSpotlight().should(seeThat(FinishBuy.on(TXT_ORDER_DATE,2),IsEqual.equalTo(formattedDate)));
 		theActorInTheSpotlight().should(seeThat(CheckUserData.on(TXT_BILL, usuario),IsEqual.equalTo(true)));
 		theActorInTheSpotlight().should(seeThat(OrderVerification.in(TXT_BILL_ITEMS),IsEqual.equalTo(true)));
 	}
