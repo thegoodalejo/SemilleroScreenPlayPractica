@@ -23,11 +23,11 @@ public class EnterCardDetails implements Task {
 
 	@Override
 	public <T extends Actor> void performAs(T actor) {
-		OrderCardModel cmUserCard = actor.recall("ocmUserCard");
+		OrderCardModel ocmUserCard = actor.recall("ocmUserCard");
 		actor.attemptsTo(
-				SelectFromOptions.byVisibleText(cmUserCard.getStrCardType()).from(CheckoutPage.FORM_CARD_TYPE),
-				Enter.theValue(cmUserCard.getStrCardNumber()).into(CheckoutPage.TXT_CARD_NUMBER),
-				Enter.theValue(cmUserCard.getStrCardExpiryDate()).into(CheckoutPage.TXT_CARD_EXPIRY_DATE)
+				SelectFromOptions.byVisibleText(ocmUserCard.getStrCardType()).from(CheckoutPage.FORM_CARD_TYPE),
+				Enter.theValue(ocmUserCard.getStrCardNumber()).into(CheckoutPage.TXT_CARD_NUMBER),
+				Enter.theValue(ocmUserCard.getStrCardExpiryDate()).into(CheckoutPage.TXT_CARD_EXPIRY_DATE)
 				);
 	}
 

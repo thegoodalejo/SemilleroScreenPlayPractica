@@ -2,6 +2,7 @@ package com.sophos.semillero.tasks;
 
 import com.sophos.semillero.exceptions.ExceptionMsg;
 import com.sophos.semillero.model.OrderCardModel;
+import com.sophos.semillero.model.OrderUserInfoModel;
 import com.sophos.semillero.model.RegisterModel;
 import com.sophos.semillero.questions.TextObtained;
 import com.sophos.semillero.ui.CartPage;
@@ -36,57 +37,57 @@ public class ValidateBillingInfoInConfirmOrder implements Task {
 		String strOrderDate = ConfirmOrderPage.TXT_ORDER_DATE.resolveFor(theActorInTheSpotlight()).getText();
 		actor.remember("strOrderDate", strOrderDate);
 		
-		RegisterModel rmNewUser = actor.recall("rmNewUser");
+		OrderUserInfoModel ouimInfo = actor.recall("ouimInfo");
 		// Validate that billing and shipping info match user info
 		actor.should(
 				seeThat(TextObtained.in(ConfirmOrderPage.TXT_BILLING_FIRST_NAME),
-				IsEqual.equalTo(rmNewUser.getStrFirstName())).orComplainWith(
+				IsEqual.equalTo(ouimInfo.getStrFirstNameBilling())).orComplainWith(
 						ExceptionMsg.class, "Error when trying match for billing first name when confirming order"),
 				seeThat(TextObtained.in(ConfirmOrderPage.TXT_BILLING_LAST_NAME),
-						IsEqual.equalTo(rmNewUser.getStrLastName())).orComplainWith(
+						IsEqual.equalTo(ouimInfo.getStrLastNameBilling())).orComplainWith(
 								ExceptionMsg.class, "Error when trying match for billing last name when confirming order"),
 				seeThat(TextObtained.in(ConfirmOrderPage.TXT_BILLING_ADDRESS_1),
-						IsEqual.equalTo(rmNewUser.getStrAddress1())).orComplainWith(
+						IsEqual.equalTo(ouimInfo.getStrAddress1Billing())).orComplainWith(
 								ExceptionMsg.class, "Error when trying match for billing address 1 when confirming order"),
 				seeThat(TextObtained.in(ConfirmOrderPage.TXT_BILLING_ADDRESS_2),
-						IsEqual.equalTo(rmNewUser.getStrAddress2())).orComplainWith(
+						IsEqual.equalTo(ouimInfo.getStrAddress2Billing())).orComplainWith(
 								ExceptionMsg.class, "Error when trying match for billing address 2 when confirming order"),
 				seeThat(TextObtained.in(ConfirmOrderPage.TXT_BILLING_CITY),
-						IsEqual.equalTo(rmNewUser.getStrCity())).orComplainWith(
+						IsEqual.equalTo(ouimInfo.getStrCityBilling())).orComplainWith(
 								ExceptionMsg.class, "Error when trying match for billing city when confirming order"),
 				seeThat(TextObtained.in(ConfirmOrderPage.TXT_BILLING_STATE),
-						IsEqual.equalTo(rmNewUser.getStrState())).orComplainWith(
+						IsEqual.equalTo(ouimInfo.getStrStateBilling())).orComplainWith(
 								ExceptionMsg.class, "Error when trying match for billing state when confirming order"),
 				seeThat(TextObtained.in(ConfirmOrderPage.TXT_BILLING_ZIP),
-						IsEqual.equalTo(rmNewUser.getStrZip())).orComplainWith(
+						IsEqual.equalTo(ouimInfo.getStrZipBilling())).orComplainWith(
 								ExceptionMsg.class, "Error when trying match for billing zip code when confirming order"),
 				seeThat(TextObtained.in(ConfirmOrderPage.TXT_BILLING_COUNTRY),
-						IsEqual.equalTo(rmNewUser.getStrCountry())).orComplainWith(
+						IsEqual.equalTo(ouimInfo.getStrCountryBilling())).orComplainWith(
 								ExceptionMsg.class, "Error when trying match for billing country when confirming order"),
 				
 				seeThat(TextObtained.in(ConfirmOrderPage.TXT_SHIPPING_FIRST_NAME),
-						IsEqual.equalTo(rmNewUser.getStrFirstName())).orComplainWith(
+						IsEqual.equalTo(ouimInfo.getStrFirstNameShipping())).orComplainWith(
 								ExceptionMsg.class, "Error when trying match for shipping first name when confirming order"),
 						seeThat(TextObtained.in(ConfirmOrderPage.TXT_SHIPPING_LAST_NAME),
-								IsEqual.equalTo(rmNewUser.getStrLastName())).orComplainWith(
+								IsEqual.equalTo(ouimInfo.getStrLastNameShipping())).orComplainWith(
 										ExceptionMsg.class, "Error when trying match for shipping last name when confirming order"),
 						seeThat(TextObtained.in(ConfirmOrderPage.TXT_SHIPPING_ADDRESS_1),
-								IsEqual.equalTo(rmNewUser.getStrAddress1())).orComplainWith(
+								IsEqual.equalTo(ouimInfo.getStrAddress1Shipping())).orComplainWith(
 										ExceptionMsg.class, "Error when trying match for shipping address 1 when confirming order"),
 						seeThat(TextObtained.in(ConfirmOrderPage.TXT_SHIPPING_ADDRESS_2),
-								IsEqual.equalTo(rmNewUser.getStrAddress2())).orComplainWith(
+								IsEqual.equalTo(ouimInfo.getStrAddress2Shipping())).orComplainWith(
 										ExceptionMsg.class, "Error when trying match for shipping address 2 when confirming order"),
 						seeThat(TextObtained.in(ConfirmOrderPage.TXT_SHIPPING_CITY),
-								IsEqual.equalTo(rmNewUser.getStrCity())).orComplainWith(
+								IsEqual.equalTo(ouimInfo.getStrCityShipping())).orComplainWith(
 										ExceptionMsg.class, "Error when trying match for shipping city when confirming order"),
 						seeThat(TextObtained.in(ConfirmOrderPage.TXT_SHIPPING_STATE),
-								IsEqual.equalTo(rmNewUser.getStrState())).orComplainWith(
+								IsEqual.equalTo(ouimInfo.getStrStateShipping())).orComplainWith(
 										ExceptionMsg.class, "Error when trying match for shipping state when confirming order"),
 						seeThat(TextObtained.in(ConfirmOrderPage.TXT_SHIPPING_ZIP),
-								IsEqual.equalTo(rmNewUser.getStrZip())).orComplainWith(
+								IsEqual.equalTo(ouimInfo.getStrZipShipping())).orComplainWith(
 										ExceptionMsg.class, "Error when trying match for shipping zip code when confirming order"),
 						seeThat(TextObtained.in(ConfirmOrderPage.TXT_SHIPPING_COUNTRY),
-								IsEqual.equalTo(rmNewUser.getStrCountry())).orComplainWith(
+								IsEqual.equalTo(ouimInfo.getStrCountryShipping())).orComplainWith(
 										ExceptionMsg.class, "Error when trying match for shipping country when confirming order")
 				);
 	}

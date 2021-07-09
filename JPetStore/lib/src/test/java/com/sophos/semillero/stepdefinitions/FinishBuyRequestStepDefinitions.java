@@ -17,15 +17,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.sophos.semillero.model.OrderCardModel;
+import com.sophos.semillero.model.OrderUserInfoModel;
 import com.sophos.semillero.questions.TextObtained;
-import com.sophos.semillero.tasks.ConfirmOrderInfo;
 import com.sophos.semillero.tasks.EnterCardDetails;
 import com.sophos.semillero.tasks.GoToPageGivenByTarget;
-import com.sophos.semillero.tasks.StoreOrderUserDefaultInfoForValidation;
 import com.sophos.semillero.tasks.ValidateBillingInfoInConfirmOrder;
+import com.sophos.semillero.tasks.ValidateReceipt;
 import com.sophos.semillero.ui.CartPage;
 import com.sophos.semillero.ui.CheckoutPage;
 import com.sophos.semillero.ui.ConfirmOrderPage;
+import com.sophos.semillero.ui.ReceiptPage;
 
 public class FinishBuyRequestStepDefinitions {
 
@@ -64,11 +65,35 @@ public class FinishBuyRequestStepDefinitions {
 
 	@When("Confirm order information")
 	public void confirmOrderInformation() {
-		theActorInTheSpotlight().wasAbleTo(ConfirmOrderInfo.matchesActualOrder());
+		String strFirstNameBilling = CheckoutPage.TXT_FIRST_NAME.resolveFor(theActorInTheSpotlight()).getValue();
+		String strLastNameBilling = CheckoutPage.TXT_LAST_NAME.resolveFor(theActorInTheSpotlight()).getValue();
+		String strAddress1Billing = CheckoutPage.TXT_ADDRESS_1.resolveFor(theActorInTheSpotlight()).getValue();
+		String strAddress2Billing = CheckoutPage.TXT_ADDRESS_2.resolveFor(theActorInTheSpotlight()).getValue();
+		String strCityBilling = CheckoutPage.TXT_CITY.resolveFor(theActorInTheSpotlight()).getValue();
+		String strStateBilling = CheckoutPage.TXT_STATE.resolveFor(theActorInTheSpotlight()).getValue();
+		String strZipBilling = CheckoutPage.TXT_ZIP.resolveFor(theActorInTheSpotlight()).getValue();
+		String strCountryBilling = CheckoutPage.TXT_COUNTRY.resolveFor(theActorInTheSpotlight()).getValue();
+		OrderUserInfoModel ouimInfo = new OrderUserInfoModel(strFirstNameBilling, strLastNameBilling,
+				strAddress1Billing, strAddress2Billing, strCityBilling, strStateBilling, strZipBilling,
+				strCountryBilling, strFirstNameBilling, strLastNameBilling, strAddress1Billing,
+				strAddress2Billing, strCityBilling, strStateBilling, strZipBilling, strCountryBilling);
+		theActorInTheSpotlight().remember("ouimInfo", ouimInfo);
+		
+		theActorInTheSpotlight().wasAbleTo(
+				GoToPageGivenByTarget.usingButtonOrLink(CheckoutPage.BTN_CONTINUE),
+				ValidateBillingInfoInConfirmOrder.ofUser(),
+				GoToPageGivenByTarget.usingButtonOrLink(ConfirmOrderPage.BTN_CONFIRM)
+				);
+		
 	}
 
 	@When("Validate that receipt information matches order")
 	public void validateThatReceiptInformationMatchesOrder() {
-		System.out.println("Nice!");
+		String[] strArrGeneratedDetails = ReceiptPage.ROW_GENERATED_DETAILS.resolveFor(theActorInTheSpotlight()).getText().split(" ");
+		String strOrderId = strArrGeneratedDetails[1];
+		String strOrderDate = strArrGeneratedDetails[2];
+		System.out.println("Nice! Your newly created order has an ID of " + strOrderId);
+		
+		theActorInTheSpotlight().wasAbleTo(ValidateReceipt.ofOrder(strOrderDate));
 	}
 }
