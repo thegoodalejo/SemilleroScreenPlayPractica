@@ -17,7 +17,6 @@ public class Info implements Question<String> {
 	public String answeredBy(Actor actor) {
 		String Data = SerenityRest.lastResponse().jsonPath().get(Path).toString();
 		System.out.println(Data);
-		System.out.println(SerenityRest.lastResponse().jsonPath().get("data.id").toString());
 		return Data;
 	}
 

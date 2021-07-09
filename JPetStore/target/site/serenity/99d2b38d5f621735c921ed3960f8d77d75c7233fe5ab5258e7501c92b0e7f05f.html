@@ -144,7 +144,7 @@
             <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 08-07-2021 16:28</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 09-07-2021 09:38</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -238,7 +238,7 @@
         <div class="story-title">
             <h3 class="story-header">Scenario Outline</h3>
 
-            <div class="scenario">Given "Juan Miguel" sets an url "https://reqres.in/"<br>When he requests to the endpoint "api/unknown/" and &lt;user&gt;<br>Then he should validate that the status code is &lt;response&gt;</div>
+            <div class="scenario">Given "Juan Miguel" sets an url "https://reqres.in/"<br>When he requests to the endpoint "api/unknown/" and &lt;user&gt;<br>Then he should validate that the status code is &lt;response&gt; want to verify that &lt;name&gt;</div>
 
         </div>
 
@@ -258,6 +258,7 @@
                         <th>#</th>
                             <th>User</th>
                             <th>Response</th>
+                            <th>Name</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -269,6 +270,9 @@
                                 <td class="test-SUCCESS"><a
                                             href="#0">200</a>
                                 </td>
+                                <td class="test-SUCCESS"><a
+                                            href="#0">cerulean</a>
+                                </td>
                         </tr>
                         <tr>
                             <td class="test-FAILURE"><a href="#1">2</a></td>
@@ -277,6 +281,9 @@
                                 </td>
                                 <td class="test-FAILURE"><a
                                             href="#1">400</a>
+                                </td>
+                                <td class="test-FAILURE"><a
+                                            href="#1">fuchsia rose</a>
                                 </td>
                         </tr>
                         <tr>
@@ -287,6 +294,9 @@
                                 <td class="test-SUCCESS"><a
                                             href="#2">200</a>
                                 </td>
+                                <td class="test-SUCCESS"><a
+                                            href="#2">true red</a>
+                                </td>
                         </tr>
                         <tr>
                             <td class="test-FAILURE"><a href="#3">4</a></td>
@@ -295,6 +305,9 @@
                                 </td>
                                 <td class="test-FAILURE"><a
                                             href="#3">404</a>
+                                </td>
+                                <td class="test-FAILURE"><a
+                                            href="#3">nomrbe</a>
                                 </td>
                         </tr>
                     </tbody>
@@ -334,7 +347,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                    style="display:block;">
                                     <span class="top-level-step">
-                                                Example: {user=1, response=200}
+                                                Example: {user=1, response=200, name=cerulean}
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -343,7 +356,7 @@
                         </td>
 
                         <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                        <td width="100"><span class="top-level-step">10.34s</span></td>
+                        <td width="100"><span class="top-level-step">10.7s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -369,7 +382,7 @@
                         </td>
 
                         <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-group-step">0.22s</span></td>
+                        <td width="100"><span class="nested-group-step">0.2s</span></td>
                     </tr>
                     <tr class="test-SUCCESS">
 
@@ -396,7 +409,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">9.59s</span></td>
+                        <td width="100"><span class="nested-step">8.92s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -427,7 +440,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">8.78s</span></td>
+                        <td width="100"><span class="nested-step">8.2s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -458,7 +471,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">8.67s</span></td>
+                        <td width="100"><span class="nested-step">8.1s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -501,7 +514,7 @@
                                         <h4>Request Cookies</h4>
                                         <pre></pre>
                                         <h4>Response Headers</h4>
-                                        <pre>Date: Thu, 08 Jul 2021 21:28:05 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>X-Powered-By: Express<br>Access-Control-Allow-Origin: *<br>Etag: W/&quot;e4-2W7ZNEqb4DWjJCUXzZoMFmGhgio&quot;<br>Via: 1.1 vegur<br>Cache-Control: max-age=14400<br>CF-Cache-Status: HIT<br>Age: 3902<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v2?s=l5bpRD79DCayi0FKDp1WZszACUgX0%2BasXG07XZ01lMdwcbjbfmZfj%2FGfzFmCwebN6chiqi2I7pc73vAnGOanaje4cGavRp6O4DcCg0GR6XaE9EFNTb7k&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Vary: Accept-Encoding<br>Server: cloudflare<br>CF-RAY: 66bc667b98b7228a-MIA<br>Content-Encoding: gzip<br>alt-svc: h3-27=&quot;:443&quot;; ma=86400, h3-28=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400, h3=&quot;:443&quot;; ma=86400</pre>
+                                        <pre>Date: Fri, 09 Jul 2021 14:38:04 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>X-Powered-By: Express<br>Access-Control-Allow-Origin: *<br>Etag: W/&quot;e4-2W7ZNEqb4DWjJCUXzZoMFmGhgio&quot;<br>Via: 1.1 vegur<br>Cache-Control: max-age=14400<br>CF-Cache-Status: MISS<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v2?s=x6LtCZ%2Fec6zVl8lJJKPAOMLSY%2FtrbYPI2r48JiLwxt0O57hI%2FmcEciBitMPSDRQIE8NcUhoGshavSTCalKJAPpgw1GB6BWW6ElOUnbm%2BUeePF8uAj%2FNN&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Vary: Accept-Encoding<br>Server: cloudflare<br>CF-RAY: 66c24b3d5a6302a0-MIA<br>Content-Encoding: gzip<br>alt-svc: h3-27=&quot;:443&quot;; ma=86400, h3-28=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400, h3=&quot;:443&quot;; ma=86400</pre>
                                     <h4>Response Body</h4>
                                         <pre>{<br>    &quot;data&quot;: {<br>        &quot;id&quot;: 1,<br>        &quot;name&quot;: &quot;cerulean&quot;,<br>        &quot;year&quot;: 2000,<br>        &quot;color&quot;: &quot;#98B2D1&quot;,<br>        &quot;pantone_value&quot;: &quot;15-4020&quot;<br>    },<br>    &quot;support&quot;: {<br>        &quot;url&quot;: &quot;https://reqres.in/#support-heading&quot;,<br>        &quot;text&quot;: &quot;To keep ReqRes free, contributions towards server costs are appreciated!&quot;<br>    }<br>}</pre>
                                 </div>
@@ -544,7 +557,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-2')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                Then he should validate that the status code is 200
+                                                Then he should validate that the status code is 200 want to verify that cerulean
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -553,7 +566,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.33s</span></td>
+                        <td width="100"><span class="nested-step">1.38s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -579,7 +592,29 @@
                         </td>
 
                         <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-group-step">0.01s</span></td>
+                        <td width="100"><span class="nested-group-step">0.02s</span></td>
+                    </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="90" class="step-icon">
+                            <a name="0-2-1"></a>
+                                <span style="margin-left: 60px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                Then info should be 'cerulean'
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">1.01s</span></td>
                     </tr>
 
                                 </table>
@@ -605,7 +640,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
                                    style="display:block;">
                                     <span class="top-level-step">
-                                                Example: {user=2, response=400}
+                                                Example: {user=2, response=400, name=fuchsia rose}
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -614,7 +649,7 @@
                         </td>
 
                         <td width="130"><span class="top-level-step">FAILURE</span></td>
-                        <td width="100"><span class="top-level-step">0.68s</span></td>
+                        <td width="100"><span class="top-level-step">0.71s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -640,7 +675,7 @@
                         </td>
 
                         <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-group-step">0.04s</span></td>
+                        <td width="100"><span class="nested-group-step">0.01s</span></td>
                     </tr>
                     <tr class="test-SUCCESS">
 
@@ -667,7 +702,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.48s</span></td>
+                        <td width="100"><span class="nested-step">0.55s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -698,7 +733,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.47s</span></td>
+                        <td width="100"><span class="nested-step">0.53s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -729,7 +764,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.45s</span></td>
+                        <td width="100"><span class="nested-step">0.51s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -753,13 +788,13 @@
                                         <span class="piece-of-evidence">
                     <span>
                         <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
-                                data-target="#restModal-REST-14">
+                                data-target="#restModal-REST-15">
                             REST Query
                         </button>
                     </span>
                     <!-- Modal -->
                     <div class="rest-query-details">
-                        <div class="collapse multi-collapse" id="restModal-REST-14">
+                        <div class="collapse multi-collapse" id="restModal-REST-15">
                             <div class="card">
                                 <div class="card-body">
                                     <h4>Response</h4>
@@ -772,7 +807,7 @@
                                         <h4>Request Cookies</h4>
                                         <pre></pre>
                                         <h4>Response Headers</h4>
-                                        <pre>Date: Thu, 08 Jul 2021 21:28:07 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>X-Powered-By: Express<br>Access-Control-Allow-Origin: *<br>Etag: W/&quot;e8-ov4wWh4/OY1IMQMqWgskYtOFnVs&quot;<br>Via: 1.1 vegur<br>Cache-Control: max-age=14400<br>CF-Cache-Status: HIT<br>Age: 1539<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v2?s=%2FD5SskCkE8tn9D7kbHvPGAiVPSVxFLabK0DtBE5uJUmgTsFB3LtkxNqMVkc6wArdQXErac51hbEsYjvcxzJEcVpFJiw8NwGYYkgnr8SyjHxXhKtcTzRp&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Vary: Accept-Encoding<br>Server: cloudflare<br>CF-RAY: 66bc6683eb642260-MIA<br>Content-Encoding: gzip<br>alt-svc: h3-27=&quot;:443&quot;; ma=86400, h3-28=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400, h3=&quot;:443&quot;; ma=86400</pre>
+                                        <pre>Date: Fri, 09 Jul 2021 14:38:07 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>X-Powered-By: Express<br>Access-Control-Allow-Origin: *<br>Etag: W/&quot;e8-ov4wWh4/OY1IMQMqWgskYtOFnVs&quot;<br>Via: 1.1 vegur<br>Cache-Control: max-age=14400<br>CF-Cache-Status: HIT<br>Age: 2436<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v2?s=gBtO0FbMH2xButN9UGvYhDUDR7o6%2BMnxGy6poAk4zDk7mhi9E4uwL999DY2XowjCxIC60PcXO23chU39fkrB376MOxjLZRDN%2FC3tiCZJ970FiNjv%2BYBe&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Vary: Accept-Encoding<br>Server: cloudflare<br>CF-RAY: 66c24b4e495d099a-MIA<br>Content-Encoding: gzip<br>alt-svc: h3-27=&quot;:443&quot;; ma=86400, h3-28=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400, h3=&quot;:443&quot;; ma=86400</pre>
                                     <h4>Response Body</h4>
                                         <pre>{<br>    &quot;data&quot;: {<br>        &quot;id&quot;: 2,<br>        &quot;name&quot;: &quot;fuchsia rose&quot;,<br>        &quot;year&quot;: 2001,<br>        &quot;color&quot;: &quot;#C74375&quot;,<br>        &quot;pantone_value&quot;: &quot;17-2031&quot;<br>    },<br>    &quot;support&quot;: {<br>        &quot;url&quot;: &quot;https://reqres.in/#support-heading&quot;,<br>        &quot;text&quot;: &quot;To keep ReqRes free, contributions towards server costs are appreciated!&quot;<br>    }<br>}</pre>
                                 </div>
@@ -815,7 +850,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-2')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                Then he should validate that the status code is 400
+                                                Then he should validate that the status code is 400 want to verify that fuchsia rose
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -864,7 +899,7 @@
                     <span class="error-message error-message-title">java.lang.AssertionError: <br>Expected: &quot;400&quot;<br>     but: was &quot;200&quot;</span>
                 </div>
                 <div class="col-sm-2">
-                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-16""
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-17""
                        role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
                 </div>
              </div>
@@ -874,14 +909,14 @@
     <!-- Details Section -->
     <div class="row stacktrace-details">
       <div class="col">
-        <div class="collapse multi-collapse" id="stacktraceModal-16">
+        <div class="collapse multi-collapse" id="stacktraceModal-17">
             <div class="card">
                 <div class="card-header">
                     <h4>java.lang.AssertionError </h4>
                 </div>
                 <div class="card-body">
                     <div>
-                        <pre>com.sophossolutions.stepdefinitions.GetRequestWithoutAuthenticationStepDefinitions.heShouldValidateThatTheStatusCodeIs(GetRequestWithoutAuthenticationStepDefinitions.java:39)<br />io.cucumber.java.Invoker.invoke(Invoker.java:27)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:49)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:51)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:67)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:227)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:54)<br />org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)<br />org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:768)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)<br /></pre>
+                        <pre>com.sophossolutions.stepdefinitions.GetRequestWithoutAuthenticationStepDefinitions.heShouldValidateThatTheStatusCodeIsWantToVerifyThat(GetRequestWithoutAuthenticationStepDefinitions.java:42)<br />io.cucumber.java.Invoker.invoke(Invoker.java:27)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:49)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:51)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:67)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:227)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:54)<br />org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)<br />org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:768)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)<br /></pre>
                     </div>
 
                 </div>
@@ -914,7 +949,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
                                    style="display:block;">
                                     <span class="top-level-step">
-                                                Example: {user=3, response=200}
+                                                Example: {user=3, response=200, name=true red}
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -923,7 +958,7 @@
                         </td>
 
                         <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                        <td width="100"><span class="top-level-step">0.52s</span></td>
+                        <td width="100"><span class="top-level-step">0.58s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -976,7 +1011,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.46s</span></td>
+                        <td width="100"><span class="nested-step">0.47s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -1007,7 +1042,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.45s</span></td>
+                        <td width="100"><span class="nested-step">0.46s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -1038,7 +1073,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.44s</span></td>
+                        <td width="100"><span class="nested-step">0.45s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -1062,13 +1097,13 @@
                                         <span class="piece-of-evidence">
                     <span>
                         <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
-                                data-target="#restModal-REST-22">
+                                data-target="#restModal-REST-23">
                             REST Query
                         </button>
                     </span>
                     <!-- Modal -->
                     <div class="rest-query-details">
-                        <div class="collapse multi-collapse" id="restModal-REST-22">
+                        <div class="collapse multi-collapse" id="restModal-REST-23">
                             <div class="card">
                                 <div class="card-body">
                                     <h4>Response</h4>
@@ -1081,7 +1116,7 @@
                                         <h4>Request Cookies</h4>
                                         <pre></pre>
                                         <h4>Response Headers</h4>
-                                        <pre>Date: Thu, 08 Jul 2021 21:28:07 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>X-Powered-By: Express<br>Access-Control-Allow-Origin: *<br>Etag: W/&quot;e4-py6WoYH4u/mttR/LvDYFJjGqZUg&quot;<br>Via: 1.1 vegur<br>Cache-Control: max-age=14400<br>CF-Cache-Status: HIT<br>Age: 1538<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v2?s=xFeiowEmZuc6rEfgyBSBv507wPecA37zl94Juk19DAhrJgmlFT3GCsUPzMdMnxaRNdM3dkPF2EzAA8WNjQnn%2FkDYUClwrxI5Cf1PnyOalbrPxjI52Sac&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Vary: Accept-Encoding<br>Server: cloudflare<br>CF-RAY: 66bc66896d05031c-MIA<br>Content-Encoding: gzip<br>alt-svc: h3-27=&quot;:443&quot;; ma=86400, h3-28=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400, h3=&quot;:443&quot;; ma=86400</pre>
+                                        <pre>Date: Fri, 09 Jul 2021 14:38:07 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>X-Powered-By: Express<br>Access-Control-Allow-Origin: *<br>Etag: W/&quot;e4-py6WoYH4u/mttR/LvDYFJjGqZUg&quot;<br>Via: 1.1 vegur<br>Cache-Control: max-age=14400<br>CF-Cache-Status: HIT<br>Age: 122<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v2?s=%2FruV39bDVE0QPQFza5oRu%2BPJ3ATKV9n0EI%2Faw%2FbqOCZXXYqcg1w7aq1OMIwNiksLUmctBKYnL6RmlEWNifus9QTbnPThOxhRWvEKHAdCUa23JzyEqzPW&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Vary: Accept-Encoding<br>Server: cloudflare<br>CF-RAY: 66c24b53ab9d226f-MIA<br>Content-Encoding: gzip<br>alt-svc: h3-27=&quot;:443&quot;; ma=86400, h3-28=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400, h3=&quot;:443&quot;; ma=86400</pre>
                                     <h4>Response Body</h4>
                                         <pre>{<br>    &quot;data&quot;: {<br>        &quot;id&quot;: 3,<br>        &quot;name&quot;: &quot;true red&quot;,<br>        &quot;year&quot;: 2002,<br>        &quot;color&quot;: &quot;#BF1932&quot;,<br>        &quot;pantone_value&quot;: &quot;19-1664&quot;<br>    },<br>    &quot;support&quot;: {<br>        &quot;url&quot;: &quot;https://reqres.in/#support-heading&quot;,<br>        &quot;text&quot;: &quot;To keep ReqRes free, contributions towards server costs are appreciated!&quot;<br>    }<br>}</pre>
                                 </div>
@@ -1124,7 +1159,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-2')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                Then he should validate that the status code is 200
+                                                Then he should validate that the status code is 200 want to verify that true red
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -1133,7 +1168,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.01s</span></td>
+                        <td width="100"><span class="nested-step">0.06s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -1161,6 +1196,28 @@
                         <td width="130"><span class="nested-group-step">SUCCESS</span></td>
                         <td width="100"><span class="nested-group-step">0s</span></td>
                     </tr>
+                    <tr class="test-SUCCESS">
+
+                        <td width="90" class="step-icon">
+                            <a name="2-2-1"></a>
+                                <span style="margin-left: 60px;"
+                                      class="nested-group-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                        </td>
+
+                        <td class="step-description-column">
+                            <div class="step-description">
+                                    <span class="nested-group-step">
+                                                Then info should be 'true red'
+                                        </span>
+                                <span class="evidence">
+                                </span>
+                            </div>
+                        </td>
+
+                        <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                        <td width="100"><span class="nested-group-step">0.05s</span></td>
+                    </tr>
 
                                 </table>
                             </td>
@@ -1185,7 +1242,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection3')"
                                    style="display:block;">
                                     <span class="top-level-step">
-                                                Example: {user=5, response=404}
+                                                Example: {user=5, response=404, name=nomrbe}
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -1194,7 +1251,7 @@
                         </td>
 
                         <td width="130"><span class="top-level-step">FAILURE</span></td>
-                        <td width="100"><span class="top-level-step">0.84s</span></td>
+                        <td width="100"><span class="top-level-step">0.92s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -1247,7 +1304,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.76s</span></td>
+                        <td width="100"><span class="nested-step">0.82s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -1278,7 +1335,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.75s</span></td>
+                        <td width="100"><span class="nested-step">0.8s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -1309,7 +1366,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.73s</span></td>
+                        <td width="100"><span class="nested-step">0.79s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -1333,13 +1390,13 @@
                                         <span class="piece-of-evidence">
                     <span>
                         <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
-                                data-target="#restModal-REST-30">
+                                data-target="#restModal-REST-32">
                             REST Query
                         </button>
                     </span>
                     <!-- Modal -->
                     <div class="rest-query-details">
-                        <div class="collapse multi-collapse" id="restModal-REST-30">
+                        <div class="collapse multi-collapse" id="restModal-REST-32">
                             <div class="card">
                                 <div class="card-body">
                                     <h4>Response</h4>
@@ -1352,7 +1409,7 @@
                                         <h4>Request Cookies</h4>
                                         <pre></pre>
                                         <h4>Response Headers</h4>
-                                        <pre>Date: Thu, 08 Jul 2021 21:28:08 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>X-Powered-By: Express<br>Access-Control-Allow-Origin: *<br>Etag: W/&quot;e5-lIGuAJqJARlA1uBKB1N3ieZh4dk&quot;<br>Via: 1.1 vegur<br>Cache-Control: max-age=14400<br>CF-Cache-Status: MISS<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v2?s=xWBqBsRFEq95W%2FcmdQpMGYM8dBlMCcg4tUlarIDgH0mlftJ2sYdejdeQFILiLF2tmP0sHrhSovGfRn9xymesuPzUfcpJIUeUbaVWjOle5bLZ%2BoQM%2Bvmw&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Vary: Accept-Encoding<br>Server: cloudflare<br>CF-RAY: 66bc668cacca0359-MIA<br>Content-Encoding: gzip<br>alt-svc: h3-27=&quot;:443&quot;; ma=86400, h3-28=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400, h3=&quot;:443&quot;; ma=86400</pre>
+                                        <pre>Date: Fri, 09 Jul 2021 14:38:08 GMT<br>Content-Type: application/json; charset=utf-8<br>Transfer-Encoding: chunked<br>Connection: keep-alive<br>X-Powered-By: Express<br>Access-Control-Allow-Origin: *<br>Etag: W/&quot;e5-lIGuAJqJARlA1uBKB1N3ieZh4dk&quot;<br>Via: 1.1 vegur<br>Cache-Control: max-age=14400<br>CF-Cache-Status: MISS<br>Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;<br>Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v2?s=xNtZOUXpHenOJIn%2F71w06TJK1Obd6vhpn2SnHCjAVWHwm7c2EiAQOnODvHkXV5gxL5uRzG%2BoIDyWj0jM0FFjcuTtR%2FmkI4EJxuW5o1dnhuec%2FaOKF0np&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>NEL: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}<br>Vary: Accept-Encoding<br>Server: cloudflare<br>CF-RAY: 66c24b57adc401cf-MIA<br>Content-Encoding: gzip<br>alt-svc: h3-27=&quot;:443&quot;; ma=86400, h3-28=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400, h3=&quot;:443&quot;; ma=86400</pre>
                                     <h4>Response Body</h4>
                                         <pre>{<br>    &quot;data&quot;: {<br>        &quot;id&quot;: 5,<br>        &quot;name&quot;: &quot;tigerlily&quot;,<br>        &quot;year&quot;: 2004,<br>        &quot;color&quot;: &quot;#E2583E&quot;,<br>        &quot;pantone_value&quot;: &quot;17-1456&quot;<br>    },<br>    &quot;support&quot;: {<br>        &quot;url&quot;: &quot;https://reqres.in/#support-heading&quot;,<br>        &quot;text&quot;: &quot;To keep ReqRes free, contributions towards server costs are appreciated!&quot;<br>    }<br>}</pre>
                                 </div>
@@ -1395,7 +1452,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection3-2')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                Then he should validate that the status code is 404
+                                                Then he should validate that the status code is 404 want to verify that nomrbe
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -1444,7 +1501,7 @@
                     <span class="error-message error-message-title">java.lang.AssertionError: <br>Expected: &quot;404&quot;<br>     but: was &quot;200&quot;</span>
                 </div>
                 <div class="col-sm-2">
-                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-32""
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-34""
                        role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
                 </div>
              </div>
@@ -1454,14 +1511,14 @@
     <!-- Details Section -->
     <div class="row stacktrace-details">
       <div class="col">
-        <div class="collapse multi-collapse" id="stacktraceModal-32">
+        <div class="collapse multi-collapse" id="stacktraceModal-34">
             <div class="card">
                 <div class="card-header">
                     <h4>java.lang.AssertionError </h4>
                 </div>
                 <div class="card-body">
                     <div>
-                        <pre>com.sophossolutions.stepdefinitions.GetRequestWithoutAuthenticationStepDefinitions.heShouldValidateThatTheStatusCodeIs(GetRequestWithoutAuthenticationStepDefinitions.java:39)<br />io.cucumber.java.Invoker.invoke(Invoker.java:27)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:49)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:51)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:67)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:227)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:54)<br />org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)<br />org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:768)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)<br /></pre>
+                        <pre>com.sophossolutions.stepdefinitions.GetRequestWithoutAuthenticationStepDefinitions.heShouldValidateThatTheStatusCodeIsWantToVerifyThat(GetRequestWithoutAuthenticationStepDefinitions.java:42)<br />io.cucumber.java.Invoker.invoke(Invoker.java:27)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:49)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:51)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:67)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:227)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:54)<br />org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)<br />org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:768)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)<br /></pre>
                     </div>
 
                 </div>
@@ -1481,7 +1538,7 @@
                 <tr class="test-FAILURE">
                         <td colspan="2"></td>
                     <td width="130"><span class="top-level-step"><em>FAILURE</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>13.1s</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>13.57s</em></span></td>
                 </tr>
 
             </table>
