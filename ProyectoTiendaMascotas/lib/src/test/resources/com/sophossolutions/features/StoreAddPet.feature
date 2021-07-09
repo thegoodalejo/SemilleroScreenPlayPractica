@@ -1,6 +1,8 @@
 #Author: elber.ceballos@sophossolutions.com
 Feature: Add Pet To Shopping Cart
-  As a tester i want to add pet to shopping cart
+  As a tester 
+  I want to add pet to shopping cart
+  To probe shopping cart
 
   Background: 
     Given I want Login in "https://petstore.octoperf.com/actions/Account.action?signonForm="
