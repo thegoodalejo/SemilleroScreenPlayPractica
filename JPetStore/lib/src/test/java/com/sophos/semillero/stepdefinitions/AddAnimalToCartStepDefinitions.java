@@ -72,7 +72,7 @@ public class AddAnimalToCartStepDefinitions {
 		theActorInTheSpotlight().wasAbleTo(GoToCategoryPage.usingLink(tarRandomCategory));
 		
 		List<?> listItemNames = CategoryPage.TB_NAMES.resolveAllFor(theActorInTheSpotlight());
-		intRandomItem = ThreadLocalRandom.current().nextInt(2, listItemNames.size());
+		intRandomItem = ThreadLocalRandom.current().nextInt(2, /*listItemNames.size()*/ 3);
 
 		theActorInTheSpotlight().wasAbleTo(
 				SelectAnimalSpecies.fromTableRowInCategoryPage(intRandomItem),

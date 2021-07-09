@@ -30,7 +30,7 @@ public class RemoveAnimalFromCartStepDefinitions {
 	public void setup() {
 		setTheStage(new OnlineCast());
 	}
-	
+	/*
 	@Given("Navigate to shopping cart page")
 	public void navigateToShoppingCartPage() {
 		theActorCalled("Grupo 4").wasAbleTo(GoToPageGivenByTarget.usingButtonOrLink(HomePage.BTN_CART));
@@ -45,5 +45,20 @@ public class RemoveAnimalFromCartStepDefinitions {
 	public void deleteItemWithId(String strItemId) {
 		theActorInTheSpotlight().wasAbleTo(RemoveAnimalFromCart.usingButtonForItemId(strItemId));
 	}
-
+	*/
+	// This method works wih the current "add animal to cart" feature. They both have to be changed to support choosing items
+	@When("Delete item from cart")
+	public void deleteItemWithId() {
+		String strItemDetailId = theActorInTheSpotlight().recall("strItemDetailId");
+		theActorInTheSpotlight().wasAbleTo(RemoveAnimalFromCart.usingButtonForItemId(strItemDetailId));
+	}
+	
+	@Then("Validate if the cart is now empty")
+	public void validateIfTheCartIsNowEmpty() {
+		String strEmptyCartMsg = "Your cart is empty.";
+		theActorInTheSpotlight().should(seeThat(TextObtained.in(CartPage.TXT_EMPTY_CART),
+				IsEqual.equalTo(strEmptyCartMsg)).orComplainWith(ExceptionMsg.class,
+						"Error when validating if the cart is now empty"));
+		
+	}
 }

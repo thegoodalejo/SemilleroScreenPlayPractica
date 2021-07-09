@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">JPetStore</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="93b2ce31d0b70dcad37450a0f9dcdff14dce040de908de8c3da68cf738ab9b6d.html">Remove Animal From Cart</a></span>
+                > <span class="truncate-60"><a
+                    href="ff1b5fcd424e2655c2845ea8c3212557619327c28ee235874f3c6fc47cb7758a.html">Remove animal from cart </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 09-07-2021 06:23</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Remove Animal From Cart </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                I as an automator want to remove an animal from the shopping cart
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="e73124e6ad821a73385d2f31032c166a3418ba0bca2ca9367861f49f9d2c87b9.html">Remove Animal From Cart
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Remove animal from cart
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="b141cb61e781a416ae46df6ac84982363f7b1863fdd0f2e5812ff65889f5bc84.png" title=" Given Open website &quot;https://petstore.octoperf.com/actions/Catalog.action&quot;" width="1034"/>
+                <img src="b141cb61e781a416ae46df6ac84982363f7b1863fdd0f2e5812ff65889f5bc84.png" title=" Grupo 4 opens the https://petstore.octoperf.com/actions/Catalog.action" width="1034"/>
+                <img src="b141cb61e781a416ae46df6ac84982363f7b1863fdd0f2e5812ff65889f5bc84.png" title=" Given Open website &quot;https://petstore.octoperf.com/actions/Catalog.action&quot; (completed)" width="1034"/>
+                <img src="3813dd306b520291c511318476b77054ce18051baa16f01bf9583c653a1acce7.png" title=" When A random animal is added to the cart" width="1034"/>
+                <img src="3813dd306b520291c511318476b77054ce18051baa16f01bf9583c653a1acce7.png" title=" Grupo 4 go to category page" width="1034"/>
+                <img src="3813dd306b520291c511318476b77054ce18051baa16f01bf9583c653a1acce7.png" title=" Grupo 4 clicks on Cats category button" width="1034"/>
+                <img src="3813dd306b520291c511318476b77054ce18051baa16f01bf9583c653a1acce7.png" title=" Grupo 4 go to category page (completed)" width="1034"/>
+                <img src="3813dd306b520291c511318476b77054ce18051baa16f01bf9583c653a1acce7.png" title=" Grupo 4 select animal species" width="1034"/>
+                <img src="3813dd306b520291c511318476b77054ce18051baa16f01bf9583c653a1acce7.png" title=" Grupo 4 clicks on Item button" width="1034"/>
+                <img src="2cb5e216399d6aebe0af26ad5bdc4cfc6aabe080be5b7f061696dbe9b468c2b7.png" title=" Grupo 4 clicks on Item button (completed)" width="1034"/>
+                <img src="2cb5e216399d6aebe0af26ad5bdc4cfc6aabe080be5b7f061696dbe9b468c2b7.png" title=" Grupo 4 select animal species (completed)" width="1034"/>
+                <img src="2cb5e216399d6aebe0af26ad5bdc4cfc6aabe080be5b7f061696dbe9b468c2b7.png" title=" Grupo 4 select item" width="1034"/>
+                <img src="2cb5e216399d6aebe0af26ad5bdc4cfc6aabe080be5b7f061696dbe9b468c2b7.png" title=" Grupo 4 clicks on Item detail button" width="1034"/>
+                <img src="a361100065d81bd3d6f2a79c71d5ce288f9c6d33bac8a024d31cd2589ba1ce81.png" title=" Grupo 4 clicks on Item detail button (completed)" width="1034"/>
+                <img src="a361100065d81bd3d6f2a79c71d5ce288f9c6d33bac8a024d31cd2589ba1ce81.png" title=" Grupo 4 select item (completed)" width="1034"/>
+                <img src="a361100065d81bd3d6f2a79c71d5ce288f9c6d33bac8a024d31cd2589ba1ce81.png" title=" Grupo 4 add animal to cart from detail page" width="1034"/>
+                <img src="a361100065d81bd3d6f2a79c71d5ce288f9c6d33bac8a024d31cd2589ba1ce81.png" title=" Grupo 4 clicks on Add to cart button" width="1034"/>
+                <img src="5aae337fec011138548aeb7f71b61f54d35effac7aa35f481d3a897dace97874.png" title=" Grupo 4 clicks on Add to cart button (completed)" width="1034"/>
+                <img src="5aae337fec011138548aeb7f71b61f54d35effac7aa35f481d3a897dace97874.png" title=" Grupo 4 add animal to cart from detail page (completed)" width="1034"/>
+                <img src="5aae337fec011138548aeb7f71b61f54d35effac7aa35f481d3a897dace97874.png" title=" When A random animal is added to the cart (completed)" width="1034"/>
+                <img src="5aae337fec011138548aeb7f71b61f54d35effac7aa35f481d3a897dace97874.png" title=" Then Validate that picked animal is in the cart" width="1034"/>
+                <img src="5aae337fec011138548aeb7f71b61f54d35effac7aa35f481d3a897dace97874.png" title=" Then text obtained should be 'EST-14'" width="1034"/>
+                <img src="5aae337fec011138548aeb7f71b61f54d35effac7aa35f481d3a897dace97874.png" title=" Then Validate that picked animal is in the cart (completed)" width="1034"/>
+                <img src="529e902663c77a7aa4192ae156ca8a4ce1ec42fc994cea382b23fc7a36e9f1e1.png" title=" When Delete item from cart" width="1034"/>
+                <img src="529e902663c77a7aa4192ae156ca8a4ce1ec42fc994cea382b23fc7a36e9f1e1.png" title=" Grupo 4 remove animal from cart" width="1034"/>
+                <img src="529e902663c77a7aa4192ae156ca8a4ce1ec42fc994cea382b23fc7a36e9f1e1.png" title=" Grupo 4 clicks on Remove item button" width="1034"/>
+                <img src="529e902663c77a7aa4192ae156ca8a4ce1ec42fc994cea382b23fc7a36e9f1e1.png" title=" Grupo 4 remove animal from cart (completed)" width="1034"/>
+                <img src="529e902663c77a7aa4192ae156ca8a4ce1ec42fc994cea382b23fc7a36e9f1e1.png" title=" When Delete item from cart (completed)" width="1034"/>
+                <img src="529e902663c77a7aa4192ae156ca8a4ce1ec42fc994cea382b23fc7a36e9f1e1.png" title=" Then Validate if the cart is now empty" width="1034"/>
+                <img src="529e902663c77a7aa4192ae156ca8a4ce1ec42fc994cea382b23fc7a36e9f1e1.png" title=" Then text obtained should be 'Your cart is empty.'" width="1034"/>
+                <img src="529e902663c77a7aa4192ae156ca8a4ce1ec42fc994cea382b23fc7a36e9f1e1.png" title=" Then Validate if the cart is now empty (completed): <span class='success-color'>SUCCESS</span>" width="1034"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.2.9</span>
+</div>
+</body>
+</html>

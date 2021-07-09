@@ -1,5 +1,4 @@
 #Author: juan.ugarriza@sophossolutions.com
-#Overview: Register new user on JPetStore
 @RegisterNewUser
 Feature: Register on JPetStore
   I as an automator want to register on JPetStore

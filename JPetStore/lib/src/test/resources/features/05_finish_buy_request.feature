@@ -1,5 +1,4 @@
-#Author: juan.ugarriza@sophossolutions.com
-#Overview: Create order and make sure the info matches
+#Author: juan.ugarriza@sophossolutions.s
 @FinishBuyRequest
 Feature: Finish buy request on JPetStore
   I as an automator want to finish a buy request on JPetStore

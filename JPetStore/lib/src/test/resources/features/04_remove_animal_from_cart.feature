@@ -1,13 +1,14 @@
 #Author: juan.ugarriza@sophossolutions.com
 @RemoveAnimalFromCart
 Feature: Remove animal from cart
-	I as an automator want to remove an animal from the shopping cart
+  I as an automator want to remove an animal from the shopping cart
 
-Scenario Outline: Remove animal from cart
-	Given Navigate to shopping cart page
-	When Validate that item ID <Item ID> is present
-	Then Delete item with ID <Item ID>
-	
-	Examples:
-		| Item ID    |
-		| "FI-SW-01" |
+	Background:
+		Given Open website "https://petstore.octoperf.com/actions/Catalog.action"
+    When A random animal is added to the cart
+    Then Validate that picked animal is in the cart
+
+  Scenario: Remove animal from cart
+    When Delete item from cart
+		Then Validate if the cart is now empty
+		
