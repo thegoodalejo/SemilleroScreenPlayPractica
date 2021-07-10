@@ -1,7 +1,5 @@
 package com.grupo3.stepdefs;
 
-
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -12,6 +10,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 import com.grupo3.questions.AnimalsInCart;
+import com.grupo3.util.Constants;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static com.grupo3.tasks.AddARandomProductToCart.addARandomProductToCart;
@@ -20,7 +19,7 @@ public class AddItemToCartStepDefinitions {
 
 	@Given("Quiero agregar un item al carrito")
 	public void quieroAgregarUnItemAlCarrito() {
-	    theActorCalled("X").wasAbleTo(Open.url("https://petstore.octoperf.com/actions/Catalog.action"));;
+	    theActorCalled(Constants.ACTOR).wasAbleTo(Open.url("https://petstore.octoperf.com/actions/Catalog.action"));;
 	}
 
 	@When("Busco {int} items y los agrego al carrito")

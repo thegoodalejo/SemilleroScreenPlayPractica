@@ -4,6 +4,7 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 import com.grupo3.model.Animal;
 import com.grupo3.questions.DeleteButton;
+import com.grupo3.util.Constants;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -32,7 +33,7 @@ public class ClickRemoveButton implements Task{
 	}
 	
 	public static ClickRemoveButton forLastItemAddedByActor(Actor a) {
-		Animal animal = a.recall("ADDED_ANIMAL");
+		Animal animal = a.recall(Constants.ADDED_ANIMAL);
 		return instrumented(ClickRemoveButton.class, animal);
 	}
 

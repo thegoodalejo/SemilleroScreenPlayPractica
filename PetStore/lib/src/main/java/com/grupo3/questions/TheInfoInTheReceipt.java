@@ -5,6 +5,7 @@ import com.grupo3.model.Animal;
 import com.grupo3.model.Purchase;
 import com.grupo3.model.ShoppingCart;
 import com.grupo3.ui.ReceiptPage;
+import com.grupo3.util.Constants;
 import com.grupo3.util.Date;
 
 import net.serenitybdd.screenplay.Actor;
@@ -18,7 +19,7 @@ public class TheInfoInTheReceipt implements Question<Boolean>{
 		
 		Date receiptDate = Date.fromString(Text.of(ReceiptPage.RECEIPT_GENERATED_DETAILS).viewedBy(actor).asString().split(" ")[2]);
 		
-		Purchase p = actor.recall("NEW_PURCHASE");
+		Purchase p = actor.recall(Constants.NEW_PURCHASE);
 		
 		Address receiptShippingAddress = new Address(
 					Text.of(ReceiptPage.SHIPPING_ADDR_FNAME).viewedBy(actor).asString(),

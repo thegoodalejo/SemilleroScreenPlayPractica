@@ -4,7 +4,6 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 
-import static com.grupo3.interactions.GetCartItems.rememberTheItemsInTheCart;
 import static com.grupo3.interactions.GetBillingInfo.rememberThePurchaseInformation;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;

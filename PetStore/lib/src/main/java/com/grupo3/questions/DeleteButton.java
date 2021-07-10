@@ -1,12 +1,8 @@
 package com.grupo3.questions;
 
-import java.util.List;
-
 import com.grupo3.model.Animal;
 import com.grupo3.ui.CartViewPage;
 
-import io.cucumber.java.bs.A;
-import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;

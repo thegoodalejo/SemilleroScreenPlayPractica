@@ -1,16 +1,14 @@
 package com.grupo3.questions;
 
-import java.util.Iterator;
-
 import org.openqa.selenium.NoSuchElementException;
 
 import com.grupo3.model.Animal;
 import com.grupo3.ui.CartViewPage;
+import com.grupo3.util.Constants;
 
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
-import net.serenitybdd.screenplay.questions.Text;
 
 public class AnimalsInCart implements Question<Boolean>{
 
@@ -40,7 +38,7 @@ public class AnimalsInCart implements Question<Boolean>{
 	}
 	
 	public static AnimalsInCart containsAnimalAddedByActor(Actor a) {
-		return new AnimalsInCart(a.recall("ADDED_ANIMAL"));
+		return new AnimalsInCart(a.recall(Constants.ADDED_ANIMAL));
 	}
 
 }

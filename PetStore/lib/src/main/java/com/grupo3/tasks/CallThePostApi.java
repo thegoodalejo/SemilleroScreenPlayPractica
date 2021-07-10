@@ -3,16 +3,13 @@ package com.grupo3.tasks;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 import com.grupo3.model.ApiPost;
-import com.grupo3.model.ApiUser;
+import com.grupo3.util.Constants;
 import com.grupo3.util.File;
-
-import net.serenitybdd.rest.SerenityRest;
 
 import static com.grupo3.util.Constants.AUTH_TOKEN;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.rest.interactions.Get;
 import net.serenitybdd.screenplay.rest.interactions.Post;
 
 public class CallThePostApi implements Task{
@@ -44,7 +41,7 @@ public class CallThePostApi implements Task{
 		
 		actor.attemptsTo(
 					Post.to(endpoint).with(
-								req -> req.header("Content-Type", "application/json")
+								req -> req.header("Content-Type", Constants.CONTENT_TYPE)
 								.body(new ApiPost(postTitle, postBody))
 								.auth().oauth2(AUTH_TOKEN)
 							)

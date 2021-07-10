@@ -3,7 +3,7 @@ package com.grupo3.stepdefs;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
-import com.grupo3.questions.TheLatestApiResponse;
+import com.grupo3.questions.GetWithoutAuth;
 import com.grupo3.tasks.CallTheGetApiNoAuth;
 
 import io.cucumber.java.en.Then;
@@ -17,9 +17,9 @@ public class GetWithoutAuthStepDefinition
 		theActorInTheSpotlight().wasAbleTo(CallTheGetApiNoAuth.onEndpoint(endpoint));
 	}
 
-	@Then("Validar que la solicitud retorne el codigo {int} y id {int}")
-	public void validarQueLaSolicitudRetorneElCodigoYId(Integer code, Integer id)
+	@Then("Validar que la solicitud retorne el id {int}")
+	public void validarQueLaSolicitudRetorneElId(Integer id)
 	{
-		theActorInTheSpotlight().should(seeThat(TheLatestApiResponse.shouldHave("code", code).and("data/id", id)));
+		theActorInTheSpotlight().should(seeThat(GetWithoutAuth.shouldHave(id)));
 	}
 }

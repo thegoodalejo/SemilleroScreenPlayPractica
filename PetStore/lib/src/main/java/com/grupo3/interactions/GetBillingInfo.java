@@ -2,7 +2,6 @@ package com.grupo3.interactions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.questions.Value;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
@@ -10,6 +9,7 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 import com.grupo3.model.Address;
 import com.grupo3.model.Purchase;
 import com.grupo3.ui.PaymentPage;
+import com.grupo3.util.Constants;
 
 public class GetBillingInfo implements Task{
 
@@ -34,8 +34,8 @@ public class GetBillingInfo implements Task{
 		
 		if (differentAddress) {
 			Purchase newPurchase = new Purchase(addr, cardNumber, cardType, cardExpiry);
-			newPurchase.setShoppingCart(actor.recall("SHOPPING_CART"));
-			actor.remember("NEW_PURCHASE", newPurchase);
+			newPurchase.setShoppingCart(actor.recall(Constants.SHOPPING_CART));
+			actor.remember(Constants.NEW_PURCHASE, newPurchase);
 		}
 		
 	}

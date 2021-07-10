@@ -2,6 +2,7 @@ package com.grupo3.interactions;
 
 import com.grupo3.model.Animal;
 import com.grupo3.ui.ProductPage;
+import com.grupo3.util.Constants;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
@@ -28,7 +29,7 @@ public class MakeChoice implements Task{
 					Text.of(ProductPage.getDescriptionNo(chosenElement)).viewedBy(actor).asString(),
 					Text.of(ProductPage.getListPriceNo(chosenElement)).viewedBy(actor).asString()
 				);
-		actor.remember("ADDED_ANIMAL", a);
+		actor.remember(Constants.ADDED_ANIMAL, a);
 		
 		
 	}

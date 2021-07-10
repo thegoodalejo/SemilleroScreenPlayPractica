@@ -11,6 +11,7 @@ import com.grupo3.model.ShoppingCart;
 import com.grupo3.questions.AmountOfElements;
 import static com.grupo3.questions.NumberOfItem.numberOfItem;
 import com.grupo3.ui.CartViewPage;
+import com.grupo3.util.Constants;
 
 public class GetCartItems implements Task{
 
@@ -32,7 +33,7 @@ public class GetCartItems implements Task{
 			}
 					
 		}
-		actor.remember("SHOPPING_CART", cart);
+		actor.remember(Constants.SHOPPING_CART, cart);
 		
 	}
 	

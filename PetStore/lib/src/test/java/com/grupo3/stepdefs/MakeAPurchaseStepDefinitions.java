@@ -7,16 +7,16 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 import com.grupo3.questions.TheInfoInTheReceipt;
+import com.grupo3.util.Constants;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
 
 public class MakeAPurchaseStepDefinitions {
 
 	@When("Termino el proceso de compra")
 	public void terminoElProcesoDeCompra() {
-	    theActorCalled("X").wasAbleTo(rememberTheItemsInTheCart());
+	    theActorCalled(Constants.ACTOR).wasAbleTo(rememberTheItemsInTheCart());
 	}
 
 	@When("Ingreso la informacion pertinente")

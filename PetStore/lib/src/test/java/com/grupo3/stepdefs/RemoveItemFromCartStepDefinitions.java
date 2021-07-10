@@ -28,7 +28,7 @@ public class RemoveItemFromCartStepDefinitions {
 
 	@Then("Deberia ver que el elemento ya no esta en el carrito")
 	public void deberiaVerQueElElementoYaNoEstaEnElCarrito() {
-		Animal animal = theActorInTheSpotlight().recall("ADDED_ANIMAL");
+		Animal animal = theActorInTheSpotlight().recall(Constants.ADDED_ANIMAL);
 	    theActorInTheSpotlight().should(seeThat(theItemWithTheAnimal(animal).isNoLongerInTheCart()));
 	}
 	

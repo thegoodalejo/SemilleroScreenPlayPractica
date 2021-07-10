@@ -8,10 +8,9 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-			glue = "com.grupo3.stepdefs",
-			features = "src/test/resources/com/guacha/features/NOMBREDELFEATURE.feature",
-			snippets = SnippetType.CAMELCASE
-		)
-public class RunnerGuide {
-
-}
+	glue = "com.grupo3.stepdefs",
+	features = "src/test/resources/com/grupo3/features/post_without_auth.feature",
+	snippets = SnippetType.CAMELCASE
+)
+public class PostWithoutAuth
+{}

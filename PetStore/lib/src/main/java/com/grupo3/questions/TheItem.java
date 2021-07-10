@@ -1,6 +1,5 @@
 package com.grupo3.questions;
 
-import java.util.Iterator;
 import java.util.List;
 
 import org.openqa.selenium.NoSuchElementException;

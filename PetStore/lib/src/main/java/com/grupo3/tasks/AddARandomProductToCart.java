@@ -1,7 +1,6 @@
 package com.grupo3.tasks;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
-import static com.grupo3.util.Constants.AUTH_TOKEN;
 
 import com.grupo3.interactions.ClickRandomAddToCartButton;
 import com.grupo3.interactions.ClickRandomElement;

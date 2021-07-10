@@ -2,7 +2,6 @@ package com.grupo3.questions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
-import net.serenitybdd.screenplay.questions.WebElementQuestion;
 import net.serenitybdd.screenplay.targets.Target;
 
 public class AmountOfElements implements Question<Integer> {

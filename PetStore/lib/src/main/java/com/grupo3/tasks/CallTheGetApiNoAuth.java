@@ -2,6 +2,8 @@ package com.grupo3.tasks;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
+import com.grupo3.util.Constants;
+
 import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -20,10 +22,9 @@ public class CallTheGetApiNoAuth implements Task
 	public <T extends Actor> void performAs(T actor)
 	{
 		actor.attemptsTo(Get.resource(endpoint));
-		SerenityRest.lastResponse().statusCode();
-		System.out.println("==============================================");
-		System.out.println("ENPOINT: " + endpoint);
-		System.out.println("============================================== \n");	
+		String json = SerenityRest.lastResponse().jsonPath().prettyPrint();
+		actor.remember(Constants.TEXT_ID, json);
+		System.out.println("============================================== \n " + json);
 	}
 	
 	public static CallTheGetApiNoAuth onEndpoint(String endpoint)
