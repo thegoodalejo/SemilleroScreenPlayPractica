@@ -1,4 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Finish buy request on JPetStore" skipped="0" tests="1" time="25.95" timestamp="2021-07-09 11:53:00"><testcase name="Finish buy request on JPetStore"><error type="java.lang.NullPointerException"/><system-err>null&#13;
-com.sophos.semillero.stepdefinitions.FinishBuyRequestStepDefinitions.validateThatReceiptInformationMatchesOrder(FinishBuyRequestStepDefinitions.java:93)&#13;
-✽.Validate that receipt information matches order(file:///C:/Repos/ScreenPlay%20Parabank/SemilleroScreenPlayPractica/JPetStore/lib/src/test/resources/features/05_finish_buy_request.feature:19)&#13;
-</system-err></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Finish buy request on JPetStore" skipped="0" tests="1" time="31.53" timestamp="2021-07-10 12:08:39"><testcase name="Finish buy request on JPetStore"/></testsuite>

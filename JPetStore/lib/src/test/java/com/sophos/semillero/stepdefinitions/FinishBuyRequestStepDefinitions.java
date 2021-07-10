@@ -68,6 +68,7 @@ public class FinishBuyRequestStepDefinitions {
 	@When("Confirm order information")
 	public void confirmOrderInformation() {		
 		OrderInfoModel orderInfo = new OrderInfoModel(theActorInTheSpotlight());
+		theActorInTheSpotlight().remember("orderInfo", orderInfo);
 		
 		theActorInTheSpotlight().wasAbleTo(GoToPageGivenByTarget.usingButtonOrLink(CheckoutPage.BTN_CONTINUE));
 		
