@@ -56,7 +56,7 @@ public class RemoveAnimalFromCartStepDefinitions {
 	@Then("Validate if the cart is now empty")
 	public void validateIfTheCartIsNowEmpty() {
 		String strEmptyCartMsg = "Your cart is empty.";
-		theActorInTheSpotlight().should(seeThat(TextObtained.in(CartPage.TXT_EMPTY_CART),
+		theActorInTheSpotlight().should(seeThat(TextObtained.from(CartPage.TXT_EMPTY_CART),
 				IsEqual.equalTo(strEmptyCartMsg)).orComplainWith(ExceptionMsg.class,
 						"Error when validating if the cart is now empty"));
 		

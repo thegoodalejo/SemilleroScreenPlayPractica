@@ -7,19 +7,19 @@ import net.serenitybdd.screenplay.targets.Target;
 
 public class TextObtained implements Question<String> {
 
-	private Target strObtenido;
+	private Target tarTextOrigin;
 
-	public TextObtained(Target strObtenido) {
-		this.strObtenido = strObtenido;
+	public TextObtained(Target tarTextOrigin) {
+		this.tarTextOrigin = tarTextOrigin;
 	}
 
 	@Override
 	public String answeredBy(Actor actor) {
-		return Text.of(strObtenido).viewedBy(actor).asString();
+		return tarTextOrigin.resolveFor(actor).getText();
 	}
 
-	public static TextObtained in(Target text) {
-		return new TextObtained(text);
+	public static TextObtained from(Target tarTextOrigin) {
+		return new TextObtained(tarTextOrigin);
 	}
 
 }

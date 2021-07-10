@@ -1,7 +1,5 @@
 package com.sophos.semillero.model;
 
-import java.util.ArrayList;
-
 import com.sophos.semillero.ui.CheckoutPage;
 
 import net.serenitybdd.screenplay.Actor;

@@ -154,7 +154,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 09-07-2021 06:31</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 09-07-2021 23:53</span>
     <br style="clear:left"/>
 </div>
 
@@ -198,9 +198,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">Finish buy request on JPetStore
+                                <span class="error-color">Finish buy request on JPetStore
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -216,11 +216,50 @@
 
     <div class="story-title">
         <h3>Scenario:</h3>
-        <div class="scenario">Given Go to checkout page<br>When Choose card type &lt;Card Type&gt; with number &lt;Card Number&gt; and date &lt;Card Expiry Date&gt;<br>And Confirm order information<br>Then Validate that receipt information matches order</div>
+        <div class="scenario">Given Purchasing has ended<br>When Choose card type &lt;Card Type&gt; with number &lt;Card Number&gt; and date &lt;Card Expiry Date&gt;<br>And Confirm order information<br>Then Validate that receipt information matches order</div>
     </div>
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Null pointer exception</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.NullPointerException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.sophos.semillero.stepdefinitions.FinishBuyRequestStepDefinitions.validateThatReceiptInformationMatchesOrder(FinishBuyRequestStepDefinitions.java:93)<br />✽.Validate that receipt information matches order(file:///C:/Repos/ScreenPlay%20Parabank/SemilleroScreenPlayPractica/JPetStore/lib/src/test/resources/features/05_finish_buy_request.feature:19)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource3112362705604520871.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
                 <img src="b141cb61e781a416ae46df6ac84982363f7b1863fdd0f2e5812ff65889f5bc84.png" title=" Example: {Card Type=&quot;MasterCard&quot;, Card Number=&quot;123456789123456&quot;, Card Expiry Date=&quot;06/26&quot;}" width="1034"/>
@@ -253,32 +292,32 @@
                 <img src="181edee9f4fa2ee4a0ace66a2ea32989747f7c1cc791ceeed345affa1f0d9c1f.png" title=" Given I am at the homepage (completed)" width="1034"/>
                 <img src="181edee9f4fa2ee4a0ace66a2ea32989747f7c1cc791ceeed345affa1f0d9c1f.png" title=" When A random animal is added to the cart" width="1034"/>
                 <img src="181edee9f4fa2ee4a0ace66a2ea32989747f7c1cc791ceeed345affa1f0d9c1f.png" title=" Grupo 4 go to category page" width="1034"/>
-                <img src="181edee9f4fa2ee4a0ace66a2ea32989747f7c1cc791ceeed345affa1f0d9c1f.png" title=" Grupo 4 clicks on Birds category button" width="1034"/>
-                <img src="33c543be3e6a97a50e443f28a6c74f6b0ee4593c8ec91688a0e02dceb2e2f316.png" title=" Grupo 4 clicks on Birds category button (completed)" width="1034"/>
-                <img src="33c543be3e6a97a50e443f28a6c74f6b0ee4593c8ec91688a0e02dceb2e2f316.png" title=" Grupo 4 go to category page (completed)" width="1034"/>
-                <img src="33c543be3e6a97a50e443f28a6c74f6b0ee4593c8ec91688a0e02dceb2e2f316.png" title=" Grupo 4 select animal species" width="1034"/>
-                <img src="33c543be3e6a97a50e443f28a6c74f6b0ee4593c8ec91688a0e02dceb2e2f316.png" title=" Grupo 4 clicks on Item button" width="1034"/>
-                <img src="73f7f9f1dce29173073e4f5e7b8bd349047a4f9cf931b10b5c6a42616eea2eef.png" title=" Grupo 4 clicks on Item button (completed)" width="1034"/>
-                <img src="73f7f9f1dce29173073e4f5e7b8bd349047a4f9cf931b10b5c6a42616eea2eef.png" title=" Grupo 4 select animal species (completed)" width="1034"/>
-                <img src="73f7f9f1dce29173073e4f5e7b8bd349047a4f9cf931b10b5c6a42616eea2eef.png" title=" Grupo 4 select item" width="1034"/>
-                <img src="73f7f9f1dce29173073e4f5e7b8bd349047a4f9cf931b10b5c6a42616eea2eef.png" title=" Grupo 4 clicks on Item detail button" width="1034"/>
-                <img src="902220069628ad40d64dc4b8f5637ee42a2be16f9d9d39c33ab21e14a996d243.png" title=" Grupo 4 clicks on Item detail button (completed)" width="1034"/>
-                <img src="902220069628ad40d64dc4b8f5637ee42a2be16f9d9d39c33ab21e14a996d243.png" title=" Grupo 4 select item (completed)" width="1034"/>
-                <img src="902220069628ad40d64dc4b8f5637ee42a2be16f9d9d39c33ab21e14a996d243.png" title=" Grupo 4 add animal to cart from detail page" width="1034"/>
-                <img src="902220069628ad40d64dc4b8f5637ee42a2be16f9d9d39c33ab21e14a996d243.png" title=" Grupo 4 clicks on Add to cart button" width="1034"/>
-                <img src="b920c2fbf5c3460d68ef660b54a1e6d3596868029f207c20a0cba73f48ac3734.png" title=" Grupo 4 clicks on Add to cart button (completed)" width="1034"/>
-                <img src="b920c2fbf5c3460d68ef660b54a1e6d3596868029f207c20a0cba73f48ac3734.png" title=" Grupo 4 add animal to cart from detail page (completed)" width="1034"/>
-                <img src="b920c2fbf5c3460d68ef660b54a1e6d3596868029f207c20a0cba73f48ac3734.png" title=" When A random animal is added to the cart (completed)" width="1034"/>
-                <img src="b920c2fbf5c3460d68ef660b54a1e6d3596868029f207c20a0cba73f48ac3734.png" title=" Then Validate that picked animal is in the cart" width="1034"/>
-                <img src="b920c2fbf5c3460d68ef660b54a1e6d3596868029f207c20a0cba73f48ac3734.png" title=" Then text obtained should be 'EST-18'" width="1034"/>
-                <img src="b920c2fbf5c3460d68ef660b54a1e6d3596868029f207c20a0cba73f48ac3734.png" title=" Then text obtained should be 'EST-18' (completed)" width="1034"/>
-                <img src="b920c2fbf5c3460d68ef660b54a1e6d3596868029f207c20a0cba73f48ac3734.png" title=" Then Validate that picked animal is in the cart (completed)" width="1034"/>
-                <img src="b920c2fbf5c3460d68ef660b54a1e6d3596868029f207c20a0cba73f48ac3734.png" title=" Given Go to checkout page" width="1034"/>
-                <img src="b920c2fbf5c3460d68ef660b54a1e6d3596868029f207c20a0cba73f48ac3734.png" title=" Grupo 4 go to page given by target" width="1034"/>
-                <img src="b920c2fbf5c3460d68ef660b54a1e6d3596868029f207c20a0cba73f48ac3734.png" title=" Grupo 4 clicks on Proceed to checkout button" width="1034"/>
+                <img src="181edee9f4fa2ee4a0ace66a2ea32989747f7c1cc791ceeed345affa1f0d9c1f.png" title=" Grupo 4 clicks on Fish category button" width="1034"/>
+                <img src="4b6e2ced41605fa230a3642ee6b82ae5ab289f7e70d23e628bf24c2e6b963f5f.png" title=" Grupo 4 clicks on Fish category button (completed)" width="1034"/>
+                <img src="4b6e2ced41605fa230a3642ee6b82ae5ab289f7e70d23e628bf24c2e6b963f5f.png" title=" Grupo 4 go to category page (completed)" width="1034"/>
+                <img src="4b6e2ced41605fa230a3642ee6b82ae5ab289f7e70d23e628bf24c2e6b963f5f.png" title=" Grupo 4 select animal species" width="1034"/>
+                <img src="4b6e2ced41605fa230a3642ee6b82ae5ab289f7e70d23e628bf24c2e6b963f5f.png" title=" Grupo 4 clicks on Item button" width="1034"/>
+                <img src="458ca4722997bf23ea6fe2125256d41691f932ca3531cb87da195258af2fa1d4.png" title=" Grupo 4 clicks on Item button (completed)" width="1034"/>
+                <img src="458ca4722997bf23ea6fe2125256d41691f932ca3531cb87da195258af2fa1d4.png" title=" Grupo 4 select animal species (completed)" width="1034"/>
+                <img src="458ca4722997bf23ea6fe2125256d41691f932ca3531cb87da195258af2fa1d4.png" title=" Grupo 4 select item" width="1034"/>
+                <img src="458ca4722997bf23ea6fe2125256d41691f932ca3531cb87da195258af2fa1d4.png" title=" Grupo 4 clicks on Item detail button" width="1034"/>
+                <img src="aedf1e48e0c71fcb07fecd1161e0eccf22e558e6efecabb274728839e669dbdc.png" title=" Grupo 4 clicks on Item detail button (completed)" width="1034"/>
+                <img src="aedf1e48e0c71fcb07fecd1161e0eccf22e558e6efecabb274728839e669dbdc.png" title=" Grupo 4 select item (completed)" width="1034"/>
+                <img src="aedf1e48e0c71fcb07fecd1161e0eccf22e558e6efecabb274728839e669dbdc.png" title=" Grupo 4 add animal to cart from detail page" width="1034"/>
+                <img src="aedf1e48e0c71fcb07fecd1161e0eccf22e558e6efecabb274728839e669dbdc.png" title=" Grupo 4 clicks on Add to cart button" width="1034"/>
+                <img src="58c3dbd5a335e95750b8e09c9d794013a693f7271c06c02a5f1d788acb267edb.png" title=" Grupo 4 clicks on Add to cart button (completed)" width="1034"/>
+                <img src="58c3dbd5a335e95750b8e09c9d794013a693f7271c06c02a5f1d788acb267edb.png" title=" Grupo 4 add animal to cart from detail page (completed)" width="1034"/>
+                <img src="58c3dbd5a335e95750b8e09c9d794013a693f7271c06c02a5f1d788acb267edb.png" title=" When A random animal is added to the cart (completed)" width="1034"/>
+                <img src="58c3dbd5a335e95750b8e09c9d794013a693f7271c06c02a5f1d788acb267edb.png" title=" Then Validate that picked animal is in the cart" width="1034"/>
+                <img src="58c3dbd5a335e95750b8e09c9d794013a693f7271c06c02a5f1d788acb267edb.png" title=" Then text obtained should be 'EST-1'" width="1034"/>
+                <img src="58c3dbd5a335e95750b8e09c9d794013a693f7271c06c02a5f1d788acb267edb.png" title=" Then text obtained should be 'EST-1' (completed)" width="1034"/>
+                <img src="58c3dbd5a335e95750b8e09c9d794013a693f7271c06c02a5f1d788acb267edb.png" title=" Then Validate that picked animal is in the cart (completed)" width="1034"/>
+                <img src="58c3dbd5a335e95750b8e09c9d794013a693f7271c06c02a5f1d788acb267edb.png" title=" Given Purchasing has ended" width="1034"/>
+                <img src="58c3dbd5a335e95750b8e09c9d794013a693f7271c06c02a5f1d788acb267edb.png" title=" Grupo 4 go to page given by target" width="1034"/>
+                <img src="58c3dbd5a335e95750b8e09c9d794013a693f7271c06c02a5f1d788acb267edb.png" title=" Grupo 4 clicks on Proceed to checkout button" width="1034"/>
                 <img src="7f7f8b9ac6149f957b527d5038bd75ff34a0e379c536b89c99ef1857cdc7952e.png" title=" Grupo 4 clicks on Proceed to checkout button (completed)" width="1034"/>
                 <img src="7f7f8b9ac6149f957b527d5038bd75ff34a0e379c536b89c99ef1857cdc7952e.png" title=" Grupo 4 go to page given by target (completed)" width="1034"/>
-                <img src="7f7f8b9ac6149f957b527d5038bd75ff34a0e379c536b89c99ef1857cdc7952e.png" title=" Given Go to checkout page (completed)" width="1034"/>
+                <img src="7f7f8b9ac6149f957b527d5038bd75ff34a0e379c536b89c99ef1857cdc7952e.png" title=" Given Purchasing has ended (completed)" width="1034"/>
                 <img src="7f7f8b9ac6149f957b527d5038bd75ff34a0e379c536b89c99ef1857cdc7952e.png" title=" When Choose card type &quot;MasterCard&quot; with number &quot;123456789123456&quot; and date &quot;06/26&quot;" width="1034"/>
                 <img src="7f7f8b9ac6149f957b527d5038bd75ff34a0e379c536b89c99ef1857cdc7952e.png" title=" Grupo 4 enter card details" width="1034"/>
                 <img src="7f7f8b9ac6149f957b527d5038bd75ff34a0e379c536b89c99ef1857cdc7952e.png" title=" Grupo 4 select MasterCard on Card type form" width="1034"/>
@@ -290,94 +329,19 @@
                 <img src="ab5709d881c0c4ccd4e6b5e631e0aeb954569039ff1957d4c5853fe13a3dada7.png" title=" Grupo 4 enter card details (completed)" width="1034"/>
                 <img src="ab5709d881c0c4ccd4e6b5e631e0aeb954569039ff1957d4c5853fe13a3dada7.png" title=" When Choose card type &quot;MasterCard&quot; with number &quot;123456789123456&quot; and date &quot;06/26&quot; (completed)" width="1034"/>
                 <img src="ab5709d881c0c4ccd4e6b5e631e0aeb954569039ff1957d4c5853fe13a3dada7.png" title=" And Confirm order information" width="1034"/>
-                <img src="ab5709d881c0c4ccd4e6b5e631e0aeb954569039ff1957d4c5853fe13a3dada7.png" title=" Grupo 4 go to page given by target" width="1034"/>
-                <img src="ab5709d881c0c4ccd4e6b5e631e0aeb954569039ff1957d4c5853fe13a3dada7.png" title=" Grupo 4 clicks on Continue button" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Grupo 4 clicks on Continue button (completed)" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Grupo 4 go to page given by target (completed)" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Grupo 4 validate billing info in confirm order" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'grupo'" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'grupo' (completed)" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'cuatro'" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'cuatro' (completed)" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'nowhere'" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'nowhere' (completed)" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'around'" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'around' (completed)" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'cartagena'" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'cartagena' (completed)" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'bolivar'" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'bolivar' (completed)" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be '130001'" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be '130001' (completed)" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'colombia'" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'colombia' (completed)" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'grupo'" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'grupo' (completed)" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'cuatro'" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'cuatro' (completed)" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'nowhere'" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'nowhere' (completed)" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'around'" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'around' (completed)" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'cartagena'" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'cartagena' (completed)" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'bolivar'" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'bolivar' (completed)" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be '130001'" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be '130001' (completed)" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'colombia'" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Then text obtained should be 'colombia' (completed)" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Grupo 4 validate billing info in confirm order (completed)" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Grupo 4 go to page given by target" width="1034"/>
-                <img src="cefa1ab519111d0983fe79185840ed4c8ab0aed1e9407f6babf30dea9c233cb9.png" title=" Grupo 4 clicks on Confirm button" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Grupo 4 clicks on Confirm button (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Grupo 4 go to page given by target (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" And Confirm order information (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then Validate that receipt information matches order" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Grupo 4 validate receipt" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained from string should be '2021/07/09'" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained from string should be '2021/07/09' (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'MasterCard'" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'MasterCard' (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained from string should be '123456789123456'" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained from string should be '123456789123456' (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be '06/26'" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be '06/26' (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'grupo'" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'grupo' (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'cuatro'" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'cuatro' (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'nowhere'" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'nowhere' (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'around'" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'around' (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'cartagena'" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'cartagena' (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'bolivar'" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'bolivar' (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be '130001'" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be '130001' (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'colombia'" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'colombia' (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'grupo'" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'grupo' (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'cuatro'" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'cuatro' (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'nowhere'" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'nowhere' (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'around'" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'around' (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'cartagena'" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'cartagena' (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'bolivar'" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'bolivar' (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be '130001'" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be '130001' (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'colombia'" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then text obtained should be 'colombia' (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Grupo 4 validate receipt (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Then Validate that receipt information matches order (completed)" width="1034"/>
-                <img src="09ed1ed0d1fcbe5bc4dcff6cac7f7d7d56c653142ef54a0f620f2f94158f01e0.png" title=" Example: {Card Type=&quot;MasterCard&quot;, Card Number=&quot;123456789123456&quot;, Card Expiry Date=&quot;06/26&quot;} (completed): <span class='success-color'>SUCCESS</span>" width="1034"/>
+                <img src="2342036b1d419de44bb781a3652a4001e54dac8be586b3625cb3ed50fb3d9089.png" title=" Grupo 4 go to page given by target" width="1034"/>
+                <img src="2342036b1d419de44bb781a3652a4001e54dac8be586b3625cb3ed50fb3d9089.png" title=" Grupo 4 clicks on Continue button" width="1034"/>
+                <img src="1d9fcd22e6194e26c3546b306deccae8f5bb83dede3981aa051cdb694af92e7f.png" title=" Grupo 4 clicks on Continue button (completed)" width="1034"/>
+                <img src="1d9fcd22e6194e26c3546b306deccae8f5bb83dede3981aa051cdb694af92e7f.png" title=" Grupo 4 go to page given by target (completed)" width="1034"/>
+                <img src="1d9fcd22e6194e26c3546b306deccae8f5bb83dede3981aa051cdb694af92e7f.png" title=" Then confirm order info matches should be (true)" width="1034"/>
+                <img src="1d9fcd22e6194e26c3546b306deccae8f5bb83dede3981aa051cdb694af92e7f.png" title=" Then confirm order info matches should be (true) (completed)" width="1034"/>
+                <img src="1d9fcd22e6194e26c3546b306deccae8f5bb83dede3981aa051cdb694af92e7f.png" title=" And Confirm order information (completed)" width="1034"/>
+                <img src="1d9fcd22e6194e26c3546b306deccae8f5bb83dede3981aa051cdb694af92e7f.png" title=" Then Validate that receipt information matches order" width="1034"/>
+                <img src="1d9fcd22e6194e26c3546b306deccae8f5bb83dede3981aa051cdb694af92e7f.png" title=" Grupo 4 go to page given by target" width="1034"/>
+                <img src="1d9fcd22e6194e26c3546b306deccae8f5bb83dede3981aa051cdb694af92e7f.png" title=" Grupo 4 clicks on Confirm button" width="1034"/>
+                <img src="299ea6b17d1da8f7e5dcf0c9d0756a11cf0c4e5ef0552eb8adb414c2a5863c9f.png" title=" Grupo 4 clicks on Confirm button (completed)" width="1034"/>
+                <img src="299ea6b17d1da8f7e5dcf0c9d0756a11cf0c4e5ef0552eb8adb414c2a5863c9f.png" title=" Grupo 4 go to page given by target (completed)" width="1034"/>
+                <img src="299ea6b17d1da8f7e5dcf0c9d0756a11cf0c4e5ef0552eb8adb414c2a5863c9f.png" title=" Then Validate that receipt information matches order (completed): <span class='error-color'>ERROR</span>" width="1034"/>
             </div>
         </div>
 

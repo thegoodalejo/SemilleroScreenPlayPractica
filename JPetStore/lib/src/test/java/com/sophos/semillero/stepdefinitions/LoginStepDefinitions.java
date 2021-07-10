@@ -45,7 +45,7 @@ public class LoginStepDefinitions {
 	@Then("Validate successful login")
 	public void validateSuccessfulLogin() {
 		String strTitleWhenLoggedIn = "Sign Out";
-		theActorInTheSpotlight().should(seeThat(TextObtained.in(HomePage.BTN_SIGN_OUT), IsEqual.equalTo(strTitleWhenLoggedIn))
+		theActorInTheSpotlight().should(seeThat(TextObtained.from(HomePage.BTN_SIGN_OUT), IsEqual.equalTo(strTitleWhenLoggedIn))
 				.orComplainWith(ExceptionMsg.class, "Error when logging in"));
 	}
 }

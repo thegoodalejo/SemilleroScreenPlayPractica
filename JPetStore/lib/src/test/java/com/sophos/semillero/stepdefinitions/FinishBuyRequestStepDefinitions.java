@@ -19,11 +19,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import com.sophos.semillero.exceptions.ExceptionMsg;
 import com.sophos.semillero.model.OrderCardModel;
 import com.sophos.semillero.model.OrderInfoModel;
-import com.sophos.semillero.questions.OrderInfoMatches;
+import com.sophos.semillero.questions.ConfirmOrderInfoMatches;
 import com.sophos.semillero.questions.TextObtained;
 import com.sophos.semillero.tasks.EnterCardDetails;
 import com.sophos.semillero.tasks.GoToPageGivenByTarget;
-import com.sophos.semillero.tasks.ValidateBillingInfoInConfirmOrder;
 import com.sophos.semillero.tasks.ValidateReceipt;
 import com.sophos.semillero.ui.CartPage;
 import com.sophos.semillero.ui.CheckoutPage;
@@ -56,7 +55,6 @@ public class FinishBuyRequestStepDefinitions {
 	public void purchasingHasEnded() {
 		
 		theActorCalled("Grupo 4").wasAbleTo(GoToPageGivenByTarget.usingButtonOrLink(CartPage.BTN_CHECKOUT));
-		theActorInTheSpotlight().wasAbleTo(GoToPageGivenByTarget.usingButtonOrLink(CartPage.BTN_CHECKOUT));
 	}
 
 	@When("Choose card type {string} with number {string} and date {string}")
@@ -68,18 +66,17 @@ public class FinishBuyRequestStepDefinitions {
 	}
 
 	@When("Confirm order information")
-	public void confirmOrderInformation() {
-		
+	public void confirmOrderInformation() {		
 		OrderInfoModel orderInfo = new OrderInfoModel(theActorInTheSpotlight());
-		
-		String strOrderDate = ConfirmOrderPage.TXT_ORDER_DATE.resolveFor(theActorInTheSpotlight()).getText();
-		theActorInTheSpotlight().remember("strOrderDate", strOrderDate);
 		
 		theActorInTheSpotlight().wasAbleTo(GoToPageGivenByTarget.usingButtonOrLink(CheckoutPage.BTN_CONTINUE));
 		
-		theActorInTheSpotlight().should(seeThat(OrderInfoMatches.enteredInfo(orderInfo),
+		String strOrderDate = ConfirmOrderPage.TXT_ORDER_DATE.resolveFor(theActorInTheSpotlight()).getText();
+		theActorInTheSpotlight().remember("strOrderDate", strOrderDate);
+
+		theActorInTheSpotlight().should(seeThat(ConfirmOrderInfoMatches.enteredInfo(orderInfo),
 				IsEqual.equalTo(Boolean.TRUE)).orComplainWith(
-						ExceptionMsg.class, "Error when validating that the order info matches"));
+						ExceptionMsg.class, "Error when validating that confirm order info matches"));
 		
 	}
 
@@ -92,6 +89,7 @@ public class FinishBuyRequestStepDefinitions {
 		String strOrderDate = strArrGeneratedDetails[2];
 		System.out.println("Nice! Your newly created order has an ID of " + strOrderId);
 		
+		// The web server has a different time zone than here (+5 hours), that needs to be taken into account
 		theActorInTheSpotlight().wasAbleTo(ValidateReceipt.ofOrder(strOrderDate));
 	}
 }

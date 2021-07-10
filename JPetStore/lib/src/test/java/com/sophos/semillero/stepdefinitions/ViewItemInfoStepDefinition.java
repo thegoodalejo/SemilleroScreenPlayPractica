@@ -87,6 +87,6 @@ public class ViewItemInfoStepDefinition {
 	public void validoQueElID_ITEMSeaElMismoEnElDetalle() {
 		String strItemIdToSeeDetail = theActorInTheSpotlight().recall("strItemIdToSeeDetail");
 		theActorInTheSpotlight()
-				.should(seeThat(TextObtained.in(DetailPage.TXT_ITEM_ID), IsEqual.equalTo(strItemIdToSeeDetail)));
+				.should(seeThat(TextObtained.from(DetailPage.TXT_ITEM_ID), IsEqual.equalTo(strItemIdToSeeDetail)));
 	}
 }

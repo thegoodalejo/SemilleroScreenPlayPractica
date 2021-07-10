@@ -46,7 +46,7 @@ public class AddAnimalToCartStepDefinitions {
 	public void iAmAtTheHomePage() {
 		String strTitleWhenLoggedIn = "Welcome grupo!";
 		theActorCalled("Grupo 4")
-				.should(seeThat(TextObtained.in(HomePage.TXT_LOGGED_IN), IsEqual.equalTo(strTitleWhenLoggedIn)));
+				.should(seeThat(TextObtained.from(HomePage.TXT_LOGGED_IN), IsEqual.equalTo(strTitleWhenLoggedIn)));
 	}
 
 	@When("A random animal is added to the cart")
@@ -85,7 +85,7 @@ public class AddAnimalToCartStepDefinitions {
 	public void validateThatPickedAnimalIsInTheCart() {
 		String strItemId = theActorInTheSpotlight().recall("strItemDetailId");
 		theActorInTheSpotlight()
-				.should(seeThat(TextObtained.in(CartPage.BTN_ITEM_ID.of(strItemId)), IsEqual.equalTo(strItemId)));
+				.should(seeThat(TextObtained.from(CartPage.BTN_ITEM_ID.of(strItemId)), IsEqual.equalTo(strItemId)));
 	}
 
 }

@@ -50,7 +50,7 @@ public class RegisterNewUserStepDefinitions {
 	@Then("Validate successful account creation")
 	public void validateSuccessfulAccountCreation() {
 		String strLogin = "Sign In";
-		theActorInTheSpotlight().should(seeThat(TextObtained.in(HomePage.BTN_LOGIN), IsEqual.equalTo(strLogin))
+		theActorInTheSpotlight().should(seeThat(TextObtained.from(HomePage.BTN_LOGIN), IsEqual.equalTo(strLogin))
 				.orComplainWith(ExceptionMsg.class, "Error when registering user"));
 	}
 }

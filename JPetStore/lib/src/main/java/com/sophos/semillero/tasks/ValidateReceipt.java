@@ -21,6 +21,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 
 import org.hamcrest.core.IsEqual;
 
@@ -53,13 +54,13 @@ public class ValidateReceipt implements Task {
 		OrderCardModel ocmUserCard = actor.recall("ocmUserCard");
 		String strCardNum = ReceiptPage.TXT_CARD_NUMBER.resolveFor(theActorInTheSpotlight()).getText().split(" * ")[0];
 		actor.should(
-				seeThat(TextObtained.in(ReceiptPage.TXT_CARD_TYPE),
+				seeThat(TextObtained.from(ReceiptPage.TXT_CARD_TYPE),
 						IsEqual.equalTo(ocmUserCard.getStrCardType())).orComplainWith(
 								ExceptionMsg.class, "Error when checking card type"),
 				seeThat(TextObtainedFromString.in(strCardNum),
 						IsEqual.equalTo(ocmUserCard.getStrCardNumber())).orComplainWith(
 								ExceptionMsg.class, "Error when checking card number"),
-				seeThat(TextObtained.in(ReceiptPage.TXT_CARD_EXPIRY_DATE),
+				seeThat(TextObtained.from(ReceiptPage.TXT_CARD_EXPIRY_DATE),
 						IsEqual.equalTo(ocmUserCard.getStrCardExpiryDate())).orComplainWith(
 								ExceptionMsg.class, "Error when checking card expiry date")
 				);
@@ -67,53 +68,53 @@ public class ValidateReceipt implements Task {
 		// Validate that billing and shipping info match user info
 		OrderInfoModel ouimInfo = actor.recall("ouimInfo");
 		actor.should(
-				seeThat(TextObtained.in(ReceiptPage.TXT_BILLING_FIRST_NAME),
+				seeThat(TextObtained.from(ReceiptPage.TXT_BILLING_FIRST_NAME),
 				IsEqual.equalTo(ouimInfo.getStrFirstNameBilling())).orComplainWith(
 						ExceptionMsg.class, "Error when trying match for billing first name when confirming order"),
-				seeThat(TextObtained.in(ReceiptPage.TXT_BILLING_LAST_NAME),
+				seeThat(TextObtained.from(ReceiptPage.TXT_BILLING_LAST_NAME),
 						IsEqual.equalTo(ouimInfo.getStrLastNameBilling())).orComplainWith(
 								ExceptionMsg.class, "Error when trying match for billing last name when confirming order"),
-				seeThat(TextObtained.in(ReceiptPage.TXT_BILLING_ADDRESS_1),
+				seeThat(TextObtained.from(ReceiptPage.TXT_BILLING_ADDRESS_1),
 						IsEqual.equalTo(ouimInfo.getStrAddress1Billing())).orComplainWith(
 								ExceptionMsg.class, "Error when trying match for billing address 1 when confirming order"),
-				seeThat(TextObtained.in(ReceiptPage.TXT_BILLING_ADDRESS_2),
+				seeThat(TextObtained.from(ReceiptPage.TXT_BILLING_ADDRESS_2),
 						IsEqual.equalTo(ouimInfo.getStrAddress2Billing())).orComplainWith(
 								ExceptionMsg.class, "Error when trying match for billing address 2 when confirming order"),
-				seeThat(TextObtained.in(ReceiptPage.TXT_BILLING_CITY),
+				seeThat(TextObtained.from(ReceiptPage.TXT_BILLING_CITY),
 						IsEqual.equalTo(ouimInfo.getStrCityBilling())).orComplainWith(
 								ExceptionMsg.class, "Error when trying match for billing city when confirming order"),
-				seeThat(TextObtained.in(ReceiptPage.TXT_BILLING_STATE),
+				seeThat(TextObtained.from(ReceiptPage.TXT_BILLING_STATE),
 						IsEqual.equalTo(ouimInfo.getStrStateBilling())).orComplainWith(
 								ExceptionMsg.class, "Error when trying match for billing state when confirming order"),
-				seeThat(TextObtained.in(ReceiptPage.TXT_BILLING_ZIP),
+				seeThat(TextObtained.from(ReceiptPage.TXT_BILLING_ZIP),
 						IsEqual.equalTo(ouimInfo.getStrZipBilling())).orComplainWith(
 								ExceptionMsg.class, "Error when trying match for billing zip code when confirming order"),
-				seeThat(TextObtained.in(ReceiptPage.TXT_BILLING_COUNTRY),
+				seeThat(TextObtained.from(ReceiptPage.TXT_BILLING_COUNTRY),
 						IsEqual.equalTo(ouimInfo.getStrCountryBilling())).orComplainWith(
 								ExceptionMsg.class, "Error when trying match for billing country when confirming order"),
 				
-				seeThat(TextObtained.in(ReceiptPage.TXT_SHIPPING_FIRST_NAME),
+				seeThat(TextObtained.from(ReceiptPage.TXT_SHIPPING_FIRST_NAME),
 						IsEqual.equalTo(ouimInfo.getStrFirstNameShipping())).orComplainWith(
 								ExceptionMsg.class, "Error when trying match for shipping first name when confirming order"),
-						seeThat(TextObtained.in(ReceiptPage.TXT_SHIPPING_LAST_NAME),
+						seeThat(TextObtained.from(ReceiptPage.TXT_SHIPPING_LAST_NAME),
 								IsEqual.equalTo(ouimInfo.getStrLastNameShipping())).orComplainWith(
 										ExceptionMsg.class, "Error when trying match for shipping last name when confirming order"),
-						seeThat(TextObtained.in(ReceiptPage.TXT_SHIPPING_ADDRESS_1),
+						seeThat(TextObtained.from(ReceiptPage.TXT_SHIPPING_ADDRESS_1),
 								IsEqual.equalTo(ouimInfo.getStrAddress1Shipping())).orComplainWith(
 										ExceptionMsg.class, "Error when trying match for shipping address 1 when confirming order"),
-						seeThat(TextObtained.in(ReceiptPage.TXT_SHIPPING_ADDRESS_2),
+						seeThat(TextObtained.from(ReceiptPage.TXT_SHIPPING_ADDRESS_2),
 								IsEqual.equalTo(ouimInfo.getStrAddress2Shipping())).orComplainWith(
 										ExceptionMsg.class, "Error when trying match for shipping address 2 when confirming order"),
-						seeThat(TextObtained.in(ReceiptPage.TXT_SHIPPING_CITY),
+						seeThat(TextObtained.from(ReceiptPage.TXT_SHIPPING_CITY),
 								IsEqual.equalTo(ouimInfo.getStrCityShipping())).orComplainWith(
 										ExceptionMsg.class, "Error when trying match for shipping city when confirming order"),
-						seeThat(TextObtained.in(ReceiptPage.TXT_SHIPPING_STATE),
+						seeThat(TextObtained.from(ReceiptPage.TXT_SHIPPING_STATE),
 								IsEqual.equalTo(ouimInfo.getStrStateShipping())).orComplainWith(
 										ExceptionMsg.class, "Error when trying match for shipping state when confirming order"),
-						seeThat(TextObtained.in(ReceiptPage.TXT_SHIPPING_ZIP),
+						seeThat(TextObtained.from(ReceiptPage.TXT_SHIPPING_ZIP),
 								IsEqual.equalTo(ouimInfo.getStrZipShipping())).orComplainWith(
 										ExceptionMsg.class, "Error when trying match for shipping zip code when confirming order"),
-						seeThat(TextObtained.in(ReceiptPage.TXT_SHIPPING_COUNTRY),
+						seeThat(TextObtained.from(ReceiptPage.TXT_SHIPPING_COUNTRY),
 								IsEqual.equalTo(ouimInfo.getStrCountryShipping())).orComplainWith(
 										ExceptionMsg.class, "Error when trying match for shipping country when confirming order")
 				);

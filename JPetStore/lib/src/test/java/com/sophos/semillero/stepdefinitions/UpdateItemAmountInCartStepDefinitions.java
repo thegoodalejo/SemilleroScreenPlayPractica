@@ -35,7 +35,7 @@ public class UpdateItemAmountInCartStepDefinitions {
 	public void iAmInTheShoppintCartPage() {
 		String strShoppingCartPageTitle = "Shopping Cart";
 		theActorCalled("Grupo 4").should(
-				seeThat(TextObtained.in(CartPage.TXT_CART_PAGE_TITLE), IsEqual.equalTo(strShoppingCartPageTitle))
+				seeThat(TextObtained.from(CartPage.TXT_CART_PAGE_TITLE), IsEqual.equalTo(strShoppingCartPageTitle))
 				.orComplainWith(ExceptionMsg.class,
 						"Error when navigating to cart page"));
 	}
