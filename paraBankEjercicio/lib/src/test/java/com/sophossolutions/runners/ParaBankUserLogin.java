@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
 		glue = "com.sophossolutions.stepdefinitions",
-		features = "src/test/resources/features/para_bank_create_user.feature",
+		features = "src/test/resources/features/para_bank_login.feature",
 		snippets = SnippetType.CAMELCASE,
 		strict = true
 		)

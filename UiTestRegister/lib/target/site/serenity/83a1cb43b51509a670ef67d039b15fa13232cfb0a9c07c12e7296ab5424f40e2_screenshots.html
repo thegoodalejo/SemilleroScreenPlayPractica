@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">JPetStore</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="df16b468f6d780e2852c3b2ef7e431315f429a72a381ba9cd50b14712bf711aa.html">Registrar En La Pagina</a></span>
+                > <span class="truncate-60"><a
+                    href="83a1cb43b51509a670ef67d039b15fa13232cfb0a9c07c12e7296ab5424f40e2.html">Iniciar el registro </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 22-07-2021 11:20</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Registrar En La Pagina </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Yo quiero registrarme en la pagina UI Test
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Iniciar el registro
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="1d9dea8dce4f21b9f0c4153f2bcf2efd54097c0b6d5eeaaedec8e8f7bd2ddd80.png" title=" Given Quiero ingresar a la pagina principal" width="1366"/>
+                <img src="1d9dea8dce4f21b9f0c4153f2bcf2efd54097c0b6d5eeaaedec8e8f7bd2ddd80.png" title=" Juan Miguel opens the Home page" width="1366"/>
+                <img src="1d9dea8dce4f21b9f0c4153f2bcf2efd54097c0b6d5eeaaedec8e8f7bd2ddd80.png" title=" Juan Miguel clicks on Register new user" width="1366"/>
+                <img src="d5b04c47c132ba11e32bb0dfb429713b1329e4da9a5eee4f8032b08c0b2bf193.png" title=" Juan Miguel clicks on Register new user (completed)" width="1366"/>
+                <img src="d5b04c47c132ba11e32bb0dfb429713b1329e4da9a5eee4f8032b08c0b2bf193.png" title=" Given Quiero ingresar a la pagina principal (completed)" width="1366"/>
+                <img src="f116da8659be7e19f9d3a145e5171a41396dcb698089ef5137b3bb9ba0fc2c35.png" title=" When Registrarme con los datos del Usuario
+| firstName | Juan |
+| lastName | Blanco |
+| email | juan.blanco@sophossolutions.com |
+| dateOfBirth | October/1/1993 |
+| language | spanish |" width="1366"/>
+                <img src="f116da8659be7e19f9d3a145e5171a41396dcb698089ef5137b3bb9ba0fc2c35.png" title=" Juan miguel basic user data" width="1366"/>
+                <img src="ffb7a029d208dccb8f08269e41946e2bf74d62305a6199fd3732515c8226dffa.png" title=" Juan Miguel enters 'Juan' into Edit text of first name" width="1366"/>
+                <img src="72019920eb2ebba3a2544bddd3d243d26191c660e45933b95a2a477de2a97d32.png" title=" Juan Miguel enters 'Juan' into Edit text of first name (completed)" width="1366"/>
+                <img src="72019920eb2ebba3a2544bddd3d243d26191c660e45933b95a2a477de2a97d32.png" title=" Juan Miguel enters 'Blanco' into Edit text of last name" width="1366"/>
+                <img src="71a72e4b1f7a2aa1d4262adc8b36d2ee5f724eda0b0cf717b11f054af9beb357.png" title=" Juan Miguel enters 'Blanco' into Edit text of last name (completed)" width="1366"/>
+                <img src="71a72e4b1f7a2aa1d4262adc8b36d2ee5f724eda0b0cf717b11f054af9beb357.png" title=" Juan Miguel enters 'juan.blanco@sophossolutions.com' into Edit text of email" width="1366"/>
+                <img src="4840e5fbcd7efa779cabc0779746f2a113c88588d2c660ee1e35e0ae8680cbdc.png" title=" Juan Miguel enters 'juan.blanco@sophossolutions.com' into Edit text of email (completed)" width="1366"/>
+                <img src="4840e5fbcd7efa779cabc0779746f2a113c88588d2c660ee1e35e0ae8680cbdc.png" title=" Juan miguel select option by click" width="1366"/>
+                <img src="4840e5fbcd7efa779cabc0779746f2a113c88588d2c660ee1e35e0ae8680cbdc.png" title=" Juan Miguel clicks on Select for birth month" width="1366"/>
+                <img src="0a885293e69f4b51727250b72b2f5875af896eaf063b07d880b67bf93a3ed357.png" title=" Juan Miguel clicks on Select for birth month (completed)" width="1366"/>
+                <img src="0a885293e69f4b51727250b72b2f5875af896eaf063b07d880b67bf93a3ed357.png" title=" Juan Miguel clicks on Option Selected" width="1366"/>
+                <img src="fc1e21bcc2fa194e75591cc86504b33e43974d0391c97f7a5a05df4fee34a652.png" title=" Juan Miguel clicks on Option Selected (completed)" width="1366"/>
+                <img src="fc1e21bcc2fa194e75591cc86504b33e43974d0391c97f7a5a05df4fee34a652.png" title=" Juan miguel select option by click (completed)" width="1366"/>
+                <img src="fc1e21bcc2fa194e75591cc86504b33e43974d0391c97f7a5a05df4fee34a652.png" title=" Juan miguel select option by click" width="1366"/>
+                <img src="fc1e21bcc2fa194e75591cc86504b33e43974d0391c97f7a5a05df4fee34a652.png" title=" Juan Miguel clicks on Select for birth day" width="1366"/>
+                <img src="d24ddda6effe49ae9a0064a2b6eed9b3956e8af3619a2e970f4b4246f63d93e8.png" title=" Juan Miguel clicks on Select for birth day (completed)" width="1366"/>
+                <img src="d24ddda6effe49ae9a0064a2b6eed9b3956e8af3619a2e970f4b4246f63d93e8.png" title=" Juan Miguel clicks on Option Selected" width="1366"/>
+                <img src="cab2f073e6c7b2c394682122c74a86d1b698798f9c21938795d2af17652ab85b.png" title=" Juan Miguel clicks on Option Selected (completed)" width="1366"/>
+                <img src="cab2f073e6c7b2c394682122c74a86d1b698798f9c21938795d2af17652ab85b.png" title=" Juan miguel select option by click (completed)" width="1366"/>
+                <img src="cab2f073e6c7b2c394682122c74a86d1b698798f9c21938795d2af17652ab85b.png" title=" Juan miguel select option by click" width="1366"/>
+                <img src="cab2f073e6c7b2c394682122c74a86d1b698798f9c21938795d2af17652ab85b.png" title=" Juan Miguel clicks on Select for birth year" width="1366"/>
+                <img src="1722871abcb71755fe6a3a7f32282ba7e8d810006a45b51da03e11cb8e03056c.png" title=" Juan Miguel clicks on Select for birth year (completed)" width="1366"/>
+                <img src="1722871abcb71755fe6a3a7f32282ba7e8d810006a45b51da03e11cb8e03056c.png" title=" Juan Miguel clicks on Option Selected" width="1366"/>
+                <img src="fa23ee052ebf15bbcbe21f5cf2d19af677873cb4318f56b1b44b6141caa61057.png" title=" Juan Miguel clicks on Option Selected (completed)" width="1366"/>
+                <img src="fa23ee052ebf15bbcbe21f5cf2d19af677873cb4318f56b1b44b6141caa61057.png" title=" Juan miguel select option by click (completed)" width="1366"/>
+                <img src="fa23ee052ebf15bbcbe21f5cf2d19af677873cb4318f56b1b44b6141caa61057.png" title=" Juan Miguel enters 'spanish' into Edit text to search language" width="1366"/>
+                <img src="55ae07ce1adc95e5019d7ff43d7f3a097fc9b9f0b787535c4b22258236df611e.png" title=" Juan Miguel enters 'spanish' into Edit text to search language (completed)" width="1366"/>
+                <img src="55ae07ce1adc95e5019d7ff43d7f3a097fc9b9f0b787535c4b22258236df611e.png" title=" Juan Miguel clicks on Select for language" width="1366"/>
+                <img src="d611c50491633122627491627b5ada5f44caf222b68847017a576ea81bfeca4c.png" title=" Juan Miguel clicks on Select for language (completed)" width="1366"/>
+                <img src="d611c50491633122627491627b5ada5f44caf222b68847017a576ea81bfeca4c.png" title=" Juan Miguel clicks on Button to next" width="1366"/>
+                <img src="c74137251210110c8744674f451235624280e55259e692945e78a80858c9ce48.png" title=" Juan Miguel clicks on Button to next (completed)" width="1366"/>
+                <img src="c74137251210110c8744674f451235624280e55259e692945e78a80858c9ce48.png" title=" Juan miguel basic user data (completed)" width="1366"/>
+                <img src="c74137251210110c8744674f451235624280e55259e692945e78a80858c9ce48.png" title=" When Registrarme con los datos del Usuario
+| firstName | Juan |
+| lastName | Blanco |
+| email | juan.blanco@sophossolutions.com |
+| dateOfBirth | October/1/1993 |
+| language | spanish | (completed)" width="1366"/>
+                <img src="c554fac2cfc2c0bab2aa6371a47ff1ebe0aa5d3e4c0b9e7f4e2a4045cffbcd51.png" title=" And el cual vive en
+| location | Bucaramanga |
+| zipCode | 680004 |" width="1366"/>
+                <img src="c554fac2cfc2c0bab2aa6371a47ff1ebe0aa5d3e4c0b9e7f4e2a4045cffbcd51.png" title=" Juan miguel address user" width="1366"/>
+                <img src="c554fac2cfc2c0bab2aa6371a47ff1ebe0aa5d3e4c0b9e7f4e2a4045cffbcd51.png" title=" Juan Miguel enters 'Bucaramanga' into Edit text City" width="1366"/>
+                <img src="23e8867720bb8b41faed0badb0d1a0d42affc65b55b8ce849d28436d5f233a5c.png" title=" Juan Miguel enters 'Bucaramanga' into Edit text City (completed)" width="1366"/>
+                <img src="23e8867720bb8b41faed0badb0d1a0d42affc65b55b8ce849d28436d5f233a5c.png" title=" Juan Miguel clicks on Option city" width="1366"/>
+                <img src="827a5640cbb8e4240187b206708ddda29c0df15bd52198e5ee20e842d508d614.png" title=" Juan Miguel clicks on Option city (completed)" width="1366"/>
+                <img src="827a5640cbb8e4240187b206708ddda29c0df15bd52198e5ee20e842d508d614.png" title=" Juan Miguel enters '680004' into Edit text zip code" width="1366"/>
+                <img src="28aea2c9e314264223575072a5f6fabb7899664a894d30a2a0fff009e883619f.png" title=" Juan Miguel enters '680004' into Edit text zip code (completed)" width="1366"/>
+                <img src="28aea2c9e314264223575072a5f6fabb7899664a894d30a2a0fff009e883619f.png" title=" Juan Miguel clicks on Button to next" width="1366"/>
+                <img src="e461eff525cb8bc3bc21d8747a20ee3fdaf95823ea195929c65c94ef89f6218a.png" title=" Juan Miguel clicks on Button to next (completed)" width="1366"/>
+                <img src="e461eff525cb8bc3bc21d8747a20ee3fdaf95823ea195929c65c94ef89f6218a.png" title=" Juan miguel address user (completed)" width="1366"/>
+                <img src="e461eff525cb8bc3bc21d8747a20ee3fdaf95823ea195929c65c94ef89f6218a.png" title=" And el cual vive en
+| location | Bucaramanga |
+| zipCode | 680004 | (completed)" width="1366"/>
+                <img src="e66af4b827be6aea54b73821cd081b8adeea5bcd6e9164e2424786a7eb4700e2.png" title=" And y tiene los dispositivos
+| OS | Windows |
+| version | windows 10 |
+| language | Spanish |
+| mobile | Samsung |
+| model | Galaxy J5 Prime |
+| systemCel | Android 5.0 |" width="1366"/>
+                <img src="e66af4b827be6aea54b73821cd081b8adeea5bcd6e9164e2424786a7eb4700e2.png" title=" Juan miguel user devices" width="1366"/>
+                <img src="e66af4b827be6aea54b73821cd081b8adeea5bcd6e9164e2424786a7eb4700e2.png" title=" Juan miguel select option search type" width="1366"/>
+                <img src="e66af4b827be6aea54b73821cd081b8adeea5bcd6e9164e2424786a7eb4700e2.png" title=" Juan Miguel clicks on Activate edit text O.S." width="1366"/>
+                <img src="da149727e7c547d8fe92fb4d26d8cb78fc820bbe18096e09415cd281d4711090.png" title=" Juan Miguel clicks on Activate edit text O.S. (completed)" width="1366"/>
+                <img src="da149727e7c547d8fe92fb4d26d8cb78fc820bbe18096e09415cd281d4711090.png" title=" Juan Miguel enters 'Windows' into Edit text O.S." width="1366"/>
+                <img src="a6980a515781561d1dcce67c9b962fdc9df4bbcc7a306c141a8c9577546d4341.png" title=" Juan Miguel enters 'Windows' into Edit text O.S. (completed)" width="1366"/>
+                <img src="a6980a515781561d1dcce67c9b962fdc9df4bbcc7a306c141a8c9577546d4341.png" title=" Juan Miguel clicks on Option In search" width="1366"/>
+                <img src="cfabcda625d127dd8261429d32e5e29c7a2293611c212e8778366ea06c310edd.png" title=" Juan Miguel clicks on Option In search (completed)" width="1366"/>
+                <img src="cfabcda625d127dd8261429d32e5e29c7a2293611c212e8778366ea06c310edd.png" title=" Juan miguel select option search type (completed)" width="1366"/>
+                <img src="cfabcda625d127dd8261429d32e5e29c7a2293611c212e8778366ea06c310edd.png" title=" Juan miguel select option search type" width="1366"/>
+                <img src="cfabcda625d127dd8261429d32e5e29c7a2293611c212e8778366ea06c310edd.png" title=" Juan Miguel clicks on Activate edit text Version" width="1366"/>
+                <img src="51d839e786f9e4cd6085410caad72db65f6067e3e3249933c7f51726f34fcdc2.png" title=" Juan Miguel clicks on Activate edit text Version (completed)" width="1366"/>
+                <img src="51d839e786f9e4cd6085410caad72db65f6067e3e3249933c7f51726f34fcdc2.png" title=" Juan Miguel enters 'windows 10' into Edit text of version" width="1366"/>
+                <img src="23fe440569843e3baac36f16438fd728e6b03e09f35f983fde2ea61e78ea3a2e.png" title=" Juan Miguel enters 'windows 10' into Edit text of version (completed)" width="1366"/>
+                <img src="23fe440569843e3baac36f16438fd728e6b03e09f35f983fde2ea61e78ea3a2e.png" title=" Juan Miguel clicks on Option In search" width="1366"/>
+                <img src="ea9118f6fcb8ba60ae807a93b369536840e8f96575e509dd2b052c9cd0aa93dc.png" title=" Juan Miguel clicks on Option In search (completed)" width="1366"/>
+                <img src="ea9118f6fcb8ba60ae807a93b369536840e8f96575e509dd2b052c9cd0aa93dc.png" title=" Juan miguel select option search type (completed)" width="1366"/>
+                <img src="ea9118f6fcb8ba60ae807a93b369536840e8f96575e509dd2b052c9cd0aa93dc.png" title=" Juan miguel select option search type" width="1366"/>
+                <img src="ea9118f6fcb8ba60ae807a93b369536840e8f96575e509dd2b052c9cd0aa93dc.png" title=" Juan Miguel clicks on Activate edit text language" width="1366"/>
+                <img src="ff7374f98b67e3456390233bcb2a0abbf0a7ef73a4c186d7dbed014a158d7fc2.png" title=" Juan Miguel clicks on Activate edit text language (completed)" width="1366"/>
+                <img src="ff7374f98b67e3456390233bcb2a0abbf0a7ef73a4c186d7dbed014a158d7fc2.png" title=" Juan Miguel enters 'Spanish' into Edit text of version" width="1366"/>
+                <img src="5b9c790b452bcfd3bb3369cf534d47f3e0c6591f8b549bd2a4113d22c7cc5155.png" title=" Juan Miguel enters 'Spanish' into Edit text of version (completed)" width="1366"/>
+                <img src="5b9c790b452bcfd3bb3369cf534d47f3e0c6591f8b549bd2a4113d22c7cc5155.png" title=" Juan Miguel clicks on Option In search" width="1366"/>
+                <img src="419c35775bfb42b8c0753d5ab9f4519cdc690ca1671f1a084894f12abfb022c8.png" title=" Juan Miguel clicks on Option In search (completed)" width="1366"/>
+                <img src="419c35775bfb42b8c0753d5ab9f4519cdc690ca1671f1a084894f12abfb022c8.png" title=" Juan miguel select option search type (completed)" width="1366"/>
+                <img src="419c35775bfb42b8c0753d5ab9f4519cdc690ca1671f1a084894f12abfb022c8.png" title=" Juan miguel select option search type" width="1366"/>
+                <img src="419c35775bfb42b8c0753d5ab9f4519cdc690ca1671f1a084894f12abfb022c8.png" title=" Juan Miguel clicks on Activate edit text Brand" width="1366"/>
+                <img src="07102d19fd3dc538b73ac8c6ce22754d0dbe319005794d718d5a2f9db26d75d9.png" title=" Juan Miguel clicks on Activate edit text Brand (completed)" width="1366"/>
+                <img src="07102d19fd3dc538b73ac8c6ce22754d0dbe319005794d718d5a2f9db26d75d9.png" title=" Juan Miguel enters 'Samsung' into Edit text Brand" width="1366"/>
+                <img src="9abf6d5e3cb2e78dde4850da58649c56487c9c2de117db4d771e0d333f190a78.png" title=" Juan Miguel enters 'Samsung' into Edit text Brand (completed)" width="1366"/>
+                <img src="9abf6d5e3cb2e78dde4850da58649c56487c9c2de117db4d771e0d333f190a78.png" title=" Juan Miguel clicks on Option In search" width="1366"/>
+                <img src="36c73676ed4e44fbc2af2840e5a9835cb2cea029ad731456d6939ebe7fdef961.png" title=" Juan Miguel clicks on Option In search (completed)" width="1366"/>
+                <img src="36c73676ed4e44fbc2af2840e5a9835cb2cea029ad731456d6939ebe7fdef961.png" title=" Juan miguel select option search type (completed)" width="1366"/>
+                <img src="36c73676ed4e44fbc2af2840e5a9835cb2cea029ad731456d6939ebe7fdef961.png" title=" Juan miguel select option search type" width="1366"/>
+                <img src="36c73676ed4e44fbc2af2840e5a9835cb2cea029ad731456d6939ebe7fdef961.png" title=" Juan Miguel clicks on Activate edit text Model" width="1366"/>
+                <img src="2ce5aca20c4f757b3b342c210302094bf6b9e53a0f13e8a561fbac8e54655c55.png" title=" Juan Miguel clicks on Activate edit text Model (completed)" width="1366"/>
+                <img src="2ce5aca20c4f757b3b342c210302094bf6b9e53a0f13e8a561fbac8e54655c55.png" title=" Juan Miguel enters 'Galaxy J5 Prime' into Edit text Model" width="1366"/>
+                <img src="5a1da02eb51c6d6ab2a22b2a2d76c747bd09b5df346ee1aaeaad5be55ab27ccf.png" title=" Juan Miguel enters 'Galaxy J5 Prime' into Edit text Model (completed)" width="1366"/>
+                <img src="5a1da02eb51c6d6ab2a22b2a2d76c747bd09b5df346ee1aaeaad5be55ab27ccf.png" title=" Juan Miguel clicks on Option In search" width="1366"/>
+                <img src="932fb22cb3ec3441dc8ac8a1b7aa0829a84a7919285b9282a7ed428ef6e8d097.png" title=" Juan Miguel clicks on Option In search (completed)" width="1366"/>
+                <img src="932fb22cb3ec3441dc8ac8a1b7aa0829a84a7919285b9282a7ed428ef6e8d097.png" title=" Juan miguel select option search type (completed)" width="1366"/>
+                <img src="932fb22cb3ec3441dc8ac8a1b7aa0829a84a7919285b9282a7ed428ef6e8d097.png" title=" Juan miguel select option search type" width="1366"/>
+                <img src="932fb22cb3ec3441dc8ac8a1b7aa0829a84a7919285b9282a7ed428ef6e8d097.png" title=" Juan Miguel clicks on Activate edit text Model version" width="1366"/>
+                <img src="ca5df4610a7b7bbfc6237c768c0270e57a15318c7f0776d2b2b782a7bf648d28.png" title=" Juan Miguel clicks on Activate edit text Model version (completed)" width="1366"/>
+                <img src="ca5df4610a7b7bbfc6237c768c0270e57a15318c7f0776d2b2b782a7bf648d28.png" title=" Juan Miguel enters 'Android 5.0' into Edit text Model version" width="1366"/>
+                <img src="cf4bd3d128eadc26ea586550215b8d1b2a1b6d5b3c5a207c8bdf73234f32492d.png" title=" Juan Miguel enters 'Android 5.0' into Edit text Model version (completed)" width="1366"/>
+                <img src="cf4bd3d128eadc26ea586550215b8d1b2a1b6d5b3c5a207c8bdf73234f32492d.png" title=" Juan Miguel clicks on Option In search" width="1366"/>
+                <img src="b81706b14a8a7452dad9787a9521a72fd2917c03cc1197a48a26d433aad58ecd.png" title=" Juan Miguel clicks on Option In search (completed)" width="1366"/>
+                <img src="b81706b14a8a7452dad9787a9521a72fd2917c03cc1197a48a26d433aad58ecd.png" title=" Juan miguel select option search type (completed)" width="1366"/>
+                <img src="b81706b14a8a7452dad9787a9521a72fd2917c03cc1197a48a26d433aad58ecd.png" title=" Juan Miguel clicks on Subbmit data" width="1366"/>
+                <img src="519f63a2e8c55a5b97e3de8725e887c7458a79cdeab0b784cae382cd306bb6a4.png" title=" Juan Miguel clicks on Subbmit data (completed)" width="1366"/>
+                <img src="519f63a2e8c55a5b97e3de8725e887c7458a79cdeab0b784cae382cd306bb6a4.png" title=" Juan miguel user devices (completed)" width="1366"/>
+                <img src="519f63a2e8c55a5b97e3de8725e887c7458a79cdeab0b784cae382cd306bb6a4.png" title=" And y tiene los dispositivos
+| OS | Windows |
+| version | windows 10 |
+| language | Spanish |
+| mobile | Samsung |
+| model | Galaxy J5 Prime |
+| systemCel | Android 5.0 | (completed)" width="1366"/>
+                <img src="c7574b1a1e0d4e9a8f13c95e4a1b063858923f272ab94ac5905872572c2a349c.png" title=" And cuya clave de usuario es J1M2b3m45*.:D" width="1366"/>
+                <img src="c7574b1a1e0d4e9a8f13c95e4a1b063858923f272ab94ac5905872572c2a349c.png" title=" Juan miguel user password" width="1366"/>
+                <img src="c7574b1a1e0d4e9a8f13c95e4a1b063858923f272ab94ac5905872572c2a349c.png" title=" Juan Miguel enters 'J1M2b3m45*.:D' into Edit text odf password" width="1366"/>
+                <img src="c7574b1a1e0d4e9a8f13c95e4a1b063858923f272ab94ac5905872572c2a349c.png" title=" Juan Miguel enters 'J1M2b3m45*.:D' into Edit text odf password" width="1366"/>
+                <img src="95b45dab5f15b2888b164a180ca1a48ff130921602c31ad32714c0a563ddbf7c.png" title=" Juan Miguel enters 'J1M2b3m45*.:D' into Edit text odf password (completed)" width="1366"/>
+                <img src="95b45dab5f15b2888b164a180ca1a48ff130921602c31ad32714c0a563ddbf7c.png" title=" Juan Miguel clicks on Option checkbox" width="1366"/>
+                <img src="e1fd202cee20bbe9c16ab16b8f336ff5e1f671a41632e60ef54c922bf63e2af3.png" title=" Juan Miguel clicks on Option checkbox (completed)" width="1366"/>
+                <img src="e1fd202cee20bbe9c16ab16b8f336ff5e1f671a41632e60ef54c922bf63e2af3.png" title=" Juan miguel user password (completed)" width="1366"/>
+                <img src="e1fd202cee20bbe9c16ab16b8f336ff5e1f671a41632e60ef54c922bf63e2af3.png" title=" And cuya clave de usuario es J1M2b3m45*.:D (completed)" width="1366"/>
+                <img src="e1fd202cee20bbe9c16ab16b8f336ff5e1f671a41632e60ef54c922bf63e2af3.png" title=" Then Registrarme sin dar click" width="1366"/>
+                <img src="e1fd202cee20bbe9c16ab16b8f336ff5e1f671a41632e60ef54c922bf63e2af3.png" title=" Then Option checkbox should be an element that is visible" width="1366"/>
+                <img src="e1fd202cee20bbe9c16ab16b8f336ff5e1f671a41632e60ef54c922bf63e2af3.png" title=" Then Registrarme sin dar click (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.2.9</span>
+</div>
+</body>
+</html>

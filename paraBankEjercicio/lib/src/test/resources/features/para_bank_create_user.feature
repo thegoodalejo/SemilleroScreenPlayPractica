@@ -8,5 +8,5 @@ Feature: Comprobar la creacion de un nuevo usuario
 
   Scenario: Creacion de un nuevo usuario
     Given Verificar que el estamos en en el Home "Welcome"
-    When Realizar la creacion del nuevo usuario tipo "SAVINGS" y opcion 5
+    When Realizar la creacion del nuevo usuario tipo "SAVINGS" y opcion 2
     Then Validar que exista la opcion en las cuentas creadas

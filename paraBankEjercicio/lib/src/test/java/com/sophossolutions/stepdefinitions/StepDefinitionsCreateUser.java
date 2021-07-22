@@ -5,16 +5,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import net.serenitybdd.screenplay.questions.Text;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-
 import org.hamcrest.core.IsEqual;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
-
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 
