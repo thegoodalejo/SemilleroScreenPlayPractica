@@ -1,0 +1,16 @@
+com/sophossolutions/semillero/tasks/BankAccounts.java
+ com.sophossolutions.semillero.tasks.BankAccounts
+com/sophossolutions/ui/HomePage.java
+ com.sophossolutions.ui.HomePage
+com/sophossolutions/questions/AccountCreated.java
+ com.sophossolutions.questions.AccountCreated
+com/sophossolutions/ui/LoginPage.java
+ com.sophossolutions.ui.LoginPage
+com/sophossolutions/questions/TextObtained.java
+ com.sophossolutions.questions.TextObtained
+com/sophossolutions/semillero/tasks/Login.java
+ com.sophossolutions.semillero.tasks.Login
+com/sophossolutions/ui/AccountListPage.java
+ com.sophossolutions.ui.AccountListPage
+com/sophossolutions/semillero/tasks/CreateUser.java
+ com.sophossolutions.semillero.tasks.CreateUser

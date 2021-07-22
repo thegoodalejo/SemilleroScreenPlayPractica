@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="2" name="GET Without Authentification" skipped="0" tests="4" time="13.57" timestamp="2021-07-09 09:38:29"><testcase name="Test Method Get in class"><failure message="&#10;Expected: &quot;400&quot;&#10;     but: was &quot;200&quot;" type="java.lang.AssertionError">
+Expected: "400"
+     but: was "200"</failure><system-err>
+Expected: "400"
+     but: was "200"&#13;
+com.sophossolutions.stepdefinitions.GetRequestWithoutAuthenticationStepDefinitions.heShouldValidateThatTheStatusCodeIsWantToVerifyThat(GetRequestWithoutAuthenticationStepDefinitions.java:42)&#13;
+✽.he should validate that the status code is 400 want to verify that fuchsia rose(file:///C:/Users/juan.blanco/Documents/semilleroTesting/SemilleroScreenPlayPractica/JPetStore/src/test/resources/com/sophossolutions/features/get_request_without_authentication.feature:10)&#13;
+</system-err></testcase></testsuite>

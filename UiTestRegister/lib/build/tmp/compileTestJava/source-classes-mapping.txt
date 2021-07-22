@@ -1,0 +1,4 @@
+com/sophossolutions/runners/UiTestRegister.java
+ com.sophossolutions.runners.UiTestRegister
+com/sophossolutions/stepdefinitions/UiTestRegisterStepDefinitions.java
+ com.sophossolutions.stepdefinitions.UiTestRegisterStepDefinitions
