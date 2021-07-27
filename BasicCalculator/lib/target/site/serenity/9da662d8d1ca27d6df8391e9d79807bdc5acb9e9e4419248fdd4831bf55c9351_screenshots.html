@@ -1,0 +1,427 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">JPetStore</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="3569d25e657a4f8ef3df55daf7e0b76dde772f5eed99f64023b04f93b463d0f8.html">Check The Type Of Operation</a></span>
+                > <span class="truncate-60"><a
+                    href="9da662d8d1ca27d6df8391e9d79807bdc5acb9e9e4419248fdd4831bf55c9351.html">Check the build of operation selected </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 26-07-2021 10:59</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Check The Type Of Operation</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                I want check the build of operation selected
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Check the build of operation selected
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given I want to verify that i am on the home page<br>When Select type of operation &lt;buildType&gt;<br>Then I verify the respective option</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Example: {buildType=0}" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel opens the Calculator home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" When Select type of operation 0" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel selects 0 in Selector Mode" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel selects 0 in Selector Mode (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" When Select type of operation 0 (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then I verify the respective option" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then result text should be '0'" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then result text should be '0' (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then I verify the respective option (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Example: {buildType=0} (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Example: {buildType=1}" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel opens the Calculator home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page (completed)" width="1366"/>
+                <img src="90d32775e968b7964071c4bfd9ebc3cf42d3e8dd61048a4c16a33e544c345207.png" title=" When Select type of operation 1" width="1366"/>
+                <img src="90d32775e968b7964071c4bfd9ebc3cf42d3e8dd61048a4c16a33e544c345207.png" title=" Juan Miguel selects 1 in Selector Mode" width="1366"/>
+                <img src="90d32775e968b7964071c4bfd9ebc3cf42d3e8dd61048a4c16a33e544c345207.png" title=" When Select type of operation 1 (completed)" width="1366"/>
+                <img src="90d32775e968b7964071c4bfd9ebc3cf42d3e8dd61048a4c16a33e544c345207.png" title=" Then I verify the respective option" width="1366"/>
+                <img src="90d32775e968b7964071c4bfd9ebc3cf42d3e8dd61048a4c16a33e544c345207.png" title=" Then result text should be '1'" width="1366"/>
+                <img src="4ec94f82c7590be6dd9c8b46a514248522b3042e8e759a019f5f7a5f8b85b4e6.png" title=" Then result text should be '1' (completed)" width="1366"/>
+                <img src="4ec94f82c7590be6dd9c8b46a514248522b3042e8e759a019f5f7a5f8b85b4e6.png" title=" Then I verify the respective option (completed)" width="1366"/>
+                <img src="4ec94f82c7590be6dd9c8b46a514248522b3042e8e759a019f5f7a5f8b85b4e6.png" title=" Example: {buildType=1} (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Example: {buildType=2}" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel opens the Calculator home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" When Select type of operation 2" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel selects 2 in Selector Mode" width="1366"/>
+                <img src="8f4fc9a67de22997c1d4ce0e54cc79df6f67f418a335a6bb8c24dfe4768d0cfb.png" title=" Juan Miguel selects 2 in Selector Mode (completed)" width="1366"/>
+                <img src="8f4fc9a67de22997c1d4ce0e54cc79df6f67f418a335a6bb8c24dfe4768d0cfb.png" title=" When Select type of operation 2 (completed)" width="1366"/>
+                <img src="8f4fc9a67de22997c1d4ce0e54cc79df6f67f418a335a6bb8c24dfe4768d0cfb.png" title=" Then I verify the respective option" width="1366"/>
+                <img src="8f4fc9a67de22997c1d4ce0e54cc79df6f67f418a335a6bb8c24dfe4768d0cfb.png" title=" Then result text should be '2'" width="1366"/>
+                <img src="07928b1e0acf8db0ff751c571e119132e025c196a2c8facaf45888c8f13c41d0.png" title=" Then result text should be '2' (completed)" width="1366"/>
+                <img src="07928b1e0acf8db0ff751c571e119132e025c196a2c8facaf45888c8f13c41d0.png" title=" Then I verify the respective option (completed)" width="1366"/>
+                <img src="07928b1e0acf8db0ff751c571e119132e025c196a2c8facaf45888c8f13c41d0.png" title=" Example: {buildType=2} (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Example: {buildType=3}" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel opens the Calculator home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" When Select type of operation 3" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel selects 3 in Selector Mode" width="1366"/>
+                <img src="04bc2beb510581069276a1a7b41fe39693efe77ff9e17c52d4a649f89200d1c1.png" title=" Juan Miguel selects 3 in Selector Mode (completed)" width="1366"/>
+                <img src="04bc2beb510581069276a1a7b41fe39693efe77ff9e17c52d4a649f89200d1c1.png" title=" When Select type of operation 3 (completed)" width="1366"/>
+                <img src="04bc2beb510581069276a1a7b41fe39693efe77ff9e17c52d4a649f89200d1c1.png" title=" Then I verify the respective option" width="1366"/>
+                <img src="04bc2beb510581069276a1a7b41fe39693efe77ff9e17c52d4a649f89200d1c1.png" title=" Then result text should be '3'" width="1366"/>
+                <img src="055ec9be0f20eb7a1a65f6ef3ea43a283db9f2349698795fd035935c2e15ac4a.png" title=" Then result text should be '3' (completed)" width="1366"/>
+                <img src="055ec9be0f20eb7a1a65f6ef3ea43a283db9f2349698795fd035935c2e15ac4a.png" title=" Then I verify the respective option (completed)" width="1366"/>
+                <img src="055ec9be0f20eb7a1a65f6ef3ea43a283db9f2349698795fd035935c2e15ac4a.png" title=" Example: {buildType=3} (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Example: {buildType=4}" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel opens the Calculator home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" When Select type of operation 4" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel selects 4 in Selector Mode" width="1366"/>
+                <img src="aa5cb6914f357688b4f7eb86b702889e135e16e0dc4d4b6ba13954608a98ee42.png" title=" Juan Miguel selects 4 in Selector Mode (completed)" width="1366"/>
+                <img src="aa5cb6914f357688b4f7eb86b702889e135e16e0dc4d4b6ba13954608a98ee42.png" title=" When Select type of operation 4 (completed)" width="1366"/>
+                <img src="aa5cb6914f357688b4f7eb86b702889e135e16e0dc4d4b6ba13954608a98ee42.png" title=" Then I verify the respective option" width="1366"/>
+                <img src="aa5cb6914f357688b4f7eb86b702889e135e16e0dc4d4b6ba13954608a98ee42.png" title=" Then result text should be '4'" width="1366"/>
+                <img src="fb84d4143c48380187b0df519690f6ccdbad2c1155166a30be94e5f80b5f3caf.png" title=" Then result text should be '4' (completed)" width="1366"/>
+                <img src="fb84d4143c48380187b0df519690f6ccdbad2c1155166a30be94e5f80b5f3caf.png" title=" Then I verify the respective option (completed)" width="1366"/>
+                <img src="fb84d4143c48380187b0df519690f6ccdbad2c1155166a30be94e5f80b5f3caf.png" title=" Example: {buildType=4} (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Example: {buildType=5}" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel opens the Calculator home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" When Select type of operation 5" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel selects 5 in Selector Mode" width="1366"/>
+                <img src="4be044baf92e65de1a93e2bf38e49e5fd045b0e2048a7068bfbab010bfabc80b.png" title=" Juan Miguel selects 5 in Selector Mode (completed)" width="1366"/>
+                <img src="4be044baf92e65de1a93e2bf38e49e5fd045b0e2048a7068bfbab010bfabc80b.png" title=" When Select type of operation 5 (completed)" width="1366"/>
+                <img src="4be044baf92e65de1a93e2bf38e49e5fd045b0e2048a7068bfbab010bfabc80b.png" title=" Then I verify the respective option" width="1366"/>
+                <img src="4be044baf92e65de1a93e2bf38e49e5fd045b0e2048a7068bfbab010bfabc80b.png" title=" Then result text should be '5'" width="1366"/>
+                <img src="b5e1047e4783a4e9dc59f24d599c636bd048f04273dae8daad6b202c9930050a.png" title=" Then result text should be '5' (completed)" width="1366"/>
+                <img src="b5e1047e4783a4e9dc59f24d599c636bd048f04273dae8daad6b202c9930050a.png" title=" Then I verify the respective option (completed)" width="1366"/>
+                <img src="b5e1047e4783a4e9dc59f24d599c636bd048f04273dae8daad6b202c9930050a.png" title=" Example: {buildType=5} (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Example: {buildType=6}" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel opens the Calculator home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" When Select type of operation 6" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel selects 6 in Selector Mode" width="1366"/>
+                <img src="51b960c73c33932c60d2fcd57f3fef41f9414fa13841974951d14b9964a9b3a3.png" title=" Juan Miguel selects 6 in Selector Mode (completed)" width="1366"/>
+                <img src="51b960c73c33932c60d2fcd57f3fef41f9414fa13841974951d14b9964a9b3a3.png" title=" When Select type of operation 6 (completed)" width="1366"/>
+                <img src="51b960c73c33932c60d2fcd57f3fef41f9414fa13841974951d14b9964a9b3a3.png" title=" Then I verify the respective option" width="1366"/>
+                <img src="51b960c73c33932c60d2fcd57f3fef41f9414fa13841974951d14b9964a9b3a3.png" title=" Then result text should be '6'" width="1366"/>
+                <img src="2995283840b289f9d2a207fb6954bac95cd923c9836ce6aecf0df75b03cdacee.png" title=" Then result text should be '6' (completed)" width="1366"/>
+                <img src="2995283840b289f9d2a207fb6954bac95cd923c9836ce6aecf0df75b03cdacee.png" title=" Then I verify the respective option (completed)" width="1366"/>
+                <img src="2995283840b289f9d2a207fb6954bac95cd923c9836ce6aecf0df75b03cdacee.png" title=" Example: {buildType=6} (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Example: {buildType=7}" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel opens the Calculator home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" When Select type of operation 7" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel selects 7 in Selector Mode" width="1366"/>
+                <img src="e334533ed9a2d2ec7f05eea29accb49a74ca1a1dceac23a968a3b0852be6a960.png" title=" Juan Miguel selects 7 in Selector Mode (completed)" width="1366"/>
+                <img src="e334533ed9a2d2ec7f05eea29accb49a74ca1a1dceac23a968a3b0852be6a960.png" title=" When Select type of operation 7 (completed)" width="1366"/>
+                <img src="e334533ed9a2d2ec7f05eea29accb49a74ca1a1dceac23a968a3b0852be6a960.png" title=" Then I verify the respective option" width="1366"/>
+                <img src="e334533ed9a2d2ec7f05eea29accb49a74ca1a1dceac23a968a3b0852be6a960.png" title=" Then result text should be '7'" width="1366"/>
+                <img src="5fb31c08a2dab20a6148ffa748310a49f083c34a906c1d70c855c9115ced36f5.png" title=" Then result text should be '7' (completed)" width="1366"/>
+                <img src="5fb31c08a2dab20a6148ffa748310a49f083c34a906c1d70c855c9115ced36f5.png" title=" Then I verify the respective option (completed)" width="1366"/>
+                <img src="5fb31c08a2dab20a6148ffa748310a49f083c34a906c1d70c855c9115ced36f5.png" title=" Example: {buildType=7} (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Example: {buildType=9}" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel opens the Calculator home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" When Select type of operation 9" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel selects 9 in Selector Mode" width="1366"/>
+                <img src="60762881c7f7c61f012f215f91028601d84aa4a9e471005b6d4d8c9a007d782a.png" title=" Juan Miguel selects 9 in Selector Mode (completed)" width="1366"/>
+                <img src="60762881c7f7c61f012f215f91028601d84aa4a9e471005b6d4d8c9a007d782a.png" title=" When Select type of operation 9 (completed)" width="1366"/>
+                <img src="60762881c7f7c61f012f215f91028601d84aa4a9e471005b6d4d8c9a007d782a.png" title=" Then I verify the respective option" width="1366"/>
+                <img src="60762881c7f7c61f012f215f91028601d84aa4a9e471005b6d4d8c9a007d782a.png" title=" Then result text should be '9'" width="1366"/>
+                <img src="3f132c3dbdde004db358e5e2e0eb6b5c6294b8096f6989a1e751507c6730ab9c.png" title=" Then result text should be '9' (completed)" width="1366"/>
+                <img src="3f132c3dbdde004db358e5e2e0eb6b5c6294b8096f6989a1e751507c6730ab9c.png" title=" Then I verify the respective option (completed)" width="1366"/>
+                <img src="3f132c3dbdde004db358e5e2e0eb6b5c6294b8096f6989a1e751507c6730ab9c.png" title=" Example: {buildType=9} (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.2.9</span>
+</div>
+</body>
+</html>

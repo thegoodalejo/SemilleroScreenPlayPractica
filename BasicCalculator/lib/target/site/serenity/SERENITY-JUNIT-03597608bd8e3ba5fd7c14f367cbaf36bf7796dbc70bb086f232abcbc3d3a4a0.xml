@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="5" name="Check calculator operations" skipped="0" tests="10" time="269.64" timestamp="2021-07-27 12:06:20"><testcase name="Check the build of operation selected"><failure message="&#10;Expected: &quot;18&quot;&#10;     but: was &quot;126&quot;" type="java.lang.AssertionError">
+Expected: "18"
+     but: was "126"</failure><system-err>
+Expected: "18"
+     but: was "126"&#13;
+com.sophossolutions.util.UtilsCalculator.verifyDataObtainedWith(UtilsCalculator.java:35)&#13;
+com.sophossolutions.stepdefinitions.BasicCalculatorAllOperationsStepDefinitions.iVerifyTheOperationResult(BasicCalculatorAllOperationsStepDefinitions.java:83)&#13;
+✽.I verify the operation result(file:///C:/Users/juan.blanco/Documents/semilleroTesting/SemilleroScreenPlayPractica/BasicCalculator/lib/src/test/resources/com/sophossolutions/features/basic_calculator_all_operations.feature:11)&#13;
+</system-err></testcase></testsuite>

@@ -1,0 +1,838 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">JPetStore</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="3282363a8447fef414acb8b302526efcd877017277d0d6aeb4f7164c1e7aec12.html">Check Calculator Operations</a></span>
+                > <span class="truncate-60"><a
+                    href="03597608bd8e3ba5fd7c14f367cbaf36bf7796dbc70bb086f232abcbc3d3a4a0.html">Check the build of operation selected </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 27-07-2021 12:06</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Check Calculator Operations</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                I want to check the menus of the calculator operations
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="failing-color">Check the build of operation selected
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given I want to verify that i am on the home page<br>When I select type of operation &lt;buildType&gt; operate two numbers<br>Then I verify the operation result</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: Expected: '18' but: was '126'</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.sophossolutions.util.UtilsCalculator.verifyDataObtainedWith(UtilsCalculator.java:35)<br />com.sophossolutions.stepdefinitions.BasicCalculatorAllOperationsStepDefinitions.iVerifyTheOperationResult(BasicCalculatorAllOperationsStepDefinitions.java:83)<br />✽.I verify the operation result(file:///C:/Users/juan.blanco/Documents/semilleroTesting/SemilleroScreenPlayPractica/BasicCalculator/lib/src/test/resources/com/sophossolutions/features/basic_calculator_all_operations.feature:11)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource11727960527466566591.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Example: {buildType=0}" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel opens the Calculator home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible" width="1366"/>
+                <img src="465b270b74aa268f93b411b8d97c4e37e3964b578ba0fee1e67efc564ae62a6e.png" title=" Then Edit Text Answer should be an element that is visible (completed)" width="1366"/>
+                <img src="465b270b74aa268f93b411b8d97c4e37e3964b578ba0fee1e67efc564ae62a6e.png" title=" Then Button calculate operation should be an element that is visible" width="1366"/>
+                <img src="c52331e5bc1428c49b5b75863e0daa9ee98ec905a8d6026b2ce1eccd510e8d54.png" title=" Then Button calculate operation should be an element that is visible (completed)" width="1366"/>
+                <img src="c52331e5bc1428c49b5b75863e0daa9ee98ec905a8d6026b2ce1eccd510e8d54.png" title=" Given I want to verify that i am on the home page (completed)" width="1366"/>
+                <img src="c52331e5bc1428c49b5b75863e0daa9ee98ec905a8d6026b2ce1eccd510e8d54.png" title=" When I select type of operation 0 operate two numbers" width="1366"/>
+                <img src="c52331e5bc1428c49b5b75863e0daa9ee98ec905a8d6026b2ce1eccd510e8d54.png" title=" Juan Miguel selects 0 in Selector Mode" width="1366"/>
+                <img src="c52331e5bc1428c49b5b75863e0daa9ee98ec905a8d6026b2ce1eccd510e8d54.png" title=" Juan Miguel selects 0 in Selector Mode (completed)" width="1366"/>
+                <img src="c52331e5bc1428c49b5b75863e0daa9ee98ec905a8d6026b2ce1eccd510e8d54.png" title=" Juan Miguel enters '19' into Edit text number 1" width="1366"/>
+                <img src="e0db6aa98ab220d3e0546e2e5d3a9c60c518119d163303476f02a1ef1f659958.png" title=" Juan Miguel enters '19' into Edit text number 1 (completed)" width="1366"/>
+                <img src="e0db6aa98ab220d3e0546e2e5d3a9c60c518119d163303476f02a1ef1f659958.png" title=" Juan Miguel enters '7' into Edit text number 1" width="1366"/>
+                <img src="4225336a67a8da0451f263771ed23da7ec1e9ed1afc5d1f400478440c25cf291.png" title=" Juan Miguel enters '7' into Edit text number 1 (completed)" width="1366"/>
+                <img src="4225336a67a8da0451f263771ed23da7ec1e9ed1afc5d1f400478440c25cf291.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="4225336a67a8da0451f263771ed23da7ec1e9ed1afc5d1f400478440c25cf291.png" title=" Juan Miguel selects 0 in Selector Operation" width="1366"/>
+                <img src="e49de3cb21802b3ec8f599a86efc5473bf76b283e94b4d02f3b2f9ff48e21250.png" title=" Juan Miguel selects 0 in Selector Operation (completed)" width="1366"/>
+                <img src="e49de3cb21802b3ec8f599a86efc5473bf76b283e94b4d02f3b2f9ff48e21250.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="a8100bcf01cd3772d8e00b34d5ea7637330c904476fc2aecf2ffef4ed08c62fb.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="cb03ed020eadbbe8d4d2436dd270eff67ca3b493835a8f1dcb61fd6881b05a34.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="cb03ed020eadbbe8d4d2436dd270eff67ca3b493835a8f1dcb61fd6881b05a34.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="cb03ed020eadbbe8d4d2436dd270eff67ca3b493835a8f1dcb61fd6881b05a34.png" title=" Juan Miguel selects 1 in Selector Operation" width="1366"/>
+                <img src="17eb0cbd26a3bdec1d584ad2cac2f4e4c77743bc40d1c8d7d457469da2406ceb.png" title=" Juan Miguel selects 1 in Selector Operation (completed)" width="1366"/>
+                <img src="17eb0cbd26a3bdec1d584ad2cac2f4e4c77743bc40d1c8d7d457469da2406ceb.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="e0c61ceea02713f2997255453c13f75ae197c13114d4dbe52a96e007d9376664.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="cf337a66a73ac1ea5fb798c2a9d5af7e9cd54d53ab391793f5f6278576e4eeae.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="cf337a66a73ac1ea5fb798c2a9d5af7e9cd54d53ab391793f5f6278576e4eeae.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="cf337a66a73ac1ea5fb798c2a9d5af7e9cd54d53ab391793f5f6278576e4eeae.png" title=" Juan Miguel selects 2 in Selector Operation" width="1366"/>
+                <img src="52f708b48227f0f35a54e7e8b58b7bcf828711e8b687b826f10ae33725b167bd.png" title=" Juan Miguel selects 2 in Selector Operation (completed)" width="1366"/>
+                <img src="52f708b48227f0f35a54e7e8b58b7bcf828711e8b687b826f10ae33725b167bd.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="8ab2ac31e925f323a59957f1e06781969c326e8b73ce45d08772738e2238314a.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="10e0943e5e120bee26eba52d7dd730af707520aee3667398a7acef1c39725207.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="10e0943e5e120bee26eba52d7dd730af707520aee3667398a7acef1c39725207.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="10e0943e5e120bee26eba52d7dd730af707520aee3667398a7acef1c39725207.png" title=" Juan Miguel selects 3 in Selector Operation" width="1366"/>
+                <img src="10abe6b15c89c5614cb5aaa580b16b4bf8bc72cae00c04d76885d0c26310b4d5.png" title=" Juan Miguel selects 3 in Selector Operation (completed)" width="1366"/>
+                <img src="10abe6b15c89c5614cb5aaa580b16b4bf8bc72cae00c04d76885d0c26310b4d5.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="040f53840a5320a64e6338cf0f3c7d4ff737b43727848ed7024692cf3f0b9ab6.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="59906a5c779db7c4e1c0bbb6f6024d92906a05613e608f9548f7ab80f4636a02.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="59906a5c779db7c4e1c0bbb6f6024d92906a05613e608f9548f7ab80f4636a02.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="59906a5c779db7c4e1c0bbb6f6024d92906a05613e608f9548f7ab80f4636a02.png" title=" Juan Miguel selects 4 in Selector Operation" width="1366"/>
+                <img src="9fa69f548e51d43824f5750f84596975127fa1d5adeb142437d4b569b7c9053c.png" title=" Juan Miguel selects 4 in Selector Operation (completed)" width="1366"/>
+                <img src="9fa69f548e51d43824f5750f84596975127fa1d5adeb142437d4b569b7c9053c.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="b4ffea91b06b00c9232bd09e17d5e1480446c39a5ecdf3739612f6b403b187e4.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="b6214cf7caa9357c049dcde848386e3a94ff45aaef3ae18df2b37736d24e8719.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="b6214cf7caa9357c049dcde848386e3a94ff45aaef3ae18df2b37736d24e8719.png" title=" When I select type of operation 0 operate two numbers (completed)" width="1366"/>
+                <img src="b6214cf7caa9357c049dcde848386e3a94ff45aaef3ae18df2b37736d24e8719.png" title=" Then I verify the operation result" width="1366"/>
+                <img src="b6214cf7caa9357c049dcde848386e3a94ff45aaef3ae18df2b37736d24e8719.png" title=" Then text calulate should be '26'" width="1366"/>
+                <img src="b6214cf7caa9357c049dcde848386e3a94ff45aaef3ae18df2b37736d24e8719.png" title=" Then text calulate should be '26' (completed)" width="1366"/>
+                <img src="b6214cf7caa9357c049dcde848386e3a94ff45aaef3ae18df2b37736d24e8719.png" title=" Then text calulate should be '12'" width="1366"/>
+                <img src="b6214cf7caa9357c049dcde848386e3a94ff45aaef3ae18df2b37736d24e8719.png" title=" Then text calulate should be '12' (completed)" width="1366"/>
+                <img src="b6214cf7caa9357c049dcde848386e3a94ff45aaef3ae18df2b37736d24e8719.png" title=" Then text calulate should be '133'" width="1366"/>
+                <img src="b6214cf7caa9357c049dcde848386e3a94ff45aaef3ae18df2b37736d24e8719.png" title=" Then text calulate should be '133' (completed)" width="1366"/>
+                <img src="b6214cf7caa9357c049dcde848386e3a94ff45aaef3ae18df2b37736d24e8719.png" title=" Then text calulate should be '2.7142857142857144'" width="1366"/>
+                <img src="b6214cf7caa9357c049dcde848386e3a94ff45aaef3ae18df2b37736d24e8719.png" title=" Then text calulate should be '2.7142857142857144' (completed)" width="1366"/>
+                <img src="b6214cf7caa9357c049dcde848386e3a94ff45aaef3ae18df2b37736d24e8719.png" title=" Then text calulate should be '197'" width="1366"/>
+                <img src="b6214cf7caa9357c049dcde848386e3a94ff45aaef3ae18df2b37736d24e8719.png" title=" Then text calulate should be '197' (completed)" width="1366"/>
+                <img src="b6214cf7caa9357c049dcde848386e3a94ff45aaef3ae18df2b37736d24e8719.png" title=" Then I verify the operation result (completed)" width="1366"/>
+                <img src="b6214cf7caa9357c049dcde848386e3a94ff45aaef3ae18df2b37736d24e8719.png" title=" Example: {buildType=0} (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Example: {buildType=1}" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel opens the Calculator home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" When I select type of operation 1 operate two numbers" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel selects 1 in Selector Mode" width="1366"/>
+                <img src="ccb7ef1d248cfba9721a386e40a0200437c855308d03b260499d8007da5d1917.png" title=" Juan Miguel selects 1 in Selector Mode (completed)" width="1366"/>
+                <img src="ccb7ef1d248cfba9721a386e40a0200437c855308d03b260499d8007da5d1917.png" title=" Juan Miguel enters '3' into Edit text number 1" width="1366"/>
+                <img src="11ace95431c0fd515ee5c14a1161805daabdde24d48ef773298cb903e98e6a8d.png" title=" Juan Miguel enters '3' into Edit text number 1 (completed)" width="1366"/>
+                <img src="11ace95431c0fd515ee5c14a1161805daabdde24d48ef773298cb903e98e6a8d.png" title=" Juan Miguel enters '6' into Edit text number 1" width="1366"/>
+                <img src="fd60427bf797842d3fc41db77076f70052dda2adc5d1a2d93d232920743b12a2.png" title=" Juan Miguel enters '6' into Edit text number 1 (completed)" width="1366"/>
+                <img src="fd60427bf797842d3fc41db77076f70052dda2adc5d1a2d93d232920743b12a2.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="fd60427bf797842d3fc41db77076f70052dda2adc5d1a2d93d232920743b12a2.png" title=" Juan Miguel selects 0 in Selector Operation" width="1366"/>
+                <img src="bb14f74019ae95e375c5943c0039a7d65e878cd15f9d7a77a461db120fed25a1.png" title=" Juan Miguel selects 0 in Selector Operation (completed)" width="1366"/>
+                <img src="bb14f74019ae95e375c5943c0039a7d65e878cd15f9d7a77a461db120fed25a1.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="e05ff26ce062892273358c79f8fabc4176ee83b96d1b5032602a807f232a7062.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="2bd8c5cf3ded8c0575ac2c14ee9eb0481b6dd22fd5877022f37ec11ca690f3b3.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="2bd8c5cf3ded8c0575ac2c14ee9eb0481b6dd22fd5877022f37ec11ca690f3b3.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="2bd8c5cf3ded8c0575ac2c14ee9eb0481b6dd22fd5877022f37ec11ca690f3b3.png" title=" Juan Miguel selects 1 in Selector Operation" width="1366"/>
+                <img src="b7f76cb6dd2ed16effc93b88603ed6354b0f93a0a1ce0c5afcf0fc377da0f8fc.png" title=" Juan Miguel selects 1 in Selector Operation (completed)" width="1366"/>
+                <img src="b7f76cb6dd2ed16effc93b88603ed6354b0f93a0a1ce0c5afcf0fc377da0f8fc.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="d7f3be1c7a9cef0d705a2360fdc68f300e178b868e134efdedd70460ca4d6154.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="8b78087eb6618950b9c31af02d38a91d68ce9e53ec9ffb1123ad4614f8cfaf91.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="8b78087eb6618950b9c31af02d38a91d68ce9e53ec9ffb1123ad4614f8cfaf91.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="8b78087eb6618950b9c31af02d38a91d68ce9e53ec9ffb1123ad4614f8cfaf91.png" title=" Juan Miguel selects 2 in Selector Operation" width="1366"/>
+                <img src="87873a5bfb2c2c74d269604551e3c7ce25098147653d010be78202a12aa179fd.png" title=" Juan Miguel selects 2 in Selector Operation (completed)" width="1366"/>
+                <img src="87873a5bfb2c2c74d269604551e3c7ce25098147653d010be78202a12aa179fd.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="04cc3e83cd2843fe1f7749e58c74f8ea2c68d9176ab8bf54b426f4b7218ef4d2.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="85e17c0cd305a88120b6acb9fb83b0327347e0c5c6ed19861d097202208df224.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="85e17c0cd305a88120b6acb9fb83b0327347e0c5c6ed19861d097202208df224.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="85e17c0cd305a88120b6acb9fb83b0327347e0c5c6ed19861d097202208df224.png" title=" Juan Miguel selects 3 in Selector Operation" width="1366"/>
+                <img src="b32a3b59acc06b1ebef74b3e312f2f562615aaa33121f678e70da291be93d6f2.png" title=" Juan Miguel selects 3 in Selector Operation (completed)" width="1366"/>
+                <img src="b32a3b59acc06b1ebef74b3e312f2f562615aaa33121f678e70da291be93d6f2.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="8120c7b83fdc66ab6fca30887d1f5029b98042cb936c17089de6f532de68c115.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="8120c7b83fdc66ab6fca30887d1f5029b98042cb936c17089de6f532de68c115.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="8120c7b83fdc66ab6fca30887d1f5029b98042cb936c17089de6f532de68c115.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="8120c7b83fdc66ab6fca30887d1f5029b98042cb936c17089de6f532de68c115.png" title=" Juan Miguel selects 4 in Selector Operation" width="1366"/>
+                <img src="e20752df4181df5734fb95cc959d4a57afecb6d67700f55cecdcc7a7ee0679b6.png" title=" Juan Miguel selects 4 in Selector Operation (completed)" width="1366"/>
+                <img src="e20752df4181df5734fb95cc959d4a57afecb6d67700f55cecdcc7a7ee0679b6.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="78c6079279933b1797205bb932e5b185bfca0744ec79fd12c44f2e9ff5b0fb7a.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="04d1f7b2a4229ce738708cd1670bf1b69e6cb616dba2fbd81951a755c5469abb.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="04d1f7b2a4229ce738708cd1670bf1b69e6cb616dba2fbd81951a755c5469abb.png" title=" When I select type of operation 1 operate two numbers (completed)" width="1366"/>
+                <img src="04d1f7b2a4229ce738708cd1670bf1b69e6cb616dba2fbd81951a755c5469abb.png" title=" Then I verify the operation result" width="1366"/>
+                <img src="04d1f7b2a4229ce738708cd1670bf1b69e6cb616dba2fbd81951a755c5469abb.png" title=" Then text calulate should be '9'" width="1366"/>
+                <img src="04d1f7b2a4229ce738708cd1670bf1b69e6cb616dba2fbd81951a755c5469abb.png" title=" Then text calulate should be '9' (completed)" width="1366"/>
+                <img src="04d1f7b2a4229ce738708cd1670bf1b69e6cb616dba2fbd81951a755c5469abb.png" title=" Then text calulate should be '-3'" width="1366"/>
+                <img src="04d1f7b2a4229ce738708cd1670bf1b69e6cb616dba2fbd81951a755c5469abb.png" title=" Then text calulate should be '-3' (completed)" width="1366"/>
+                <img src="04d1f7b2a4229ce738708cd1670bf1b69e6cb616dba2fbd81951a755c5469abb.png" title=" Then text calulate should be '18'" width="1366"/>
+                <img src="04d1f7b2a4229ce738708cd1670bf1b69e6cb616dba2fbd81951a755c5469abb.png" title=" Then text calulate should be '18' (completed)" width="1366"/>
+                <img src="04d1f7b2a4229ce738708cd1670bf1b69e6cb616dba2fbd81951a755c5469abb.png" title=" Then text calulate should be '0.5'" width="1366"/>
+                <img src="04d1f7b2a4229ce738708cd1670bf1b69e6cb616dba2fbd81951a755c5469abb.png" title=" Then text calulate should be '0.5' (completed)" width="1366"/>
+                <img src="04d1f7b2a4229ce738708cd1670bf1b69e6cb616dba2fbd81951a755c5469abb.png" title=" Then text calulate should be '36'" width="1366"/>
+                <img src="04d1f7b2a4229ce738708cd1670bf1b69e6cb616dba2fbd81951a755c5469abb.png" title=" Then text calulate should be '36' (completed)" width="1366"/>
+                <img src="04d1f7b2a4229ce738708cd1670bf1b69e6cb616dba2fbd81951a755c5469abb.png" title=" Then I verify the operation result (completed)" width="1366"/>
+                <img src="04d1f7b2a4229ce738708cd1670bf1b69e6cb616dba2fbd81951a755c5469abb.png" title=" Example: {buildType=1} (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Example: {buildType=2}" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel opens the Calculator home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" When I select type of operation 2 operate two numbers" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel selects 2 in Selector Mode" width="1366"/>
+                <img src="377db799ee1ac5d87b2372eec2f408fe95988371f9e31a3afec3e39d76e18b62.png" title=" Juan Miguel selects 2 in Selector Mode (completed)" width="1366"/>
+                <img src="377db799ee1ac5d87b2372eec2f408fe95988371f9e31a3afec3e39d76e18b62.png" title=" Juan Miguel enters '12' into Edit text number 1" width="1366"/>
+                <img src="2efe8fd62b15fdb9fdc2a70c1f684511043eca59f12817bdf30eaf2b2962ce90.png" title=" Juan Miguel enters '12' into Edit text number 1 (completed)" width="1366"/>
+                <img src="2efe8fd62b15fdb9fdc2a70c1f684511043eca59f12817bdf30eaf2b2962ce90.png" title=" Juan Miguel enters '6' into Edit text number 1" width="1366"/>
+                <img src="096962e62f9322288f5205b63d1f08948bdd49af5abbc8405d970eeb1237d24f.png" title=" Juan Miguel enters '6' into Edit text number 1 (completed)" width="1366"/>
+                <img src="096962e62f9322288f5205b63d1f08948bdd49af5abbc8405d970eeb1237d24f.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="096962e62f9322288f5205b63d1f08948bdd49af5abbc8405d970eeb1237d24f.png" title=" Juan Miguel selects 0 in Selector Operation" width="1366"/>
+                <img src="bb2772ef2bae65209a8b6d9fd1c1f2f38a4d4434a1bcf985a01e4f8ef67cbfc9.png" title=" Juan Miguel selects 0 in Selector Operation (completed)" width="1366"/>
+                <img src="bb2772ef2bae65209a8b6d9fd1c1f2f38a4d4434a1bcf985a01e4f8ef67cbfc9.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="919161b90125f0dcbcdfc8755c7199856829029c6303c8427d57c22cd974ac9d.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="6b6e524311a97b94aa632bfbcc18cc1e14c2ed9f975afcd3901ec0f2b39b2714.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="6b6e524311a97b94aa632bfbcc18cc1e14c2ed9f975afcd3901ec0f2b39b2714.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="6b6e524311a97b94aa632bfbcc18cc1e14c2ed9f975afcd3901ec0f2b39b2714.png" title=" Juan Miguel selects 1 in Selector Operation" width="1366"/>
+                <img src="64c4b397babb6975bafadf9ea441e88fde8f2fec0c5e7a3a02d7a44098e92150.png" title=" Juan Miguel selects 1 in Selector Operation (completed)" width="1366"/>
+                <img src="64c4b397babb6975bafadf9ea441e88fde8f2fec0c5e7a3a02d7a44098e92150.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="e512f64dc722a3ba5c30c16d3bfaeb9326a068e7f0cefc6c525e194ec2130f53.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="82235002bd40a634c3dad35d2a95432230779c1b92729854e0c08e186588faea.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="82235002bd40a634c3dad35d2a95432230779c1b92729854e0c08e186588faea.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="82235002bd40a634c3dad35d2a95432230779c1b92729854e0c08e186588faea.png" title=" Juan Miguel selects 2 in Selector Operation" width="1366"/>
+                <img src="53cef176c6c3b4fd84c5bc4d709429448384141b579416e468b2a08fb4a8299e.png" title=" Juan Miguel selects 2 in Selector Operation (completed)" width="1366"/>
+                <img src="53cef176c6c3b4fd84c5bc4d709429448384141b579416e468b2a08fb4a8299e.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="5b944af7621c9c205dab720290faec5224feeb89ff449be1904663acd18d77d6.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="cf873e5e337c9184de97ba273fa0c01a1990b097c0c877895db710793db11bb9.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="cf873e5e337c9184de97ba273fa0c01a1990b097c0c877895db710793db11bb9.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="cf873e5e337c9184de97ba273fa0c01a1990b097c0c877895db710793db11bb9.png" title=" Juan Miguel selects 3 in Selector Operation" width="1366"/>
+                <img src="582f542f9e7c656c044ca516d06efe83a1a630ecad4b1fbc0e191bd7fc0f45d0.png" title=" Juan Miguel selects 3 in Selector Operation (completed)" width="1366"/>
+                <img src="582f542f9e7c656c044ca516d06efe83a1a630ecad4b1fbc0e191bd7fc0f45d0.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="89e7318185631133c8cbf261b836f7cccf509e2ce40e7c9faab76f261200d4b9.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="02729fd0d13a82b5b528b72dd69a3c1752bd96619dd805c238160dee0d56b35d.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="02729fd0d13a82b5b528b72dd69a3c1752bd96619dd805c238160dee0d56b35d.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="02729fd0d13a82b5b528b72dd69a3c1752bd96619dd805c238160dee0d56b35d.png" title=" Juan Miguel selects 4 in Selector Operation" width="1366"/>
+                <img src="48bfa1b34b2f8b9bd7d14b2899845fdc681d1a3b559d51dd54b485ef315c7b15.png" title=" Juan Miguel selects 4 in Selector Operation (completed)" width="1366"/>
+                <img src="48bfa1b34b2f8b9bd7d14b2899845fdc681d1a3b559d51dd54b485ef315c7b15.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="80791fe449e097549f0633057eeb9f0484c29e2f13ed705d118016598c883ff6.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="2b78d86d8bb2b55a0416d7bbe995a15deeb5e64bfbae1404679f2622085f0f5a.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="2b78d86d8bb2b55a0416d7bbe995a15deeb5e64bfbae1404679f2622085f0f5a.png" title=" When I select type of operation 2 operate two numbers (completed)" width="1366"/>
+                <img src="2b78d86d8bb2b55a0416d7bbe995a15deeb5e64bfbae1404679f2622085f0f5a.png" title=" Then I verify the operation result" width="1366"/>
+                <img src="2b78d86d8bb2b55a0416d7bbe995a15deeb5e64bfbae1404679f2622085f0f5a.png" title=" Then text calulate should be '18'" width="1366"/>
+                <img src="2b78d86d8bb2b55a0416d7bbe995a15deeb5e64bfbae1404679f2622085f0f5a.png" title=" Then text calulate should be '18' (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Example: {buildType=3}" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel opens the Calculator home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" When I select type of operation 3 operate two numbers" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel selects 3 in Selector Mode" width="1366"/>
+                <img src="0586da745665f24e92a1544547f2f2fa7bfff5869a0fd675c2cd23046c0a19d2.png" title=" Juan Miguel selects 3 in Selector Mode (completed)" width="1366"/>
+                <img src="0586da745665f24e92a1544547f2f2fa7bfff5869a0fd675c2cd23046c0a19d2.png" title=" Juan Miguel enters '16' into Edit text number 1" width="1366"/>
+                <img src="117ec57da0adcda167478b882af3996182f57a6cbab1b54058246ecd6b031200.png" title=" Juan Miguel enters '16' into Edit text number 1 (completed)" width="1366"/>
+                <img src="117ec57da0adcda167478b882af3996182f57a6cbab1b54058246ecd6b031200.png" title=" Juan Miguel enters '18' into Edit text number 1" width="1366"/>
+                <img src="26eb69eb8c032ea5c58b1b015522842bebffebbf7c42a7b356b45e1881f54d46.png" title=" Juan Miguel enters '18' into Edit text number 1 (completed)" width="1366"/>
+                <img src="26eb69eb8c032ea5c58b1b015522842bebffebbf7c42a7b356b45e1881f54d46.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="26eb69eb8c032ea5c58b1b015522842bebffebbf7c42a7b356b45e1881f54d46.png" title=" Juan Miguel selects 0 in Selector Operation" width="1366"/>
+                <img src="2003357c593b3ccfcac78fc95257bdac08ef0eb3a863db8acda80fc0414f28ef.png" title=" Juan Miguel selects 0 in Selector Operation (completed)" width="1366"/>
+                <img src="2003357c593b3ccfcac78fc95257bdac08ef0eb3a863db8acda80fc0414f28ef.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="c8b78fd1e697150bb7f9a3b9a5c49192ab141c16650b772cf63d202a76ed8c27.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="cda1c38f0a60a8523d107df177f61224c3d8c2cac3e1f8b7d52ec4a0a19d0254.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="cda1c38f0a60a8523d107df177f61224c3d8c2cac3e1f8b7d52ec4a0a19d0254.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="cda1c38f0a60a8523d107df177f61224c3d8c2cac3e1f8b7d52ec4a0a19d0254.png" title=" Juan Miguel selects 1 in Selector Operation" width="1366"/>
+                <img src="88b06203927f87a0901a7803ddbd8c3a68658c1c3e80aca654c3b81ca42d2cf3.png" title=" Juan Miguel selects 1 in Selector Operation (completed)" width="1366"/>
+                <img src="88b06203927f87a0901a7803ddbd8c3a68658c1c3e80aca654c3b81ca42d2cf3.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="bc8a8f2526ef3570f7fcc19eb355f785f1525cc3a428a76520a0837e8be886fd.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="4feb8fcf0230b97051ffb9b411caa30a4a4b032a621fb75f94412f8ed350606a.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="4feb8fcf0230b97051ffb9b411caa30a4a4b032a621fb75f94412f8ed350606a.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="4feb8fcf0230b97051ffb9b411caa30a4a4b032a621fb75f94412f8ed350606a.png" title=" Juan Miguel selects 2 in Selector Operation" width="1366"/>
+                <img src="e25578e7a59f891ccd7c7a6fe516020030b4ba99a67981347bd552283b3d7f23.png" title=" Juan Miguel selects 2 in Selector Operation (completed)" width="1366"/>
+                <img src="e25578e7a59f891ccd7c7a6fe516020030b4ba99a67981347bd552283b3d7f23.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="0b350c4248d18d8502ad26f801dadfbf393e249cdd7d28652a72cccdf96548cf.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="44ca68b63c8dc830624c45b68eb70cb3cb7dcc4e4d588c40cafe146fe55c8600.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="44ca68b63c8dc830624c45b68eb70cb3cb7dcc4e4d588c40cafe146fe55c8600.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="44ca68b63c8dc830624c45b68eb70cb3cb7dcc4e4d588c40cafe146fe55c8600.png" title=" Juan Miguel selects 3 in Selector Operation" width="1366"/>
+                <img src="f1f1f0646531e5520155d9b458649d90c679ccfc76651bd08872991062ad1558.png" title=" Juan Miguel selects 3 in Selector Operation (completed)" width="1366"/>
+                <img src="f1f1f0646531e5520155d9b458649d90c679ccfc76651bd08872991062ad1558.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="528d90bd4b3523b6fa8dc4a11f76404e680b0847b637306ae5fad1e96ecc509c.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="aaa0672f4f3268eae365380459224714ceafd87ad9947ff21bcfd19255733014.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="aaa0672f4f3268eae365380459224714ceafd87ad9947ff21bcfd19255733014.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="aaa0672f4f3268eae365380459224714ceafd87ad9947ff21bcfd19255733014.png" title=" Juan Miguel selects 4 in Selector Operation" width="1366"/>
+                <img src="e07855aee802a9188c29479bf5ba0585649c75179f5c74887bcc5fc4a9d44f86.png" title=" Juan Miguel selects 4 in Selector Operation (completed)" width="1366"/>
+                <img src="e07855aee802a9188c29479bf5ba0585649c75179f5c74887bcc5fc4a9d44f86.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="20c1dea15d8a40e07791f57e07bb22fb4a53bb035661d24c81bd8d6bca016943.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="dfb297bd9f1f806d5f5e3e962599de897d02693dcce8cc8a8fe99d904636094f.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="dfb297bd9f1f806d5f5e3e962599de897d02693dcce8cc8a8fe99d904636094f.png" title=" When I select type of operation 3 operate two numbers (completed)" width="1366"/>
+                <img src="dfb297bd9f1f806d5f5e3e962599de897d02693dcce8cc8a8fe99d904636094f.png" title=" Then I verify the operation result" width="1366"/>
+                <img src="dfb297bd9f1f806d5f5e3e962599de897d02693dcce8cc8a8fe99d904636094f.png" title=" Then text calulate should be '34'" width="1366"/>
+                <img src="dfb297bd9f1f806d5f5e3e962599de897d02693dcce8cc8a8fe99d904636094f.png" title=" Then text calulate should be '34' (completed)" width="1366"/>
+                <img src="dfb297bd9f1f806d5f5e3e962599de897d02693dcce8cc8a8fe99d904636094f.png" title=" Then text calulate should be '-2'" width="1366"/>
+                <img src="dfb297bd9f1f806d5f5e3e962599de897d02693dcce8cc8a8fe99d904636094f.png" title=" Then text calulate should be '-2' (completed)" width="1366"/>
+                <img src="dfb297bd9f1f806d5f5e3e962599de897d02693dcce8cc8a8fe99d904636094f.png" title=" Then text calulate should be '288'" width="1366"/>
+                <img src="dfb297bd9f1f806d5f5e3e962599de897d02693dcce8cc8a8fe99d904636094f.png" title=" Then text calulate should be '288' (completed)" width="1366"/>
+                <img src="dfb297bd9f1f806d5f5e3e962599de897d02693dcce8cc8a8fe99d904636094f.png" title=" Then text calulate should be '0.8888888888888888'" width="1366"/>
+                <img src="dfb297bd9f1f806d5f5e3e962599de897d02693dcce8cc8a8fe99d904636094f.png" title=" Then text calulate should be '0.8888888888888888' (completed)" width="1366"/>
+                <img src="dfb297bd9f1f806d5f5e3e962599de897d02693dcce8cc8a8fe99d904636094f.png" title=" Then text calulate should be '1618'" width="1366"/>
+                <img src="dfb297bd9f1f806d5f5e3e962599de897d02693dcce8cc8a8fe99d904636094f.png" title=" Then text calulate should be '1618' (completed)" width="1366"/>
+                <img src="dfb297bd9f1f806d5f5e3e962599de897d02693dcce8cc8a8fe99d904636094f.png" title=" Then I verify the operation result (completed)" width="1366"/>
+                <img src="dfb297bd9f1f806d5f5e3e962599de897d02693dcce8cc8a8fe99d904636094f.png" title=" Example: {buildType=3} (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Example: {buildType=4}" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel opens the Calculator home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" When I select type of operation 4 operate two numbers" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel selects 4 in Selector Mode" width="1366"/>
+                <img src="5f8cafb319fd7f95afe280b749d9822a08fcd8e677e3ac10d84f09e9ef3a0e89.png" title=" Juan Miguel selects 4 in Selector Mode (completed)" width="1366"/>
+                <img src="5f8cafb319fd7f95afe280b749d9822a08fcd8e677e3ac10d84f09e9ef3a0e89.png" title=" Juan Miguel enters '13' into Edit text number 1" width="1366"/>
+                <img src="6d47f03090ed3cdd09d1ac6e7034e8afd4f2d64acf1f43d256ea7d5f476e419f.png" title=" Juan Miguel enters '13' into Edit text number 1 (completed)" width="1366"/>
+                <img src="6d47f03090ed3cdd09d1ac6e7034e8afd4f2d64acf1f43d256ea7d5f476e419f.png" title=" Juan Miguel enters '1' into Edit text number 1" width="1366"/>
+                <img src="761e15c77542f584545f9834aa985bc3f32132965d103ac7b8fe3146c6d087ab.png" title=" Juan Miguel enters '1' into Edit text number 1 (completed)" width="1366"/>
+                <img src="761e15c77542f584545f9834aa985bc3f32132965d103ac7b8fe3146c6d087ab.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="761e15c77542f584545f9834aa985bc3f32132965d103ac7b8fe3146c6d087ab.png" title=" Juan Miguel selects 0 in Selector Operation" width="1366"/>
+                <img src="34107e0c1b5d3100f1890f6f4a07f9a36251b041b67a84eeba4ee4c0eaa09d97.png" title=" Juan Miguel selects 0 in Selector Operation (completed)" width="1366"/>
+                <img src="34107e0c1b5d3100f1890f6f4a07f9a36251b041b67a84eeba4ee4c0eaa09d97.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="48b31f7e8db76619430ab398a7dcef5ef2e13e8af9645c055c4916593c79b932.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="25e6c9dadbcd31c6e05a5ecaf7b8f676fdec03783492ff1a5cc37987b96859ac.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="25e6c9dadbcd31c6e05a5ecaf7b8f676fdec03783492ff1a5cc37987b96859ac.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="25e6c9dadbcd31c6e05a5ecaf7b8f676fdec03783492ff1a5cc37987b96859ac.png" title=" Juan Miguel selects 1 in Selector Operation" width="1366"/>
+                <img src="98ffa9c99b27d11471fb004aeb61189949e5227487fa4ceaab7fb18b879b96a9.png" title=" Juan Miguel selects 1 in Selector Operation (completed)" width="1366"/>
+                <img src="98ffa9c99b27d11471fb004aeb61189949e5227487fa4ceaab7fb18b879b96a9.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="a9011df89088aba3c6a7916b90e0ed0ef4f91a8430ad8d71d2cf28c35b46534f.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="c2f5727e594afab73b5f093e0551c115ffaff4959d532960fc7dcf5e83e51fd2.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="c2f5727e594afab73b5f093e0551c115ffaff4959d532960fc7dcf5e83e51fd2.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="c2f5727e594afab73b5f093e0551c115ffaff4959d532960fc7dcf5e83e51fd2.png" title=" Juan Miguel selects 2 in Selector Operation" width="1366"/>
+                <img src="e0d892f4f9fa081e61d08cb386346e41e5375d0c80aec05ea07e397b20dfd253.png" title=" Juan Miguel selects 2 in Selector Operation (completed)" width="1366"/>
+                <img src="e0d892f4f9fa081e61d08cb386346e41e5375d0c80aec05ea07e397b20dfd253.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="84a327558b3727c3f91710927d266ec0d16046f5076f9320af4ec8e6ac394c9f.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="f7ab9bf76c7a2136052ff10c2dcf84694c640f0af10c71b57f5695e2ae0eb507.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="f7ab9bf76c7a2136052ff10c2dcf84694c640f0af10c71b57f5695e2ae0eb507.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="f7ab9bf76c7a2136052ff10c2dcf84694c640f0af10c71b57f5695e2ae0eb507.png" title=" Juan Miguel selects 3 in Selector Operation" width="1366"/>
+                <img src="fd0852aa854dc406bf9210e56d865c50079921a7a55f0c5cad61c291742aa177.png" title=" Juan Miguel selects 3 in Selector Operation (completed)" width="1366"/>
+                <img src="fd0852aa854dc406bf9210e56d865c50079921a7a55f0c5cad61c291742aa177.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="87fbdac25769a78f912f4be9cb668979344bc4a729b420fc5c4a0d91b8119ee4.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="6ea574152936428346d3d67236079d2639f2140b0c79234881f5e913d5227da2.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="6ea574152936428346d3d67236079d2639f2140b0c79234881f5e913d5227da2.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="6ea574152936428346d3d67236079d2639f2140b0c79234881f5e913d5227da2.png" title=" Juan Miguel selects 4 in Selector Operation" width="1366"/>
+                <img src="f108413a0f6b77a2ef2e2b4f501a239d5b448282e08667d881bd4f14038fd6a6.png" title=" Juan Miguel selects 4 in Selector Operation (completed)" width="1366"/>
+                <img src="f108413a0f6b77a2ef2e2b4f501a239d5b448282e08667d881bd4f14038fd6a6.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="071a3f2767c4d2bba5c9c147d97b0fc341557125164c32e3a4afaccc50c3ae7b.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="2e078a7c6de24a3b720403445a27af9e120dd0121ec580d025f237e074727159.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="2e078a7c6de24a3b720403445a27af9e120dd0121ec580d025f237e074727159.png" title=" When I select type of operation 4 operate two numbers (completed)" width="1366"/>
+                <img src="2e078a7c6de24a3b720403445a27af9e120dd0121ec580d025f237e074727159.png" title=" Then I verify the operation result" width="1366"/>
+                <img src="2e078a7c6de24a3b720403445a27af9e120dd0121ec580d025f237e074727159.png" title=" Then text calulate should be '14'" width="1366"/>
+                <img src="2e078a7c6de24a3b720403445a27af9e120dd0121ec580d025f237e074727159.png" title=" Then text calulate should be '14' (completed)" width="1366"/>
+                <img src="2e078a7c6de24a3b720403445a27af9e120dd0121ec580d025f237e074727159.png" title=" Then text calulate should be '12'" width="1366"/>
+                <img src="2e078a7c6de24a3b720403445a27af9e120dd0121ec580d025f237e074727159.png" title=" Then text calulate should be '12' (completed)" width="1366"/>
+                <img src="2e078a7c6de24a3b720403445a27af9e120dd0121ec580d025f237e074727159.png" title=" Then text calulate should be '13'" width="1366"/>
+                <img src="2e078a7c6de24a3b720403445a27af9e120dd0121ec580d025f237e074727159.png" title=" Then text calulate should be '13' (completed)" width="1366"/>
+                <img src="2e078a7c6de24a3b720403445a27af9e120dd0121ec580d025f237e074727159.png" title=" Then text calulate should be '13.0'" width="1366"/>
+                <img src="2e078a7c6de24a3b720403445a27af9e120dd0121ec580d025f237e074727159.png" title=" Then text calulate should be '13.0' (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Example: {buildType=5}" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel opens the Calculator home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" When I select type of operation 5 operate two numbers" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel selects 5 in Selector Mode" width="1366"/>
+                <img src="c60f69487c6e4b94d23544bbebf83b542c0940863fe5a985aa35ebca659b9ced.png" title=" Juan Miguel selects 5 in Selector Mode (completed)" width="1366"/>
+                <img src="c60f69487c6e4b94d23544bbebf83b542c0940863fe5a985aa35ebca659b9ced.png" title=" Juan Miguel enters '8' into Edit text number 1" width="1366"/>
+                <img src="640d5c5f2831f280414108571d6ee7c98443ae486efa632354e8789162f92ac2.png" title=" Juan Miguel enters '8' into Edit text number 1 (completed)" width="1366"/>
+                <img src="640d5c5f2831f280414108571d6ee7c98443ae486efa632354e8789162f92ac2.png" title=" Juan Miguel enters '15' into Edit text number 1" width="1366"/>
+                <img src="4f7a35a64bf5eaca5da78203a04e6acdd972a1a056d019749fc837d7af24971d.png" title=" Juan Miguel enters '15' into Edit text number 1 (completed)" width="1366"/>
+                <img src="4f7a35a64bf5eaca5da78203a04e6acdd972a1a056d019749fc837d7af24971d.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="4f7a35a64bf5eaca5da78203a04e6acdd972a1a056d019749fc837d7af24971d.png" title=" Juan Miguel selects 0 in Selector Operation" width="1366"/>
+                <img src="09b03626b1fd5000731dc6111b34845da6cbdfb39db6a2c49a285fad6e6168bc.png" title=" Juan Miguel selects 0 in Selector Operation (completed)" width="1366"/>
+                <img src="09b03626b1fd5000731dc6111b34845da6cbdfb39db6a2c49a285fad6e6168bc.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="0567ab459f317d3ff1e7ac68e2e1df39b4326ab6dcba187a040c478c0c63dda2.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="653352f2fc8e8fd7e62523acf20dc91f751e8e5144814e75068f8efcb7de0848.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="653352f2fc8e8fd7e62523acf20dc91f751e8e5144814e75068f8efcb7de0848.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="653352f2fc8e8fd7e62523acf20dc91f751e8e5144814e75068f8efcb7de0848.png" title=" Juan Miguel selects 1 in Selector Operation" width="1366"/>
+                <img src="d18e7f404bb4865c3e3316b9c8d7220440a6412468374760bce2eff37fdc7f54.png" title=" Juan Miguel selects 1 in Selector Operation (completed)" width="1366"/>
+                <img src="d18e7f404bb4865c3e3316b9c8d7220440a6412468374760bce2eff37fdc7f54.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="076c96f386069ada29f36a5b3cf1ba459a56e849fc254619adc4cdba88bcf206.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="06758864cc99739d6d27ccce365ee9175d7e52db57a054e4cbf460bbc7770ab0.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="06758864cc99739d6d27ccce365ee9175d7e52db57a054e4cbf460bbc7770ab0.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="06758864cc99739d6d27ccce365ee9175d7e52db57a054e4cbf460bbc7770ab0.png" title=" Juan Miguel selects 2 in Selector Operation" width="1366"/>
+                <img src="fd07be550bf2664d518c0ce7ca22e095370de064e8d60f3981bb2d11ae1345f0.png" title=" Juan Miguel selects 2 in Selector Operation (completed)" width="1366"/>
+                <img src="fd07be550bf2664d518c0ce7ca22e095370de064e8d60f3981bb2d11ae1345f0.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="63cdd1801fdf3cc82e38b356f7c87769c8689233ebbf65808da401aafa4ebb94.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="3fbd5f3aaca9e37e82acc4bea3c477a9f8f5e1f53456b3531da12e2d461b6b77.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="3fbd5f3aaca9e37e82acc4bea3c477a9f8f5e1f53456b3531da12e2d461b6b77.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="3fbd5f3aaca9e37e82acc4bea3c477a9f8f5e1f53456b3531da12e2d461b6b77.png" title=" Juan Miguel selects 3 in Selector Operation" width="1366"/>
+                <img src="8a9835381c6708ab581b63e621cf598758c1ff7f29244e7f0e095fe8b9ad3afe.png" title=" Juan Miguel selects 3 in Selector Operation (completed)" width="1366"/>
+                <img src="8a9835381c6708ab581b63e621cf598758c1ff7f29244e7f0e095fe8b9ad3afe.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="6dc31c2966d29d2398dc71820c5e5f754cc1439d92e0ab33c4a509d499ca43fe.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="09cd8d410279b7fe62335820d613de412285168315b5b5bb3be7ad0596b873c3.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="09cd8d410279b7fe62335820d613de412285168315b5b5bb3be7ad0596b873c3.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="09cd8d410279b7fe62335820d613de412285168315b5b5bb3be7ad0596b873c3.png" title=" Juan Miguel selects 4 in Selector Operation" width="1366"/>
+                <img src="7a660e033801074a46b9f75a7eccad7889ac189585c10d541d4e15ecbfc10eb9.png" title=" Juan Miguel selects 4 in Selector Operation (completed)" width="1366"/>
+                <img src="7a660e033801074a46b9f75a7eccad7889ac189585c10d541d4e15ecbfc10eb9.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="65c48df21a166d9f2cb71f2d96e7e707ac0948ccd4572123540e10302fc86c51.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="65c48df21a166d9f2cb71f2d96e7e707ac0948ccd4572123540e10302fc86c51.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="65c48df21a166d9f2cb71f2d96e7e707ac0948ccd4572123540e10302fc86c51.png" title=" When I select type of operation 5 operate two numbers (completed)" width="1366"/>
+                <img src="65c48df21a166d9f2cb71f2d96e7e707ac0948ccd4572123540e10302fc86c51.png" title=" Then I verify the operation result" width="1366"/>
+                <img src="65c48df21a166d9f2cb71f2d96e7e707ac0948ccd4572123540e10302fc86c51.png" title=" Then text calulate should be '23'" width="1366"/>
+                <img src="65c48df21a166d9f2cb71f2d96e7e707ac0948ccd4572123540e10302fc86c51.png" title=" Then text calulate should be '23' (completed)" width="1366"/>
+                <img src="65c48df21a166d9f2cb71f2d96e7e707ac0948ccd4572123540e10302fc86c51.png" title=" Then text calulate should be '-7'" width="1366"/>
+                <img src="65c48df21a166d9f2cb71f2d96e7e707ac0948ccd4572123540e10302fc86c51.png" title=" Then text calulate should be '-7' (completed)" width="1366"/>
+                <img src="65c48df21a166d9f2cb71f2d96e7e707ac0948ccd4572123540e10302fc86c51.png" title=" Then text calulate should be '120'" width="1366"/>
+                <img src="65c48df21a166d9f2cb71f2d96e7e707ac0948ccd4572123540e10302fc86c51.png" title=" Then text calulate should be '120' (completed)" width="1366"/>
+                <img src="65c48df21a166d9f2cb71f2d96e7e707ac0948ccd4572123540e10302fc86c51.png" title=" Then text calulate should be '0.5333333333333333'" width="1366"/>
+                <img src="65c48df21a166d9f2cb71f2d96e7e707ac0948ccd4572123540e10302fc86c51.png" title=" Then text calulate should be '0.5333333333333333' (completed)" width="1366"/>
+                <img src="65c48df21a166d9f2cb71f2d96e7e707ac0948ccd4572123540e10302fc86c51.png" title=" Then text calulate should be '815'" width="1366"/>
+                <img src="65c48df21a166d9f2cb71f2d96e7e707ac0948ccd4572123540e10302fc86c51.png" title=" Then text calulate should be '815' (completed)" width="1366"/>
+                <img src="65c48df21a166d9f2cb71f2d96e7e707ac0948ccd4572123540e10302fc86c51.png" title=" Then I verify the operation result (completed)" width="1366"/>
+                <img src="65c48df21a166d9f2cb71f2d96e7e707ac0948ccd4572123540e10302fc86c51.png" title=" Example: {buildType=5} (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Example: {buildType=6}" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel opens the Calculator home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" When I select type of operation 6 operate two numbers" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel selects 6 in Selector Mode" width="1366"/>
+                <img src="69556b13763b8dbbbc5a1dda1cfdf804e9f5ce741b7aff8bd1bc1ebf79673373.png" title=" Juan Miguel selects 6 in Selector Mode (completed)" width="1366"/>
+                <img src="69556b13763b8dbbbc5a1dda1cfdf804e9f5ce741b7aff8bd1bc1ebf79673373.png" title=" Juan Miguel enters '19' into Edit text number 1" width="1366"/>
+                <img src="27faf1c60b55ea3b270b70cab2822d51bfb8e8eedcea943a6d03893e2e585319.png" title=" Juan Miguel enters '19' into Edit text number 1 (completed)" width="1366"/>
+                <img src="27faf1c60b55ea3b270b70cab2822d51bfb8e8eedcea943a6d03893e2e585319.png" title=" Juan Miguel enters '2' into Edit text number 1" width="1366"/>
+                <img src="ac5ec1d68c5b060275f2e0ecfbbdf5e341184e7290968bd25d14bfe8119d9d23.png" title=" Juan Miguel enters '2' into Edit text number 1 (completed)" width="1366"/>
+                <img src="ac5ec1d68c5b060275f2e0ecfbbdf5e341184e7290968bd25d14bfe8119d9d23.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="ac5ec1d68c5b060275f2e0ecfbbdf5e341184e7290968bd25d14bfe8119d9d23.png" title=" Juan Miguel selects 0 in Selector Operation" width="1366"/>
+                <img src="c02855a1e7b2a0665867c337acd1a09ac4cfb4c72611c4514e23fe244afa3552.png" title=" Juan Miguel selects 0 in Selector Operation (completed)" width="1366"/>
+                <img src="c02855a1e7b2a0665867c337acd1a09ac4cfb4c72611c4514e23fe244afa3552.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="1d1d1c33fd7e20b3bac1ad8c425d2c842e96127bb8cc018ddb2307c8d50a1bac.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="ca547435b2be947ca1b0775b3afbe1da6c9604318da7f3c739fff50a9d6a53ff.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="ca547435b2be947ca1b0775b3afbe1da6c9604318da7f3c739fff50a9d6a53ff.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="ca547435b2be947ca1b0775b3afbe1da6c9604318da7f3c739fff50a9d6a53ff.png" title=" Juan Miguel selects 1 in Selector Operation" width="1366"/>
+                <img src="52e5b8c06fbe871f046b62043662bc745439281aa6c342f0111169c2aa41d2b9.png" title=" Juan Miguel selects 1 in Selector Operation (completed)" width="1366"/>
+                <img src="52e5b8c06fbe871f046b62043662bc745439281aa6c342f0111169c2aa41d2b9.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="7973292c75f32fe2da90e7976e4420424b860f60b1a0b908e5e1f38c22ba88c5.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="f816d9f50cd072b46bd012fac14b3803530e68fe728f5a3fd9e0041d66c1876d.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="f816d9f50cd072b46bd012fac14b3803530e68fe728f5a3fd9e0041d66c1876d.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="f816d9f50cd072b46bd012fac14b3803530e68fe728f5a3fd9e0041d66c1876d.png" title=" Juan Miguel selects 2 in Selector Operation" width="1366"/>
+                <img src="8e73423dcd6c3166ca842dfb6cc56b3f61d0ce50a9d9ecde840384db7d86ec60.png" title=" Juan Miguel selects 2 in Selector Operation (completed)" width="1366"/>
+                <img src="8e73423dcd6c3166ca842dfb6cc56b3f61d0ce50a9d9ecde840384db7d86ec60.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="808b7cd6291b8872edca42d328322f61f17da1e47d1dbbfcc87c21b899e961f7.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="23533fba249cd29126eaea0cb6c770fd199b34cd54528c2f4ccc62c7801e5b5d.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="23533fba249cd29126eaea0cb6c770fd199b34cd54528c2f4ccc62c7801e5b5d.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="23533fba249cd29126eaea0cb6c770fd199b34cd54528c2f4ccc62c7801e5b5d.png" title=" Juan Miguel selects 3 in Selector Operation" width="1366"/>
+                <img src="4c5d7b22f1232b91ee8a98bd8ff65591546bb7ea690fd55fc8a0300f74903391.png" title=" Juan Miguel selects 3 in Selector Operation (completed)" width="1366"/>
+                <img src="4c5d7b22f1232b91ee8a98bd8ff65591546bb7ea690fd55fc8a0300f74903391.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="df26ddc9d192c428fc71e18ce0e3870388c12dd98fbdca1466f0bb0f92661e34.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="c47d9a69801329fdb8c863b7dc5f3d621662354c352595e14c2a8e4ad89b3a3a.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="c47d9a69801329fdb8c863b7dc5f3d621662354c352595e14c2a8e4ad89b3a3a.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="c47d9a69801329fdb8c863b7dc5f3d621662354c352595e14c2a8e4ad89b3a3a.png" title=" Juan Miguel selects 4 in Selector Operation" width="1366"/>
+                <img src="c4665409a7178e4ce0183f4eb87af2a3b71e1dff5efa819510d6a428bc09d8bf.png" title=" Juan Miguel selects 4 in Selector Operation (completed)" width="1366"/>
+                <img src="c4665409a7178e4ce0183f4eb87af2a3b71e1dff5efa819510d6a428bc09d8bf.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="92e0302b637e997ee4c18e4a4a40e6f760d12e80d2ae633ffca91122c7072c13.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="92e0302b637e997ee4c18e4a4a40e6f760d12e80d2ae633ffca91122c7072c13.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="92e0302b637e997ee4c18e4a4a40e6f760d12e80d2ae633ffca91122c7072c13.png" title=" When I select type of operation 6 operate two numbers (completed)" width="1366"/>
+                <img src="92e0302b637e997ee4c18e4a4a40e6f760d12e80d2ae633ffca91122c7072c13.png" title=" Then I verify the operation result" width="1366"/>
+                <img src="92e0302b637e997ee4c18e4a4a40e6f760d12e80d2ae633ffca91122c7072c13.png" title=" Then text calulate should be '21'" width="1366"/>
+                <img src="92e0302b637e997ee4c18e4a4a40e6f760d12e80d2ae633ffca91122c7072c13.png" title=" Then text calulate should be '21' (completed)" width="1366"/>
+                <img src="92e0302b637e997ee4c18e4a4a40e6f760d12e80d2ae633ffca91122c7072c13.png" title=" Then text calulate should be '17'" width="1366"/>
+                <img src="92e0302b637e997ee4c18e4a4a40e6f760d12e80d2ae633ffca91122c7072c13.png" title=" Then text calulate should be '17' (completed)" width="1366"/>
+                <img src="92e0302b637e997ee4c18e4a4a40e6f760d12e80d2ae633ffca91122c7072c13.png" title=" Then text calulate should be '38'" width="1366"/>
+                <img src="92e0302b637e997ee4c18e4a4a40e6f760d12e80d2ae633ffca91122c7072c13.png" title=" Then text calulate should be '38' (completed)" width="1366"/>
+                <img src="92e0302b637e997ee4c18e4a4a40e6f760d12e80d2ae633ffca91122c7072c13.png" title=" Then text calulate should be '9.5'" width="1366"/>
+                <img src="92e0302b637e997ee4c18e4a4a40e6f760d12e80d2ae633ffca91122c7072c13.png" title=" Then text calulate should be '9.5' (completed)" width="1366"/>
+                <img src="92e0302b637e997ee4c18e4a4a40e6f760d12e80d2ae633ffca91122c7072c13.png" title=" Then text calulate should be '192'" width="1366"/>
+                <img src="92e0302b637e997ee4c18e4a4a40e6f760d12e80d2ae633ffca91122c7072c13.png" title=" Then text calulate should be '192' (completed)" width="1366"/>
+                <img src="92e0302b637e997ee4c18e4a4a40e6f760d12e80d2ae633ffca91122c7072c13.png" title=" Then I verify the operation result (completed)" width="1366"/>
+                <img src="92e0302b637e997ee4c18e4a4a40e6f760d12e80d2ae633ffca91122c7072c13.png" title=" Example: {buildType=6} (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Example: {buildType=7}" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel opens the Calculator home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" When I select type of operation 7 operate two numbers" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel selects 7 in Selector Mode" width="1366"/>
+                <img src="d0c319c0bc2fc2d8472c3526411ea7858393602e865fc931440d4ea310d20d7d.png" title=" Juan Miguel selects 7 in Selector Mode (completed)" width="1366"/>
+                <img src="d0c319c0bc2fc2d8472c3526411ea7858393602e865fc931440d4ea310d20d7d.png" title=" Juan Miguel enters '1' into Edit text number 1" width="1366"/>
+                <img src="cbac754c8a82cb0f805cf1489be775d21d0ebb894324edecb1b56e04504205d6.png" title=" Juan Miguel enters '1' into Edit text number 1 (completed)" width="1366"/>
+                <img src="cbac754c8a82cb0f805cf1489be775d21d0ebb894324edecb1b56e04504205d6.png" title=" Juan Miguel enters '15' into Edit text number 1" width="1366"/>
+                <img src="04d374c7256b2cbf990532f9082bb3703152ee2eb6830346d11c2e60b4cb9c5c.png" title=" Juan Miguel enters '15' into Edit text number 1 (completed)" width="1366"/>
+                <img src="04d374c7256b2cbf990532f9082bb3703152ee2eb6830346d11c2e60b4cb9c5c.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="04d374c7256b2cbf990532f9082bb3703152ee2eb6830346d11c2e60b4cb9c5c.png" title=" Juan Miguel selects 0 in Selector Operation" width="1366"/>
+                <img src="fea58e4d7baa0c023c1e402e11108304a9c4a0964efe5f1ee5c84b20224db4e4.png" title=" Juan Miguel selects 0 in Selector Operation (completed)" width="1366"/>
+                <img src="fea58e4d7baa0c023c1e402e11108304a9c4a0964efe5f1ee5c84b20224db4e4.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="1001f23658fbc1c7fc4b07328b7c0e88696dfec5229687a5fc49178918d30653.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="d8a7673a1087453515894b89bd57005161135fb4ad05601df001ea34bbdc1238.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="d8a7673a1087453515894b89bd57005161135fb4ad05601df001ea34bbdc1238.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="d8a7673a1087453515894b89bd57005161135fb4ad05601df001ea34bbdc1238.png" title=" Juan Miguel selects 1 in Selector Operation" width="1366"/>
+                <img src="41f28fc7d47426ea8b2f03658382f122c27b0d5f9a606f8e47c26b07366b2235.png" title=" Juan Miguel selects 1 in Selector Operation (completed)" width="1366"/>
+                <img src="41f28fc7d47426ea8b2f03658382f122c27b0d5f9a606f8e47c26b07366b2235.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="d2b8f366427a450e1acf1b0652a48bbcbf58f88766e94baf74a254889a944314.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="25545f9907d447afd7962ba0c79987aac665b4b7d59e8ce6bfbe614b8bf01737.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="25545f9907d447afd7962ba0c79987aac665b4b7d59e8ce6bfbe614b8bf01737.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="25545f9907d447afd7962ba0c79987aac665b4b7d59e8ce6bfbe614b8bf01737.png" title=" Juan Miguel selects 2 in Selector Operation" width="1366"/>
+                <img src="950628e090c88d5a448579a15fdab264755d8e91e5a6aaf3da0dab2173921f3f.png" title=" Juan Miguel selects 2 in Selector Operation (completed)" width="1366"/>
+                <img src="950628e090c88d5a448579a15fdab264755d8e91e5a6aaf3da0dab2173921f3f.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="678caaf05fd6da3ad588c6a58e6ca61092db314c996fb7564174179c4fe14e80.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="454f4bdc99a2347b01840c2ac97c54b28f6fd601f3e4a17f44636d9f52be3388.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="454f4bdc99a2347b01840c2ac97c54b28f6fd601f3e4a17f44636d9f52be3388.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="454f4bdc99a2347b01840c2ac97c54b28f6fd601f3e4a17f44636d9f52be3388.png" title=" Juan Miguel selects 3 in Selector Operation" width="1366"/>
+                <img src="874d783115aef257406e67e8a5e577c0a542eb452b0adc8e93c25ad198b67f02.png" title=" Juan Miguel selects 3 in Selector Operation (completed)" width="1366"/>
+                <img src="874d783115aef257406e67e8a5e577c0a542eb452b0adc8e93c25ad198b67f02.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="523bf7d13b7ea30a76ba48443a7a8b8f66fd51c9c6c53e350bc4838a3d54db1f.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="e08a22794b9d36129ce8a15de4303d78645ca8a9d214f6a2ee0a79eb6bc14bf1.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="e08a22794b9d36129ce8a15de4303d78645ca8a9d214f6a2ee0a79eb6bc14bf1.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="e08a22794b9d36129ce8a15de4303d78645ca8a9d214f6a2ee0a79eb6bc14bf1.png" title=" Juan Miguel selects 4 in Selector Operation" width="1366"/>
+                <img src="087b36fd3b7e8716a1b633de1d136d80f4d0a1ff7c8c2e2eae509e83c5067424.png" title=" Juan Miguel selects 4 in Selector Operation (completed)" width="1366"/>
+                <img src="087b36fd3b7e8716a1b633de1d136d80f4d0a1ff7c8c2e2eae509e83c5067424.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="7e632184cf840b8b0bfe313d143834a001fdde94b16a8b5cf96010481f4ea7b3.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="87d48ac6f186916ec84b7490dac743c79e7386b0a8ab35a8022951949fef63a8.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="87d48ac6f186916ec84b7490dac743c79e7386b0a8ab35a8022951949fef63a8.png" title=" When I select type of operation 7 operate two numbers (completed)" width="1366"/>
+                <img src="87d48ac6f186916ec84b7490dac743c79e7386b0a8ab35a8022951949fef63a8.png" title=" Then I verify the operation result" width="1366"/>
+                <img src="87d48ac6f186916ec84b7490dac743c79e7386b0a8ab35a8022951949fef63a8.png" title=" Then text calulate should be '16'" width="1366"/>
+                <img src="87d48ac6f186916ec84b7490dac743c79e7386b0a8ab35a8022951949fef63a8.png" title=" Then text calulate should be '16' (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Example: {buildType=8}" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel opens the Calculator home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" When I select type of operation 8 operate two numbers" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel selects 8 in Selector Mode" width="1366"/>
+                <img src="d82badf542be77e184c5f2fe10cfcfdde836741ce0dc293a8d7fa5b71c9ef859.png" title=" Juan Miguel selects 8 in Selector Mode (completed)" width="1366"/>
+                <img src="d82badf542be77e184c5f2fe10cfcfdde836741ce0dc293a8d7fa5b71c9ef859.png" title=" Juan Miguel enters '15' into Edit text number 1" width="1366"/>
+                <img src="f7520914ab68574d123a48a272b3fb22e7f1ac8b3d745caec21f9ad74d80f48e.png" title=" Juan Miguel enters '15' into Edit text number 1 (completed)" width="1366"/>
+                <img src="f7520914ab68574d123a48a272b3fb22e7f1ac8b3d745caec21f9ad74d80f48e.png" title=" Juan Miguel enters '11' into Edit text number 1" width="1366"/>
+                <img src="a053a9859df358e766ef6fbc91038f1cb5e35f09a20b962020d96f797a91bf48.png" title=" Juan Miguel enters '11' into Edit text number 1 (completed)" width="1366"/>
+                <img src="a053a9859df358e766ef6fbc91038f1cb5e35f09a20b962020d96f797a91bf48.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="a053a9859df358e766ef6fbc91038f1cb5e35f09a20b962020d96f797a91bf48.png" title=" Juan Miguel selects 0 in Selector Operation" width="1366"/>
+                <img src="f768ea1f1cb08d0f1decd2cf4b82a99c4455a6415b48c00c238fb5b1c90935ca.png" title=" Juan Miguel selects 0 in Selector Operation (completed)" width="1366"/>
+                <img src="f768ea1f1cb08d0f1decd2cf4b82a99c4455a6415b48c00c238fb5b1c90935ca.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="4f894564b1d2f939dbcd53fdad51cff63ff868c86a729429ef6bedefd14cb1ae.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="8004e0494f11ec71fd69950ba7b576acd44cac98259ce5eb1fd3b68d201aedd8.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="8004e0494f11ec71fd69950ba7b576acd44cac98259ce5eb1fd3b68d201aedd8.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="8004e0494f11ec71fd69950ba7b576acd44cac98259ce5eb1fd3b68d201aedd8.png" title=" Juan Miguel selects 1 in Selector Operation" width="1366"/>
+                <img src="940d2e32a7fc16041c81531308db5e4e9b4cae94f7c80e977f8c1b76d40f299d.png" title=" Juan Miguel selects 1 in Selector Operation (completed)" width="1366"/>
+                <img src="940d2e32a7fc16041c81531308db5e4e9b4cae94f7c80e977f8c1b76d40f299d.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="ebef6cf502b4708be313913bc43a7975fdf413f8882a5ff825824526cedee38e.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="447d000a0ee5fddf9a2e226a3fa2630429151fddf525f86e2efe56638e6aed4a.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="447d000a0ee5fddf9a2e226a3fa2630429151fddf525f86e2efe56638e6aed4a.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="447d000a0ee5fddf9a2e226a3fa2630429151fddf525f86e2efe56638e6aed4a.png" title=" Juan Miguel selects 2 in Selector Operation" width="1366"/>
+                <img src="e542d3ef36861285d3caec56cfcb04cc16826db7cba01474fd117d21e60d41f2.png" title=" Juan Miguel selects 2 in Selector Operation (completed)" width="1366"/>
+                <img src="e542d3ef36861285d3caec56cfcb04cc16826db7cba01474fd117d21e60d41f2.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="5c15d11d02129c4583ebf4a60f6210e545ec3840b54aecbae65da9fdf55240c9.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="5c15d11d02129c4583ebf4a60f6210e545ec3840b54aecbae65da9fdf55240c9.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="5c15d11d02129c4583ebf4a60f6210e545ec3840b54aecbae65da9fdf55240c9.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="5c15d11d02129c4583ebf4a60f6210e545ec3840b54aecbae65da9fdf55240c9.png" title=" Juan Miguel selects 3 in Selector Operation" width="1366"/>
+                <img src="72016d3d8882f26a085280aed1feb7ef00f4fc0361fa77e29810f5a5d4e4f111.png" title=" Juan Miguel selects 3 in Selector Operation (completed)" width="1366"/>
+                <img src="72016d3d8882f26a085280aed1feb7ef00f4fc0361fa77e29810f5a5d4e4f111.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="5f9faed86c13493ccc70f7df859880f13abc9c18d6671ee17264edf65dd66921.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="7024c524bceb86188d1c2b36430fecc6c3e44afee7135c79c7f0adb0138c1234.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="7024c524bceb86188d1c2b36430fecc6c3e44afee7135c79c7f0adb0138c1234.png" title=" Juan miguel perform operation" width="1366"/>
+                <img src="7024c524bceb86188d1c2b36430fecc6c3e44afee7135c79c7f0adb0138c1234.png" title=" Juan Miguel selects 4 in Selector Operation" width="1366"/>
+                <img src="00fd41867a00f2f41438b6ce0991d25bee5d90f3f4d5fe198a3b3d2806786a7d.png" title=" Juan Miguel selects 4 in Selector Operation (completed)" width="1366"/>
+                <img src="00fd41867a00f2f41438b6ce0991d25bee5d90f3f4d5fe198a3b3d2806786a7d.png" title=" Juan Miguel clicks on Button calculate operation" width="1366"/>
+                <img src="107934207cabcc8183136b7869eb899897c056c2afe01dff3944ac4288d5cfbd.png" title=" Juan Miguel clicks on Button calculate operation (completed)" width="1366"/>
+                <img src="3ef335699d7898d1847382b079127a257b86017609a5d9115389f54d297fdd75.png" title=" Juan miguel perform operation (completed)" width="1366"/>
+                <img src="3ef335699d7898d1847382b079127a257b86017609a5d9115389f54d297fdd75.png" title=" When I select type of operation 8 operate two numbers (completed)" width="1366"/>
+                <img src="3ef335699d7898d1847382b079127a257b86017609a5d9115389f54d297fdd75.png" title=" Then I verify the operation result" width="1366"/>
+                <img src="3ef335699d7898d1847382b079127a257b86017609a5d9115389f54d297fdd75.png" title=" Then text calulate should be '26'" width="1366"/>
+                <img src="3ef335699d7898d1847382b079127a257b86017609a5d9115389f54d297fdd75.png" title=" Then text calulate should be '26' (completed)" width="1366"/>
+                <img src="3ef335699d7898d1847382b079127a257b86017609a5d9115389f54d297fdd75.png" title=" Then text calulate should be '4'" width="1366"/>
+                <img src="3ef335699d7898d1847382b079127a257b86017609a5d9115389f54d297fdd75.png" title=" Then text calulate should be '4' (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Example: {buildType=9}" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel opens the Calculator home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to go to page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit text number 1 should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Edit Text Answer should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Then Button calculate operation should be an element that is visible (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Given I want to verify that i am on the home page (completed)" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" When I select type of operation 9 operate two numbers" width="1366"/>
+                <img src="6f7390bc46d7a964e77277982a384af39dcd200a1bc68036f56f6bbe9d370020.png" title=" Juan Miguel selects 9 in Selector Mode" width="1366"/>
+                <img src="41832f58a956efbbf1f29f3d46f5466b55db1046c6ad5552f465304fd9492291.png" title=" Juan Miguel selects 9 in Selector Mode (completed)" width="1366"/>
+                <img src="41832f58a956efbbf1f29f3d46f5466b55db1046c6ad5552f465304fd9492291.png" title=" Juan Miguel enters '17' into Edit text number 1" width="1366"/>
+                <img src="fbb3d336b255188f275b40d072ec313641caafca90e4c2953f607d726cc7a7c1.png" title=" Juan Miguel enters '17' into Edit text number 1 (completed)" width="1366"/>
+                <img src="fbb3d336b255188f275b40d072ec313641caafca90e4c2953f607d726cc7a7c1.png" title=" Juan Miguel enters '9' into Edit text number 1" width="1366"/>
+                <img src="fbb3d336b255188f275b40d072ec313641caafca90e4c2953f607d726cc7a7c1.png" title=" Juan Miguel enters '9' into Edit text number 1 (completed): <span class='failing-color'>FAILURE</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.2.9</span>
+</div>
+</body>
+</html>
